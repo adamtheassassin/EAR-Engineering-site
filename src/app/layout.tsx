@@ -48,6 +48,8 @@ const localBusinessSchema = {
   "priceRange": "$$"
 };
 
+import FontSwitcher from "@/components/FontSwitcher";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -63,6 +65,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} min-h-screen flex flex-col antialiased`}>
         {children}
+        <FontSwitcher />
       </body>
     </html>
   );
