@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, MessageCircleQuestion } from "lucide-react";
+import { FaChevronDown as ChevronDown, FaCircleQuestion as MessageCircleQuestion } from "react-icons/fa6";
 
 export default function FAQ() {
     const [openIdx, setOpenIdx] = useState<number | null>(null);

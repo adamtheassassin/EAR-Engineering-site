@@ -1,4 +1,4 @@
-import { CheckCircle2, ShieldCheck, HardHat, FileBadge, FolderGit2 } from "lucide-react";
+import { FaRegCircleCheck as CheckCircle2, FaShield as ShieldCheck, FaHelmetSafety as HardHat, FaIdBadge as FileBadge, FaFolderOpen as FolderGit2 } from "react-icons/fa6";
 
 export default function Trust() {
     const points = [

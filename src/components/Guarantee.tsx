@@ -1,4 +1,5 @@
-import { ShieldCheck, Target, Search, Clock, LucideIcon } from "lucide-react";
+import { FaShield as ShieldCheck, FaBullseye as Target, FaMagnifyingGlass as Search, FaClock as Clock } from "react-icons/fa6";
+import { IconType as LucideIcon } from "react-icons";
 
 export default function Guarantee() {
     const guarantees: { title: string; desc: string; icon: LucideIcon }[] = [

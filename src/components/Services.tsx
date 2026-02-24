@@ -1,4 +1,4 @@
-import { Zap, Snowflake, Sun } from "lucide-react";
+import { FaBolt as Zap, FaRegSnowflake as Snowflake, FaSun as Sun } from "react-icons/fa6";
 
 interface ServicesProps {
     onOpenModal: () => void;
@@ -9,43 +9,52 @@ export default function Services({ onOpenModal }: ServicesProps) {
         {
             title: "Electrical",
             icon: Zap,
-            color: "bg-white text-blue-600",
-            topBgColor: "bg-blue-100",
+            iconColor: "text-blue-600",
+            topBgColor: "bg-blue-600",
+            titleColor: "text-white",
+            descColor: "text-blue-50",
+            watermarkColor: "text-blue-100 opacity-30",
             description: "Comprehensive home and commercial electrical services tailored to safety and compliance.",
             urgentProblems: "e.g. Tripping power, burnt outlets, compliance certs",
             features: [
-                "DB Board Upgrades & Fault Finding",
-                "New Installations & Rewiring",
-                "COC Inspections & Issuing",
-                "Lighting & Power Point Additions"
+                "Electrical design and new installations",
+                "Power distribution, DB boards, lighting & plug circuits",
+                "Standby generator installation and changeover systems",
+                "Testing, commissioning & COC certificates"
             ]
         },
         {
-            title: "Aircon & Refrigeration",
+            title: "Aircon",
             icon: Snowflake,
-            color: "bg-white text-cyan-600",
-            topBgColor: "bg-cyan-100",
+            iconColor: "text-cyan-600",
+            topBgColor: "bg-cyan-600",
+            titleColor: "text-white",
+            descColor: "text-cyan-50",
+            watermarkColor: "text-cyan-100 opacity-30",
             description: "Fast cooling solutions to keep your home comfortable or business running without disruption.",
             urgentProblems: "e.g. AC leaking water, not cooling, strange noises",
             features: [
-                "Split & Ducted System Installations",
-                "Maintenance & Deep Cleaning",
-                "Commercial Refrigeration Repairs",
-                "Gas Re-gassing & Leak Detection"
+                "Split unit and inverter air-conditioning systems",
+                "Residential and estate installations",
+                "Commercial and office air-conditioning",
+                "Preventative maintenance and breakdown support"
             ]
         },
         {
-            title: "Solar Backup",
+            title: "Solar",
             icon: Sun,
-            color: "bg-white text-yellow-600",
-            topBgColor: "bg-yellow-100",
+            iconColor: "text-yellow-500",
+            topBgColor: "bg-yellow-500",
+            titleColor: "text-gray-900",
+            descColor: "text-gray-800",
+            watermarkColor: "text-yellow-100 opacity-50",
             description: "Beat loadshedding with robust inverter and solar installations designed for efficiency.",
             urgentProblems: "e.g. Inverter beeping, batteries not holding charge",
             features: [
-                "Inverter & Battery Backup Systems",
-                "Solar Panel Installs & Upgrades",
-                "System Diagnostics & Repair",
-                "SSEG Registration Assistance"
+                "Hybrid solar systems",
+                "Battery backup solutions",
+                "Commercial solar installations up to 100kW",
+                "Solar system upgrades and expansions"
             ]
         }
     ];
@@ -67,15 +76,17 @@ export default function Services({ onOpenModal }: ServicesProps) {
                         <div key={i} className="bg-white border rounded-3xl shadow-sm hover:shadow-xl transition-all flex flex-col group relative overflow-hidden">
 
                             {/* TOP HALF (Tinted) */}
-                            <div className={`p-8 pb-6 relative ${svc.topBgColor} border-b border-gray-100`}>
-                                <div className={`absolute top-0 right-0 p-8 opacity-5 group-hover:scale-110 transition-transform duration-500`}>
-                                    <svc.icon className="w-48 h-48" />
+                            <div className={`p-8 pb-6 relative ${svc.topBgColor}`}>
+                                <div className={`absolute right-4 top-1/2 -translate-y-1/2 group-hover:scale-110 transition-transform duration-500 ${svc.watermarkColor}`}>
+                                    <svc.icon className="w-28 h-28" />
                                 </div>
-                                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-black/5 ${svc.color}`}>
-                                    <svc.icon className="w-7 h-7" />
+                                <div className="flex items-center gap-4 mb-4 relative z-10">
+                                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm border border-black/5 bg-white ${svc.iconColor} shrink-0`}>
+                                        <svc.icon className="w-7 h-7" />
+                                    </div>
+                                    <h3 className={`text-3xl font-bold ${svc.titleColor}`}>{svc.title}</h3>
                                 </div>
-                                <h3 className="text-2xl font-bold text-gray-900 mb-3 relative z-10">{svc.title}</h3>
-                                <p className="text-gray-600 relative z-10 min-h-[48px]">
+                                <p className={`relative z-10 min-h-[48px] ${svc.descColor}`}>
                                     {svc.description}
                                 </p>
                             </div>

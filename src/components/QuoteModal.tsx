@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { X, CheckCircle, ArrowRight, ArrowLeft } from "lucide-react";
+import { FaXmark as X, FaCircleCheck as CheckCircle, FaArrowRight as ArrowRight, FaArrowLeft as ArrowLeft } from "react-icons/fa6";
 
 interface QuoteModalProps {
     isOpen: boolean;

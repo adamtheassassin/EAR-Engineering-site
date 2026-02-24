@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { Phone, MessageCircle } from "lucide-react";
+import { useState, useEffect } from "react";
+import { FaPhone as Phone } from "react-icons/fa6";
 import { CONTACT } from "@/lib/constants";
 
 interface HeaderProps {
@@ -9,6 +9,34 @@ interface HeaderProps {
 }
 
 export default function Header({ onOpenModal }: HeaderProps) {
+    const [showSticky, setShowSticky] = useState(false);
+
+    useEffect(() => {
+        let observer: IntersectionObserver;
+
+        const initObserver = () => {
+            const heroCta = document.getElementById("hero-cta");
+            if (!heroCta) return;
+
+            observer = new IntersectionObserver(
+                ([entry]) => {
+                    setShowSticky(!entry.isIntersecting);
+                },
+                { threshold: 0, rootMargin: "0px" }
+            );
+
+            observer.observe(heroCta);
+        };
+
+        // Small delay to ensure the DOM is fully rendered
+        const timer = setTimeout(initObserver, 100);
+
+        return () => {
+            clearTimeout(timer);
+            if (observer) observer.disconnect();
+        };
+    }, []);
+
     return (
         <>
             <header className="sticky top-0 z-50 w-full bg-white border-b shadow-sm h-16 md:h-20 transition-all">
@@ -25,15 +53,6 @@ export default function Header({ onOpenModal }: HeaderProps) {
                             <Phone className="w-5 h-5 text-cyan-600" />
                             {CONTACT.phone}
                         </a>
-                        <a
-                            href={CONTACT.whatsappLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 font-semibold text-gray-700 hover:text-green-600 transition"
-                        >
-                            <MessageCircle className="w-5 h-5 text-green-500" />
-                            WhatsApp
-                        </a>
                         <button
                             onClick={onOpenModal}
                             className="px-6 py-2.5 bg-cyan-600 text-white rounded-lg font-bold hover:bg-cyan-700 transition shadow-sm"
@@ -44,14 +63,6 @@ export default function Header({ onOpenModal }: HeaderProps) {
 
                     {/* Mobile minimal right side */}
                     <div className="md:hidden flex items-center gap-3">
-                        <a
-                            href={CONTACT.whatsappLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-center w-10 h-10 bg-green-50 text-green-600 rounded-full"
-                        >
-                            <MessageCircle className="w-5 h-5" />
-                        </a>
                         <button
                             onClick={onOpenModal}
                             className="px-4 py-2 bg-cyan-600 text-white rounded-lg font-bold text-sm shadow-sm"
@@ -63,23 +74,16 @@ export default function Header({ onOpenModal }: HeaderProps) {
             </header>
 
             {/* Sticky Bottom Mobile CTA Bar */}
-            <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t p-3 grid grid-cols-2 gap-3 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
-                <a
-                    href={CONTACT.phoneLink}
-                    className="flex flex-col items-center justify-center p-2 rounded-lg bg-gray-50 text-gray-900 font-semibold text-sm active:bg-gray-100"
+            <div
+                className={`md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t p-4 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] transition-transform duration-300 ${showSticky ? "translate-y-0" : "translate-y-full"
+                    }`}
+            >
+                <button
+                    onClick={onOpenModal}
+                    className="w-full py-4 bg-yellow-400 text-gray-900 rounded-xl font-bold text-lg shadow-lg active:bg-yellow-500 transition-colors"
                 >
-                    <Phone className="w-5 h-5 mb-1 text-cyan-600" />
-                    Call Now
-                </a>
-                <a
-                    href={CONTACT.whatsappLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center p-2 rounded-lg bg-green-50 text-green-700 font-semibold text-sm active:bg-green-100"
-                >
-                    <MessageCircle className="w-5 h-5 mb-1" />
-                    WhatsApp
-                </a>
+                    Free Quote
+                </button>
             </div>
         </>
     );

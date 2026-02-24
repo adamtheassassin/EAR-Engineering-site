@@ -1,4 +1,4 @@
-import { MapPin } from "lucide-react";
+import { FaLocationDot as MapPin } from "react-icons/fa6";
 
 export default function ServiceAreas() {
     const areas = [

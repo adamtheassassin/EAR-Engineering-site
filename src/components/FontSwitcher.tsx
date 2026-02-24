@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Settings, X, Type } from "lucide-react";
+import { FaGear as Settings, FaXmark as X, FaFont as Type } from "react-icons/fa6";
 
 const FONTS = [
     "Inter",
@@ -72,8 +72,8 @@ export default function FontSwitcher() {
                                 key={font}
                                 onClick={() => setActiveFont(font)}
                                 className={`w-full text-left px-4 py-3 rounded-lg transition-colors flex justify-between items-center ${activeFont === font
-                                        ? "bg-cyan-50 text-cyan-700 font-bold"
-                                        : "hover:bg-gray-100 text-gray-700 font-medium"
+                                    ? "bg-cyan-50 text-cyan-700 font-bold"
+                                    : "hover:bg-gray-100 text-gray-700 font-medium"
                                     }`}
                                 style={{ fontFamily: font === "Inter" ? "" : `"${font}", sans-serif` }}
                             >

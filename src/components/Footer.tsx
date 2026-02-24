@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { FaLocationDot as MapPin, FaPhone as Phone, FaEnvelope as Mail, FaClock as Clock } from "react-icons/fa6";
 import { CONTACT } from "@/lib/constants";
 
 export default function Footer() {

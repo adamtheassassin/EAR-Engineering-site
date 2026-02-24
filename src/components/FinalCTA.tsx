@@ -1,4 +1,4 @@
-import { FileText, Phone } from "lucide-react";
+import { FaFileLines as FileText, FaPhone as Phone } from "react-icons/fa6";
 
 interface FinalCTAProps {
     onOpenModal: () => void;

@@ -1,6 +1,6 @@
 "use client";
 
-import { ShieldCheck, Phone, MessageCircle, ArrowRight, CheckCircle2, Zap, LayoutList, BadgeCheck, ClockAlert } from "lucide-react";
+import { FaShield as ShieldCheck, FaPhone as Phone, FaArrowRight as ArrowRight, FaRegCircleCheck as CheckCircle2, FaBoltLightning as Zap, FaList as LayoutList, FaCertificate as BadgeCheck, FaClock as ClockAlert } from "react-icons/fa6";
 import { CONTACT } from "@/lib/constants";
 
 interface HeroProps {
@@ -34,28 +34,19 @@ export default function Hero({ onOpenModal }: HeroProps) {
 
                     <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 pt-4">
                         <button
+                            id="hero-cta"
                             onClick={onOpenModal}
                             className="w-full sm:w-auto px-8 py-4 bg-yellow-400 hover:bg-yellow-500 text-gray-900 rounded-xl font-bold text-lg transition-transform transform hover:scale-105 active:scale-95 shadow-xl flex items-center justify-center gap-2 group"
                         >
                             Get a Free Quote
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </button>
-                        <div className="flex w-full sm:w-auto items-center gap-4">
-                            <a
-                                href={CONTACT.phoneLink}
-                                className="flex-1 sm:flex-none flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md px-6 py-4 rounded-xl font-bold transition-all border border-white/20"
-                            >
-                                <Phone className="w-5 h-5 hidden xl:block" /> Call
-                            </a>
-                            <a
-                                href={CONTACT.whatsappLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex-1 sm:flex-none flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-4 rounded-xl font-bold transition-all shadow-md"
-                            >
-                                <MessageCircle className="w-5 h-5 hidden xl:block" /> WhatsApp
-                            </a>
-                        </div>
+                        <a
+                            href={CONTACT.phoneLink}
+                            className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md px-8 py-4 rounded-xl font-bold transition-all border border-white/20"
+                        >
+                            <Phone className="w-5 h-5" /> Call Now
+                        </a>
                     </div>
 
                     <div className="flex items-center gap-2 text-sm font-medium text-cyan-100">

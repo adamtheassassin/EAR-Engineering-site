@@ -5,6 +5,19 @@
   --color-brand-dark: #006b9e;
   --color-brand-light: #e6f6ff;
   --color-accent: #ff6b00;
+  --color-whatsapp: #25D366;
+
+  --animate-marquee: marquee 35s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
+  }
 }
 
 @layer base {
@@ -25,6 +38,7 @@ body {
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
