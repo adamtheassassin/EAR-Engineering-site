@@ -6,7 +6,7 @@ interface FinalCTAProps {
 
 export default function FinalCTA({ onOpenModal }: FinalCTAProps) {
     return (
-        <section className="bg-yellow-400 py-20 text-gray-900 border-t border-yellow-500 relative overflow-hidden">
+        <section className="bg-[#FFCA08] py-20 text-gray-900 border-t border-[#E5B507] relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4JyBoZWlnaHQ9JzgnPgo8cmVjdCB3aWR0aD0nOCwgaGVpZ2h0PSc4JyBmaWxsPScjZmZmJyBmaWxsLW9wYWNpdHk9JzAuMSIvPgo8cGF0aCBkPSdNMCAwaDhyOHYtOEgweicgZmlsbD0nI2ZmZicgZmlsbC1vcGFjaXR5PScwLjA1Jy8+Cjwvc3ZnPg==')] pointer-events-none filter invert"></div>
 
             <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">

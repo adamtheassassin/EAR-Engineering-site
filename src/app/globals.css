@@ -7,6 +7,9 @@
   --color-accent: #ff6b00;
   --color-whatsapp: #25D366;
 
+  --font-outfit: var(--font-outfit);
+  --font-mukta: var(--font-mukta);
+
   --animate-marquee: marquee 35s linear infinite;
 
   @keyframes marquee {
@@ -25,14 +28,24 @@
     --background: #ffffff;
     --foreground: #111827;
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-mukta), sans-serif;
+  }
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: inherit;
+  font-family: var(--font-outfit), sans-serif;
   scroll-behavior: smooth;
 }
+
 
 /* Base utility for hiding scrollbar in modal if needed */
 .hide-scrollbar::-webkit-scrollbar {

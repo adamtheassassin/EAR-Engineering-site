@@ -9,8 +9,8 @@ export default function Services({ onOpenModal }: ServicesProps) {
         {
             title: "Electrical",
             icon: Zap,
-            iconColor: "text-blue-600",
-            topBgColor: "bg-blue-600",
+            iconColor: "text-[#015CAB]",
+            topBgColor: "bg-[#015CAB]",
             titleColor: "text-white",
             descColor: "text-blue-50",
             watermarkColor: "text-blue-100 opacity-30",
@@ -43,8 +43,8 @@ export default function Services({ onOpenModal }: ServicesProps) {
         {
             title: "Solar",
             icon: Sun,
-            iconColor: "text-yellow-500",
-            topBgColor: "bg-yellow-500",
+            iconColor: "text-[#FFCA08]",
+            topBgColor: "bg-[#FFCA08]",
             titleColor: "text-gray-900",
             descColor: "text-gray-800",
             watermarkColor: "text-yellow-100 opacity-50",
@@ -95,7 +95,7 @@ export default function Services({ onOpenModal }: ServicesProps) {
                             <div className="p-8 pt-6 flex-1 flex flex-col bg-white overflow-hidden">
                                 <div className="mb-8 flex-1">
                                     <div className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Common Issues</div>
-                                    <div className="text-gray-700 bg-gray-50 border p-3 rounded-lg text-sm mb-6 border-l-4 border-l-cyan-600">
+                                    <div className="text-gray-700 bg-gray-50 border p-3 rounded-lg text-sm mb-6 border-l-4 border-l-[#015CAB]">
                                         <span className="font-semibold block mb-1">Urgent?</span>
                                         {svc.urgentProblems}
                                     </div>
@@ -103,7 +103,7 @@ export default function Services({ onOpenModal }: ServicesProps) {
                                     <ul className="space-y-3">
                                         {svc.features.map((feature, j) => (
                                             <li key={j} className="flex flex-start gap-3 text-gray-700 font-medium">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-cyan-600 mt-2 flex-shrink-0"></div>
+                                                <div className="w-1.5 h-1.5 rounded-full bg-[#015CAB] mt-2 flex-shrink-0"></div>
                                                 <span>{feature}</span>
                                             </li>
                                         ))}
@@ -112,7 +112,7 @@ export default function Services({ onOpenModal }: ServicesProps) {
 
                                 <button
                                     onClick={onOpenModal}
-                                    className="w-full py-4 text-center rounded-xl bg-gray-900 hover:bg-cyan-600 text-white font-bold transition shadow-md z-10"
+                                    className="w-full py-4 text-center rounded-xl bg-gray-900 hover:bg-[#015CAB] text-white font-bold transition shadow-md z-10"
                                 >
                                     Request Free Quote
                                 </button>

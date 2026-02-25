@@ -1,12 +1,26 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Outfit, Mukta } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap",
+});
+
+const mukta = Mukta({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-mukta",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "EAR Engineering | Fast HVAC, Electrical & Solar in Cape Town",
   description: "EAR Engineering provides expert project-managed electrical, aircon & solar solutions in Helderberg and Cape Town. On time, on budget, with a 1-hour callback promise.",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 const localBusinessSchema = {
@@ -48,25 +62,23 @@ const localBusinessSchema = {
   "priceRange": "$$"
 };
 
-import FontSwitcher from "@/components/FontSwitcher";
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${outfit.variable} ${mukta.variable}`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       </head>
-      <body className={`${inter.className} min-h-screen flex flex-col antialiased`}>
+      <body className="min-h-screen flex flex-col antialiased font-outfit">
         {children}
-        <FontSwitcher />
       </body>
     </html>
   );
 }
+

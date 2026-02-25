@@ -41,21 +41,25 @@ export default function Header({ onOpenModal }: HeaderProps) {
         <>
             <header className="sticky top-0 z-50 w-full bg-white border-b shadow-sm h-16 md:h-20 transition-all">
                 <div className="container mx-auto px-4 h-full flex items-center justify-between">
-                    <div className="font-extrabold text-2xl tracking-tighter text-gray-900">
-                        EAR <span className="text-cyan-600">Engineering</span>
-                    </div>
+                    <a href="/" className="flex items-center">
+                        <img
+                            src="/EAR Engineering Menu Logo.png"
+                            alt="EAR Engineering"
+                            className="h-14 md:h-18 w-auto object-contain"
+                        />
+                    </a>
 
                     <div className="hidden md:flex items-center gap-6">
                         <a
                             href={CONTACT.phoneLink}
-                            className="flex items-center gap-2 font-semibold text-gray-700 hover:text-cyan-600 transition"
+                            className="flex items-center gap-2 font-semibold text-gray-700 hover:text-[#015CAB] transition"
                         >
-                            <Phone className="w-5 h-5 text-cyan-600" />
+                            <Phone className="w-5 h-5 text-[#015CAB]" />
                             {CONTACT.phone}
                         </a>
                         <button
                             onClick={onOpenModal}
-                            className="px-6 py-2.5 bg-cyan-600 text-white rounded-lg font-bold hover:bg-cyan-700 transition shadow-sm"
+                            className="px-6 py-2.5 bg-[#015CAB] text-white rounded-lg font-bold hover:bg-[#01418A] transition shadow-sm"
                         >
                             Free Quote
                         </button>
@@ -65,7 +69,7 @@ export default function Header({ onOpenModal }: HeaderProps) {
                     <div className="md:hidden flex items-center gap-3">
                         <button
                             onClick={onOpenModal}
-                            className="px-4 py-2 bg-cyan-600 text-white rounded-lg font-bold text-sm shadow-sm"
+                            className="px-4 py-2 bg-[#015CAB] text-white rounded-lg font-bold text-sm shadow-sm"
                         >
                             Quote
                         </button>
@@ -80,7 +84,7 @@ export default function Header({ onOpenModal }: HeaderProps) {
             >
                 <button
                     onClick={onOpenModal}
-                    className="w-full py-4 bg-yellow-400 text-gray-900 rounded-xl font-bold text-lg shadow-lg active:bg-yellow-500 transition-colors"
+                    className="w-full py-4 bg-[#FFCA08] text-gray-900 rounded-xl font-bold text-lg shadow-lg active:bg-[#E5B507] transition-colors"
                 >
                     Free Quote
                 </button>
