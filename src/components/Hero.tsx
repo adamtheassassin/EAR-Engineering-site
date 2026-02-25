@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
 import Image from "next/image";
-import { FaShield as ShieldCheck, FaPhone as Phone, FaArrowRight as ArrowRight, FaBoltLightning as Zap, FaList as LayoutList, FaCertificate as BadgeCheck, FaClock as ClockAlert } from "react-icons/fa6";
+import { FaShield as ShieldCheck, FaPhone as Phone, FaArrowRight as ArrowRight, FaRegCircleCheck as CheckCircle2, FaBoltLightning as Zap, FaList as LayoutList, FaCertificate as BadgeCheck, FaClock as ClockAlert } from "react-icons/fa6";
 import { CONTACT } from "@/lib/constants";
 
 interface HeroProps {
@@ -8,108 +7,7 @@ interface HeroProps {
 }
 
 export default function Hero({ onOpenModal }: HeroProps) {
-    const [location, setLocation] = useState("Helderberg + Cape Town");
-
-    useEffect(() => {
-        const fetchLocation = async () => {
-            try {
-                // 1. Try db-ip first for highly accurate city mapping
-                let city = "";
-                let region = "";
-
-                try {
-                    const dbIpRes = await fetch("https://api.db-ip.com/v2/free/self");
-                    const dbIpData = await dbIpRes.json();
-                    if (dbIpData.city && dbIpData.stateProv) {
-                        city = dbIpData.city;
-                        region = dbIpData.stateProv;
-                    }
-                } catch (e) {
-                    console.error("db-ip fallback", e);
-                }
-
-                // 2. Fetch ipapi for lat/lon, postal, and fallback city
-                let data: any = {};
-                try {
-                    const response = await fetch("https://ipapi.co/json/");
-                    data = await response.json();
-                } catch (e) {
-                    console.error("ipapi fallback", e);
-                }
-
-                region = region || data.region || "";
-                city = city || data.city || "";
-
-                // Advanced bespoke town mapping for Western Cape
-                const postalMap: Record<string, string> = {
-                    "7130": "Somerset West",
-                    "7129": "Somerset West",
-                    "7140": "Strand",
-                    "7150": "Gordon's Bay",
-                    "7151": "Gordon's Bay",
-                    "7600": "Stellenbosch",
-                    "7601": "Stellenbosch",
-                    "7110": "Macassar",
-                    "7100": "Helderberg",
-                    "7530": "Bellville",
-                    "7550": "Durbanville",
-                    "7560": "Brackenfell",
-                    "7570": "Kraaifontein",
-                    "7135": "Lwandle"
-                };
-
-                // Check if in Western Cape
-                if (region === "Western Cape" || data.region === "Western Cape" || data.region_code === "WC") {
-                    const postal = data.postal ? String(data.postal) : "";
-
-                    // A. High priority: Check our bespoke postal map for specific towns
-                    if (postal && postalMap[postal]) {
-                        setLocation(postalMap[postal]);
-                        return;
-                    }
-
-                    // B. Highest "bespoke" priority: Reverse Geocode for Suburbs/Localities using lat/lon
-                    if (data.latitude && data.longitude) {
-                        try {
-                            const geoRes = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${data.latitude}&longitude=${data.longitude}&localityLanguage=en`);
-                            const geoData = await geoRes.json();
-                            if (geoData.locality) {
-                                const genericNames = ["City of Cape Town", "Cape Town", "Western Cape", "South Africa"];
-                                if (!genericNames.includes(geoData.locality)) {
-                                    setLocation(geoData.locality);
-                                    return;
-                                }
-                            }
-                        } catch (e) {
-                            console.error("Reverse geocode failed", e);
-                        }
-                    }
-
-                    // C. Medium priority: Use city if it's not generic "Cape Town"
-                    if (city && city !== "Cape Town" && city !== "City of Cape Town") {
-                        setLocation(city);
-                        return;
-                    }
-
-                    // D. Low priority: If in Somerset West/Helderberg area but generic city
-                    if (postal.startsWith("71")) {
-                        setLocation("Somerset West");
-                        return;
-                    }
-
-                    // E. Default WC fallback
-                    setLocation("Helderberg");
-                } else {
-                    // Default for outside Western Cape
-                    setLocation(city && city !== "Cape Town" ? city : "Helderberg");
-                }
-            } catch (error) {
-                console.error("Error fetching location:", error);
-            }
-        };
-
-        fetchLocation();
-    }, []);
+    const location = "Helderberg & Cape Town";
 
     return (
         <section className="relative overflow-hidden bg-[#015CAB] text-white min-h-[90vh] lg:h-[calc(100vh-5rem)] flex items-center py-20 lg:py-0">
