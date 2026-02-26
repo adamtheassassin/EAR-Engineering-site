@@ -7,6 +7,7 @@ import Reviews from "@/components/Reviews";
 import TrustedBy from "@/components/TrustedBy";
 import Services from "@/components/Services";
 import Emergency from "@/components/Emergency";
+import WhoWeWorkWith from "@/components/WhoWeWorkWith";
 import Trust from "@/components/Trust";
 import Guarantee from "@/components/Guarantee";
 import Process from "@/components/Process";
@@ -29,6 +30,7 @@ export default function Home() {
         <Reviews />
         <Services onOpenModal={() => setIsModalOpen(true)} />
         <Emergency onOpenModal={() => setIsModalOpen(true)} />
+        <WhoWeWorkWith />
         <Trust />
         <Guarantee />
         <Process />
