@@ -9,7 +9,7 @@ import Services from "@/components/Services";
 import Emergency from "@/components/Emergency";
 import WhoWeWorkWith from "@/components/WhoWeWorkWith";
 import Trust from "@/components/Trust";
-import Guarantee from "@/components/Guarantee";
+
 import Process from "@/components/Process";
 import ServiceAreas from "@/components/ServiceAreas";
 import FAQ from "@/components/FAQ";
@@ -32,7 +32,7 @@ export default function Home() {
         <Emergency onOpenModal={() => setIsModalOpen(true)} />
         <WhoWeWorkWith />
         <Trust />
-        <Guarantee />
+
         <Process />
         <ServiceAreas />
         <FAQ />

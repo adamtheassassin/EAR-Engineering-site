@@ -112,7 +112,7 @@ export default function Services({ onOpenModal }: ServicesProps) {
 
                                 <button
                                     onClick={onOpenModal}
-                                    className="w-full py-4 text-center rounded-xl bg-gray-900 hover:bg-[#015CAB] text-white font-bold transition shadow-md z-10"
+                                    className="w-full py-4 text-center rounded-xl bg-[#FFCA08] hover:bg-[#E5B507] text-gray-900 font-bold transition shadow-md z-10"
                                 >
                                     Request Free Quote
                                 </button>
