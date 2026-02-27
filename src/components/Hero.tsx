@@ -4,9 +4,11 @@ import { CONTACT } from "@/lib/constants";
 
 interface HeroProps {
     onOpenModal: () => void;
+    title?: React.ReactNode;
+    subtitle?: React.ReactNode;
 }
 
-export default function Hero({ onOpenModal }: HeroProps) {
+export default function Hero({ onOpenModal, title, subtitle }: HeroProps) {
     const location = "Helderberg & Cape Town";
 
     return (
@@ -26,12 +28,16 @@ export default function Hero({ onOpenModal }: HeroProps) {
                         </div>
 
                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1]">
-                            Electricians, Aircon & <br className="hidden lg:block" />
-                            <span className="text-[#FFCA08]">Solar Installers in Somerset West</span>
+                            {title || (
+                                <>
+                                    Electricians, Aircon & <br className="hidden lg:block" />
+                                    <span className="text-[#FFCA08]">Solar Installers in Somerset West</span>
+                                </>
+                            )}
                         </h1>
 
                         <p className="text-xl md:text-2xl text-cyan-50 leading-relaxed font-medium max-w-2xl">
-                            Serving the Helderberg, Stellenbosch, Boland and greater Western Cape for over 18 years.
+                            {subtitle || "Serving the Helderberg, Stellenbosch, Boland and greater Western Cape for over 18 years."}
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 pt-4">

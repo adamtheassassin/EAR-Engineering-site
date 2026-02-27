@@ -3,10 +3,14 @@
 import { useState } from "react";
 import { FaChevronDown as ChevronDown, FaCircleQuestion as MessageCircleQuestion } from "react-icons/fa6";
 
-export default function FAQ() {
+interface FAQProps {
+    faqs?: { q: string, a: string }[];
+}
+
+export default function FAQ({ faqs: customFaqs }: FAQProps) {
     const [openIdx, setOpenIdx] = useState<number | null>(null);
 
-    const faqs = [
+    const defaultFaqs = [
         { q: "Do you supply Certificates of Compliance (COC)?", a: "Yes, we are fully licensed to inspect your electrical installation and issue a COC upon passing all safety and compliance checks." },
         { q: "How quickly can you respond to an emergency?", a: "During business hours, we prioritize urgent breakdowns (like power outages or critical faults) and aim to have a technician on-site as fast as possible." },
         { q: "Are your solar installations registered with the municipality?", a: "We manage the SSEG registration process to ensure your new solar setup is entirely legal and compliant with local municipal regulations." },
@@ -18,6 +22,8 @@ export default function FAQ() {
         { q: "Is there a call-out fee?", a: "Yes, a standard call-out fee applies for fault finding and diagnostics. Once the issue is identified, we provide a transparent quote for the necessary repairs. Free quotes apply to new installations." },
         { q: "How do I request a quote?", a: "You can click the 'Free Quote' button on our website, call us directly, or send us a WhatsApp message. We respond within 1 hour during business hours." }
     ];
+
+    const faqs = customFaqs || defaultFaqs;
 
     return (
         <section className="bg-white py-24 border-t border-gray-100">
