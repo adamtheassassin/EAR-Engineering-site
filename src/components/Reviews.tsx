@@ -4,7 +4,7 @@ import Script from "next/script";
 
 export default function Reviews() {
     return (
-        <section className="bg-gray-50 py-16 md:py-24 border-b border-gray-100 relative">
+        <section className="bg-white py-12 md:py-16 relative" id="reviews">
             <div className="w-full">
                 <div className="container mx-auto px-4 text-center mb-10">
                     <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 mb-4">

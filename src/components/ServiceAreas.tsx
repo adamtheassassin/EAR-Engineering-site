@@ -91,7 +91,7 @@ export default function ServiceAreas() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 lg:items-center">
                     {/* Left Column: Text & Location List */}
                     <div className="lg:col-span-5 flex flex-col gap-8">
-                        <div className="max-w-2xl">
+                        <div className="max-w-2xl text-center lg:text-left">
                             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-[#015CAB]">
                                 Where We Help
                             </h2>

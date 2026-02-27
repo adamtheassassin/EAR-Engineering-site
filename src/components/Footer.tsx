@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FaLocationDot as MapPin, FaPhone as Phone, FaEnvelope as Mail, FaClock as Clock } from "react-icons/fa6";
 import { CONTACT } from "@/lib/constants";
 
@@ -6,8 +7,14 @@ export default function Footer() {
         <footer className="bg-gray-900 text-gray-400 py-16 border-t border-gray-800 pb-28 md:pb-16">
             <div className="container mx-auto px-4 grid md:grid-cols-4 gap-12">
                 <div className="md:col-span-1">
-                    <div className="font-extrabold text-2xl tracking-tighter text-white mb-6">
-                        EAR <span className="text-cyan-500">Engineering</span>
+                    <div className="mb-6">
+                        <Image
+                            src="/EAR Engineering Menu Logo.png"
+                            alt="EAR Engineering Logo"
+                            width={220}
+                            height={60}
+                            className="brightness-0 invert opacity-90"
+                        />
                     </div>
                     <p className="text-sm font-medium leading-relaxed mb-6">
                         Project-managed electrical, aircon & solar in Helderberg + Cape Town. Since 1994. Quality installations, zero guesswork.

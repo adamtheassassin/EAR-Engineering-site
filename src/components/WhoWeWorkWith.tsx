@@ -50,7 +50,7 @@ export default function WhoWeWorkWith() {
                     <h2 className="text-3xl md:text-4xl font-black mb-4 text-[#015CAB] tracking-tight">
                         Who We Work With
                     </h2>
-                    <p className="text-base md:text-lg text-slate-600 leading-relaxed font-outfit">
+                    <p className="text-lg md:text-xl text-slate-700 leading-relaxed font-outfit font-semibold opacity-90">
                         Whether you're a homeowner with a tripped DB board, a property manager keeping multiple buildings running, or a business owner who needs solar installed before the next load shedding season, you've found the right team.
                     </p>
                 </div>
@@ -74,8 +74,8 @@ export default function WhoWeWorkWith() {
                 </div>
 
                 {/* Bottom text */}
-                <div className="text-center max-w-4xl mx-auto">
-                    <p className="text-lg md:text-xl text-slate-700 font-medium">
+                <div className="text-center max-w-4xl mx-auto pt-4">
+                    <p className="text-xl md:text-2xl text-slate-800 font-bold tracking-tight">
                         If it involves electricity, air-conditioning, or solar in the Helderberg, Boland, or Western Cape, we are the team to call.
                     </p>
                 </div>

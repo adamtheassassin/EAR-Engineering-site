@@ -16,6 +16,8 @@ export default function Services({ onOpenModal }: ServicesProps) {
             watermarkColor: "text-blue-100 opacity-30",
             description: "Comprehensive home and commercial electrical services tailored to safety and compliance.",
             urgentProblems: "e.g. Tripping power, burnt outlets, compliance certs",
+            sliverColor: "border-l-[#015CAB]",
+            bulletColor: "bg-[#015CAB]",
             features: [
                 "Electrical design and new installations",
                 "Power distribution, DB boards, lighting & plug circuits",
@@ -33,6 +35,8 @@ export default function Services({ onOpenModal }: ServicesProps) {
             watermarkColor: "text-cyan-100 opacity-30",
             description: "Fast cooling solutions to keep your home comfortable or business running without disruption.",
             urgentProblems: "e.g. AC leaking water, not cooling, strange noises",
+            sliverColor: "border-l-cyan-600",
+            bulletColor: "bg-cyan-600",
             features: [
                 "Split unit and inverter air-conditioning systems",
                 "Residential and estate installations",
@@ -50,6 +54,8 @@ export default function Services({ onOpenModal }: ServicesProps) {
             watermarkColor: "text-yellow-100 opacity-50",
             description: "Beat loadshedding with robust inverter and solar installations designed for efficiency.",
             urgentProblems: "e.g. Inverter beeping, batteries not holding charge",
+            sliverColor: "border-l-[#FFCA08]",
+            bulletColor: "bg-[#FFCA08]",
             features: [
                 "Hybrid solar systems",
                 "Battery backup solutions",
@@ -60,7 +66,7 @@ export default function Services({ onOpenModal }: ServicesProps) {
     ];
 
     return (
-        <section className="py-20 md:py-28 bg-white" id="services">
+        <section className="pt-10 pb-20 md:pt-14 md:pb-28 bg-white" id="services">
             <div className="container mx-auto px-4">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-6">
@@ -95,15 +101,15 @@ export default function Services({ onOpenModal }: ServicesProps) {
                             <div className="p-8 pt-6 flex-1 flex flex-col bg-white overflow-hidden">
                                 <div className="mb-8 flex-1">
                                     <div className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Common Issues</div>
-                                    <div className="text-gray-700 bg-gray-50 border p-3 rounded-lg text-sm mb-6 border-l-4 border-l-[#015CAB]">
-                                        <span className="font-semibold block mb-1">Urgent?</span>
+                                    <div className={`text-gray-700 bg-gray-50 border p-3 rounded-lg text-sm mb-6 border-l-4 ${svc.sliverColor}`}>
+                                        <span className="font-semibold block mb-1 text-gray-900">Urgent?</span>
                                         {svc.urgentProblems}
                                     </div>
 
                                     <ul className="space-y-3">
                                         {svc.features.map((feature, j) => (
                                             <li key={j} className="flex flex-start gap-3 text-gray-700 font-medium">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-[#015CAB] mt-2 flex-shrink-0"></div>
+                                                <div className={`w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 ${svc.bulletColor}`}></div>
                                                 <span>{feature}</span>
                                             </li>
                                         ))}

@@ -143,19 +143,21 @@ export default function SolarInstallationPage() {
                             </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                        <div className="grid lg:grid-cols-2 gap-8 mb-12">
                             {[
                                 { title: "Hybrid Solar Systems", icon: FaSolarPanel, desc: "Connects to the grid and uses solar panels to generate power during the day. Any extra power goes into your batteries for night time or during outages." },
                                 { title: "Battery Backup Systems", icon: FaBatteryFull, desc: "A great starting point if you aren't ready for full solar. We install the batteries and inverter so your essential appliances keep running." },
                                 { title: "Commercial Installations", icon: FaBuilding, desc: "We install commercial solar systems up to 100kW for businesses, estates, farms, and offices to dramatically cut electricity costs." },
                                 { title: "System Upgrades", icon: FaWrench, desc: "Already have a system? We can assess and expand it by adding more panels, upgrading batteries, or replacing old inverters." }
                             ].map((s, i) => (
-                                <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-cyan-200 transition-colors group">
-                                    <div className="bg-cyan-50 p-4 rounded-xl text-[#015CAB] w-fit mb-6 group-hover:bg-[#015CAB] group-hover:text-white transition-colors">
+                                <div key={i} className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-cyan-200 transition-colors group flex flex-col sm:flex-row gap-6 items-start">
+                                    <div className="bg-cyan-50 p-4 rounded-xl text-[#015CAB] flex-shrink-0 group-hover:bg-[#015CAB] group-hover:text-white transition-colors">
                                         <s.icon className="w-8 h-8" />
                                     </div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-3">{s.title}</h3>
-                                    <p className="text-gray-600 font-medium leading-relaxed">{s.desc}</p>
+                                    <div>
+                                        <h3 className="text-xl font-bold text-gray-900 mb-2">{s.title}</h3>
+                                        <p className="text-gray-600 font-medium leading-relaxed">{s.desc}</p>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -391,7 +393,7 @@ export default function SolarInstallationPage() {
                                     Locations We Serve
                                 </h2>
                                 <p className="text-lg font-medium text-white/90 leading-relaxed mb-8">
-                                    EARE Engineering is based in the Helderberg and we offer reputable solar installations, electrical, and HVAC services for homeowners and businesses in the surrounding areas.
+                                    EAR Engineering is based in the Helderberg and we offer reputable solar installations, electrical, and HVAC services for homeowners and businesses in the surrounding areas.
                                 </p>
 
                                 <div className="grid grid-cols-2 gap-x-4 gap-y-3 text-left">

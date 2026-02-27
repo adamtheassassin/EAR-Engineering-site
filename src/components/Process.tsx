@@ -10,7 +10,7 @@ export default function Process() {
         <section className="bg-gray-50 py-24 border-t border-gray-100 relative overflow-hidden">
             {/* Background graphic */}
             <div className="absolute top-0 right-0 max-w-[50vw] h-full opacity-5 pointer-events-none pb-20">
-                <div className="w-full h-full bg-cyan-600 rounded-l-[100px] transform skew-x-12 translate-x-1/4"></div>
+                <div className="w-full h-full bg-[#015CAB] rounded-l-[100px] transform skew-x-12 translate-x-1/4"></div>
             </div>
 
             <div className="container mx-auto px-4 relative z-10">
@@ -25,8 +25,8 @@ export default function Process() {
 
                 <div className="grid md:grid-cols-4 gap-8">
                     {steps.map((step, i) => (
-                        <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition group">
-                            <div className="text-5xl font-black text-cyan-100 group-hover:text-cyan-600 transition-colors mb-4">
+                        <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition group text-center md:text-left">
+                            <div className="text-5xl font-black text-[#015CAB] md:text-[#015CAB]/10 group-hover:text-[#015CAB] transition-colors mb-4">
                                 {step.num}
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
