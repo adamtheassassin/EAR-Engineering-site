@@ -4,11 +4,13 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TrustedBy from "@/components/TrustedBy";
+import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import QuoteModal from "@/components/QuoteModal";
-import { FaSolarPanel, FaBatteryFull, FaWrench, FaBuilding, FaCircleCheck, FaBoltLightning, FaShieldHalved, FaClockRotateLeft, FaUserTie } from "react-icons/fa6";
+import { FaSolarPanel, FaBatteryFull, FaWrench, FaBuilding, FaCircleCheck, FaBoltLightning, FaShieldHalved, FaClockRotateLeft, FaUserTie, FaPlug, FaMapLocationDot } from "react-icons/fa6";
+import Image from "next/image";
 
 export default function SolarInstallationPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -88,22 +90,43 @@ export default function SolarInstallationPage() {
 
                 {/* Introduction / Load Shedding Section */}
                 <section className="py-20 bg-white">
-                    <div className="container mx-auto px-4 max-w-4xl">
-                        <div className="text-center mb-10">
+                    <div className="container mx-auto px-4 max-w-6xl">
+                        <div className="text-center mb-16">
                             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#015CAB] mb-6">
                                 Reliable Solar Power for Your Home or Business
                             </h2>
                         </div>
-                        <div className="prose prose-lg mx-auto text-gray-700 font-medium leading-relaxed space-y-6">
-                            <p>
-                                South Africans have been dealing with load shedding for years, and most people are no longer willing to just wait it out. Candles and power banks only go so far. Businesses lose money every time the power goes off. Families are frustrated. And electricity prices keep going up.
-                            </p>
-                            <p>
-                                A solar system with battery backup changes all of that. When the grid goes down, your batteries kick in and your lights stay on. Your fridge keeps running. Your business keeps operating. And over time, you are using less grid electricity, which means your monthly bill comes down.
-                            </p>
-                            <p>
-                                Western Cape clients are in a great position when it comes to solar. The region gets a lot of sunshine throughout the year, which means solar panels here produce energy reliably and consistently. That makes the investment work harder for you than it would in many other parts of the world.
-                            </p>
+
+                        <div className="grid md:grid-cols-3 gap-8">
+                            <div className="bg-gray-50 border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center md:items-start text-center md:text-left">
+                                <div className="w-14 h-14 bg-red-100 text-red-600 rounded-full flex items-center justify-center mb-6">
+                                    <FaPlug className="w-6 h-6" />
+                                </div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-4">The Cost of Outages</h3>
+                                <p className="text-gray-600 font-medium leading-relaxed">
+                                    South Africans have been dealing with load shedding for years. Candles and power banks only go so far. Businesses lose money every time the power goes off, families are frustrated, and electricity prices keep climbing.
+                                </p>
+                            </div>
+
+                            <div className="bg-gray-50 border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center md:items-start text-center md:text-left">
+                                <div className="w-14 h-14 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6">
+                                    <FaBatteryFull className="w-6 h-6" />
+                                </div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-4">Uninterrupted Power</h3>
+                                <p className="text-gray-600 font-medium leading-relaxed">
+                                    A solar system with battery backup changes all of that. When the grid goes down, your batteries kick in and your lights stay on. Your fridge stays cold, your business keeps operating, and you use far less grid electricity.
+                                </p>
+                            </div>
+
+                            <div className="bg-gray-50 border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center md:items-start text-center md:text-left">
+                                <div className="w-14 h-14 bg-yellow-100 text-[#d49a00] rounded-full flex items-center justify-center mb-6">
+                                    <FaMapLocationDot className="w-6 h-6" />
+                                </div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-4">Ideal for the Cape</h3>
+                                <p className="text-gray-600 font-medium leading-relaxed">
+                                    Western Cape clients are in a great position for solar. The region gets abundant sunshine throughout the year, meaning panels produce energy reliably, making your investment work incredibly hard.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -120,7 +143,7 @@ export default function SolarInstallationPage() {
                             </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                             {[
                                 { title: "Hybrid Solar Systems", icon: FaSolarPanel, desc: "Connects to the grid and uses solar panels to generate power during the day. Any extra power goes into your batteries for night time or during outages." },
                                 { title: "Battery Backup Systems", icon: FaBatteryFull, desc: "A great starting point if you aren't ready for full solar. We install the batteries and inverter so your essential appliances keep running." },
@@ -136,11 +159,21 @@ export default function SolarInstallationPage() {
                                 </div>
                             ))}
                         </div>
+
+                        <div className="flex justify-center">
+                            <button
+                                onClick={() => setIsModalOpen(true)}
+                                className="px-10 py-4 bg-[#FFCA08] hover:bg-[#E5B507] text-gray-900 rounded-xl font-extrabold text-xl transition-all transform hover:scale-105 active:scale-95 shadow-xl flex items-center gap-3 group"
+                            >
+                                Free Solar Inspection
+                                <FaBoltLightning className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                            </button>
+                        </div>
                     </div>
                 </section>
 
                 {/* How the Process Works */}
-                <section className="py-20 bg-white border-t border-gray-100 relative overflow-hidden">
+                <section className="py-12 md:py-20 bg-white border-t border-gray-100 relative overflow-hidden">
                     <div className="container mx-auto px-4 max-w-5xl relative z-10">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#015CAB] mb-6">
@@ -174,28 +207,41 @@ export default function SolarInstallationPage() {
                 </section>
 
                 {/* Real Projects */}
-                <section className="py-24 bg-gray-50 border-t border-gray-100">
-                    <div className="container mx-auto px-4 max-w-6xl">
+                <section className="py-12 md:py-24 bg-white relative overflow-hidden z-10">
+                    {/* Background Image with Overlay */}
+                    <div className="absolute inset-0 z-0">
+                        <Image
+                            src="/solar_background.png"
+                            alt="Background Solar Panels"
+                            fill
+                            quality={90}
+                            className="object-cover object-center"
+                        />
+                        <div className="absolute inset-0 bg-white/40 mix-blend-overlay"></div>
+                        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/20 to-white"></div>
+                    </div>
+
+                    <div className="container mx-auto px-4 max-w-6xl relative z-10 text-center md:text-left">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div>
-                                <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-6">
+                                <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 mb-6 uppercase md:normal-case">
                                     Real Projects.<br />Real Results.
                                 </h2>
-                                <p className="text-xl text-gray-600 font-medium mb-8 leading-relaxed">
+                                <p className="text-xl text-gray-700 font-medium mb-8 leading-relaxed">
                                     We have been working in the Helderberg and Boland for a long time, and our client list speaks for itself. We believe in providing tangible references for our work.
                                 </p>
 
                                 <div className="space-y-6">
-                                    <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 border-l-4 border-l-[#015CAB]">
+                                    <div className="bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-sm border border-gray-200/60 border-l-4 border-l-[#015CAB] transition-transform hover:-translate-y-1">
                                         <h3 className="text-xl font-bold text-gray-900 mb-2">Val De Vie Estate, Stellenbosch</h3>
-                                        <p className="text-gray-600 font-medium">
+                                        <p className="text-gray-700 font-medium">
                                             We are currently installing a 100kW commercial solar system at Val De Vie Estate in Stellenbosch. This is a large-scale project that will significantly reduce the estate's electricity costs and provide reliable power during load shedding.
                                         </p>
                                     </div>
 
-                                    <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 border-l-4 border-l-[#FFCA08]">
+                                    <div className="bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-sm border border-gray-200/60 border-l-4 border-l-[#FFCA08] transition-transform hover:-translate-y-1">
                                         <h3 className="text-xl font-bold text-gray-900 mb-2">Residential & Commercial References</h3>
-                                        <p className="text-gray-600 font-medium">
+                                        <p className="text-gray-700 font-medium">
                                             We can point you to various solar installations we have done in your specific area, from standard home setups in Somerset West and Strand to premium guesthouses in Franschhoek.
                                         </p>
                                     </div>
@@ -203,11 +249,11 @@ export default function SolarInstallationPage() {
                             </div>
                             <div className="relative">
                                 {/* Decorational illustration */}
-                                <div className="aspect-[4/3] bg-[#015CAB] rounded-[2rem] overflow-hidden p-8 flex flex-col justify-end relative shadow-2xl">
+                                <div className="aspect-[4/3] bg-[#015CAB]/95 backdrop-blur-md rounded-[2rem] overflow-hidden p-8 flex flex-col justify-end relative shadow-2xl border border-white/10">
                                     <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4JyBoZWlnaHQ9JzgnPgo8cmVjdCB3aWR0aD0nOCwgaGVpZ2h0PSc4JyBmaWxsPScjZmZmJyBmaWxsLW9wYWNpdHk9JzAuMScvPgo8cGF0aCBkPSdNMCAwaDhyOHYtOEgweicgZmlsbD0nI2ZmZicgZmlsbC1vcGFjaXR5PScwLjA1JyAvPgo8L3N2Zz4=')] opacity-20"></div>
                                     <FaSolarPanel className="text-white/10 w-64 h-64 absolute -top-10 -right-10" />
                                     <div className="relative z-10 text-white space-y-2">
-                                        <div className="inline-block px-3 py-1 bg-[#FFCA08] text-gray-900 text-sm font-bold rounded-lg mb-2">Commercial Project Highlight</div>
+                                        <div className="inline-block px-3 py-1 bg-[#FFCA08] text-gray-900 text-sm font-bold rounded-lg mb-2 shadow-sm">Commercial Project Highlight</div>
                                         <h4 className="text-3xl font-black">100kW System</h4>
                                         <p className="font-medium text-cyan-50">Providing energy independence and sustainability for premium residential estates.</p>
                                     </div>
@@ -218,7 +264,7 @@ export default function SolarInstallationPage() {
                 </section>
 
                 {/* Price Estimation */}
-                <section className="py-24 bg-white border-t border-gray-100">
+                <section className="py-24 bg-white">
                     <div className="container mx-auto px-4 max-w-5xl">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-6">
@@ -291,7 +337,7 @@ export default function SolarInstallationPage() {
                             </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                             {[
                                 { title: "18 Years Experience", icon: FaClockRotateLeft, desc: "We know this area, we know the local suppliers, and we know what works here." },
                                 { title: "Qualified Electricians", icon: FaShieldHalved, desc: "All our electrical work is done by registered electricians and comes with a COC." },
@@ -309,6 +355,16 @@ export default function SolarInstallationPage() {
                                 </div>
                             ))}
                         </div>
+
+                        <div className="flex justify-center">
+                            <button
+                                onClick={() => setIsModalOpen(true)}
+                                className="px-10 py-4 bg-[#FFCA08] hover:bg-[#E5B507] text-gray-900 rounded-xl font-extrabold text-xl transition-all transform hover:scale-105 active:scale-95 shadow-xl flex items-center gap-3 group"
+                            >
+                                Free Solar Inspection
+                                <FaBoltLightning className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                            </button>
+                        </div>
                     </div>
                 </section>
 
@@ -320,7 +376,7 @@ export default function SolarInstallationPage() {
                             <div className="overflow-hidden rounded-xl shadow-2xl h-[400px] w-full bg-white relative">
                                 {/* GBP Map Embed */}
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105943.51352433066!2d18.8021!3d-34.0200!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dccdd0e82c59567%3A0x6bba46c53579c3cf!2sSomerset%20West%2C%20Cape%20Town!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4023.9526587094174!2d18.820527300000002!3d-34.063464499999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcdb5947a717cc1%3A0x6ffb176a283db73e!2sEAR%20Engineering!5e1!3m2!1sen!2sza!4v1772199538942!5m2!1sen!2sza"
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0 }}
@@ -330,7 +386,7 @@ export default function SolarInstallationPage() {
                                 ></iframe>
                             </div>
 
-                            <div className="space-y-6">
+                            <div className="space-y-6 text-center lg:text-left">
                                 <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-2">
                                     Locations We Serve
                                 </h2>
@@ -338,7 +394,7 @@ export default function SolarInstallationPage() {
                                     EARE Engineering is based in the Helderberg and we offer reputable solar installations, electrical, and HVAC services for homeowners and businesses in the surrounding areas.
                                 </p>
 
-                                <div className="grid grid-cols-2 gap-x-4 gap-y-3">
+                                <div className="grid grid-cols-2 gap-x-4 gap-y-3 text-left">
                                     {[
                                         "Somerset West",
                                         "Stellenbosch",
@@ -359,6 +415,8 @@ export default function SolarInstallationPage() {
                         </div>
                     </div>
                 </section>
+
+                <Reviews />
 
                 <FAQ faqs={solarFaqs} />
 

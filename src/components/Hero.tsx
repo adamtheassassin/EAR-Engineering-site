@@ -20,9 +20,9 @@ export default function Hero({ onOpenModal, title, subtitle }: HeroProps) {
 
             <div className="container mx-auto px-4 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
+                    <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
 
-                        <div className="inline-flex items-center bg-cyan-900/30 font-semibold px-4 py-2 rounded-full text-base text-cyan-50 border border-cyan-400/30">
+                        <div className="inline-flex items-center bg-cyan-900/30 font-semibold px-4 py-2 rounded-full text-base text-cyan-50 border border-cyan-400/30 w-fit">
                             <span className="flex w-2 h-2 bg-green-400 rounded-full mr-2 z-10 animate-pulse"></span>
                             Available for Service in {location}
                         </div>
@@ -57,24 +57,24 @@ export default function Hero({ onOpenModal, title, subtitle }: HeroProps) {
                             </a>
                         </div>
 
-                        <div className="flex items-center gap-2 text-sm font-medium text-cyan-100">
+                        <div className="flex items-center justify-center lg:justify-start gap-2 text-sm font-medium text-cyan-100">
                             <ClockAlert className="w-5 h-5 text-[#FFCA08]" /> We’ll contact you within 1 hour (during business hours).
                         </div>
 
-                        <div className="grid grid-cols-2 gap-4 mt-8 lg:mt-12 border-t border-cyan-400/30 pt-8">
-                            <div className="flex items-start gap-2">
+                        <div className="hidden lg:grid grid-cols-2 gap-4 mt-8 lg:mt-12 border-t border-cyan-400/30 pt-8 w-full">
+                            <div className="flex items-start lg:justify-start justify-center gap-2">
                                 <ShieldCheck className="w-5 h-5 text-[#FFCA08] flex-shrink-0" />
                                 <span className="text-sm font-medium text-cyan-50">Since 1994</span>
                             </div>
-                            <div className="flex items-start gap-2">
+                            <div className="flex items-start lg:justify-start justify-center gap-2">
                                 <BadgeCheck className="w-5 h-5 text-[#FFCA08] flex-shrink-0" />
                                 <span className="text-sm font-medium text-cyan-50">COC issued where applicable</span>
                             </div>
-                            <div className="flex items-start gap-2">
+                            <div className="flex items-start lg:justify-start justify-center gap-2">
                                 <LayoutList className="w-5 h-5 text-[#FFCA08] flex-shrink-0" />
                                 <span className="text-sm font-medium text-cyan-50">Project-managed installs</span>
                             </div>
-                            <div className="flex items-start gap-2">
+                            <div className="flex items-start lg:justify-start justify-center gap-2">
                                 <Zap className="w-5 h-5 text-[#FFCA08] flex-shrink-0" />
                                 <span className="text-sm font-medium text-cyan-50">Same-day support when available</span>
                             </div>
