@@ -88,49 +88,6 @@ export default function SolarInstallationPage() {
 
                 <TrustedBy />
 
-                {/* Introduction / Load Shedding Section */}
-                <section className="py-20 bg-white">
-                    <div className="container mx-auto px-4 max-w-6xl">
-                        <div className="text-center mb-16">
-                            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#015CAB] mb-6">
-                                Reliable Solar Power for Your Home or Business
-                            </h2>
-                        </div>
-
-                        <div className="grid md:grid-cols-3 gap-8">
-                            <div className="bg-gray-50 border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center md:items-start text-center md:text-left">
-                                <div className="w-14 h-14 bg-red-100 text-red-600 rounded-full flex items-center justify-center mb-6">
-                                    <FaPlug className="w-6 h-6" />
-                                </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-4">The Cost of Outages</h3>
-                                <p className="text-gray-600 font-medium leading-relaxed">
-                                    South Africans have been dealing with load shedding for years. Candles and power banks only go so far. Businesses lose money every time the power goes off, families are frustrated, and electricity prices keep climbing.
-                                </p>
-                            </div>
-
-                            <div className="bg-gray-50 border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center md:items-start text-center md:text-left">
-                                <div className="w-14 h-14 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6">
-                                    <FaBatteryFull className="w-6 h-6" />
-                                </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-4">Uninterrupted Power</h3>
-                                <p className="text-gray-600 font-medium leading-relaxed">
-                                    A solar system with battery backup changes all of that. When the grid goes down, your batteries kick in and your lights stay on. Your fridge stays cold, your business keeps operating, and you use far less grid electricity.
-                                </p>
-                            </div>
-
-                            <div className="bg-gray-50 border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center md:items-start text-center md:text-left">
-                                <div className="w-14 h-14 bg-yellow-100 text-[#d49a00] rounded-full flex items-center justify-center mb-6">
-                                    <FaMapLocationDot className="w-6 h-6" />
-                                </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-4">Ideal for the Cape</h3>
-                                <p className="text-gray-600 font-medium leading-relaxed">
-                                    Western Cape clients are in a great position for solar. The region gets abundant sunshine throughout the year, meaning panels produce energy reliably, making your investment work incredibly hard.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 {/* Our Solar Services Include */}
                 <section className="py-20 bg-gray-50 border-t border-gray-100">
                     <div className="container mx-auto px-4 max-w-6xl">
@@ -265,6 +222,49 @@ export default function SolarInstallationPage() {
                     </div>
                 </section>
 
+                {/* Why Choose Us */}
+                <section className="py-20 bg-gray-50 border-t border-gray-100">
+                    <div className="container mx-auto px-4 max-w-6xl">
+                        <div className="text-center mb-16">
+                            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-6">
+                                Why Clients Choose EAR Engineering
+                            </h2>
+                            <p className="text-xl text-gray-600 font-medium max-w-2xl mx-auto">
+                                There are a lot of solar companies out there right now. Here is why our clients come back to us and refer us to others.
+                            </p>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                            {[
+                                { title: "18 Years Experience", icon: FaClockRotateLeft, desc: "We know this area, we know the local suppliers, and we know what works here." },
+                                { title: "Qualified Electricians", icon: FaShieldHalved, desc: "All our electrical work is done by registered electricians and comes with a COC." },
+                                { title: "Everything Under One Roof", icon: FaBoltLightning, desc: "Electrical, solar, and air conditioning—all managed by one company to make things simple." },
+                                { title: "No Disappearing Acts", icon: FaUserTie, desc: "We are a local business. When you call us six months after installation, we pick up." }
+                            ].map((item, i) => (
+                                <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex gap-4 items-start">
+                                    <div className="bg-cyan-50 p-3 rounded-xl text-[#015CAB]">
+                                        <item.icon className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-gray-900 text-lg mb-1">{item.title}</h3>
+                                        <p className="text-gray-600 font-medium text-sm leading-relaxed">{item.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className="flex justify-center">
+                            <button
+                                onClick={() => setIsModalOpen(true)}
+                                className="px-10 py-4 bg-[#FFCA08] hover:bg-[#E5B507] text-gray-900 rounded-xl font-extrabold text-xl transition-all transform hover:scale-105 active:scale-95 shadow-xl flex items-center gap-3 group"
+                            >
+                                Free Solar Inspection
+                                <FaBoltLightning className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
                 {/* Price Estimation */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4 max-w-5xl">
@@ -327,45 +327,45 @@ export default function SolarInstallationPage() {
                     </div>
                 </section>
 
-                {/* Why Choose Us */}
-                <section className="py-20 bg-gray-50 border-t border-gray-100">
+                {/* Introduction / Load Shedding Section */}
+                <section className="py-20 bg-white border-t border-gray-100">
                     <div className="container mx-auto px-4 max-w-6xl">
                         <div className="text-center mb-16">
-                            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-6">
-                                Why Clients Choose EAR Engineering
+                            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#015CAB] mb-6">
+                                Reliable Solar Power for Your Home or Business
                             </h2>
-                            <p className="text-xl text-gray-600 font-medium max-w-2xl mx-auto">
-                                There are a lot of solar companies out there right now. Here is why our clients come back to us and refer us to others.
-                            </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                            {[
-                                { title: "18 Years Experience", icon: FaClockRotateLeft, desc: "We know this area, we know the local suppliers, and we know what works here." },
-                                { title: "Qualified Electricians", icon: FaShieldHalved, desc: "All our electrical work is done by registered electricians and comes with a COC." },
-                                { title: "Everything Under One Roof", icon: FaBoltLightning, desc: "Electrical, solar, and air conditioning—all managed by one company to make things simple." },
-                                { title: "No Disappearing Acts", icon: FaUserTie, desc: "We are a local business. When you call us six months after installation, we pick up." }
-                            ].map((item, i) => (
-                                <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex gap-4 items-start">
-                                    <div className="bg-cyan-50 p-3 rounded-xl text-[#015CAB]">
-                                        <item.icon className="w-6 h-6" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-gray-900 text-lg mb-1">{item.title}</h3>
-                                        <p className="text-gray-600 font-medium text-sm leading-relaxed">{item.desc}</p>
-                                    </div>
+                        <div className="grid md:grid-cols-3 gap-8">
+                            <div className="bg-gray-50 border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center md:items-start text-center md:text-left">
+                                <div className="w-14 h-14 bg-red-100 text-red-600 rounded-full flex items-center justify-center mb-6">
+                                    <FaPlug className="w-6 h-6" />
                                 </div>
-                            ))}
-                        </div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-4">The Cost of Outages</h3>
+                                <p className="text-gray-600 font-medium leading-relaxed">
+                                    South Africans have been dealing with load shedding for years. Candles and power banks only go so far. Businesses lose money every time the power goes off, families are frustrated, and electricity prices keep climbing.
+                                </p>
+                            </div>
 
-                        <div className="flex justify-center">
-                            <button
-                                onClick={() => setIsModalOpen(true)}
-                                className="px-10 py-4 bg-[#FFCA08] hover:bg-[#E5B507] text-gray-900 rounded-xl font-extrabold text-xl transition-all transform hover:scale-105 active:scale-95 shadow-xl flex items-center gap-3 group"
-                            >
-                                Free Solar Inspection
-                                <FaBoltLightning className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                            </button>
+                            <div className="bg-gray-50 border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center md:items-start text-center md:text-left">
+                                <div className="w-14 h-14 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6">
+                                    <FaBatteryFull className="w-6 h-6" />
+                                </div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-4">Uninterrupted Power</h3>
+                                <p className="text-gray-600 font-medium leading-relaxed">
+                                    A solar system with battery backup changes all of that. When the grid goes down, your batteries kick in and your lights stay on. Your fridge stays cold, your business keeps operating, and you use far less grid electricity.
+                                </p>
+                            </div>
+
+                            <div className="bg-gray-50 border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center md:items-start text-center md:text-left">
+                                <div className="w-14 h-14 bg-yellow-100 text-[#d49a00] rounded-full flex items-center justify-center mb-6">
+                                    <FaMapLocationDot className="w-6 h-6" />
+                                </div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-4">Ideal for the Cape</h3>
+                                <p className="text-gray-600 font-medium leading-relaxed">
+                                    Western Cape clients are in a great position for solar. The region gets abundant sunshine throughout the year, meaning panels produce energy reliably, making your investment work incredibly hard.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </section>
