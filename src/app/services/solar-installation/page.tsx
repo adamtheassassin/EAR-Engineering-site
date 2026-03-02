@@ -23,7 +23,7 @@ export default function SolarInstallationPage() {
         { q: "What is a Certificate of Compliance (COC)?", a: "A COC is a document issued by a registered electrician that confirms your electrical installation meets the required safety standards. It is important for your insurance and for the safety of everyone in the building. Every installation we do includes a COC." },
         { q: "Can I start with just a battery backup and add solar panels later?", a: "Yes. We design our systems with expansion in mind. If you want to start with a battery backup system and add solar panels later, we will make sure the initial installation is set up in a way that makes the upgrade simple and affordable." },
         { q: "How much does solar installation cost in the Western Cape?", a: "A basic battery backup system starts from around R25,000. A mid-size residential solar system with battery storage typically falls between R100,000 and R180,000. Commercial systems vary widely depending on size. The only accurate way to get a price is through a site assessment, which we offer for free." },
-        { q: "Do you also do electrical and air conditioning work?", a: "Yes. EARE Engineering offers electrical installations and maintenance, air conditioning installation and servicing, and solar installation all under one roof. Many of our clients use us for all three services." }
+        { q: "Do you also do electrical and air conditioning work?", a: "Yes. EAR Engineering offers electrical installations and maintenance, air conditioning installation and servicing, and solar installation all under one roof. Many of our clients use us for all three services." }
     ];
 
     const faqSchema = {
@@ -138,7 +138,7 @@ export default function SolarInstallationPage() {
                                 How the Process Works
                             </h2>
                             <p className="text-xl text-gray-600 font-medium max-w-2xl mx-auto">
-                                Going solar with EARE Engineering is a straightforward process. Here is what to expect from start to finish:
+                                Going solar with EAR Engineering is a straightforward process. Here is what to expect from start to finish:
                             </p>
                         </div>
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
