@@ -5,15 +5,15 @@ import { CONTACT } from "@/lib/constants";
 export default function Footer() {
     return (
         <footer className="bg-white text-gray-600 py-16 border-t border-gray-200 pb-28 md:pb-8 flex flex-col">
-            <div className="container mx-auto px-4 grid md:grid-cols-4 gap-12 flex-grow">
-                <div className="md:col-span-1">
-                    <div className="mb-6">
+            <div className="container mx-auto px-4 grid md:grid-cols-12 gap-8 lg:gap-12 flex-grow">
+                <div className="md:col-span-3">
+                    <div className="mb-6 flex">
                         <Image
                             src="/EAR Engineering Menu Logo.png"
                             alt="EAR Engineering Logo"
                             width={220}
                             height={60}
-                            className="object-contain"
+                            className="object-contain object-left"
                         />
                     </div>
                     <p className="text-sm font-medium leading-relaxed mb-6 text-gray-600">
@@ -21,7 +21,7 @@ export default function Footer() {
                     </p>
                 </div>
 
-                <div>
+                <div className="md:col-span-3">
                     <h4 className="text-[#015CAB] font-bold mb-6 text-lg tracking-wide uppercase">Contact Us</h4>
                     <ul className="space-y-4">
                         <li>
@@ -43,16 +43,14 @@ export default function Footer() {
                     </ul>
                 </div>
 
-                <div>
+                <div className="md:col-span-3">
                     <h4 className="text-[#015CAB] font-bold mb-6 text-lg tracking-wide uppercase">Location</h4>
                     <div className="flex items-start gap-3 text-sm font-medium text-gray-600">
-                        <div className="bg-cyan-50 p-2 rounded-lg mt-1">
+                        <div className="bg-cyan-50 p-2 rounded-lg mt-1 flex-shrink-0">
                             <MapPin className="w-4 h-4 text-[#015CAB]" />
                         </div>
                         <div>
-                            {CONTACT.address.split(", ").map((line, i) => (
-                                <div key={i}>{line}</div>
-                            ))}
+                            <div className="leading-relaxed">{CONTACT.address}</div>
                             <a
                                 href={`https://maps.google.com/?q=${encodeURIComponent(CONTACT.address)}`}
                                 target="_blank"
@@ -65,11 +63,11 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div>
+                <div className="md:col-span-3">
                     <h4 className="text-[#015CAB] font-bold mb-6 text-lg tracking-wide uppercase">Business Hours</h4>
                     <ul className="space-y-4 text-sm font-medium">
                         <li className="flex items-start gap-3">
-                            <div className="bg-cyan-50 p-2 rounded-lg">
+                            <div className="bg-cyan-50 p-2 rounded-lg flex-shrink-0">
                                 <Clock className="w-4 h-4 text-[#015CAB]" />
                             </div>
                             <div className="space-y-2 text-gray-600">

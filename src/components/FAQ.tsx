@@ -15,12 +15,10 @@ export default function FAQ({ faqs: customFaqs }: FAQProps) {
         { q: "How quickly can you respond to an emergency?", a: "During business hours, we prioritize urgent breakdowns (like power outages or critical faults) and aim to have a technician on-site as fast as possible." },
         { q: "Are your solar installations registered with the municipality?", a: "We manage the SSEG registration process to ensure your new solar setup is entirely legal and compliant with local municipal regulations." },
         { q: "Do you offer warranties on your work?", a: "Yes, we provide workmanship warranties on our installations. The specific timeframe depends on the project details, which we outline transparently beforehand." },
-        { q: "What areas do you service?", a: "We primarily service the Helderberg area (Somerset West, Strand, Gordon's Bay) and the greater Cape Town region." },
         { q: "Do you handle commercial projects?", a: "Absolutely. We manage large-scale commercial electrical, refrigeration, and solar projects with dedicated project management." },
         { q: "How long does a typical solar installation take?", a: "Most residential solar installations take between 1 to 3 days, depending on the system size and roof complexity." },
         { q: "Can you fix an air conditioner installed by someone else?", a: "Yes, our technicians are trained to fault-find and repair air conditioners and refrigeration units from most major brands, regardless of who installed them." },
-        { q: "Is there a call-out fee?", a: "Yes, a standard call-out fee applies for fault finding and diagnostics. Once the issue is identified, we provide a transparent quote for the necessary repairs. Free quotes apply to new installations." },
-        { q: "How do I request a quote?", a: "You can click the 'Free Quote' button on our website, call us directly, or send us a WhatsApp message. We respond within 1 hour during business hours." }
+        { q: "Is there a call-out fee?", a: "Yes, a standard call-out fee applies for fault finding and diagnostics. Once the issue is identified, we provide a transparent quote for the necessary repairs. Free quotes apply to new installations." }
     ];
 
     const faqs = customFaqs || defaultFaqs;

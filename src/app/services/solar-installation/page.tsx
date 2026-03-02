@@ -23,9 +23,7 @@ export default function SolarInstallationPage() {
         { q: "What is a Certificate of Compliance (COC)?", a: "A COC is a document issued by a registered electrician that confirms your electrical installation meets the required safety standards. It is important for your insurance and for the safety of everyone in the building. Every installation we do includes a COC." },
         { q: "Can I start with just a battery backup and add solar panels later?", a: "Yes. We design our systems with expansion in mind. If you want to start with a battery backup system and add solar panels later, we will make sure the initial installation is set up in a way that makes the upgrade simple and affordable." },
         { q: "How much does solar installation cost in the Western Cape?", a: "A basic battery backup system starts from around R25,000. A mid-size residential solar system with battery storage typically falls between R100,000 and R180,000. Commercial systems vary widely depending on size. The only accurate way to get a price is through a site assessment, which we offer for free." },
-        { q: "What areas do you cover?", a: "We cover Somerset West, Strand, Gordon's Bay, Stellenbosch, Franschhoek, Paarl, Grabouw and Cape Town. Our main base is in Somerset West, so our response times in the Helderberg area are especially fast." },
-        { q: "Do you also do electrical and air conditioning work?", a: "Yes. EARE Engineering offers electrical installations and maintenance, air conditioning installation and servicing, and solar installation all under one roof. Many of our clients use us for all three services." },
-        { q: "How do I get a quote?", a: "Simply get in touch with us and we will arrange a free site assessment. We visit your property, look at what you need, and come back to you with a clear proposal. There is no cost and no obligation." }
+        { q: "Do you also do electrical and air conditioning work?", a: "Yes. EARE Engineering offers electrical installations and maintenance, air conditioning installation and servicing, and solar installation all under one roof. Many of our clients use us for all three services." }
     ];
 
     const faqSchema = {
@@ -89,7 +87,7 @@ export default function SolarInstallationPage() {
                 <TrustedBy />
 
                 {/* Our Solar Services Include */}
-                <section className="py-20 bg-gray-50 border-t border-gray-100">
+                <section className="py-20 bg-gray-50">
                     <div className="container mx-auto px-4 max-w-6xl">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-6">
@@ -170,14 +168,14 @@ export default function SolarInstallationPage() {
                     {/* Background Image with Overlay */}
                     <div className="absolute inset-0 z-0">
                         <Image
-                            src="/solar_background.png"
+                            src="/Background Images/Solarbackground residential.webp"
                             alt="Background Solar Panels"
                             fill
                             quality={90}
                             className="object-cover object-center"
                         />
-                        <div className="absolute inset-0 bg-white/40 mix-blend-overlay"></div>
-                        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/20 to-white"></div>
+                        <div className="absolute inset-0 bg-white/50 mix-blend-screen"></div>
+                        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/30 to-gray-50"></div>
                     </div>
 
                     <div className="container mx-auto px-4 max-w-6xl relative z-10 text-center md:text-left">
@@ -223,7 +221,7 @@ export default function SolarInstallationPage() {
                 </section>
 
                 {/* Why Choose Us */}
-                <section className="py-20 bg-gray-50 border-t border-gray-100">
+                <section className="py-20 bg-gray-50">
                     <div className="container mx-auto px-4 max-w-6xl">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-6">
@@ -241,14 +239,14 @@ export default function SolarInstallationPage() {
                                 { title: "Everything Under One Roof", icon: FaBoltLightning, desc: "Electrical, solar, and air conditioning—all managed by one company to make things simple." },
                                 { title: "No Disappearing Acts", icon: FaUserTie, desc: "We are a local business. When you call us six months after installation, we pick up." }
                             ].map((item, i) => (
-                                <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex gap-4 items-start">
-                                    <div className="bg-cyan-50 p-3 rounded-xl text-[#015CAB]">
-                                        <item.icon className="w-6 h-6" />
+                                <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-4">
+                                    <div className="flex items-center gap-4">
+                                        <div className="bg-cyan-50 p-3 rounded-xl text-[#015CAB] flex-shrink-0">
+                                            <item.icon className="w-6 h-6" />
+                                        </div>
+                                        <h3 className="font-bold text-gray-900 text-lg leading-tight">{item.title}</h3>
                                     </div>
-                                    <div>
-                                        <h3 className="font-bold text-gray-900 text-lg mb-1">{item.title}</h3>
-                                        <p className="text-gray-600 font-medium text-sm leading-relaxed">{item.desc}</p>
-                                    </div>
+                                    <p className="text-gray-600 font-medium text-sm leading-relaxed">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -371,7 +369,7 @@ export default function SolarInstallationPage() {
                 </section>
 
                 {/* Areas We Serve with GBP Embed */}
-                <section className="bg-[#66A4D9] py-20 text-white">
+                <section className="bg-[#015CAB] py-20 text-white">
                     <div className="container mx-auto px-4 max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
