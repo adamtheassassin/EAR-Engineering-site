@@ -16,7 +16,7 @@ export default function SolarInstallationPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const solarFaqs = [
-        { q: "What is included in a solar installation?", a: "A full installation from EARE Engineering includes solar panels, an inverter, battery storage, all wiring and electrical connections, a Certificate of Compliance, and a handover showing you how to use and monitor your system. We handle everything in-house." },
+        { q: "What is included in a solar installation?", a: "A full installation from EAR Engineering includes solar panels, an inverter, battery storage, all wiring and electrical connections, a Certificate of Compliance, and a handover showing you how to use and monitor your system. We handle everything in-house." },
         { q: "Will my solar system keep the power on during load shedding?", a: "Yes, as long as you have battery storage included in your system. When the grid goes off, your batteries supply power to your home or business. The size of your batteries determines how long you can run and which appliances you can use during an outage." },
         { q: "How long does installation take?", a: "Most residential installations take one to two days on site. From your first enquiry to a fully working system, you are usually looking at two to three weeks. This depends on equipment availability and your property. Larger commercial jobs take longer." },
         { q: "Do I need permission from the municipality to install solar?", a: "It depends on your municipality and the size of your system. For most residential installations in the Western Cape, the requirements are manageable. We handle all the necessary paperwork and applications on your behalf so you do not have to worry about it." },
@@ -78,10 +78,11 @@ export default function SolarInstallationPage() {
                     onOpenModal={() => setIsModalOpen(true)}
                     title={
                         <>
-                            Solar Installation
+                            <span className="text-[#FFCA08]">Solar</span> Installation
                         </>
                     }
                     subtitle="We install solar power systems for homes, businesses and commercial properties across Somerset West, Stellenbosch and the Helderberg."
+                    image="/Background Images/Solarbackground residential.webp"
                 />
 
                 <TrustedBy />

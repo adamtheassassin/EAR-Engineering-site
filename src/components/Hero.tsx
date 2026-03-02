@@ -6,9 +6,10 @@ interface HeroProps {
     onOpenModal: () => void;
     title?: React.ReactNode;
     subtitle?: React.ReactNode;
+    image?: string;
 }
 
-export default function Hero({ onOpenModal, title, subtitle }: HeroProps) {
+export default function Hero({ onOpenModal, title, subtitle, image = "/hero-engineering.png" }: HeroProps) {
     const location = "Helderberg & Cape Town";
 
     return (
@@ -84,7 +85,7 @@ export default function Hero({ onOpenModal, title, subtitle }: HeroProps) {
                     <div className="hidden lg:block relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-300">
                         <div className="relative h-[600px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/10 group">
                             <Image
-                                src="/hero-engineering.png"
+                                src={image}
                                 alt="Professional Engineering Services"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-110"
