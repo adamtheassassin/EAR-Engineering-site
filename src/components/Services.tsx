@@ -23,7 +23,9 @@ export default function Services({ onOpenModal }: ServicesProps) {
                 "Power distribution, DB boards, lighting & plug circuits",
                 "Standby generator installation and changeover systems",
                 "Testing, commissioning & COC certificates"
-            ]
+            ],
+            href: "/services",
+            linkText: "View Electrical Services"
         },
         {
             title: "Aircon",
@@ -42,7 +44,9 @@ export default function Services({ onOpenModal }: ServicesProps) {
                 "Residential and estate installations",
                 "Commercial and office air-conditioning",
                 "Preventative maintenance and breakdown support"
-            ]
+            ],
+            href: "/services/ac-installation",
+            linkText: "View Aircon Services"
         },
         {
             title: "Solar",
@@ -61,7 +65,9 @@ export default function Services({ onOpenModal }: ServicesProps) {
                 "Battery backup solutions",
                 "Commercial solar installations up to 100kW",
                 "Solar system upgrades and expansions"
-            ]
+            ],
+            href: "/services/solar-installation",
+            linkText: "View Solar Services"
         }
     ];
 
@@ -116,12 +122,20 @@ export default function Services({ onOpenModal }: ServicesProps) {
                                     </ul>
                                 </div>
 
-                                <button
-                                    onClick={onOpenModal}
-                                    className="w-full py-4 text-center rounded-xl bg-[#FFCA08] hover:bg-[#E5B507] text-gray-900 font-bold transition shadow-md z-10"
-                                >
-                                    Request Free Quote
-                                </button>
+                                <div className="space-y-3 relative z-10">
+                                    <button
+                                        onClick={onOpenModal}
+                                        className="w-full py-4 text-center rounded-xl bg-[#FFCA08] hover:bg-[#E5B507] text-gray-900 font-extrabold transition shadow-md"
+                                    >
+                                        Request Free Quote
+                                    </button>
+                                    <a
+                                        href={svc.href}
+                                        className="w-full py-3.5 text-center flex items-center justify-center rounded-xl bg-gray-50 border border-gray-200 text-gray-700 font-bold hover:border-[#015CAB] hover:text-[#015CAB] transition-colors"
+                                    >
+                                        {svc.linkText}
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     ))}

@@ -186,7 +186,7 @@ export default function SolarInstallationPage() {
                     </div>
 
                     <div className="container mx-auto px-4 max-w-6xl relative z-10 text-center md:text-left">
-                        <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div className="grid md:grid-cols-2 gap-12 items-stretch">
                             <div>
                                 <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 mb-6 uppercase md:normal-case">
                                     Real Projects.<br />Real Results.
@@ -213,7 +213,7 @@ export default function SolarInstallationPage() {
                             </div>
                             <div className="relative">
                                 {/* Real Project Photo */}
-                                <div className="aspect-[4/3] rounded-[2rem] overflow-hidden relative shadow-2xl border border-white/20 group">
+                                <div className="h-full min-h-[400px] rounded-[2rem] overflow-hidden relative shadow-2xl border border-white/20 group">
                                     <Image
                                         src="/Work Photos/solar installation with panels.webp"
                                         alt="100kW Solar Installation with Panels"

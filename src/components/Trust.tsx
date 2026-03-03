@@ -18,18 +18,14 @@ export default function Trust() {
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
             />
-            {/* Fade from nothing at top to overlay at bottom */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#015CAB]/80 via-[#015CAB]/40 to-transparent"></div>
+            {/* Fade from nothing to overlay specifically behind the text at the bottom */}
+            <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-[#015CAB]/85 via-[#015CAB]/35 to-transparent"></div>
 
             <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-10 pb-4 md:pb-10 text-white">
                 <h3 className="text-2xl md:text-4xl font-black mb-2 md:mb-4 z-10 text-yellow-400">Since 1994</h3>
                 <p className="text-sm md:text-xl font-medium leading-relaxed z-10 opacity-95 max-w-md">
                     Over 30 years of specialized engineering solutions for homes and businesses. Trust the experts to manage your project from concept to certificate of compliance.
                 </p>
-
-                <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12 z-10 opacity-10">
-                    <ShieldCheck className="w-24 h-24 md:w-48 md:h-48" />
-                </div>
             </div>
         </div>
     );

@@ -304,7 +304,7 @@ export default function ACInstallationPage() {
                 <section className="py-12 md:py-24 bg-gray-50 relative overflow-hidden z-10">
                     <div className="absolute inset-0 z-0">
                         <Image
-                            src="/Work Photos/electrical installation job somerset west.webp"
+                            src="/Work Photos/ac_background_stellenbosch.webp"
                             alt="Air Conditioning Installation Job"
                             fill
                             quality={90}

@@ -14,6 +14,7 @@ import Process from "@/components/Process";
 import ServiceAreas from "@/components/ServiceAreas";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
+import HomeMap from "@/components/HomeMap";
 import Footer from "@/components/Footer";
 import QuoteModal from "@/components/QuoteModal";
 
@@ -37,6 +38,7 @@ export default function Home() {
         <ServiceAreas />
         <FAQ />
         <FinalCTA onOpenModal={() => setIsModalOpen(true)} />
+        <HomeMap />
       </main>
 
       <Footer />

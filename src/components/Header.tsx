@@ -12,6 +12,7 @@ interface HeaderProps {
 
 export default function Header({ onOpenModal, mobileCtaText, mobileCtaIcon }: HeaderProps) {
     const [showSticky, setShowSticky] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         let observer: IntersectionObserver;
@@ -54,6 +55,12 @@ export default function Header({ onOpenModal, mobileCtaText, mobileCtaIcon }: He
 
                     <div className="hidden md:flex items-center gap-6">
                         <a
+                            href="/services"
+                            className="font-semibold text-gray-700 hover:text-[#015CAB] transition"
+                        >
+                            Services
+                        </a>
+                        <a
                             href={CONTACT.phoneLink}
                             className="flex items-center gap-2 font-semibold text-gray-700 hover:text-[#015CAB] transition"
                         >
@@ -78,6 +85,7 @@ export default function Header({ onOpenModal, mobileCtaText, mobileCtaIcon }: He
                             <Phone className="w-6 h-6" />
                         </a>
                         <button
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             className="p-2.5 text-gray-700 transition active:scale-95"
                             aria-label="Menu"
                         >
@@ -85,6 +93,36 @@ export default function Header({ onOpenModal, mobileCtaText, mobileCtaIcon }: He
                         </button>
                     </div>
                 </div>
+
+                {/* Mobile Menu Dropdown */}
+                {isMobileMenuOpen && (
+                    <div className="md:hidden absolute top-full left-0 w-full bg-white border-b shadow-lg flex flex-col transition-all duration-300">
+                        <a
+                            href="/services"
+                            className="px-6 py-4 border-b border-gray-100 text-lg font-bold text-gray-800 hover:bg-gray-50 hover:text-[#015CAB] transition-colors"
+                        >
+                            Our Services
+                        </a>
+                        <a
+                            href="/services/solar-installation"
+                            className="px-6 py-4 border-b border-gray-100 font-semibold text-gray-700 hover:bg-gray-50 hover:text-[#015CAB] transition-colors pl-10"
+                        >
+                            Solar Installation
+                        </a>
+                        <a
+                            href="/services/ac-installation"
+                            className="px-6 py-4 border-b border-gray-100 font-semibold text-gray-700 hover:bg-gray-50 hover:text-[#015CAB] transition-colors pl-10"
+                        >
+                            Air Conditioning
+                        </a>
+                        <a
+                            href={CONTACT.phoneLink}
+                            className="px-6 py-4 text-lg font-bold text-[#015CAB] hover:bg-gray-50 flex items-center gap-3 transition-colors"
+                        >
+                            <Phone className="w-5 h-5" /> Call {CONTACT.phone}
+                        </a>
+                    </div>
+                )}
             </header>
 
             {/* Sticky Bottom Mobile CTA Bar */}
