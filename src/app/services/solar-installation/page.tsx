@@ -71,7 +71,11 @@ export default function SolarInstallationPage() {
             <title>Solar Installation Somerset West and Stellenbosch | EAR Engineering</title>
             <meta name="description" content="EAR Engineering installs solar systems with battery backup for homes and businesses in Somerset West, Stellenbosch and the Helderberg. Get a free quote today." />
 
-            <Header onOpenModal={() => setIsModalOpen(true)} />
+            <Header
+                onOpenModal={() => setIsModalOpen(true)}
+                mobileCtaText="Free Solar Inspection"
+                mobileCtaIcon={<FaBoltLightning className="w-5 h-5" />}
+            />
 
             <main className="flex-1">
                 <Hero
@@ -83,6 +87,8 @@ export default function SolarInstallationPage() {
                     }
                     subtitle="We install solar power systems for homes, businesses and commercial properties across Somerset West, Stellenbosch and the Helderberg."
                     image="/Background Images/Solarbackground residential.webp"
+                    ctaText="Free Solar Inspection"
+                    ctaIcon={<FaBoltLightning className="w-5 h-5" />}
                 />
 
                 <TrustedBy />
@@ -106,11 +112,11 @@ export default function SolarInstallationPage() {
                                 { title: "Commercial Installations", icon: FaBuilding, desc: "We install commercial solar systems up to 100kW for businesses, estates, farms, and offices to dramatically cut electricity costs." },
                                 { title: "System Upgrades", icon: FaWrench, desc: "Already have a system? We can assess and expand it by adding more panels, upgrading batteries, or replacing old inverters." }
                             ].map((s, i) => (
-                                <div key={i} className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-cyan-200 transition-colors group flex flex-col sm:flex-row gap-6 items-start">
+                                <div key={i} className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-cyan-200 transition-colors group flex flex-col sm:flex-row gap-6 items-center sm:items-start">
                                     <div className="bg-[#015CAB] p-4 rounded-xl text-white flex-shrink-0 group-hover:text-[#FFCA08] transition-colors">
                                         <s.icon className="w-8 h-8" />
                                     </div>
-                                    <div>
+                                    <div className="text-center sm:text-left">
                                         <h3 className="text-xl font-bold text-gray-900 mb-2">{s.title}</h3>
                                         <p className="text-gray-600 font-medium leading-relaxed">{s.desc}</p>
                                     </div>
@@ -247,8 +253,8 @@ export default function SolarInstallationPage() {
                                 { title: "Everything Under One Roof", icon: FaBoltLightning, desc: "Electrical, solar, and air conditioning—all managed by one company to make things simple." },
                                 { title: "No Disappearing Acts", icon: FaUserTie, desc: "We are a local business. When you call us six months after installation, we pick up." }
                             ].map((item, i) => (
-                                <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-4 hover:border-cyan-200 transition-colors group">
-                                    <div className="flex items-center gap-4">
+                                <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-4 items-center sm:items-start text-center sm:text-left hover:border-cyan-200 transition-colors group">
+                                    <div className="flex flex-col sm:flex-row items-center gap-4">
                                         <div className="bg-[#015CAB] p-3 rounded-xl text-white flex-shrink-0 group-hover:text-[#FFCA08] transition-colors">
                                             <item.icon className="w-6 h-6" />
                                         </div>

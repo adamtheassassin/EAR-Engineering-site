@@ -6,9 +6,11 @@ import { CONTACT } from "@/lib/constants";
 
 interface HeaderProps {
     onOpenModal: () => void;
+    mobileCtaText?: string;
+    mobileCtaIcon?: React.ReactNode;
 }
 
-export default function Header({ onOpenModal }: HeaderProps) {
+export default function Header({ onOpenModal, mobileCtaText, mobileCtaIcon }: HeaderProps) {
     const [showSticky, setShowSticky] = useState(false);
 
     useEffect(() => {
@@ -20,7 +22,8 @@ export default function Header({ onOpenModal }: HeaderProps) {
 
             observer = new IntersectionObserver(
                 ([entry]) => {
-                    setShowSticky(!entry.isIntersecting);
+                    // Only show the sticky CTA if the hero CTA is not visible AND we've scrolled past it (top < 0)
+                    setShowSticky(!entry.isIntersecting && entry.boundingClientRect.top < 0);
                 },
                 { threshold: 0, rootMargin: "0px" }
             );
@@ -91,9 +94,10 @@ export default function Header({ onOpenModal }: HeaderProps) {
             >
                 <button
                     onClick={onOpenModal}
-                    className="w-full py-4 bg-[#FFCA08] text-gray-900 rounded-xl font-bold text-lg shadow-lg active:bg-[#E5B507] transition-colors"
+                    className="w-full py-4 bg-[#FFCA08] text-gray-900 rounded-xl font-bold text-lg shadow-lg active:bg-[#E5B507] transition-colors flex items-center justify-center gap-3"
                 >
-                    Free Quote
+                    {mobileCtaIcon && <span>{mobileCtaIcon}</span>}
+                    {mobileCtaText || "Free Quote"}
                 </button>
             </div>
         </>

@@ -87,7 +87,11 @@ export default function ACInstallationPage() {
             <title>Air Conditioning Installation Somerset West and Stellenbosch | EAR Engineering</title>
             <meta name="description" content="EAR Engineering installs, services and repairs air conditioning systems across Somerset West, Stellenbosch and the Helderberg. Get a free quote today." />
 
-            <Header onOpenModal={() => setIsModalOpen(true)} />
+            <Header
+                onOpenModal={() => setIsModalOpen(true)}
+                mobileCtaText="Free Air Conditioning Quote"
+                mobileCtaIcon={<FaWind className="w-5 h-5" />}
+            />
 
             <main className="flex-1">
                 <Hero
@@ -130,11 +134,11 @@ export default function ACInstallationPage() {
                                     )
                                 }
                             ].map((s, i) => (
-                                <div key={i} className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-cyan-200 transition-colors group flex flex-col sm:flex-row gap-6 items-start">
+                                <div key={i} className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-cyan-200 transition-colors group flex flex-col sm:flex-row gap-6 items-center sm:items-start">
                                     <div className="bg-[#015CAB] p-4 rounded-xl text-white flex-shrink-0 group-hover:text-[#FFCA08] transition-colors">
                                         <s.icon className="w-8 h-8" />
                                     </div>
-                                    <div>
+                                    <div className="text-center sm:text-left">
                                         <h3 className="text-xl font-bold text-gray-900 mb-2">{s.title}</h3>
                                         <p className="text-gray-600 font-medium leading-relaxed">{s.desc}</p>
                                     </div>
@@ -491,8 +495,8 @@ export default function ACInstallationPage() {
                                 { title: "Long-Term Relationships", icon: FaHandshake, desc: "De Zalze Estate has trusted us as their sole provider for 10 years. That kind of relationship does not happen without consistent quality." },
                                 { title: "We Pick Up The Phone", icon: FaPhoneVolume, desc: "We are a local business and we stand behind our work. When you need us after the installation, we are reachable." }
                             ].map((item, i) => (
-                                <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-4 items-start text-left hover:border-cyan-200 transition-colors group">
-                                    <div className="flex items-center gap-4">
+                                <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-4 items-center sm:items-start text-center sm:text-left hover:border-cyan-200 transition-colors group">
+                                    <div className="flex flex-col sm:flex-row items-center gap-4">
                                         <div className="bg-[#015CAB] p-3 rounded-xl text-white flex-shrink-0 group-hover:text-[#FFCA08] transition-colors">
                                             <item.icon className="w-6 h-6" />
                                         </div>

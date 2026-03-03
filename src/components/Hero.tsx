@@ -15,22 +15,22 @@ export default function Hero({ onOpenModal, title, subtitle, image = "/hero-engi
     const location = "Helderberg & Cape Town";
 
     return (
-        <section className="relative overflow-hidden bg-[#015CAB] text-white min-h-[90vh] lg:h-[calc(100vh-5rem)] flex items-center py-20 lg:py-0">
+        <section className="relative overflow-hidden bg-[#015CAB] text-white lg:h-[calc(100vh-5rem)] flex items-start lg:items-center pt-6 pb-10 lg:py-0">
             <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#01418A]/80 to-transparent"></div>
 
             {/* Dynamic Background Pattern / Texture (subtle) */}
             <div className="absolute inset-0 z-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4JyBoZWlnaHQ9JzgnPgo8cmVjdCB3aWR0aD0nOCwgaGVpZ2h0PSc4JyBmaWxsPScjZmZmJyBmaWxsLW9wYWNpdHk9JzAuMScvPgo8cGF0aCBkPSdNMCAwaDhyOHYtOEgweicgZmlsbD0nI2ZmZicgZmlsbC1vcGFjaXR5PScwLjA1JyAvPgo8L3N2Zz4=')]"></div>
 
-            <div className="container mx-auto px-4 relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
+            <div className="container mx-auto px-4 relative z-10 w-full">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-4 lg:space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
 
-                        <div className="inline-flex items-center bg-cyan-900/30 font-semibold px-4 py-2 rounded-full text-base text-cyan-50 border border-cyan-400/30 w-fit">
+                        <div className="inline-flex items-center bg-cyan-900/30 font-semibold px-3 lg:px-4 py-1.5 lg:py-2 rounded-full text-xs lg:text-base text-cyan-50 border border-cyan-400/30 w-fit">
                             <span className="flex w-2 h-2 bg-green-400 rounded-full mr-2 z-10 animate-pulse"></span>
                             Available for Service in {location}
                         </div>
 
-                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1]">
+                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1]">
                             {title || (
                                 <>
                                     Electricians, Aircon & <br className="hidden lg:block" />
@@ -39,15 +39,26 @@ export default function Hero({ onOpenModal, title, subtitle, image = "/hero-engi
                             )}
                         </h1>
 
-                        <p className="text-xl md:text-2xl text-cyan-50 leading-relaxed font-medium max-w-2xl">
+                        <div className="block lg:hidden w-full max-w-sm mx-auto aspect-[2/1] relative rounded-2xl overflow-hidden shadow-xl border-2 border-white/10">
+                            <Image
+                                src={image}
+                                alt="Professional Engineering Services"
+                                fill
+                                className="object-cover"
+                                priority
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#015CAB]/40 via-transparent to-transparent"></div>
+                        </div>
+
+                        <p className="text-lg md:text-xl lg:text-2xl text-cyan-50 leading-relaxed font-medium max-w-2xl">
                             {subtitle || "Serving the Helderberg, Stellenbosch, Boland and greater Western Cape for over 18 years."}
                         </p>
 
-                        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 pt-4">
+                        <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 pt-2 lg:pt-4 w-full sm:w-auto">
                             <button
                                 id="hero-cta"
                                 onClick={onOpenModal}
-                                className="w-full sm:w-auto px-8 py-4 bg-[#FFCA08] hover:bg-[#E5B507] text-gray-900 rounded-xl font-bold text-lg transition-transform transform hover:scale-105 active:scale-95 shadow-xl flex items-center justify-center gap-2 group"
+                                className="w-full sm:w-auto px-6 lg:px-8 py-3.5 lg:py-4 bg-[#FFCA08] hover:bg-[#E5B507] text-gray-900 rounded-xl font-bold text-base lg:text-lg transition-transform transform hover:scale-105 active:scale-95 shadow-xl flex items-center justify-center gap-2 group"
                             >
                                 {ctaText || "Get a Free Quote"}
                                 {ctaIcon ? (
@@ -58,14 +69,14 @@ export default function Hero({ onOpenModal, title, subtitle, image = "/hero-engi
                             </button>
                             <a
                                 href={CONTACT.phoneLink}
-                                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md px-8 py-4 rounded-xl font-bold transition-all border border-white/20"
+                                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md px-6 lg:px-8 py-3.5 lg:py-4 rounded-xl font-bold text-base lg:text-lg transition-all border border-white/20"
                             >
                                 <Phone className="w-5 h-5" /> Call Now
                             </a>
                         </div>
 
-                        <div className="flex items-center justify-center lg:justify-start gap-2 text-sm font-medium text-cyan-100">
-                            <ClockAlert className="w-5 h-5 text-[#FFCA08]" /> We’ll contact you within 1 hour (during business hours).
+                        <div className="flex items-center justify-center lg:justify-start gap-2 text-xs lg:text-sm font-medium text-cyan-100">
+                            <ClockAlert className="w-4 h-4 lg:w-5 lg:h-5 text-[#FFCA08] flex-shrink-0" /> We’ll contact you within 1 hour (business hours).
                         </div>
 
                         <div className="hidden lg:grid grid-cols-2 gap-4 mt-8 lg:mt-12 border-t border-cyan-400/30 pt-8 w-full">
