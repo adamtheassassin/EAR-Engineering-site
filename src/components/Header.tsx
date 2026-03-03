@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { FaPhone as Phone, FaBars as Bars } from "react-icons/fa6";
+import { FaPhone as Phone, FaBars as Bars, FaXmark as XMark } from "react-icons/fa6";
 import { CONTACT } from "@/lib/constants";
 
 interface HeaderProps {
@@ -55,16 +55,28 @@ export default function Header({ onOpenModal, mobileCtaText, mobileCtaIcon }: He
 
                     <div className="hidden md:flex items-center gap-6">
                         <a
+                            href="/"
+                            className="font-semibold text-gray-700 hover:text-[#015CAB] transition text-sm lg:text-base whitespace-nowrap"
+                        >
+                            Home
+                        </a>
+                        <a
                             href="/services"
-                            className="font-semibold text-gray-700 hover:text-[#015CAB] transition"
+                            className="font-semibold text-gray-700 hover:text-[#015CAB] transition text-sm lg:text-base whitespace-nowrap"
                         >
                             Services
                         </a>
                         <a
-                            href={CONTACT.phoneLink}
-                            className="flex items-center gap-2 font-semibold text-gray-700 hover:text-[#015CAB] transition"
+                            href="/contact"
+                            className="font-semibold text-gray-700 hover:text-[#015CAB] transition text-sm lg:text-base whitespace-nowrap"
                         >
-                            <Phone className="w-5 h-5 text-[#015CAB]" />
+                            Contact
+                        </a>
+                        <a
+                            href={CONTACT.phoneLink}
+                            className="flex items-center gap-1.5 font-semibold text-gray-700 hover:text-[#015CAB] transition text-sm lg:text-base whitespace-nowrap"
+                        >
+                            <Phone className="w-4 h-4 text-[#015CAB]" />
                             {CONTACT.phone}
                         </a>
                         <button
@@ -86,10 +98,11 @@ export default function Header({ onOpenModal, mobileCtaText, mobileCtaIcon }: He
                         </a>
                         <button
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            className="p-2.5 text-gray-700 transition active:scale-95"
+                            className="p-2.5 text-gray-700 transition active:scale-95 flex items-center justify-center relative w-12 h-12"
                             aria-label="Menu"
                         >
-                            <Bars className="w-7 h-7" />
+                            <Bars className={`absolute transition-all duration-300 w-7 h-7 text-[#015CAB] ${isMobileMenuOpen ? 'opacity-0 rotate-90 scale-50' : 'opacity-100 rotate-0 scale-100'}`} />
+                            <XMark className={`absolute transition-all duration-300 w-8 h-8 text-[#015CAB] ${isMobileMenuOpen ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-90 scale-50'}`} />
                         </button>
                     </div>
                 </div>
@@ -97,6 +110,12 @@ export default function Header({ onOpenModal, mobileCtaText, mobileCtaIcon }: He
                 {/* Mobile Menu Dropdown */}
                 {isMobileMenuOpen && (
                     <div className="md:hidden absolute top-full left-0 w-full bg-white border-b shadow-lg flex flex-col transition-all duration-300">
+                        <a
+                            href="/"
+                            className="px-6 py-4 border-b border-gray-100 text-lg font-bold text-gray-800 hover:bg-gray-50 hover:text-[#015CAB] transition-colors"
+                        >
+                            Home
+                        </a>
                         <a
                             href="/services"
                             className="px-6 py-4 border-b border-gray-100 text-lg font-bold text-gray-800 hover:bg-gray-50 hover:text-[#015CAB] transition-colors"
@@ -114,6 +133,12 @@ export default function Header({ onOpenModal, mobileCtaText, mobileCtaIcon }: He
                             className="px-6 py-4 border-b border-gray-100 font-semibold text-gray-700 hover:bg-gray-50 hover:text-[#015CAB] transition-colors pl-10"
                         >
                             Air Conditioning
+                        </a>
+                        <a
+                            href="/contact"
+                            className="px-6 py-4 border-b border-gray-100 text-lg font-bold text-gray-800 hover:bg-gray-50 hover:text-[#015CAB] transition-colors flex items-center gap-3"
+                        >
+                            Contact
                         </a>
                         <a
                             href={CONTACT.phoneLink}
