@@ -7,9 +7,11 @@ interface HeroProps {
     title?: React.ReactNode;
     subtitle?: React.ReactNode;
     image?: string;
+    ctaText?: string;
+    ctaIcon?: React.ReactNode;
 }
 
-export default function Hero({ onOpenModal, title, subtitle, image = "/hero-engineering.png" }: HeroProps) {
+export default function Hero({ onOpenModal, title, subtitle, image = "/hero-engineering.png", ctaText, ctaIcon }: HeroProps) {
     const location = "Helderberg & Cape Town";
 
     return (
@@ -47,8 +49,12 @@ export default function Hero({ onOpenModal, title, subtitle, image = "/hero-engi
                                 onClick={onOpenModal}
                                 className="w-full sm:w-auto px-8 py-4 bg-[#FFCA08] hover:bg-[#E5B507] text-gray-900 rounded-xl font-bold text-lg transition-transform transform hover:scale-105 active:scale-95 shadow-xl flex items-center justify-center gap-2 group"
                             >
-                                Get a Free Quote
-                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                {ctaText || "Get a Free Quote"}
+                                {ctaIcon ? (
+                                    <span className="group-hover:rotate-12 transition-transform">{ctaIcon}</span>
+                                ) : (
+                                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                )}
                             </button>
                             <a
                                 href={CONTACT.phoneLink}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { FaPhone as Phone } from "react-icons/fa6";
+import { FaPhone as Phone, FaBars as Bars } from "react-icons/fa6";
 import { CONTACT } from "@/lib/constants";
 
 interface HeaderProps {
@@ -66,12 +66,19 @@ export default function Header({ onOpenModal }: HeaderProps) {
                     </div>
 
                     {/* Mobile minimal right side */}
-                    <div className="md:hidden flex items-center gap-3">
-                        <button
-                            onClick={onOpenModal}
-                            className="px-4 py-2 bg-[#015CAB] text-white rounded-lg font-bold text-sm shadow-sm"
+                    <div className="md:hidden flex items-center gap-2">
+                        <a
+                            href={CONTACT.phoneLink}
+                            className="p-2.5 text-[#015CAB] transition active:scale-95"
+                            aria-label="Call EAR Engineering"
                         >
-                            Quote
+                            <Phone className="w-6 h-6" />
+                        </a>
+                        <button
+                            className="p-2.5 text-gray-700 transition active:scale-95"
+                            aria-label="Menu"
+                        >
+                            <Bars className="w-7 h-7" />
                         </button>
                     </div>
                 </div>

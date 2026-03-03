@@ -107,7 +107,7 @@ export default function SolarInstallationPage() {
                                 { title: "System Upgrades", icon: FaWrench, desc: "Already have a system? We can assess and expand it by adding more panels, upgrading batteries, or replacing old inverters." }
                             ].map((s, i) => (
                                 <div key={i} className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-cyan-200 transition-colors group flex flex-col sm:flex-row gap-6 items-start">
-                                    <div className="bg-cyan-50 p-4 rounded-xl text-[#015CAB] flex-shrink-0 group-hover:bg-[#015CAB] group-hover:text-white transition-colors">
+                                    <div className="bg-[#015CAB] p-4 rounded-xl text-white flex-shrink-0 group-hover:text-[#FFCA08] transition-colors">
                                         <s.icon className="w-8 h-8" />
                                     </div>
                                     <div>
@@ -206,14 +206,21 @@ export default function SolarInstallationPage() {
                                 </div>
                             </div>
                             <div className="relative">
-                                {/* Decorational illustration */}
-                                <div className="aspect-[4/3] bg-[#015CAB]/95 backdrop-blur-md rounded-[2rem] overflow-hidden p-8 flex flex-col justify-end relative shadow-2xl border border-white/10">
-                                    <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4JyBoZWlnaHQ9JzgnPgo8cmVjdCB3aWR0aD0nOCwgaGVpZ2h0PSc4JyBmaWxsPScjZmZmJyBmaWxsLW9wYWNpdHk9JzAuMScvPgo8cGF0aCBkPSdNMCAwaDhyOHYtOEgweicgZmlsbD0nI2ZmZicgZmlsbC1vcGFjaXR5PScwLjA1JyAvPgo8L3N2Zz4=')] opacity-20"></div>
-                                    <FaSolarPanel className="text-white/10 w-64 h-64 absolute -top-10 -right-10" />
-                                    <div className="relative z-10 text-white space-y-2">
+                                {/* Real Project Photo */}
+                                <div className="aspect-[4/3] rounded-[2rem] overflow-hidden relative shadow-2xl border border-white/20 group">
+                                    <Image
+                                        src="/Work Photos/solar installation with panels.webp"
+                                        alt="100kW Solar Installation with Panels"
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                    />
+                                    {/* Gradient Overlay for text readability */}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#015CAB]/90 via-[#015CAB]/40 to-transparent"></div>
+
+                                    <div className="absolute bottom-0 left-0 right-0 p-8 z-10 text-white space-y-2">
                                         <div className="inline-block px-3 py-1 bg-[#FFCA08] text-gray-900 text-sm font-bold rounded-lg mb-2 shadow-sm">Commercial Project Highlight</div>
                                         <h4 className="text-3xl font-black">100kW System</h4>
-                                        <p className="font-medium text-cyan-50">Providing energy independence and sustainability for premium residential estates.</p>
+                                        <p className="font-medium text-white/90">Providing energy independence and sustainability for premium residential estates.</p>
                                     </div>
                                 </div>
                             </div>
@@ -240,9 +247,9 @@ export default function SolarInstallationPage() {
                                 { title: "Everything Under One Roof", icon: FaBoltLightning, desc: "Electrical, solar, and air conditioning—all managed by one company to make things simple." },
                                 { title: "No Disappearing Acts", icon: FaUserTie, desc: "We are a local business. When you call us six months after installation, we pick up." }
                             ].map((item, i) => (
-                                <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-4">
+                                <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-4 hover:border-cyan-200 transition-colors group">
                                     <div className="flex items-center gap-4">
-                                        <div className="bg-cyan-50 p-3 rounded-xl text-[#015CAB] flex-shrink-0">
+                                        <div className="bg-[#015CAB] p-3 rounded-xl text-white flex-shrink-0 group-hover:text-[#FFCA08] transition-colors">
                                             <item.icon className="w-6 h-6" />
                                         </div>
                                         <h3 className="font-bold text-gray-900 text-lg leading-tight">{item.title}</h3>
@@ -327,7 +334,7 @@ export default function SolarInstallationPage() {
                 </section>
 
                 {/* Introduction / Load Shedding Section */}
-                <section className="py-20 bg-white border-t border-gray-100">
+                <section className="py-20 bg-white">
                     <div className="container mx-auto px-4 max-w-6xl">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#015CAB] mb-6">
@@ -336,32 +343,38 @@ export default function SolarInstallationPage() {
                         </div>
 
                         <div className="grid md:grid-cols-3 gap-8">
-                            <div className="bg-gray-50 border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center md:items-start text-center md:text-left">
-                                <div className="w-14 h-14 bg-red-100 text-red-600 rounded-full flex items-center justify-center mb-6">
-                                    <FaPlug className="w-6 h-6" />
+                            <div className="bg-[#015CAB] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 flex flex-col items-center md:items-start text-center md:text-left border border-[#01418A]">
+                                <div className="flex items-center gap-4 mb-6">
+                                    <div className="w-12 h-12 bg-[#FFCA08] text-[#015CAB] rounded-full flex items-center justify-center flex-shrink-0 shadow-inner">
+                                        <FaPlug className="w-6 h-6" />
+                                    </div>
+                                    <h3 className="text-xl font-extrabold text-white">The Cost of Outages</h3>
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-4">The Cost of Outages</h3>
-                                <p className="text-gray-600 font-medium leading-relaxed">
+                                <p className="text-blue-50 font-medium leading-relaxed">
                                     South Africans have been dealing with load shedding for years. Candles and power banks only go so far. Businesses lose money every time the power goes off, families are frustrated, and electricity prices keep climbing.
                                 </p>
                             </div>
 
-                            <div className="bg-gray-50 border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center md:items-start text-center md:text-left">
-                                <div className="w-14 h-14 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6">
-                                    <FaBatteryFull className="w-6 h-6" />
+                            <div className="bg-[#015CAB] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 flex flex-col items-center md:items-start text-center md:text-left border border-[#01418A]">
+                                <div className="flex items-center gap-4 mb-6">
+                                    <div className="w-12 h-12 bg-[#FFCA08] text-[#015CAB] rounded-full flex items-center justify-center flex-shrink-0 shadow-inner">
+                                        <FaBatteryFull className="w-6 h-6" />
+                                    </div>
+                                    <h3 className="text-xl font-extrabold text-white">Uninterrupted Power</h3>
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-4">Uninterrupted Power</h3>
-                                <p className="text-gray-600 font-medium leading-relaxed">
+                                <p className="text-blue-50 font-medium leading-relaxed">
                                     A solar system with battery backup changes all of that. When the grid goes down, your batteries kick in and your lights stay on. Your fridge stays cold, your business keeps operating, and you use far less grid electricity.
                                 </p>
                             </div>
 
-                            <div className="bg-gray-50 border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center md:items-start text-center md:text-left">
-                                <div className="w-14 h-14 bg-yellow-100 text-[#d49a00] rounded-full flex items-center justify-center mb-6">
-                                    <FaMapLocationDot className="w-6 h-6" />
+                            <div className="bg-[#015CAB] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 flex flex-col items-center md:items-start text-center md:text-left border border-[#01418A]">
+                                <div className="flex items-center gap-4 mb-6">
+                                    <div className="w-12 h-12 bg-[#FFCA08] text-[#015CAB] rounded-full flex items-center justify-center flex-shrink-0 shadow-inner">
+                                        <FaMapLocationDot className="w-6 h-6" />
+                                    </div>
+                                    <h3 className="text-xl font-extrabold text-white">Ideal for the Cape</h3>
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-4">Ideal for the Cape</h3>
-                                <p className="text-gray-600 font-medium leading-relaxed">
+                                <p className="text-blue-50 font-medium leading-relaxed">
                                     Western Cape clients are in a great position for solar. The region gets abundant sunshine throughout the year, meaning panels produce energy reliably, making your investment work incredibly hard.
                                 </p>
                             </div>
@@ -422,7 +435,7 @@ export default function SolarInstallationPage() {
                 <FAQ faqs={solarFaqs} />
 
                 <FinalCTA onOpenModal={() => setIsModalOpen(true)} />
-            </main>
+            </main >
 
             <Footer />
 

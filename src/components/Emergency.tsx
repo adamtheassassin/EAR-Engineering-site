@@ -47,19 +47,19 @@ export default function Emergency({ onOpenModal }: EmergencyProps) {
 
                 {/* Right Side: CTA Button */}
                 <div className="flex-shrink-0 w-full md:w-auto mt-2 md:mt-0">
-                    <button
-                        onClick={onOpenModal}
+                    <a
+                        href="tel:0769737329"
                         className="w-full md:w-auto group/btn relative inline-flex items-center justify-center gap-3 rounded-full bg-[#FFCA08] px-8 py-4 md:py-3.5 text-base md:text-lg font-black text-black shadow-[0_4px_14px_rgba(255,202,8,0.2)] transition-all duration-300 hover:scale-[1.02] hover:bg-yellow-400 hover:shadow-[0_8px_25px_rgba(255,202,8,0.4)] active:scale-95 whitespace-nowrap"
                     >
                         <span className="relative flex h-3 w-3">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-black opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-3 w-3 bg-black"></span>
                         </span>
-                        <span className="uppercase tracking-widest text-black">Priority Request</span>
+                        <span className="uppercase tracking-widest text-black">Call Now</span>
                         <svg className="h-5 w-5 text-black transition-transform group-hover/btn:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                         </svg>
-                    </button>
+                    </a>
                 </div>
 
             </div>
