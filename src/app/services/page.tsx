@@ -1,10 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import QuoteModal from "@/components/QuoteModal";
 import { FaBolt, FaRegSnowflake, FaSun, FaArrowRight } from "react-icons/fa6";
 
 export default function ServicesPage() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const categories = [
         {
             title: "Air Conditioning",
@@ -46,7 +49,7 @@ export default function ServicesPage() {
             <title>Electrical, Aircon & Solar Services in Somerset West | EAR Engineering</title>
             <meta name="description" content="Browse our professional electrical, air conditioning, and solar installation services in Somerset West, Stellenbosch, and the Helderberg." />
 
-            <Header onOpenModal={() => { }} />
+            <Header onOpenModal={() => setIsModalOpen(true)} />
 
             <main className="flex-1 bg-gray-50 py-16 md:py-24">
                 <div className="container mx-auto px-4 max-w-5xl">
@@ -88,6 +91,11 @@ export default function ServicesPage() {
             </main>
 
             <Footer />
+
+            <QuoteModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+            />
         </>
     );
 }

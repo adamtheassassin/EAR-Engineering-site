@@ -9,7 +9,7 @@ import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import QuoteModal from "@/components/QuoteModal";
-import { FaSolarPanel, FaBatteryFull, FaWrench, FaBuilding, FaCircleCheck, FaBoltLightning, FaShieldHalved, FaClockRotateLeft, FaUserTie, FaPlug, FaMapLocationDot } from "react-icons/fa6";
+import { FaSolarPanel, FaBatteryFull, FaWrench, FaBuilding, FaCircleCheck, FaBoltLightning, FaShieldHalved, FaClockRotateLeft, FaUserTie, FaPlug, FaMapLocationDot, FaSun } from "react-icons/fa6";
 import Image from "next/image";
 
 export default function SolarInstallationPage() {
@@ -74,7 +74,7 @@ export default function SolarInstallationPage() {
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
                 mobileCtaText="Free Solar Inspection"
-                mobileCtaIcon={<FaBoltLightning className="w-5 h-5" />}
+                mobileCtaIcon={<FaSun className="w-5 h-5" />}
             />
 
             <main className="flex-1">
@@ -88,7 +88,7 @@ export default function SolarInstallationPage() {
                     subtitle="We install solar power systems for homes, businesses and commercial properties across Somerset West, Stellenbosch and the Helderberg."
                     image="/Background Images/Solarbackground residential.webp"
                     ctaText="Free Solar Inspection"
-                    ctaIcon={<FaBoltLightning className="w-5 h-5" />}
+                    ctaIcon={<FaSun className="w-5 h-5" />}
                 />
 
                 <TrustedBy />
@@ -130,7 +130,7 @@ export default function SolarInstallationPage() {
                                 className="px-10 py-4 bg-[#FFCA08] hover:bg-[#E5B507] text-gray-900 rounded-xl font-extrabold text-xl transition-all transform hover:scale-105 active:scale-95 shadow-xl flex items-center gap-3 group"
                             >
                                 Free Solar Inspection
-                                <FaBoltLightning className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                                <FaSun className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                             </button>
                         </div>
                     </div>
@@ -271,7 +271,7 @@ export default function SolarInstallationPage() {
                                 className="px-10 py-4 bg-[#FFCA08] hover:bg-[#E5B507] text-gray-900 rounded-xl font-extrabold text-xl transition-all transform hover:scale-105 active:scale-95 shadow-xl flex items-center gap-3 group"
                             >
                                 Free Solar Inspection
-                                <FaBoltLightning className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                                <FaSun className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                             </button>
                         </div>
                     </div>
@@ -396,7 +396,7 @@ export default function SolarInstallationPage() {
                             <div className="overflow-hidden rounded-xl shadow-2xl h-[400px] w-full bg-white relative">
                                 {/* GBP Map Embed */}
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4023.9526587094174!2d18.820527300000002!3d-34.063464499999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcdb5947a717cc1%3A0x6ffb176a283db73e!2sEAR%20Engineering!5e1!3m2!1sen!2sza!4v1772199538942!5m2!1sen!2sza"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4023.9526587094174!2d18.820527300000002!3d-34.063464499999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcdb5947a717cc1%3A0x6ffb176a283db73e!2sEAR%20Engineering!5e0!3m2!1sen!2sza!4v1772199538942!5m2!1sen!2sza"
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0 }}
@@ -448,6 +448,7 @@ export default function SolarInstallationPage() {
             <QuoteModal
                 isOpen={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
+                preselectedCategory="Solar"
             />
         </>
     );

@@ -20,24 +20,30 @@ import QuoteModal from "@/components/QuoteModal";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalCategory, setModalCategory] = useState<"Electrical" | "Aircon" | "Solar" | "">("");
+
+  const openModal = (category?: "Electrical" | "Aircon" | "Solar" | "") => {
+    setModalCategory(category || "");
+    setIsModalOpen(true);
+  };
 
   return (
     <>
-      <Header onOpenModal={() => setIsModalOpen(true)} />
+      <Header onOpenModal={() => openModal()} />
 
       <main className="flex-1">
-        <Hero onOpenModal={() => setIsModalOpen(true)} />
+        <Hero onOpenModal={() => openModal()} />
         <TrustedBy />
         <Reviews />
-        <Services onOpenModal={() => setIsModalOpen(true)} />
-        <Emergency onOpenModal={() => setIsModalOpen(true)} />
+        <Services onOpenModal={(cat) => openModal(cat)} />
+        <Emergency onOpenModal={() => openModal()} />
         <WhoWeWorkWith />
         <Trust />
 
         <Process />
         <ServiceAreas />
         <FAQ />
-        <FinalCTA onOpenModal={() => setIsModalOpen(true)} />
+        <FinalCTA onOpenModal={() => openModal()} />
         <HomeMap />
       </main>
 
@@ -46,6 +52,7 @@ export default function Home() {
       <QuoteModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
+        preselectedCategory={modalCategory}
       />
     </>
   );

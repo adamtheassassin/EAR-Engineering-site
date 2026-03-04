@@ -3,31 +3,94 @@
 import { useState, useEffect, useRef } from "react";
 import { FaXmark as X, FaCircleCheck as CheckCircle, FaArrowRight as ArrowRight, FaArrowLeft as ArrowLeft } from "react-icons/fa6";
 
+export type ServiceCategory = "Electrical" | "Aircon" | "Solar" | "";
+
 interface QuoteModalProps {
     isOpen: boolean;
     onClose: () => void;
+    preselectedCategory?: ServiceCategory;
 }
 
-export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
-    const [step, setStep] = useState(1);
+export default function QuoteModal({ isOpen, onClose, preselectedCategory }: QuoteModalProps) {
+    const defaultStep = preselectedCategory ? 2 : 1;
+    const [step, setStep] = useState(defaultStep);
     const [isSuccess, setIsSuccess] = useState(false);
+
+    // Form state
+    const [category, setCategory] = useState<ServiceCategory>(preselectedCategory || "");
+    const [subService, setSubService] = useState("");
+    const [details, setDetails] = useState("");
+    const [timeframe, setTimeframe] = useState("As soon as possible");
+    const [emergency, setEmergency] = useState(false);
+
+    // Contact state
+    const [name, setName] = useState("");
+    const [phone, setPhone] = useState("");
+    const [email, setEmail] = useState("");
+    const [area, setArea] = useState("");
+
     const modalRef = useRef<HTMLDivElement>(null);
+
+    // Categories
+    const categories: ServiceCategory[] = ["Electrical", "Aircon", "Solar"];
+
+    // Sub-services depending on category
+    const subServicesMap: Record<string, string[]> = {
+        "Electrical": [
+            "New Installation / Wiring",
+            "DB Board Replacement",
+            "Fault Finding & Repairs",
+            "COC Certificate",
+            "Generator Installation",
+            "Other"
+        ],
+        "Aircon": [
+            "New AC Installation",
+            "AC Repair & Fault Finding",
+            "Routine Service & Maintenance",
+            "Commercial Air Conditioning",
+            "Other"
+        ],
+        "Solar": [
+            "New Solar System",
+            "Battery Backup Solution",
+            "System Upgrade / Expansion",
+            "Commercial Solar",
+            "Other"
+        ]
+    };
+
+    // Initialize correctly when modal opens
+    useEffect(() => {
+        if (!isOpen) {
+            setStep(preselectedCategory ? 2 : 1);
+            setCategory(preselectedCategory || "");
+            setSubService("");
+            setDetails("");
+            setTimeframe("As soon as possible");
+            setEmergency(false);
+            setName("");
+            setPhone("");
+            setEmail("");
+            setArea("");
+            setIsSuccess(false);
+            return;
+        } else {
+            setStep(preselectedCategory ? 2 : 1);
+            setCategory(preselectedCategory || "");
+        }
+    }, [isOpen, preselectedCategory]);
 
     // Focus trap
     useEffect(() => {
-        if (!isOpen) {
-            setStep(1);
-            setIsSuccess(false);
-            return;
-        }
+        if (!isOpen) return;
 
         const handleKeyDown = (e: KeyboardEvent) => {
             if (e.key === "Escape") onClose();
-            // Basic focus trap can be implemented here if full standard needed
         };
 
         document.addEventListener("keydown", handleKeyDown);
-        document.body.style.overflow = "hidden"; // Prevent background scroll
+        document.body.style.overflow = "hidden";
 
         return () => {
             document.removeEventListener("keydown", handleKeyDown);
@@ -39,8 +102,45 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+
+        if (step < 4) {
+            setStep(step + 1);
+            return;
+        }
+
         setIsSuccess(true);
     };
+
+    const handleNext = () => {
+        if (step === 1 && !category) {
+            alert("Please select a service category.");
+            return;
+        }
+        if (step === 2 && !subService) {
+            alert("Please select the specific service you need.");
+            return;
+        }
+        if (step === 3 && !details) {
+            const txt = document.getElementById("details_textarea") as HTMLTextAreaElement;
+            if (txt && !txt.checkValidity()) {
+                txt.reportValidity();
+                return;
+            }
+        }
+        setStep(s => s + 1);
+    };
+
+    const handleBack = () => {
+        setStep(s => s - 1);
+    };
+
+    const startStep = preselectedCategory ? 2 : 1;
+    const totalSteps = 4;
+    const progressChunks = [];
+    for (let i = startStep; i <= totalSteps; i++) {
+        progressChunks.push(i);
+    }
+    const currentProgressIndex = progressChunks.indexOf(step);
 
     return (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 p-4 transition-opacity">
@@ -49,7 +149,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                 role="dialog"
                 aria-modal="true"
                 aria-labelledby="modal-title"
-                className="w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl relative"
+                className="w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl relative max-h-[90vh] overflow-y-auto"
             >
                 <button
                     onClick={onClose}
@@ -78,8 +178,8 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                         <div className="mb-6 border-b pb-4">
                             <h2 id="modal-title" className="text-xl font-bold text-gray-900">Request a Free Quote</h2>
                             <div className="flex gap-2 mt-4">
-                                {[1, 2, 3].map(s => (
-                                    <div key={s} className={`h-2 flex-1 rounded-full ${step >= s ? 'bg-cyan-600' : 'bg-gray-200'}`} />
+                                {progressChunks.map((s, idx) => (
+                                    <div key={s} className={`h-2 flex-1 rounded-full ${idx <= currentProgressIndex ? 'bg-cyan-600' : 'bg-gray-200'}`} />
                                 ))}
                             </div>
                         </div>
@@ -89,30 +189,48 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                                 <div className="space-y-4">
                                     <h3 className="font-semibold text-gray-800">1. What service do you need?</h3>
                                     <div className="grid grid-cols-1 gap-3">
-                                        {["Electrical", "Aircon & Refrigeration", "Solar"].map(service => (
-                                            <label key={service} className="flex items-center p-4 border rounded-lg cursor-pointer hover:border-cyan-600 hover:bg-cyan-50 transition">
-                                                <input type="radio" name="service" required value={service} className="w-5 h-5 text-cyan-600" />
-                                                <span className="ml-3 font-medium text-gray-900">{service}</span>
+                                        {categories.map(c => (
+                                            <label key={c} className={`flex items-center p-4 border rounded-lg cursor-pointer transition ${category === c ? 'border-cyan-600 bg-cyan-50' : 'hover:border-cyan-600 hover:bg-cyan-50'}`}>
+                                                <input type="radio" name="service" required checked={category === c} onChange={() => { setCategory(c); setSubService(""); }} className="w-5 h-5 text-cyan-600 focus:ring-cyan-600" />
+                                                <span className="ml-3 font-medium text-gray-900">{c}</span>
                                             </label>
                                         ))}
                                     </div>
-                                    <label className="flex items-center mt-4 p-4 bg-red-50 border border-red-100 rounded-lg cursor-pointer">
-                                        <input type="checkbox" name="emergency" className="w-5 h-5 text-red-600" />
-                                        <span className="ml-3 font-medium text-red-800">This is an emergency (Priority Support)</span>
+                                    <label className={`flex items-center mt-4 p-4 border rounded-lg cursor-pointer transition ${emergency ? 'border-red-400 bg-red-50' : 'border-red-100 bg-red-50 hover:border-red-300'}`}>
+                                        <input type="checkbox" name="emergency" checked={emergency} onChange={(e) => setEmergency(e.target.checked)} className="w-5 h-5 text-red-600 focus:ring-red-600 rounded" />
+                                        <span className="ml-3 font-medium text-red-800">This is an emergency (Priority)</span>
                                     </label>
                                 </div>
                             )}
 
-                            {step === 2 && (
+                            {step === 2 && category && (
                                 <div className="space-y-4 animate-in fade-in slide-in-from-right-4">
-                                    <h3 className="font-semibold text-gray-800">2. Tell us more</h3>
+                                    <h3 className="font-semibold text-gray-800">
+                                        {preselectedCategory ? "1." : "2."} What do you need help with?
+                                    </h3>
+                                    <div className="grid grid-cols-1 gap-3 max-h-[40vh] overflow-y-auto pr-1">
+                                        {(subServicesMap[category] || []).map(sub => (
+                                            <label key={sub} className={`flex items-center p-4 border rounded-lg cursor-pointer transition ${subService === sub ? 'border-cyan-600 bg-cyan-50' : 'hover:border-cyan-600 hover:bg-cyan-50'}`}>
+                                                <input type="radio" name="subService" required checked={subService === sub} onChange={() => setSubService(sub)} className="w-5 h-5 text-cyan-600 focus:ring-cyan-600" />
+                                                <span className="ml-3 font-medium text-gray-900">{sub}</span>
+                                            </label>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
+                            {step === 3 && (
+                                <div className="space-y-4 animate-in fade-in slide-in-from-right-4">
+                                    <h3 className="font-semibold text-gray-800">
+                                        {preselectedCategory ? "2." : "3."} Tell us more
+                                    </h3>
                                     <div>
                                         <label className="block text-sm font-medium mb-1">Describe the issue or project</label>
-                                        <textarea required className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-cyan-600 outline-none min-h-[100px]" placeholder="e.g. My inverter is beeping..."></textarea>
+                                        <textarea id="details_textarea" required value={details} onChange={(e) => setDetails(e.target.value)} className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-cyan-600 outline-none min-h-[100px]" placeholder="e.g. Need a quote for a 5kW inverter and panels..."></textarea>
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-medium mb-1">Timeframe</label>
-                                        <select className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-cyan-600 outline-none bg-white">
+                                        <label className="block text-sm font-medium mb-1">When do you need this done?</label>
+                                        <select value={timeframe} onChange={(e) => setTimeframe(e.target.value)} className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-cyan-600 outline-none bg-white">
                                             <option>As soon as possible</option>
                                             <option>Within a week</option>
                                             <option>Planning phase</option>
@@ -121,38 +239,40 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                                 </div>
                             )}
 
-                            {step === 3 && (
+                            {step === 4 && (
                                 <div className="space-y-4 animate-in fade-in slide-in-from-right-4">
-                                    <h3 className="font-semibold text-gray-800">3. Your details</h3>
+                                    <h3 className="font-semibold text-gray-800">
+                                        {preselectedCategory ? "3." : "4."} Your details
+                                    </h3>
                                     <div>
                                         <label className="block text-sm font-medium mb-1">Full Name</label>
-                                        <input type="text" required className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-cyan-600 outline-none" />
+                                        <input type="text" required value={name} onChange={(e) => setName(e.target.value)} className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-cyan-600 outline-none" />
                                     </div>
                                     <div>
                                         <label className="block text-sm font-medium mb-1">Phone Number</label>
-                                        <input type="tel" required className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-cyan-600 outline-none" />
+                                        <input type="tel" required value={phone} onChange={(e) => setPhone(e.target.value)} className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-cyan-600 outline-none" />
                                     </div>
                                     <div>
                                         <label className="block text-sm font-medium mb-1">Email Address</label>
-                                        <input type="email" required className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-cyan-600 outline-none" />
+                                        <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-cyan-600 outline-none" />
                                     </div>
                                     <div>
                                         <label className="block text-sm font-medium mb-1">Area / Suburb</label>
-                                        <input type="text" required className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-cyan-600 outline-none" placeholder="e.g. Somerset West" />
+                                        <input type="text" required value={area} onChange={(e) => setArea(e.target.value)} className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-cyan-600 outline-none" placeholder="e.g. Somerset West" />
                                     </div>
                                 </div>
                             )}
                         </div>
 
                         <div className="mt-8 flex justify-between gap-3">
-                            {step > 1 ? (
-                                <button type="button" onClick={() => setStep(s => s - 1)} className="px-5 py-3 border border-gray-300 rounded-lg text-gray-700 font-medium hover:bg-gray-50 flex items-center gap-2">
+                            {step > startStep ? (
+                                <button type="button" onClick={handleBack} className="px-5 py-3 border border-gray-300 rounded-lg text-gray-700 font-medium hover:bg-gray-50 flex items-center gap-2">
                                     <ArrowLeft className="w-4 h-4" /> Back
                                 </button>
                             ) : <div></div>}
 
-                            {step < 3 ? (
-                                <button type="button" onClick={() => setStep(s => s + 1)} className="px-6 py-3 bg-cyan-600 text-white rounded-lg font-bold hover:bg-cyan-700 flex items-center gap-2 transition ml-auto">
+                            {step < 4 ? (
+                                <button type="button" onClick={handleNext} className="px-6 py-3 bg-cyan-600 text-white rounded-lg font-bold hover:bg-cyan-700 flex items-center gap-2 transition ml-auto">
                                     Next <ArrowRight className="w-4 h-4" />
                                 </button>
                             ) : (

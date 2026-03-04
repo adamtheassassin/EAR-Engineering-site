@@ -37,9 +37,7 @@ export default function ACInstallationPage() {
         { q: "Can you service a unit that was not installed by EAR Engineering?", a: "Yes. We work on most makes and models regardless of who installed them. If you are unsure of the service history or suspect a problem, we can do a full inspection and give you an honest assessment of the unit's condition." },
         { q: "How long does installation take?", a: "A single residential unit typically takes half a day to install. Larger jobs with multiple units or more complex electrical requirements will take longer. We will always give you a clear timeframe before we start." },
         { q: "Do you install air conditioning for rental properties and estates?", a: "Yes, and this is a significant part of what we do. We work with rental agencies and estate management companies across the Helderberg and Boland, including serving as the exclusive air conditioning provider for De Zalze Estate for the past 10 years. If you manage multiple properties and need a reliable contractor, get in touch." },
-        { q: "Can I pair my air conditioning with solar to save on running costs?", a: "Yes, and it works very well in the Western Cape. Air conditioning tends to be used most on hot, sunny days, which is exactly when your solar panels are producing the most power. Running your aircon from solar reduces what it costs to keep your home or office cool." },
-        { q: "What areas do you cover?", a: "We cover Somerset West, Strand, Gordon's Bay, Stellenbosch, Franschhoek, Paarl, Grabouw and Cape Town. Our main base is in Somerset West, so our response times across the Helderberg are especially fast." },
-        { q: "How do I get a quote?", a: "Get in touch and we will arrange a free site visit. We look at your space, understand what you need, and come back to you with a clear proposal. No cost, no obligation." }
+        { q: "Can I pair my air conditioning with solar to save on running costs?", a: "Yes, and it works very well in the Western Cape. Air conditioning tends to be used most on hot, sunny days, which is exactly when your solar panels are producing the most power. Running your aircon from solar reduces what it costs to keep your home or office cool." }
     ];
 
     const faqSchema = {
@@ -434,7 +432,7 @@ export default function ACInstallationPage() {
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div className="overflow-hidden rounded-xl shadow-2xl h-[400px] w-full bg-white relative">
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4023.9526587094174!2d18.820527300000002!3d-34.063464499999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcdb5947a717cc1%3A0x6ffb176a283db73e!2sEAR%20Engineering!5e1!3m2!1sen!2sza!4v1772199538942!5m2!1sen!2sza"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4023.9526587094174!2d18.820527300000002!3d-34.063464499999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcdb5947a717cc1%3A0x6ffb176a283db73e!2sEAR%20Engineering!5e0!3m2!1sen!2sza!4v1772199538942!5m2!1sen!2sza"
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0 }}
@@ -531,6 +529,7 @@ export default function ACInstallationPage() {
             <QuoteModal
                 isOpen={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
+                preselectedCategory="Aircon"
             />
         </>
     );

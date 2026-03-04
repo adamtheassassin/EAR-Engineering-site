@@ -1,7 +1,7 @@
-import { FaBolt as Zap, FaRegSnowflake as Snowflake, FaSun as Sun } from "react-icons/fa6";
+import { FaBolt as Zap, FaWind as Wind, FaSun as Sun } from "react-icons/fa6";
 
 interface ServicesProps {
-    onOpenModal: () => void;
+    onOpenModal: (category?: "Electrical" | "Aircon" | "Solar") => void;
 }
 
 export default function Services({ onOpenModal }: ServicesProps) {
@@ -29,7 +29,7 @@ export default function Services({ onOpenModal }: ServicesProps) {
         },
         {
             title: "Aircon",
-            icon: Snowflake,
+            icon: Wind,
             iconColor: "text-cyan-600",
             topBgColor: "bg-cyan-600",
             titleColor: "text-white",
@@ -124,7 +124,7 @@ export default function Services({ onOpenModal }: ServicesProps) {
 
                                 <div className="space-y-3 relative z-10">
                                     <button
-                                        onClick={onOpenModal}
+                                        onClick={() => onOpenModal(svc.title as "Electrical" | "Aircon" | "Solar")}
                                         className="w-full py-4 text-center rounded-xl bg-[#FFCA08] hover:bg-[#E5B507] text-gray-900 font-extrabold transition shadow-md"
                                     >
                                         Request Free Quote

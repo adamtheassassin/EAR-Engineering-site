@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaShield as ShieldCheck, FaPhone as Phone, FaArrowRight as ArrowRight, FaRegCircleCheck as CheckCircle2, FaBoltLightning as Zap, FaList as LayoutList, FaCertificate as BadgeCheck, FaClock as ClockAlert } from "react-icons/fa6";
+import { FaShield as ShieldCheck, FaPhone as Phone, FaArrowRight as ArrowRight, FaRegCircleCheck as CheckCircle2, FaBoltLightning as Zap, FaUserCheck as UserCheck, FaCertificate as BadgeCheck, FaClock as ClockAlert } from "react-icons/fa6";
 import { CONTACT } from "@/lib/constants";
 
 interface HeroProps {
@@ -89,12 +89,12 @@ export default function Hero({ onOpenModal, title, subtitle, image = "/hero-engi
                                 <span className="text-sm font-medium text-cyan-50">COC issued where applicable</span>
                             </div>
                             <div className="flex items-start lg:justify-start justify-center gap-2">
-                                <LayoutList className="w-5 h-5 text-[#FFCA08] flex-shrink-0" />
-                                <span className="text-sm font-medium text-cyan-50">Project-managed installs</span>
+                                <UserCheck className="w-5 h-5 text-[#FFCA08] flex-shrink-0" />
+                                <span className="text-sm font-medium text-cyan-50">Qualified & registered electricians</span>
                             </div>
                             <div className="flex items-start lg:justify-start justify-center gap-2">
                                 <Zap className="w-5 h-5 text-[#FFCA08] flex-shrink-0" />
-                                <span className="text-sm font-medium text-cyan-50">Same-day support when available</span>
+                                <span className="text-sm font-medium text-cyan-50">Same-day support</span>
                             </div>
                         </div>
                     </div>
