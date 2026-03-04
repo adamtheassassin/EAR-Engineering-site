@@ -53,9 +53,9 @@ export default function ContactPage() {
                         </p>
                     </div>
 
-                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
                         {/* Contact Information */}
-                        <div className="space-y-8">
+                        <div className="space-y-8 h-full">
                             <div className="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-gray-100 flex flex-col gap-8 h-full">
                                 <h2 className="text-2xl font-bold text-gray-900">Contact Information</h2>
 
@@ -108,9 +108,9 @@ export default function ContactPage() {
                         </div>
 
                         {/* Contact Form */}
-                        <div className="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-gray-100">
+                        <div className="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-gray-100 h-full flex flex-col">
                             <h2 className="text-2xl font-bold text-gray-900 mb-6">Send a Message</h2>
-                            <form onSubmit={handleSubmit} className="space-y-6">
+                            <form onSubmit={handleSubmit} className="space-y-6 flex-grow flex flex-col">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label htmlFor="name" className="text-sm font-bold text-gray-700">Full Name</label>
@@ -186,14 +186,16 @@ export default function ContactPage() {
                                     ></textarea>
                                 </div>
 
-                                <button
-                                    type="submit"
-                                    disabled={isSubmitting}
-                                    className="w-full py-4 mt-2 bg-[#FFCA08] hover:bg-[#E5B507] text-gray-900 font-extrabold text-lg rounded-xl flex items-center justify-center gap-3 transition-colors shadow-md disabled:opacity-70 disabled:cursor-not-allowed"
-                                >
-                                    {isSubmitting ? "Sending Message..." : "Send Message"}
-                                    {!isSubmitting && <FaPaperPlane className="w-5 h-5" />}
-                                </button>
+                                <div className="flex-grow flex flex-col justify-end">
+                                    <button
+                                        type="submit"
+                                        disabled={isSubmitting}
+                                        className="w-full py-4 mt-2 bg-[#FFCA08] hover:bg-[#E5B507] text-gray-900 font-extrabold text-lg rounded-xl flex items-center justify-center gap-3 transition-colors shadow-md disabled:opacity-70 disabled:cursor-not-allowed"
+                                    >
+                                        {isSubmitting ? "Sending Message..." : "Send Message"}
+                                        {!isSubmitting && <FaPaperPlane className="w-5 h-5" />}
+                                    </button>
+                                </div>
                             </form>
                         </div>
                     </div>
