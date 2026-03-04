@@ -2,7 +2,7 @@ export default function Process() {
     const steps = [
         { num: "01", title: "Request a Free Quote", desc: "Share your electrical, aircon, or solar needs with us online or over the phone." },
         { num: "02", title: "1-Hour Callback", desc: "During business hours, we'll connect with you within 60 minutes to evaluate your needs." },
-        { num: "03", title: "Transparent Scoping", desc: "We provide exactly what the installation entails—timeline, materials, and cost upfront." },
+        { num: "03", title: "Transparent Scoping", desc: "We provide exactly what the installation entails, including timeline, materials, and cost upfront." },
         { num: "04", title: "Project-Managed Install", desc: "Quality execution by certified professionals. Signed off and strictly compliant." }
     ];
 

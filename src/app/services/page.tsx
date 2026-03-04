@@ -36,10 +36,10 @@ export default function ServicesPage() {
             icon: FaBolt,
             iconColor: "text-[#015CAB]",
             services: [
-                { name: "Electrical Installations", href: "#" },
-                { name: "DB Board Upgrades", href: "#" },
-                { name: "COC Certificates", href: "#" },
-                { name: "Generator Installations", href: "#" },
+                { name: "Electrical Installations", href: "/services/electrical-services" },
+                { name: "DB Board Upgrades", href: "/services/electrical-services" },
+                { name: "COC Certificates", href: "/services/electrical-services" },
+                { name: "Generator Installations", href: "/services/electrical-services" },
             ]
         }
     ];

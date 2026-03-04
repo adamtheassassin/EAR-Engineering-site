@@ -250,7 +250,7 @@ export default function SolarInstallationPage() {
                             {[
                                 { title: "18 Years Experience", icon: FaClockRotateLeft, desc: "We know this area, we know the local suppliers, and we know what works here." },
                                 { title: "Qualified Electricians", icon: FaShieldHalved, desc: "All our electrical work is done by registered electricians and comes with a COC." },
-                                { title: "Everything Under One Roof", icon: FaBoltLightning, desc: "Electrical, solar, and air conditioning—all managed by one company to make things simple." },
+                                { title: "Everything Under One Roof", icon: FaBoltLightning, desc: "Electrical, solar, and air conditioning are all managed by one company to make things simple." },
                                 { title: "No Disappearing Acts", icon: FaUserTie, desc: "We are a local business. When you call us six months after installation, we pick up." }
                             ].map((item, i) => (
                                 <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-4 items-center sm:items-start text-center sm:text-left hover:border-cyan-200 transition-colors group">
