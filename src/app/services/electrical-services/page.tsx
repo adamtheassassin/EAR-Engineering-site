@@ -243,17 +243,17 @@ export default function ElectricalServicesPage() {
                 </section>
 
                 {/* Real Projects */}
-                <section className="py-12 md:py-24 bg-gray-50 relative overflow-hidden z-10">
+                <section className="py-12 md:py-24 bg-white relative overflow-hidden z-10">
                     <div className="absolute inset-0 z-0">
                         <Image
-                            src="/Work Photos/electrical installation job somerset west.webp"
+                            src="/Location images/StellenboschWC-Aerial.webp"
                             alt="Electrical Installation Background"
                             fill
                             quality={90}
                             className="object-cover object-center"
                         />
                         <div className="absolute inset-0 bg-white/50 mix-blend-screen"></div>
-                        <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-white/40 to-gray-50"></div>
+                        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/30 to-white"></div>
                     </div>
 
                     <div className="container mx-auto px-4 max-w-6xl relative z-10 text-center md:text-left">
