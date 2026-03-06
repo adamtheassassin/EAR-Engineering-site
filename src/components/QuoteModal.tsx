@@ -15,6 +15,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
     const defaultStep = preselectedCategory ? 2 : 1;
     const [step, setStep] = useState(defaultStep);
     const [isSuccess, setIsSuccess] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     // Form state
     const [category, setCategory] = useState<ServiceCategory>(preselectedCategory || "");
@@ -152,7 +153,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
     const isAcInstall = category === "Aircon" && subService === "New AC Installation";
     const totalSteps = isAcInstall ? 5 : 4;
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
         if (step < totalSteps) {
@@ -160,7 +161,42 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
             return;
         }
 
-        setIsSuccess(true);
+        setIsSubmitting(true);
+        try {
+            const payload = {
+                serviceCategory: category,
+                serviceType: subService,
+                description: details,
+                timeframe: timeframe,
+                customerName: name,
+                customerPhone: phone,
+                customerEmail: email,
+                customerArea: area,
+                ...(isAcInstall && {
+                    acType: acType,
+                    acBrand: acBrand
+                })
+            };
+
+            const response = await fetch("https://hook.eu2.make.com/1rz5w2sjex28nl2qf7ffofqpe7bn819d", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(payload),
+            });
+
+            if (response.ok) {
+                setIsSuccess(true);
+            } else {
+                alert("There was an error submitting your request. Please try again or call us directly.");
+            }
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            alert("There was a network error. Please try again or call us directly.");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const handleNext = () => {
@@ -361,8 +397,10 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
                                     Next <ArrowRight className="w-4 h-4" />
                                 </button>
                             ) : (
-                                <button type="submit" className="px-6 py-3 bg-[#ff6b00] text-white rounded-lg font-bold hover:bg-[#e66000] flex items-center gap-2 transition ml-auto shadow-md">
-                                    Submit Request <CheckCircle className="w-4 h-4" />
+                                <button type="submit" disabled={isSubmitting} className={`px-6 py-3 bg-[#ff6b00] text-white rounded-lg font-bold flex items-center gap-2 transition ml-auto shadow-md ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-[#e66000]'}`}>
+                                    {isSubmitting ? "Submitting..." : (
+                                        <>Submit Request <CheckCircle className="w-4 h-4" /></>
+                                    )}
                                 </button>
                             )}
                         </div>
