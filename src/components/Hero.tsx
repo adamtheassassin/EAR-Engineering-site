@@ -33,8 +33,8 @@ export default function Hero({ onOpenModal, title, subtitle, image = "/hero-engi
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1]">
                             {title || (
                                 <>
-                                    Electricians, Aircon & <br className="hidden lg:block" />
-                                    <span className="text-[#FFCA08]">Solar Installers in Somerset West</span>
+                                    Professional Electricians<br className="hidden lg:block" />
+                                    <span className="text-[#FFCA08]">in Somerset West</span>
                                 </>
                             )}
                         </h1>
@@ -51,7 +51,7 @@ export default function Hero({ onOpenModal, title, subtitle, image = "/hero-engi
                         </div>
 
                         <p className="text-lg md:text-xl lg:text-2xl text-cyan-50 leading-relaxed font-medium max-w-2xl">
-                            {subtitle || "Serving the Helderberg, Stellenbosch, Boland and greater Western Cape for over 18 years."}
+                            {subtitle || "Specializing in Solar Installations, Air-conditioning & Electrical Compliance - serving the Helderberg and greater Western Cape for over 18 years."}
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 pt-2 lg:pt-4 w-full sm:w-auto">

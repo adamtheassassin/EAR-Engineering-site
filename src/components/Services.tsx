@@ -75,9 +75,9 @@ export default function Services({ onOpenModal }: ServicesProps) {
         <section className="pt-10 pb-20 md:pt-14 md:pb-28 bg-white" id="services">
             <div className="container mx-auto px-4">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-6">
+                    <h3 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-6">
                         Choose Your Service
-                    </h2>
+                    </h3>
                     <p className="text-xl text-gray-600">
                         Expert solutions delivered safely, efficiently, and compliantly.
                     </p>
@@ -85,7 +85,7 @@ export default function Services({ onOpenModal }: ServicesProps) {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {services.map((svc, i) => (
-                        <div key={i} className="bg-white border rounded-3xl shadow-sm hover:shadow-xl transition-all flex flex-col group relative overflow-hidden">
+                        <section key={i} aria-label={`${svc.title} Services`} className="bg-white border rounded-3xl shadow-sm hover:shadow-xl transition-all flex flex-col group relative overflow-hidden">
 
                             {/* TOP HALF (Tinted) */}
                             <div className={`p-8 pb-6 relative ${svc.topBgColor}`}>
@@ -96,7 +96,7 @@ export default function Services({ onOpenModal }: ServicesProps) {
                                     <div className={`w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm border border-black/5 bg-white ${svc.iconColor} shrink-0`}>
                                         <svc.icon className="w-7 h-7" />
                                     </div>
-                                    <h3 className={`text-3xl font-bold ${svc.titleColor}`}>{svc.title}</h3>
+                                    <h2 className={`text-3xl font-bold ${svc.titleColor}`}>{svc.title}</h2>
                                 </div>
                                 <p className={`relative z-10 min-h-[48px] ${svc.descColor}`}>
                                     {svc.description}
@@ -137,7 +137,7 @@ export default function Services({ onOpenModal }: ServicesProps) {
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </section>
                     ))}
                 </div>
             </div>
