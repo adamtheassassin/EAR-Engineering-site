@@ -16,8 +16,6 @@ const mukta = Mukta({
 });
 
 export const metadata: Metadata = {
-  title: "EAR Engineering | Fast HVAC, Electrical & Solar in Cape Town",
-  description: "EAR Engineering provides expert project-managed electrical, aircon & solar solutions in Helderberg and Cape Town. On time, on budget, with a 1-hour callback promise.",
   icons: {
     icon: "/icon.png",
   },

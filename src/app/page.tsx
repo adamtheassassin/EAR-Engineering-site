@@ -29,6 +29,8 @@ export default function Home() {
 
   return (
     <>
+      <title>EAR Engineering | Fast HVAC, Electrical & Solar in Cape Town</title>
+      <meta name="description" content="EAR Engineering provides expert project-managed electrical, aircon & solar solutions in Helderberg and Cape Town. On time, on budget, with a 1-hour callback promise." />
       <Header onOpenModal={() => openModal()} />
 
       <main className="flex-1">
