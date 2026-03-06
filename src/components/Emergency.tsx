@@ -48,7 +48,7 @@ export default function Emergency({ onOpenModal }: EmergencyProps) {
                 {/* Right Side: CTA Button */}
                 <div className="flex-shrink-0 w-full md:w-auto mt-2 md:mt-0">
                     <a
-                        href="tel:0769737329"
+                        href="tel:0218554462"
                         className="w-full md:w-auto group/btn relative inline-flex items-center justify-center gap-3 rounded-full bg-[#FFCA08] px-8 py-4 md:py-3.5 text-base md:text-lg font-black text-black shadow-[0_4px_14px_rgba(255,202,8,0.2)] transition-all duration-300 hover:scale-[1.02] hover:bg-yellow-400 hover:shadow-[0_8px_25px_rgba(255,202,8,0.4)] active:scale-95 whitespace-nowrap"
                     >
                         <span className="relative flex h-3 w-3">

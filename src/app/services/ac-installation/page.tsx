@@ -400,7 +400,7 @@ export default function ACInstallationPage() {
                                     <tr className="hover:bg-gray-50 transition-colors bg-gray-50/50">
                                         <td className="py-4 px-6 font-bold text-gray-900">Single inverter unit</td>
                                         <td className="py-4 px-6 text-gray-600 font-medium">Living areas, home office, daily use spaces</td>
-                                        <td className="py-4 px-6 text-[#015CAB] font-bold">R12,000 to R22,000</td>
+                                        <td className="py-4 px-6 text-[#015CAB] font-bold">R12,000 to R19,000</td>
                                     </tr>
                                     <tr className="hover:bg-gray-50 transition-colors">
                                         <td className="py-4 px-6 font-bold text-gray-900">Multi-room residential</td>

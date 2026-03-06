@@ -4,7 +4,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import { FaPhone, FaEnvelope, FaLocationDot, FaClock, FaPaperPlane } from "react-icons/fa6";
+import { FaPhone, FaEnvelope, FaLocationDot, FaClock, FaPaperPlane, FaWhatsapp } from "react-icons/fa6";
 import { CONTACT } from "@/lib/constants";
 import QuoteModal from "@/components/QuoteModal";
 
@@ -67,6 +67,21 @@ export default function ContactPage() {
                                         <div>
                                             <h3 className="font-bold text-gray-900 text-lg mb-1">Call Us</h3>
                                             <p className="text-gray-600 font-medium text-lg leading-snug group-hover:text-[#015CAB] transition-colors">{CONTACT.phone}</p>
+                                        </div>
+                                    </a>
+
+                                    <a
+                                        href={CONTACT.whatsappLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-start gap-5 group"
+                                    >
+                                        <div className="bg-[#e6f0f9] p-4 rounded-xl flex-shrink-0 text-[#015CAB] group-hover:bg-[#015CAB] group-hover:text-white transition-colors duration-300">
+                                            <FaWhatsapp className="w-6 h-6" />
+                                        </div>
+                                        <div>
+                                            <h3 className="font-bold text-gray-900 text-lg mb-1">WhatsApp</h3>
+                                            <p className="text-gray-600 font-medium text-lg leading-snug group-hover:text-[#015CAB] transition-colors">Chat with us</p>
                                         </div>
                                     </a>
 

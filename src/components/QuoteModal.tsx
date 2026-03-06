@@ -21,7 +21,11 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
     const [subService, setSubService] = useState("");
     const [details, setDetails] = useState("");
     const [timeframe, setTimeframe] = useState("As soon as possible");
-    const [emergency, setEmergency] = useState(false);
+
+    // AC installation specific state
+    const [acType, setAcType] = useState("");
+    const [acBrand, setAcBrand] = useState("Not sure");
+
 
     // Contact state
     const [name, setName] = useState("");
@@ -60,26 +64,71 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
         ]
     };
 
-    // Initialize correctly when modal opens
+    const [isInitialized, setIsInitialized] = useState(false);
+    const prevIsOpen = useRef(isOpen);
+
+    // Load from local storage on mount
     useEffect(() => {
-        if (!isOpen) {
-            setStep(preselectedCategory ? 2 : 1);
-            setCategory(preselectedCategory || "");
-            setSubService("");
-            setDetails("");
-            setTimeframe("As soon as possible");
-            setEmergency(false);
-            setName("");
-            setPhone("");
-            setEmail("");
-            setArea("");
-            setIsSuccess(false);
-            return;
-        } else {
-            setStep(preselectedCategory ? 2 : 1);
-            setCategory(preselectedCategory || "");
+        const saved = localStorage.getItem("quoteModalState");
+        if (saved) {
+            try {
+                const parsed = JSON.parse(saved);
+                if (parsed.step) setStep(parsed.step);
+                if (parsed.category) setCategory(parsed.category);
+                if (parsed.subService) setSubService(parsed.subService);
+                if (parsed.details) setDetails(parsed.details);
+                if (parsed.timeframe) setTimeframe(parsed.timeframe);
+                if (parsed.name) setName(parsed.name);
+                if (parsed.phone) setPhone(parsed.phone);
+                if (parsed.email) setEmail(parsed.email);
+                if (parsed.area) setArea(parsed.area);
+                if (parsed.isSuccess) setIsSuccess(parsed.isSuccess);
+                if (parsed.acType) setAcType(parsed.acType);
+                if (parsed.acBrand) setAcBrand(parsed.acBrand);
+            } catch (e) {
+                console.error("Failed to parse quote modal state", e);
+            }
         }
-    }, [isOpen, preselectedCategory]);
+        setIsInitialized(true);
+    }, []);
+
+    // Save to local storage whenever state changes
+    useEffect(() => {
+        if (!isInitialized) return;
+        const stateToSave = {
+            step, category, subService, details, timeframe, name, phone, email, area, isSuccess, acType, acBrand
+        };
+        localStorage.setItem("quoteModalState", JSON.stringify(stateToSave));
+    }, [isInitialized, step, category, subService, details, timeframe, name, phone, email, area, isSuccess, acType, acBrand]);
+
+    // Handle opening logic and preselected categories
+    useEffect(() => {
+        if (isOpen && !prevIsOpen.current) {
+            // Reset the form if it was in success state
+            if (isSuccess) {
+                setStep(preselectedCategory ? 2 : 1);
+                setCategory(preselectedCategory || "");
+                setSubService("");
+                setDetails("");
+                setTimeframe("As soon as possible");
+                setName("");
+                setPhone("");
+                setEmail("");
+                setArea("");
+                setAcType("");
+                setAcBrand("Not sure");
+                setIsSuccess(false);
+                localStorage.removeItem("quoteModalState");
+            }
+            // If opening from a new service page, override previous progress for category/step
+            else if (preselectedCategory && preselectedCategory !== category) {
+                setCategory(preselectedCategory);
+                setStep(2);
+                setSubService("");
+            }
+        }
+        prevIsOpen.current = isOpen;
+    }, [isOpen, preselectedCategory, isSuccess, category]);
 
     // Focus trap
     useEffect(() => {
@@ -100,10 +149,13 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
 
     if (!isOpen) return null;
 
+    const isAcInstall = category === "Aircon" && subService === "New AC Installation";
+    const totalSteps = isAcInstall ? 5 : 4;
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        if (step < 4) {
+        if (step < totalSteps) {
             setStep(step + 1);
             return;
         }
@@ -120,7 +172,12 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
             alert("Please select the specific service you need.");
             return;
         }
-        if (step === 3 && !details) {
+        if (step === 3 && isAcInstall && !acType) {
+            alert("Please select the type of AC unit (Split unit, Inverter, or Not sure).");
+            return;
+        }
+        const isDetailsStep = (step === 3 && !isAcInstall) || (step === 4 && isAcInstall);
+        if (isDetailsStep && !details) {
             const txt = document.getElementById("details_textarea") as HTMLTextAreaElement;
             if (txt && !txt.checkValidity()) {
                 txt.reportValidity();
@@ -135,7 +192,6 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
     };
 
     const startStep = preselectedCategory ? 2 : 1;
-    const totalSteps = 4;
     const progressChunks = [];
     for (let i = startStep; i <= totalSteps; i++) {
         progressChunks.push(i);
@@ -196,10 +252,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
                                             </label>
                                         ))}
                                     </div>
-                                    <label className={`flex items-center mt-4 p-4 border rounded-lg cursor-pointer transition ${emergency ? 'border-red-400 bg-red-50' : 'border-red-100 bg-red-50 hover:border-red-300'}`}>
-                                        <input type="checkbox" name="emergency" checked={emergency} onChange={(e) => setEmergency(e.target.checked)} className="w-5 h-5 text-red-600 focus:ring-red-600 rounded" />
-                                        <span className="ml-3 font-medium text-red-800">This is an emergency (Priority)</span>
-                                    </label>
+
                                 </div>
                             )}
 
@@ -219,10 +272,42 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
                                 </div>
                             )}
 
-                            {step === 3 && (
+                            {step === 3 && isAcInstall && (
                                 <div className="space-y-4 animate-in fade-in slide-in-from-right-4">
                                     <h3 className="font-semibold text-gray-800">
-                                        {preselectedCategory ? "2." : "3."} Tell us more
+                                        {preselectedCategory ? "2." : "3."} AC Installation Preferences
+                                    </h3>
+                                    <div>
+                                        <label className="block text-sm font-medium mb-2">What type of AC unit do you prefer?</label>
+                                        <div className="grid grid-cols-1 gap-3">
+                                            {["Split Unit", "Inverter", "Not sure"].map(type => (
+                                                <label key={type} className={`flex items-center p-4 border rounded-lg cursor-pointer transition ${acType === type ? 'border-cyan-600 bg-cyan-50' : 'hover:border-cyan-600 hover:bg-cyan-50'}`}>
+                                                    <input type="radio" name="acType" required checked={acType === type} onChange={() => setAcType(type)} className="w-5 h-5 text-cyan-600 focus:ring-cyan-600" />
+                                                    <span className="ml-3 font-medium text-gray-900">{type}</span>
+                                                </label>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <div className="mt-4">
+                                        <label className="block text-sm font-medium mb-1">Preferred AC Brand</label>
+                                        <select value={acBrand} onChange={(e) => setAcBrand(e.target.value)} className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-cyan-600 outline-none bg-white">
+                                            <option>Not sure</option>
+                                            <option>Samsung</option>
+                                            <option>LG</option>
+                                            <option>Daikin</option>
+                                            <option>Midea</option>
+                                            <option>Alliance</option>
+                                            <option>Hisense</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            )}
+
+                            {((step === 3 && !isAcInstall) || (step === 4 && isAcInstall)) && (
+                                <div className="space-y-4 animate-in fade-in slide-in-from-right-4">
+                                    <h3 className="font-semibold text-gray-800">
+                                        {preselectedCategory ? (isAcInstall ? "3." : "2.") : (isAcInstall ? "4." : "3.")} Tell us more
                                     </h3>
                                     <div>
                                         <label className="block text-sm font-medium mb-1">Describe the issue or project</label>
@@ -239,10 +324,10 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
                                 </div>
                             )}
 
-                            {step === 4 && (
+                            {((step === 4 && !isAcInstall) || (step === 5 && isAcInstall)) && (
                                 <div className="space-y-4 animate-in fade-in slide-in-from-right-4">
                                     <h3 className="font-semibold text-gray-800">
-                                        {preselectedCategory ? "3." : "4."} Your details
+                                        {preselectedCategory ? (isAcInstall ? "4." : "3.") : (isAcInstall ? "5." : "4.")} Your details
                                     </h3>
                                     <div>
                                         <label className="block text-sm font-medium mb-1">Full Name</label>
@@ -271,7 +356,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
                                 </button>
                             ) : <div></div>}
 
-                            {step < 4 ? (
+                            {step < totalSteps ? (
                                 <button type="button" onClick={handleNext} className="px-6 py-3 bg-cyan-600 text-white rounded-lg font-bold hover:bg-cyan-700 flex items-center gap-2 transition ml-auto">
                                     Next <ArrowRight className="w-4 h-4" />
                                 </button>

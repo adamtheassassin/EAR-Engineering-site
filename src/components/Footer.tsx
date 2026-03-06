@@ -17,7 +17,7 @@ export default function Footer() {
                         />
                     </div>
                     <p className="text-sm font-medium leading-relaxed mb-6 text-gray-600">
-                        Project-managed electrical, aircon & solar in Helderberg + Cape Town. Since 1994. Quality installations, zero guesswork.
+                        <strong>EAR Engineering</strong> - Project-managed electrical, aircon & solar in Helderberg + Cape Town. Since 1994. Quality installations, zero guesswork.
                     </p>
                 </div>
 

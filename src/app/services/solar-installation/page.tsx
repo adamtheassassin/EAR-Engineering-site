@@ -197,9 +197,9 @@ export default function SolarInstallationPage() {
 
                                 <div className="space-y-6">
                                     <div className="bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-sm border border-gray-200/60 border-l-4 border-l-[#015CAB] transition-transform hover:-translate-y-1">
-                                        <h3 className="text-xl font-bold text-gray-900 mb-2">Val De Vie Estate, Stellenbosch</h3>
+                                        <h3 className="text-xl font-bold text-gray-900 mb-2">Val De Vine Estate, Stellenbosch</h3>
                                         <p className="text-gray-700 font-medium">
-                                            We are currently installing a 100kW commercial solar system at Val De Vie Estate in Stellenbosch. This is a large-scale project that will significantly reduce the estate's electricity costs and provide reliable power during load shedding.
+                                            We are currently installing a 100kW commercial solar system at Val De Vine Estate in Stellenbosch. This is a large-scale project that will significantly reduce the estate's electricity costs and provide reliable power during load shedding.
                                         </p>
                                     </div>
 
@@ -302,12 +302,12 @@ export default function SolarInstallationPage() {
                                     <tr className="hover:bg-gray-50 transition-colors">
                                         <td className="py-4 px-6 font-bold text-gray-900">Battery backup only</td>
                                         <td className="py-4 px-6 text-gray-600 font-medium">Load shedding cover for the basics</td>
-                                        <td className="py-4 px-6 text-[#015CAB] font-bold">R25,000 to R50,000</td>
+                                        <td className="py-4 px-6 text-[#015CAB] font-bold">R12,000 to R50,000</td>
                                     </tr>
                                     <tr className="hover:bg-gray-50 transition-colors bg-gray-50/50">
                                         <td className="py-4 px-6 font-bold text-gray-900">Small residential solar</td>
                                         <td className="py-4 px-6 text-gray-600 font-medium">Smaller homes and townhouses</td>
-                                        <td className="py-4 px-6 text-[#015CAB] font-bold">R60,000 to R100,000</td>
+                                        <td className="py-4 px-6 text-[#015CAB] font-bold">R25,000 to R100,000</td>
                                     </tr>
                                     <tr className="hover:bg-gray-50 transition-colors">
                                         <td className="py-4 px-6 font-bold text-gray-900">Mid-size residential solar</td>

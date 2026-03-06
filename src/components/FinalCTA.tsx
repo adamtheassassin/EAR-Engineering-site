@@ -24,8 +24,8 @@ export default function FinalCTA({ onOpenModal }: FinalCTAProps) {
                     >
                         <FileText className="w-6 h-6" /> Free Quote
                     </button>
-                    <a href="tel:0769737329" className="w-full sm:w-auto bg-white/50 hover:bg-white text-gray-900 backdrop-blur-md border-2 border-gray-900 px-8 py-5 rounded-2xl font-black text-xl transition-all shadow-md flex items-center justify-center gap-3">
-                        <Phone className="w-6 h-6" /> 076 973 7329
+                    <a href="tel:0218554462" className="w-full sm:w-auto bg-white/50 hover:bg-white text-gray-900 backdrop-blur-md border-2 border-gray-900 px-8 py-5 rounded-2xl font-black text-xl transition-all shadow-md flex items-center justify-center gap-3">
+                        <Phone className="w-6 h-6" /> 021 855 4462
                     </a>
                 </div>
 
