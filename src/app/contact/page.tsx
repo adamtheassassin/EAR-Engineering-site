@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
 import Image from "next/image";
 import { FaPhone, FaEnvelope, FaLocationDot, FaClock, FaPaperPlane, FaWhatsapp } from "react-icons/fa6";
 import { CONTACT } from "@/lib/constants";
@@ -216,6 +217,8 @@ export default function ContactPage() {
                     </div>
                 </div>
             </main>
+
+            <FAQ />
 
             <Footer />
 

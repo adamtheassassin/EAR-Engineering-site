@@ -15,25 +15,25 @@ export default function Hero({ onOpenModal, title, subtitle, image = "/hero-engi
     const location = "Helderberg & Cape Town";
 
     return (
-        <section className="relative overflow-hidden bg-[#015CAB] text-white lg:h-[calc(100vh-5rem)] flex items-start lg:items-center pt-6 pb-10 lg:py-0">
+        <section className="relative overflow-hidden bg-[#015CAB] text-white lg:min-h-[calc(85vh-5rem)] flex items-start lg:items-center pt-10 pb-12 lg:pt-12 lg:pb-16 xl:pt-16 xl:pb-20">
             <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#01418A]/80 to-transparent"></div>
 
             {/* Dynamic Background Pattern / Texture (subtle) */}
             <div className="absolute inset-0 z-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4JyBoZWlnaHQ9JzgnPgo8cmVjdCB3aWR0aD0nOCwgaGVpZ2h0PSc4JyBmaWxsPScjZmZmJyBmaWxsLW9wYWNpdHk9JzAuMScvPgo8cGF0aCBkPSdNMCAwaDhyOHYtOEgweicgZmlsbD0nI2ZmZicgZmlsbC1vcGFjaXR5PScwLjA1JyAvPgo8L3N2Zz4=')]"></div>
 
             <div className="container mx-auto px-4 relative z-10 w-full">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-                    <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-4 lg:space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                    <div className="lg:col-span-7 xl:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-4 lg:space-y-6 animate-in fade-in slide-in-from-bottom-8 duration-700">
 
                         <div className="inline-flex items-center bg-cyan-900/30 font-semibold px-3 lg:px-4 py-1.5 lg:py-2 rounded-full text-xs lg:text-base text-cyan-50 border border-cyan-400/30 w-fit">
                             <span className="flex w-2 h-2 bg-green-400 rounded-full mr-2 z-10 animate-pulse"></span>
                             Available for Service in {location}
                         </div>
 
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1]">
+                        <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-[4rem] 2xl:text-7xl font-extrabold tracking-tight leading-[1.1]">
                             {title || (
                                 <>
-                                    Professional Electricians<br className="hidden lg:block" />
+                                    <span className="lg:whitespace-nowrap">Professional Electricians</span><br className="hidden lg:block" />
                                     <span className="text-[#FFCA08]">in Somerset West</span>
                                 </>
                             )}
@@ -79,7 +79,7 @@ export default function Hero({ onOpenModal, title, subtitle, image = "/hero-engi
                             <ClockAlert className="w-4 h-4 lg:w-5 lg:h-5 text-[#FFCA08] flex-shrink-0" /> We’ll contact you within 1 hour (business hours).
                         </div>
 
-                        <div className="hidden lg:grid grid-cols-2 gap-4 mt-8 lg:mt-12 border-t border-cyan-400/30 pt-8 w-full">
+                        <div className="hidden lg:grid grid-cols-2 gap-4 mt-5 lg:mt-6 border-t border-cyan-400/30 pt-4 lg:pt-5 w-full">
                             <div className="flex items-start lg:justify-start justify-center gap-2">
                                 <ShieldCheck className="w-5 h-5 text-[#FFCA08] flex-shrink-0" />
                                 <span className="text-sm font-medium text-cyan-50">Since 1994</span>
@@ -99,8 +99,8 @@ export default function Hero({ onOpenModal, title, subtitle, image = "/hero-engi
                         </div>
                     </div>
 
-                    <div className="hidden lg:block relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-300">
-                        <div className="relative h-[600px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/10 group">
+                    <div className="hidden lg:block lg:col-span-5 xl:col-span-5 relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-300">
+                        <div className="relative h-[400px] lg:h-[480px] xl:h-[550px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/10 group">
                             <Image
                                 src={image}
                                 alt="Professional Engineering Services"

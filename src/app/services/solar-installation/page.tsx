@@ -50,7 +50,7 @@ export default function SolarInstallationPage() {
             "addressCountry": "ZA"
         },
         "currenciesAccepted": "ZAR",
-        "areaServed": ["Somerset West", "Strand", "Gordon's Bay", "Stellenbosch", "Franschhoek", "Paarl", "Grabouw", "Cape Town"],
+        "areaServed": ["Somerset West", "Strand", "Gordon's Bay", "Stellenbosch", "Franschhoek", "Paarl", "Durbanville", "Cape Town"],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Solar Services",
@@ -423,7 +423,7 @@ export default function SolarInstallationPage() {
                                         "Gordon's Bay",
                                         "Paarl",
                                         "Cape Town",
-                                        "Grabouw"
+                                        "Durbanville"
                                     ].map((area, i) => (
                                         <div key={i} className="flex items-center gap-2">
                                             <FaCircleCheck className="text-white w-5 h-5 flex-shrink-0" />

@@ -63,7 +63,7 @@ export default function ElectricalServicesPage() {
             "addressCountry": "ZA"
         },
         "currenciesAccepted": "ZAR",
-        "areaServed": ["Somerset West", "Strand", "Gordon's Bay", "Stellenbosch", "Franschhoek", "Paarl", "Grabouw", "Cape Town"],
+        "areaServed": ["Somerset West", "Strand", "Gordon's Bay", "Stellenbosch", "Franschhoek", "Paarl", "Durbanville", "Cape Town"],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Electrical Services",
@@ -406,7 +406,7 @@ export default function ElectricalServicesPage() {
                                         "Gordon's Bay",
                                         "Paarl",
                                         "Cape Town",
-                                        "Grabouw",
+                                        "Durbanville",
                                     ].map((location, i) => (
                                         <div key={i} className="flex items-center gap-3">
                                             <FaCircleCheck className="text-[#FFCA08] w-5 h-5 flex-shrink-0" />

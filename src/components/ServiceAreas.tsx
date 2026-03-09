@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { FaMountain, FaWater, FaAnchor, FaTree, FaTrainTram, FaMonument, FaAppleWhole, FaMountainCity } from "react-icons/fa6";
+import { FaMountain, FaWater, FaAnchor, FaTree, FaTrainTram, FaMonument, FaHouseChimney, FaMountainCity } from "react-icons/fa6";
 import { IconType } from "react-icons";
 import Image from "next/image";
 
@@ -63,12 +63,12 @@ const locations: LocationData[] = [
         icon: FaMonument
     },
     {
-        id: "grabouw",
-        name: "Grabouw",
-        subRegion: "OVERBERG",
-        description: "Expert engineering and maintenance solutions for agricultural and cold-storage facilities.",
-        image: "/Location images/Grabouw.webp",
-        icon: FaAppleWhole
+        id: "durbanville",
+        name: "Durbanville",
+        subRegion: "NORTHERN SUBURBS",
+        description: "Providing premium residential, commercial, and agricultural and electrical engineering solutions to the Durbanville area.",
+        image: "/Location images/Durbanville.webp",
+        icon: FaHouseChimney
     },
     {
         id: "cape-town",
