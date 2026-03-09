@@ -11,18 +11,45 @@ import QuoteModal from "@/components/QuoteModal";
 
 export default function ContactPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [formData, setFormData] = useState({ name: "", email: "", phone: "", service: "", message: "" });
+    const [formData, setFormData] = useState({ customerName: "", customerEmail: "", customerPhone: "", serviceType: "", description: "" });
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
-        // Simulate form submission
-        setTimeout(() => {
-            alert("Thank you for your message. We will get back to you shortly.");
-            setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+
+        try {
+            const payload = {
+                serviceCategory: "contactform",
+                serviceType: formData.serviceType,
+                description: formData.description,
+                customerName: formData.customerName,
+                customerPhone: formData.customerPhone,
+                customerEmail: formData.customerEmail,
+                timeframe: "Not specified",
+                customerArea: "Not specified"
+            };
+
+            const response = await fetch("https://hook.eu2.make.com/1rz5w2sjex28nl2qf7ffofqpe7bn819d", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(payload),
+            });
+
+            if (response.ok) {
+                alert("Thank you for your message. We will get back to you shortly.");
+                setFormData({ customerName: "", customerEmail: "", customerPhone: "", serviceType: "", description: "" });
+            } else {
+                alert("There was an error submitting your request. Please try again calling us directly.");
+            }
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            alert("There was a network error. Please try again or call us directly.");
+        } finally {
             setIsSubmitting(false);
-        }, 1000);
+        }
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -129,26 +156,26 @@ export default function ContactPage() {
                             <form onSubmit={handleSubmit} className="space-y-6 flex-grow flex flex-col">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
-                                        <label htmlFor="name" className="text-sm font-bold text-gray-700">Full Name</label>
+                                        <label htmlFor="customerName" className="text-sm font-bold text-gray-700">Full Name</label>
                                         <input
                                             type="text"
-                                            id="name"
-                                            name="name"
+                                            id="customerName"
+                                            name="customerName"
                                             required
-                                            value={formData.name}
+                                            value={formData.customerName}
                                             onChange={handleChange}
                                             className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#015CAB] focus:border-[#015CAB] transition-all bg-gray-50 focus:bg-white text-gray-900 outline-none"
                                             placeholder="John Doe"
                                         />
                                     </div>
                                     <div className="space-y-2">
-                                        <label htmlFor="phone" className="text-sm font-bold text-gray-700">Phone Number</label>
+                                        <label htmlFor="customerPhone" className="text-sm font-bold text-gray-700">Phone Number</label>
                                         <input
                                             type="tel"
-                                            id="phone"
-                                            name="phone"
+                                            id="customerPhone"
+                                            name="customerPhone"
                                             required
-                                            value={formData.phone}
+                                            value={formData.customerPhone}
                                             onChange={handleChange}
                                             className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#015CAB] focus:border-[#015CAB] transition-all bg-gray-50 focus:bg-white text-gray-900 outline-none"
                                             placeholder="082 123 4567"
@@ -157,13 +184,13 @@ export default function ContactPage() {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label htmlFor="email" className="text-sm font-bold text-gray-700">Email Address</label>
+                                    <label htmlFor="customerEmail" className="text-sm font-bold text-gray-700">Email Address</label>
                                     <input
                                         type="email"
-                                        id="email"
-                                        name="email"
+                                        id="customerEmail"
+                                        name="customerEmail"
                                         required
-                                        value={formData.email}
+                                        value={formData.customerEmail}
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#015CAB] focus:border-[#015CAB] transition-all bg-gray-50 focus:bg-white text-gray-900 outline-none"
                                         placeholder="john@example.com"
@@ -171,11 +198,11 @@ export default function ContactPage() {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label htmlFor="service" className="text-sm font-bold text-gray-700">Service Needed</label>
+                                    <label htmlFor="serviceType" className="text-sm font-bold text-gray-700">Service Needed</label>
                                     <select
-                                        id="service"
-                                        name="service"
-                                        value={formData.service}
+                                        id="serviceType"
+                                        name="serviceType"
+                                        value={formData.serviceType}
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#015CAB] focus:border-[#015CAB] transition-all bg-gray-50 focus:bg-white text-gray-900 outline-none appearance-none"
                                         style={{ backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`, backgroundPosition: `right 0.5rem center`, backgroundRepeat: `no-repeat`, backgroundSize: `1.5em 1.5em`, paddingRight: `2.5rem` }}
@@ -189,13 +216,13 @@ export default function ContactPage() {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label htmlFor="message" className="text-sm font-bold text-gray-700">Project Details or Message</label>
+                                    <label htmlFor="description" className="text-sm font-bold text-gray-700">Project Details or Message</label>
                                     <textarea
-                                        id="message"
-                                        name="message"
+                                        id="description"
+                                        name="description"
                                         rows={4}
                                         required
-                                        value={formData.message}
+                                        value={formData.description}
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#015CAB] focus:border-[#015CAB] transition-all bg-gray-50 focus:bg-white text-gray-900 outline-none resize-none"
                                         placeholder="Tell us a bit about what you need help with..."
