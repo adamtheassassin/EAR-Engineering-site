@@ -91,7 +91,7 @@ export default function Footer() {
                     rel="noopener noreferrer"
                     className="text-xs font-medium text-gray-400 hover:text-[#015CAB] transition-colors"
                 >
-                    Built by ao-automations
+                    Built by aoautomations
                 </a>
             </div>
         </footer>
