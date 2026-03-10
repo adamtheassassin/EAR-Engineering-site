@@ -30,11 +30,11 @@ export default function Hero({ onOpenModal, title, subtitle, image = "/hero-engi
                             Available for Service in {location}
                         </div>
 
-                        <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-[4rem] 2xl:text-7xl font-extrabold tracking-tight leading-[1.1]">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-[4rem] 2xl:text-7xl font-extrabold tracking-tight leading-[1.1]">
                             {title || (
                                 <>
-                                    <span className="lg:whitespace-nowrap">Professional Electricians</span><br className="hidden lg:block" />
-                                    <span className="text-[#FFCA08]">in Somerset West</span>
+                                    <span className="block whitespace-nowrap">Professional Electrician</span>
+                                    <span className="text-[#FFCA08] block whitespace-nowrap">in Somerset West</span>
                                 </>
                             )}
                         </h1>
