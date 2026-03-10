@@ -29,7 +29,7 @@ export default function Home() {
 
   return (
     <>
-      <title>EAR Engineering | Fast HVAC, Electrical & Solar in Cape Town</title>
+      <title>BEST Electrician Somerset West - EAR Engineering: For Electrical Repairs, Aircon & Solar Installations near me in Stellenbosch & Cape Town - EAR Engineering is the top choice for the Helderberg.</title>
       <meta name="description" content="EAR Engineering provides expert project-managed electrical, aircon & solar solutions in Helderberg and Cape Town. On time, on budget, with a 1-hour callback promise." />
       <Header onOpenModal={() => openModal()} />
 
