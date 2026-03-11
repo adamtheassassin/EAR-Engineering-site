@@ -48,6 +48,7 @@ export default function ServicesPage() {
         <>
             <title>Electrical, Aircon & Solar Services in Somerset West | EAR Engineering</title>
             <meta name="description" content="Browse our professional electrical, air conditioning, and solar installation services in Somerset West, Stellenbosch, and the Helderberg." />
+            <link rel="canonical" href="https://earengineering.co.za/services" />
 
             <Header onOpenModal={() => setIsModalOpen(true)} />
 

@@ -84,6 +84,7 @@ export default function ElectricalServicesPage() {
 
             <title>Qualified Electricians in Somerset West and Stellenbosch | EAR Engineering</title>
             <meta name="description" content="EAR Engineering provides professional electrical installations, DB board upgrades, COC certificates, generator setups, and fault finding across Somerset West, Stellenbosch, and the Helderberg." />
+            <link rel="canonical" href="https://earengineering.co.za/services/electrical-services" />
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}

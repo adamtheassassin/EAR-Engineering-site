@@ -84,6 +84,7 @@ export default function ACInstallationPage() {
 
             <title>Air Conditioning Installation Somerset West and Stellenbosch | EAR Engineering</title>
             <meta name="description" content="EAR Engineering installs, services and repairs air conditioning systems across Somerset West, Stellenbosch and the Helderberg. Get a free quote today." />
+            <link rel="canonical" href="https://earengineering.co.za/services/ac-installation" />
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}

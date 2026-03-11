@@ -60,6 +60,7 @@ export default function ContactPage() {
         <>
             <title>Contact Us | EAR Engineering</title>
             <meta name="description" content={`Get in touch with EAR Engineering. ${CONTACT.hours.mon_fri}`} />
+            <link rel="canonical" href="https://earengineering.co.za/contact" />
 
             <Header onOpenModal={() => setIsModalOpen(true)} />
 
