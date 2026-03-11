@@ -44,15 +44,15 @@ const localBusinessSchema = {
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
-      "opens": "09:00",
-      "closes": "16:00"
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "17:00"
     },
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Friday"],
-      "opens": "09:00",
-      "closes": "14:00"
+      "dayOfWeek": ["Sunday"],
+      "opens": "08:00",
+      "closes": "13:00"
     }
   ],
   "areaServed": ["Helderberg", "Cape Town", "Somerset West"],

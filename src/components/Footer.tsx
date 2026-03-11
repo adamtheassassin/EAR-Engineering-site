@@ -71,9 +71,9 @@ export default function Footer() {
                                 <Clock className="w-4 h-4 text-[#015CAB]" />
                             </div>
                             <div className="space-y-2 text-gray-600">
-                                <div>{CONTACT.hours.mon_thu}</div>
-                                <div>{CONTACT.hours.fri}</div>
-                                <div className="text-gray-500">{CONTACT.hours.sat_sun}</div>
+                                <div>{CONTACT.hours.mon_fri}</div>
+                                <div>{CONTACT.hours.sun}</div>
+                                <div className="text-gray-500">{CONTACT.hours.sat}</div>
                             </div>
                         </li>
                     </ul>

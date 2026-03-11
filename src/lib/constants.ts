@@ -6,8 +6,8 @@ export const CONTACT = {
     email: "info@earengineering.co.za",
     address: "Abelia St, Heldervue, Cape Town, 7130",
     hours: {
-        mon_thu: "Mon–Thu: 9am–4pm",
-        fri: "Fri: 9am–2pm",
-        sat_sun: "Sat–Sun: Closed"
+        mon_fri: "Mon–Fri: 08:00 – 17:00",
+        sat: "Sat: Closed",
+        sun: "Sun: 08:00 – 13:00"
     }
 };

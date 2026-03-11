@@ -59,7 +59,7 @@ export default function ContactPage() {
     return (
         <>
             <title>Contact Us | EAR Engineering</title>
-            <meta name="description" content={`Get in touch with EAR Engineering. ${CONTACT.hours.mon_thu}`} />
+            <meta name="description" content={`Get in touch with EAR Engineering. ${CONTACT.hours.mon_fri}`} />
 
             <Header onOpenModal={() => setIsModalOpen(true)} />
 
@@ -140,9 +140,9 @@ export default function ContactPage() {
                                         <div>
                                             <h3 className="font-bold text-gray-900 text-lg mb-1">Business Hours</h3>
                                             <div className="text-gray-600 font-medium text-lg leading-snug space-y-1">
-                                                <p>{CONTACT.hours.mon_thu}</p>
-                                                <p>{CONTACT.hours.fri}</p>
-                                                <p className="text-gray-400">{CONTACT.hours.sat_sun}</p>
+                                                <p>{CONTACT.hours.mon_fri}</p>
+                                                <p>{CONTACT.hours.sun}</p>
+                                                <p className="text-gray-400">{CONTACT.hours.sat}</p>
                                             </div>
                                         </div>
                                     </div>
