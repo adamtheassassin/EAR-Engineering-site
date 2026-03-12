@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaShield as ShieldCheck, FaPhone as Phone, FaArrowRight as ArrowRight, FaRegCircleCheck as CheckCircle2, FaBoltLightning as Zap, FaUserCheck as UserCheck, FaCertificate as BadgeCheck, FaClock as ClockAlert } from "react-icons/fa6";
+import { FaShield as ShieldCheck, FaPhone as Phone, FaArrowRight as ArrowRight, FaRegCircleCheck as CheckCircle2, FaBoltLightning as Zap, FaUserCheck as UserCheck, FaCertificate as BadgeCheck, FaClock as ClockAlert, FaWhatsapp } from "react-icons/fa6";
 import { CONTACT } from "@/lib/constants";
 
 interface HeroProps {
@@ -68,10 +68,12 @@ export default function Hero({ onOpenModal, title, subtitle, image = "/hero-engi
                                 )}
                             </button>
                             <a
-                                href={CONTACT.phoneLink}
-                                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md px-6 lg:px-8 py-3.5 lg:py-4 rounded-xl font-bold text-base lg:text-lg transition-all border border-white/20"
+                                href={CONTACT.whatsappLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#25D366] text-white hover:bg-[#128C7E] px-6 lg:px-8 py-3.5 lg:py-4 rounded-xl font-bold text-base lg:text-lg transition-all shadow-md"
                             >
-                                <Phone className="w-5 h-5" /> Call Now
+                                <FaWhatsapp className="w-6 h-6" /> WhatsApp
                             </a>
                         </div>
 

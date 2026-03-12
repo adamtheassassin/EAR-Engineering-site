@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit, Mukta } from "next/font/google";
+import { FaWhatsapp } from "react-icons/fa6";
+import { CONTACT } from "@/lib/constants";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -73,8 +75,17 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col antialiased font-outfit">
+      <body className="min-h-screen flex flex-col antialiased font-outfit relative">
         {children}
+        <a
+          href={CONTACT.whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-6 right-6 z-50 hidden md:flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-2xl hover:bg-[#128C7E] transition-all transform hover:scale-110"
+          aria-label="Chat on WhatsApp"
+        >
+          <FaWhatsapp className="w-8 h-8" />
+        </a>
       </body>
     </html>
   );

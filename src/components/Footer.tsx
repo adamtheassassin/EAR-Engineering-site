@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaLocationDot as MapPin, FaPhone as Phone, FaEnvelope as Mail, FaClock as Clock } from "react-icons/fa6";
+import { FaLocationDot as MapPin, FaPhone as Phone, FaEnvelope as Mail, FaClock as Clock, FaFacebook } from "react-icons/fa6";
 import { CONTACT } from "@/lib/constants";
 
 export default function Footer() {
@@ -38,6 +38,14 @@ export default function Footer() {
                                     <Mail className="w-4 h-4 text-[#015CAB] group-hover:text-white transition" />
                                 </div>
                                 {CONTACT.email}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/share/1AmsoznMis/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-600 hover:text-[#015CAB] transition font-medium group">
+                                <div className="bg-cyan-50 p-2 rounded-lg group-hover:bg-[#015CAB] transition">
+                                    <FaFacebook className="w-4 h-4 text-[#015CAB] group-hover:text-white transition" />
+                                </div>
+                                Facebook
                             </a>
                         </li>
                     </ul>
