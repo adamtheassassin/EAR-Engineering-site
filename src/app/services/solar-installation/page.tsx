@@ -26,19 +26,6 @@ export default function SolarInstallationPage() {
         { q: "Do you also do electrical and air conditioning work?", a: "Yes. EAR Engineering offers electrical installations and maintenance, air conditioning installation and servicing, and solar installation all under one roof. Many of our clients use us for all three services." }
     ];
 
-    const faqSchema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": solarFaqs.map(faq => ({
-            "@type": "Question",
-            "name": faq.q,
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.a
-            }
-        }))
-    };
-
     const localBusinessSchema = {
         "@context": "https://schema.org",
         "@type": "ElectricalContractor",
@@ -65,7 +52,6 @@ export default function SolarInstallationPage() {
 
     return (
         <>
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
 
             <title>Solar Installation Somerset West and Stellenbosch | EAR Engineering</title>

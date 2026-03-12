@@ -39,19 +39,6 @@ export default function ElectricalServicesPage() {
         { q: "Can you combine electrical work with solar or air conditioning?", a: "Yes. Because we offer all three services under one roof, we can look at your full electrical setup and make sure everything works together properly. Many of our clients use us for electrical, solar and air conditioning, which makes the whole process simpler and avoids the problems that come from having multiple contractors working on the same property." }
     ];
 
-    const faqSchema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": electricalFaqs.map(faq => ({
-            "@type": "Question",
-            "name": faq.q,
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.a
-            }
-        }))
-    };
-
     const localBusinessSchema = {
         "@context": "https://schema.org",
         "@type": "Electrician",
@@ -79,7 +66,6 @@ export default function ElectricalServicesPage() {
 
     return (
         <>
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
 
             <title>Qualified Electricians in Somerset West and Stellenbosch | EAR Engineering</title>

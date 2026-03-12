@@ -23,44 +23,63 @@ export default function FAQ({ faqs: customFaqs }: FAQProps) {
 
     const faqs = customFaqs || defaultFaqs;
 
-    return (
-        <section className="bg-white py-24 border-t border-gray-100">
-            <div className="container mx-auto px-4 max-w-4xl">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-6 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-3">
-                        <MessageCircleQuestion className="w-12 h-12 md:w-10 md:h-10 text-[#015CAB]" />
-                        Frequently Asked Questions
-                    </h2>
-                    <p className="text-xl text-gray-600 font-medium">
-                        Everything you need to know about working with EAR Engineering.
-                    </p>
-                </div>
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.q,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.a
+            }
+        }))
+    };
 
-                <div className="space-y-4">
-                    {faqs.map((faq, i) => (
-                        <div key={i} className={`border rounded-2xl overflow-hidden transition-all duration-300 ${openIdx === i ? 'border-[#015CAB]/50 shadow-md ring-2 ring-[#015CAB]/10 ring-offset-2' : 'border-gray-200 hover:border-[#015CAB]/30'}`}>
-                            <button
-                                onClick={() => setOpenIdx(openIdx === i ? null : i)}
-                                className="w-full px-6 py-5 text-left flex justify-between items-center bg-gray-50 focus:outline-none focus:bg-white transition-colors"
-                                aria-expanded={openIdx === i}
-                            >
-                                <span className={`font-bold text-lg pr-4 ${openIdx === i ? 'text-[#015CAB]' : 'text-gray-900'}`}>{faq.q}</span>
-                                <div className={`p-1 rounded-full transition-colors ${openIdx === i ? 'bg-[#015CAB]/10 text-[#015CAB]' : 'bg-gray-200 text-gray-500'}`}>
-                                    <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${openIdx === i ? 'rotate-180' : ''}`} />
-                                </div>
-                            </button>
-                            <div
-                                className={`overflow-hidden transition-all duration-300 ease-in-out bg-white`}
-                                style={{ maxHeight: openIdx === i ? '500px' : '0' }}
-                            >
-                                <div className="p-6 text-gray-700 leading-relaxed font-medium bg-gradient-to-b from-white to-gray-50">
-                                    {faq.a}
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <section className="bg-white py-24 border-t border-gray-100">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-6 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-3">
+                            <MessageCircleQuestion className="w-12 h-12 md:w-10 md:h-10 text-[#015CAB]" />
+                            Frequently Asked Questions
+                        </h2>
+                        <p className="text-xl text-gray-600 font-medium">
+                            Everything you need to know about working with EAR Engineering.
+                        </p>
+                    </div>
+
+                    <div className="space-y-4">
+                        {faqs.map((faq, i) => (
+                            <div key={i} className={`border rounded-2xl overflow-hidden transition-all duration-300 ${openIdx === i ? 'border-[#015CAB]/50 shadow-md ring-2 ring-[#015CAB]/10 ring-offset-2' : 'border-gray-200 hover:border-[#015CAB]/30'}`}>
+                                <button
+                                    onClick={() => setOpenIdx(openIdx === i ? null : i)}
+                                    className="w-full px-6 py-5 text-left flex justify-between items-center bg-gray-50 focus:outline-none focus:bg-white transition-colors"
+                                    aria-expanded={openIdx === i}
+                                >
+                                    <span className={`font-bold text-lg pr-4 ${openIdx === i ? 'text-[#015CAB]' : 'text-gray-900'}`}>{faq.q}</span>
+                                    <div className={`p-1 rounded-full transition-colors ${openIdx === i ? 'bg-[#015CAB]/10 text-[#015CAB]' : 'bg-gray-200 text-gray-500'}`}>
+                                        <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${openIdx === i ? 'rotate-180' : ''}`} />
+                                    </div>
+                                </button>
+                                <div
+                                    className={`overflow-hidden transition-all duration-300 ease-in-out bg-white`}
+                                    style={{ maxHeight: openIdx === i ? '500px' : '0' }}
+                                >
+                                    <div className="p-6 text-gray-700 leading-relaxed font-medium bg-gradient-to-b from-white to-gray-50">
+                                        {faq.a}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </>
     );
 }

@@ -40,19 +40,6 @@ export default function ACInstallationPage() {
         { q: "Can I pair my air conditioning with solar to save on running costs?", a: "Yes, and it works very well in the Western Cape. Air conditioning tends to be used most on hot, sunny days, which is exactly when your solar panels are producing the most power. Running your aircon from solar reduces what it costs to keep your home or office cool." }
     ];
 
-    const faqSchema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": acFaqs.map(faq => ({
-            "@type": "Question",
-            "name": faq.q,
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.a
-            }
-        }))
-    };
-
     const localBusinessSchema = {
         "@context": "https://schema.org",
         "@type": "HVACBusiness",
@@ -79,7 +66,6 @@ export default function ACInstallationPage() {
 
     return (
         <>
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
 
             <title>Air Conditioning Installation Somerset West and Stellenbosch | EAR Engineering</title>
