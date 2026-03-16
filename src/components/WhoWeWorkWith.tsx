@@ -33,7 +33,7 @@ export default function WhoWeWorkWith() {
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/trees_background.png"
+                    src="/Background Images/trees_background.png"
                     alt="Background Trees"
                     fill
                     quality={90}
