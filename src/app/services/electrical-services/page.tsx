@@ -167,7 +167,11 @@ export default function ElectricalServicesPage() {
                                 { title: "DB Board Upgrades & Repairs", icon: FaWrench, desc: "An old or overloaded DB board is a common cause of electrical problems. We assess and upgrade your board to handle your current load safely." },
                                 { title: "Fault Finding & Emergencies", icon: FaScrewdriverWrench, desc: "If something has stopped working and you don't know why, we'll find the fault and fix it. We offer emergency electrical callouts across the Helderberg and Boland." },
                                 { title: "Certificate of Compliance (COC)", icon: FaShieldHalved, desc: "A COC is a legal requirement for property transactions. Our registered electricians inspect, repair, and issue the certificate without hassle." },
-                                { title: "Generator Installations", icon: FaCarBattery, desc: "We install standby generators and safe changeover systems to provide reliable backup power when the grid goes down, keeping your home or business running." }
+                                { title: "Generator Installations", icon: FaCarBattery, desc: (
+                                        <>
+                                            We install standby generators and safe changeover systems to provide reliable backup power when the grid goes down. Find out more about our <Link href="/services/electrical-services/generator-installation" className="text-[#015CAB] underline hover:text-[#013f75]">generator installations</Link>.
+                                        </>
+                                ) }
                             ].map((s, i) => (
                                 <div key={i} className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-cyan-200 transition-colors group flex flex-col sm:flex-row gap-6 items-center sm:items-start">
                                     <div className="bg-[#015CAB] p-4 rounded-xl text-white flex-shrink-0 group-hover:text-[#FFCA08] transition-colors">

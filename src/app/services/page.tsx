@@ -39,7 +39,7 @@ export default function ServicesPage() {
                 { name: "Electrical Installations", href: "/services/electrical-services" },
                 { name: "DB Board Upgrades", href: "/services/electrical-services" },
                 { name: "COC Certificates", href: "/services/electrical-services" },
-                { name: "Generator Installations", href: "/services/electrical-services" },
+                { name: "Generator Installations", href: "/services/electrical-services/generator-installation" },
             ]
         }
     ];
