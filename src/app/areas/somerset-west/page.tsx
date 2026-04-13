@@ -221,10 +221,10 @@ export default function SomersetWestAreaPage() {
                     </div>
                 </section>
 
-                {/* Solar and Aircon */}
+                {/* Solar, Aircon, and Electrical */}
                 <section className="bg-[#015CAB] py-24 text-white">
                     <div className="container mx-auto px-4 max-w-6xl">
-                        <div className="grid md:grid-cols-2 gap-16">
+                        <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
                             <div>
                                 <div className="bg-[#FFCA08] text-gray-900 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
                                     <FaSolarPanel className="w-8 h-8" />
@@ -241,6 +241,15 @@ export default function SomersetWestAreaPage() {
                                 <h2 className="text-3xl font-bold mb-4">Air Conditioning</h2>
                                 <p className="text-blue-50 font-medium leading-relaxed mb-6">
                                     Somerset West summers are warm and increasingly hot. Whether you need a split unit installed in a Parel Vallei home, an inverter air conditioner for an office in Waterstone Village, or a full setup for a guesthouse, our <Link href="/services/ac-installation" className="text-[#FFCA08] underline font-bold">air conditioning</Link> team supplies, installs and maintains systems that suit your budget.
+                                </p>
+                            </div>
+                            <div>
+                                <div className="bg-[#FFCA08] text-gray-900 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                                    <FaBoltLightning className="w-8 h-8" />
+                                </div>
+                                <h2 className="text-3xl font-bold mb-4">Electrical Services</h2>
+                                <p className="text-blue-50 font-medium leading-relaxed mb-6">
+                                    From modern estates in Sitari to decades-old properties in Heldervue, our registered electricians cover all of Somerset West. We handle everything from tripping DB boards and power surges to wiring new builds and issuing <Link href="/services/electrical-services/coc" className="text-[#FFCA08] underline font-bold">Certificates of Compliance (COC)</Link> for property sales.
                                 </p>
                             </div>
                         </div>
