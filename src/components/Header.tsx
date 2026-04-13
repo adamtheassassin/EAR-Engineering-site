@@ -67,6 +67,12 @@ export default function Header({ onOpenModal, mobileCtaText, mobileCtaIcon }: He
                             Services
                         </a>
                         <a
+                            href="/areas"
+                            className="font-semibold text-gray-700 hover:text-[#015CAB] transition text-sm lg:text-base whitespace-nowrap"
+                        >
+                            Areas
+                        </a>
+                        <a
                             href="/contact"
                             className="font-semibold text-gray-700 hover:text-[#015CAB] transition text-sm lg:text-base whitespace-nowrap"
                         >
@@ -123,16 +129,22 @@ export default function Header({ onOpenModal, mobileCtaText, mobileCtaIcon }: He
                             Our Services
                         </a>
                         <a
+                            href="/areas"
+                            className="px-6 py-4 border-b border-gray-100 text-lg font-bold text-gray-800 hover:bg-gray-50 hover:text-[#015CAB] transition-colors"
+                        >
+                            Areas We Serve
+                        </a>
+                        <a
                             href="/services/electrical-services"
                             className="px-6 py-4 border-b border-gray-100 font-semibold text-gray-700 hover:bg-gray-50 hover:text-[#015CAB] transition-colors pl-10"
                         >
                             Electrical Services
                         </a>
                         <a
-                            href="/services/solar-installation"
+                            href="/services/solar"
                             className="px-6 py-4 border-b border-gray-100 font-semibold text-gray-700 hover:bg-gray-50 hover:text-[#015CAB] transition-colors pl-10"
                         >
-                            Solar Installation
+                            Solar Services
                         </a>
                         <a
                             href="/services/ac-installation"

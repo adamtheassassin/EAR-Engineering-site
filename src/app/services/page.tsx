@@ -24,17 +24,19 @@ export default function ServicesPage() {
             title: "Solar Solutions",
             icon: FaSun,
             iconColor: "text-[#FFCA08]",
+            seeAllHref: "/services/solar",
             services: [
-                { name: "Solar Installation", href: "/services/solar-installation" },
-                { name: "Battery Backup Systems", href: "/services/solar-installation" },
-                { name: "Commercial Solar", href: "/services/solar-installation" },
-                { name: "Solar System Upgrades", href: "/services/solar-installation" },
+                { name: "Solar Installation", href: "/services/solar/solar-installation" },
+                { name: "Battery Backup Systems", href: "/services/solar/battery-storage" },
+                { name: "Commercial Solar", href: "/services/solar" },
+                { name: "Solar System Upgrades", href: "/services/solar/inverter-installation" },
             ]
         },
         {
             title: "Electrical Services",
             icon: FaBolt,
             iconColor: "text-[#015CAB]",
+            seeAllHref: "/services/electrical-services",
             services: [
                 { name: "Electrical Installations", href: "/services/electrical-services" },
                 { name: "DB Board Upgrades & Repairs", href: "/services/electrical-services/db-board-upgrades-and-repairs" },
@@ -85,6 +87,18 @@ export default function ServicesPage() {
                                         </a>
                                     ))}
                                 </div>
+                                
+                                {category.seeAllHref && (
+                                    <div className="mt-8">
+                                        <a
+                                            href={category.seeAllHref}
+                                            className="flex w-full justify-center items-center gap-2 px-6 py-4 bg-gray-50 hover:bg-[#015CAB] text-[#015CAB] hover:text-white font-bold rounded-xl transition-all border border-gray-100 group"
+                                        >
+                                            See All {category.title}
+                                            <FaArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                        </a>
+                                    </div>
+                                )}
                             </div>
                         ))}
                     </div>

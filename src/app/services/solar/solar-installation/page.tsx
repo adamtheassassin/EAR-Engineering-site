@@ -59,7 +59,7 @@ export default function SolarInstallationPage() {
 
             <title>Solar Installation Somerset West and Stellenbosch | EAR Engineering</title>
             <meta name="description" content="EAR Engineering installs solar systems with battery backup for homes and businesses in Somerset West, Stellenbosch and the Helderberg. Get a free quote today." />
-            <link rel="canonical" href="https://earengineering.co.za/services/solar-installation" />
+            <link rel="canonical" href="https://earengineering.co.za/services/solar/solar-installation" />
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}

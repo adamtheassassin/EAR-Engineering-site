@@ -4,7 +4,7 @@ import { FaMountain, FaWater, FaAnchor, FaTree, FaTrainTram, FaMonument, FaHouse
 import { IconType } from "react-icons";
 import Image from "next/image";
 
-type LocationData = {
+export type LocationData = {
     id: string;
     name: string;
     subRegion: string;
@@ -13,7 +13,7 @@ type LocationData = {
     icon: IconType;
 };
 
-const locations: LocationData[] = [
+export const locations: LocationData[] = [
     {
         id: "somerset-west",
         name: "Somerset West",
