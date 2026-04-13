@@ -20,7 +20,8 @@ import {
     FaHandshake,
     FaCircleCheck,
     FaTruckFast,
-    FaScrewdriverWrench
+    FaScrewdriverWrench,
+    FaArrowRight
 } from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
@@ -43,10 +44,13 @@ export default function ElectricalServicesPage() {
         "@context": "https://schema.org",
         "@type": "Electrician",
         "name": "EAR Engineering",
+        "telephone": "021 855 4462",
         "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Somerset West",
+            "streetAddress": "Abelia St, Heldervue",
+            "addressLocality": "Cape Town",
             "addressRegion": "Western Cape",
+            "postalCode": "7130",
             "addressCountry": "ZA"
         },
         "currenciesAccepted": "ZAR",
@@ -164,22 +168,25 @@ export default function ElectricalServicesPage() {
                                         </>
                                     )
                                 },
-                                { title: "DB Board Upgrades & Repairs", icon: FaWrench, desc: "An old or overloaded DB board is a common cause of electrical problems. We assess and upgrade your board to handle your current load safely." },
+                                { title: "DB Board Upgrades & Repairs", icon: FaWrench, desc: "An old or overloaded DB board is a common cause of electrical problems. We assess and upgrade your board to handle your current load safely.", href: "/services/electrical-services/db-board-upgrades-and-repairs" },
                                 { title: "Fault Finding & Emergencies", icon: FaScrewdriverWrench, desc: "If something has stopped working and you don't know why, we'll find the fault and fix it. We offer emergency electrical callouts across the Helderberg and Boland." },
-                                { title: "Certificate of Compliance (COC)", icon: FaShieldHalved, desc: "A COC is a legal requirement for property transactions. Our registered electricians inspect, repair, and issue the certificate without hassle." },
-                                { title: "Generator Installations", icon: FaCarBattery, desc: (
-                                        <>
-                                            We install standby generators and safe changeover systems to provide reliable backup power when the grid goes down. Find out more about our <Link href="/services/electrical-services/generator-installation" className="text-[#015CAB] underline hover:text-[#013f75]">generator installations</Link>.
-                                        </>
-                                ) }
+                                { title: "Certificate of Compliance (COC)", icon: FaShieldHalved, desc: "A COC is a legal requirement for property transactions. Our registered electricians inspect, repair, and issue the certificate without hassle.", href: "/services/electrical-services/coc" },
+                                { title: "Generator Installations", icon: FaCarBattery, desc: "We install standby generators and safe changeover systems to provide reliable backup power when the grid goes down.", href: "/services/electrical-services/generator-installation" }
                             ].map((s, i) => (
                                 <div key={i} className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-cyan-200 transition-colors group flex flex-col sm:flex-row gap-6 items-center sm:items-start">
                                     <div className="bg-[#015CAB] p-4 rounded-xl text-white flex-shrink-0 group-hover:text-[#FFCA08] transition-colors">
                                         <s.icon className="w-8 h-8" />
                                     </div>
-                                    <div className="text-center sm:text-left">
+                                    <div className="text-center sm:text-left flex flex-col items-center sm:items-start h-full">
                                         <h3 className="text-xl font-bold text-gray-900 mb-2">{s.title}</h3>
-                                        <p className="text-gray-600 font-medium leading-relaxed">{s.desc}</p>
+                                        <div className="text-gray-600 font-medium leading-relaxed flex-grow">{s.desc}</div>
+                                        {s.href && (
+                                            <div className="mt-4">
+                                                <Link href={s.href} className="inline-flex items-center font-extrabold text-[#015CAB] hover:text-[#013f75] group/link">
+                                                    Explore {s.title} <FaArrowRight className="ml-2 w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                                                </Link>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             ))}

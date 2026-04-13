@@ -30,10 +30,13 @@ export default function SolarInstallationPage() {
         "@context": "https://schema.org",
         "@type": "ElectricalContractor",
         "name": "EAR Engineering",
+        "telephone": "021 855 4462",
         "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Somerset West",
+            "streetAddress": "Abelia St, Heldervue",
+            "addressLocality": "Cape Town",
             "addressRegion": "Western Cape",
+            "postalCode": "7130",
             "addressCountry": "ZA"
         },
         "currenciesAccepted": "ZAR",

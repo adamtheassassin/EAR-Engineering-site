@@ -46,8 +46,15 @@ export default function GeneratorInstallationPage() {
         "@context": "https://schema.org",
         "@type": "ElectricalContractor",
         "name": "EAR Engineering",
-        "address": "Somerset West, Western Cape, South Africa",
-        "telephone": "076 973 7329",
+        "telephone": "021 855 4462",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Abelia St, Heldervue",
+            "addressLocality": "Cape Town",
+            "addressRegion": "Western Cape",
+            "postalCode": "7130",
+            "addressCountry": "ZA"
+        },
         "currenciesAccepted": "ZAR",
         "areaServed": ["Somerset West", "Strand", "Gordon's Bay", "Stellenbosch", "Franschhoek", "Paarl", "Grabouw", "Cape Town"],
         "hasOfferCatalog": {

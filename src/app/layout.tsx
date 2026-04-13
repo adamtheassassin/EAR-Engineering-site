@@ -29,12 +29,13 @@ const localBusinessSchema = {
   "name": "EAR Engineering",
   "image": "https://earengineering.co.za/logo.png",
   "url": "https://earengineering.co.za",
-  "telephone": "+27769737329",
+  "telephone": "021 855 4462",
   "email": "info@earengineering.co.za",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Abelia St",
-    "addressLocality": "Heldervue, Cape Town",
+    "streetAddress": "Abelia St, Heldervue",
+    "addressLocality": "Cape Town",
+    "addressRegion": "Western Cape",
     "postalCode": "7130",
     "addressCountry": "ZA"
   },

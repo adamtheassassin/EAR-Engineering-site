@@ -37,8 +37,8 @@ export default function ServicesPage() {
             iconColor: "text-[#015CAB]",
             services: [
                 { name: "Electrical Installations", href: "/services/electrical-services" },
-                { name: "DB Board Upgrades", href: "/services/electrical-services" },
-                { name: "COC Certificates", href: "/services/electrical-services" },
+                { name: "DB Board Upgrades & Repairs", href: "/services/electrical-services/db-board-upgrades-and-repairs" },
+                { name: "COC Certificates", href: "/services/electrical-services/coc" },
                 { name: "Generator Installations", href: "/services/electrical-services/generator-installation" },
             ]
         }
