@@ -36,7 +36,7 @@ export default function DBBoardUpgradesPage() {
         { q: "Will my power be off during the work?", a: "Yes, for the duration of the work on the board your power will need to be off. For most repairs and upgrades this is a matter of a few hours. For full replacements it may be longer. We work as efficiently as possible to keep the downtime to a minimum and we will let you know in advance what to expect." },
         { q: "Do I get a COC after DB board work?", a: "Yes. A Certificate of Compliance is issued on completion of every DB board repair, upgrade or replacement we carry out. This is a legal requirement for electrical work in South Africa and is important for your insurance and any future property transaction." },
         { q: "Can an old DB board affect my insurance?", a: "Yes. Many insurers will not pay out on electrical-related claims if the installation is found to be non-compliant or if there is no valid COC. An outdated or faulty board that has not been inspected can leave you exposed. Getting it assessed and a COC issued puts you in a much stronger position." },
-        { q: "What areas do you cover?", a: "We cover Somerset West, Strand, Gordon's Bay, Stellenbosch, Franschhoek, Paarl, Grabouw and Cape Town. Our main base is in Somerset West so our response times across the Helderberg are especially fast." },
+        { q: "What areas do you cover?", a: "We cover Somerset West, Strand, Gordon's Bay, Stellenbosch, Franschhoek, Paarl, Durbanville and Cape Town. Our main base is in Somerset West so our response times across the Helderberg are especially fast." },
         { q: "How do I book an assessment?", a: "Call us or send a message. If your board is showing warning signs right now, let us know and we will treat it as a priority. For planned upgrades we will arrange a site visit at a time that suits you." }
     ];
 
@@ -54,7 +54,7 @@ export default function DBBoardUpgradesPage() {
             "addressCountry": "ZA"
         },
         "currenciesAccepted": "ZAR",
-        "areaServed": ["Somerset West", "Strand", "Gordon's Bay", "Stellenbosch", "Franschhoek", "Paarl", "Grabouw", "Cape Town"],
+        "areaServed": ["Somerset West", "Strand", "Gordon's Bay", "Stellenbosch", "Franschhoek", "Paarl", "Durbanville", "Cape Town"],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "DB Board Services",
@@ -359,7 +359,7 @@ export default function DBBoardUpgradesPage() {
                                     { loc: "Gordon's Bay", path: "/gordons-bay", desc: "Residential and small commercial board work" },
                                     { loc: "Franschhoek", path: "/franschhoek", desc: "Estate, guesthouse and residential properties" },
                                     { loc: "Paarl", path: "/paarl", desc: "Residential and commercial across Paarl Valley" },
-                                    { loc: "Grabouw", path: "/grabouw", desc: "Residential and rural properties" },
+                                    { loc: "Durbanville", path: "/Durbanville", desc: "Residential and rural properties" },
                                     { loc: "Cape Town", path: "/cape-town", desc: "Residential and commercial DB board work" },
                                 ].map((location, i) => (
                                     <div key={i} className="flex flex-col gap-1 w-full text-center md:text-left">

@@ -24,7 +24,7 @@ export default function Services({ onOpenModal }: ServicesProps) {
                 "Standby generator installation and changeover systems",
                 "Testing, commissioning & COC certificates"
             ],
-            href: "/services",
+            href: "/services/electrical-services",
             linkText: "View Electrical Services"
         },
         {
@@ -66,7 +66,7 @@ export default function Services({ onOpenModal }: ServicesProps) {
                 "Commercial solar installations up to 100kW",
                 "Solar system upgrades and expansions"
             ],
-            href: "/services/solar-installation",
+            href: "/services/solar",
             linkText: "View Solar Services"
         }
     ];
@@ -139,6 +139,15 @@ export default function Services({ onOpenModal }: ServicesProps) {
                             </div>
                         </section>
                     ))}
+                </div>
+
+                <div className="mt-16 text-center">
+                    <a
+                        href="/services"
+                        className="inline-flex items-center justify-center px-8 py-4 bg-[#015CAB] hover:bg-[#01488c] text-white font-extrabold rounded-xl transition-all shadow-md hover:shadow-lg"
+                    >
+                        See All Services
+                    </a>
                 </div>
             </div>
         </section>

@@ -92,7 +92,7 @@ export default function ElectricalServicesPage() {
                     }
                     subtitle="Electrical problems are stressful. Whether your power has tripped and you cannot figure out why, your DB board is overloaded, or you need a reliable electrician for a new build, we get the job done correctly and safely."
                     image="/Work Photos/Electrician Somerset West Hero Image.webp"
-                    ctaText="Free Electrical Assessment"
+                    ctaText="Get a Free Electrical Quote"
                     ctaIcon={<FaBolt className="w-5 h-5" />}
                 />
 

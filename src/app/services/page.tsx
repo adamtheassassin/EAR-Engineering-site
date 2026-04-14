@@ -27,9 +27,10 @@ export default function ServicesPage() {
             seeAllHref: "/services/solar",
             services: [
                 { name: "Solar Installation", href: "/services/solar/solar-installation" },
-                { name: "Battery Backup Systems", href: "/services/solar/battery-storage" },
-                { name: "Commercial Solar", href: "/services/solar" },
-                { name: "Solar System Upgrades", href: "/services/solar/inverter-installation" },
+                { name: "Repair & Maintenance", href: "/services/solar/solar-repair-maintenance" },
+                { name: "Battery Storage", href: "/services/solar/battery-storage" },
+                { name: "Inverter Installation", href: "/services/solar/inverter-installation" },
+                { name: "Off-Grid Solar", href: "/services/solar/off-grid-solar" },
             ]
         },
         {

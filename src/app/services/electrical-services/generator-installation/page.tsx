@@ -38,7 +38,7 @@ export default function GeneratorInstallationPage() {
         { q: "Can I install a generator myself?", a: "The generator itself can be purchased independently, but the electrical work including the changeover system must be done by a registered electrician. Attempting to connect a generator without a proper changeover switch is dangerous and illegal. It also voids most generator warranties and your property insurance." },
         { q: "How often does a generator need to be serviced?", a: "Most generator manufacturers recommend a service every 200 to 250 running hours, or at least once a year even if the generator has not been used heavily. Regular servicing ensures the generator will start reliably when you need it. We offer servicing for generators we install as well as existing units." },
         { q: "Can a generator and a solar system work together?", a: "Yes, and this is an increasingly popular combination. Solar handles your day-to-day energy needs and reduces your electricity bill, while the generator provides backup for extended outages or periods of bad weather when your solar batteries are depleted. If this is your long-term plan, it is important to design both systems to work together from the start." },
-        { q: "What areas do you cover?", a: "We cover Somerset West, Strand, Gordon's Bay, Stellenbosch, Franschhoek, Paarl, Grabouw and Cape Town. Our main base is in Somerset West, so our response times across the Helderberg are especially fast." },
+        { q: "What areas do you cover?", a: "We cover Somerset West, Strand, Gordon's Bay, Stellenbosch, Franschhoek, Paarl, Durbanville and Cape Town. Our main base is in Somerset West, so our response times across the Helderberg are especially fast." },
         { q: "How do I get a quote?", a: "Get in touch and we will arrange a free site visit. We assess your property and power requirements, and come back to you with a clear proposal. No cost, no obligation." }
     ];
 
@@ -56,7 +56,7 @@ export default function GeneratorInstallationPage() {
             "addressCountry": "ZA"
         },
         "currenciesAccepted": "ZAR",
-        "areaServed": ["Somerset West", "Strand", "Gordon's Bay", "Stellenbosch", "Franschhoek", "Paarl", "Grabouw", "Cape Town"],
+        "areaServed": ["Somerset West", "Strand", "Gordon's Bay", "Stellenbosch", "Franschhoek", "Paarl", "Durbanville", "Cape Town"],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Generator Installation Services",
@@ -376,7 +376,7 @@ export default function GeneratorInstallationPage() {
                                     { loc: "Gordon's Bay", path: "/gordons-bay" },
                                     { loc: "Franschhoek", path: "/franschhoek" },
                                     { loc: "Paarl", path: "/paarl" },
-                                    { loc: "Grabouw", path: "/grabouw" },
+                                    { loc: "Durbanville", path: "/Durbanville" },
                                     { loc: "Cape Town", path: "/cape-town" },
                                 ].map((location, i) => (
                                     <Link href={`/locations${location.path}`} key={i} className="flex items-center gap-3 hover:text-[#FFCA08] transition-colors w-full justify-center md:justify-start">

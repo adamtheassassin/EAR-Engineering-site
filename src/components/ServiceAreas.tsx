@@ -146,6 +146,16 @@ export default function ServiceAreas() {
                                 );
                             })}
                         </div>
+
+                        {/* View All Areas Button */}
+                        <div className="mt-4 md:mt-2">
+                            <a
+                                href="/areas"
+                                className="w-full md:w-auto inline-flex items-center justify-center px-8 py-4 bg-white border-2 border-[#015CAB] text-[#015CAB] hover:bg-[#015CAB] hover:text-white font-extrabold rounded-xl transition-colors shadow-sm"
+                            >
+                                See All Areas We Serve
+                            </a>
+                        </div>
                     </div>
 
                     {/* Right Column: Display Area (IMAGE ONLY ON DESKTOP) */}

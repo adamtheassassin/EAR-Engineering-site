@@ -33,7 +33,7 @@ export default function SolarParentPage() {
         { q: "Do you handle commercial solar installations?", a: "Yes. We install commercial solar systems up to 100kW for offices, retail properties, guesthouses, wine estates, farms and other commercial clients. Our current project at Val De Vie Estate in Stellenbosch is an example of the scale we work at on the commercial side." },
         { q: "What happens if my solar system stops working?", a: "Call us. We carry out fault diagnosis on solar systems and can identify whether the issue is with the panels, the inverter, the batteries or the electrical connections. Most faults can be diagnosed and repaired in a single visit." },
         { q: "Do you service solar systems installed by other companies?", a: "Yes. We carry out repairs, maintenance and upgrades on solar systems regardless of who originally installed them. If your system is underperforming or you are not sure it was installed correctly, we can assess it and tell you what needs attention." },
-        { q: "What areas do you cover?", a: "We cover Somerset West, Strand, Gordon's Bay, Stellenbosch, Franschhoek, Paarl, Grabouw and Cape Town. Our base is in Somerset West so our response times across the Helderberg are especially fast." },
+        { q: "What areas do you cover?", a: "We cover Somerset West, Strand, Gordon's Bay, Stellenbosch, Franschhoek, Paarl, Durbanville and Cape Town. Our base is in Somerset West so our response times across the Helderberg are especially fast." },
         { q: "How do I get started?", a: "Call us on 021 855 4462 or send us a message. We will ask a few questions about your property and energy needs, arrange a site visit, and come back to you with a clear recommendation and a quote once we have seen what is involved." }
     ];
 
@@ -51,7 +51,7 @@ export default function SolarParentPage() {
         },
         "telephone": "021 855 4462",
         "currenciesAccepted": "ZAR",
-        "areaServed": ["Somerset West", "Strand", "Gordon's Bay", "Stellenbosch", "Franschhoek", "Paarl", "Grabouw", "Cape Town"],
+        "areaServed": ["Somerset West", "Strand", "Gordon's Bay", "Stellenbosch", "Franschhoek", "Paarl", "Durbanville", "Cape Town"],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Solar Services",
@@ -90,7 +90,7 @@ export default function SolarParentPage() {
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
-                mobileCtaText="Get a Solar Quote"
+                mobileCtaText="Free Solar Quote"
                 mobileCtaIcon={<FaSolarPanel className="w-5 h-5" />}
             />
 
@@ -104,7 +104,7 @@ export default function SolarParentPage() {
                     }
                     subtitle="Electricity is getting more expensive every year. Solar changes that equation. We design and install solar power solutions, battery storage, and off-grid systems across the Boland."
                     image="/Work Photos/solar_parent_hero.png"
-                    ctaText="Talk to EAR Engineering About Solar"
+                    ctaText="Get a Free Solar Quote"
                     ctaIcon={<FaSolarPanel className="w-5 h-5" />}
                 />
 
@@ -285,7 +285,7 @@ export default function SolarParentPage() {
                                     We currently have a 100kW commercial solar system underway at Val De Vie Estate in Stellenbosch. This is a large-scale installation designed to significantly reduce the estate's electricity costs and provide reliable power during load shedding. It is one of a growing number of commercial and estate solar projects we have completed across the Western Cape.
                                 </p>
                                 <p className="text-gray-700 font-medium leading-relaxed">
-                                    We also install residential solar systems across Somerset West, Strand, Gordon's Bay, Franschhoek, Paarl and Grabouw. From a battery backup setup in a Parel Vallei townhouse to a full hybrid system on a working farm near Grabouw, each project is designed around the specific property and the client's actual energy needs.
+                                    We also install residential solar systems across Somerset West, Strand, Gordon's Bay, Franschhoek, Paarl and Durbanville. From a battery backup setup in a Parel Vallei townhouse to a full hybrid system on a working farm near Durbanville, each project is designed around the specific property and the client's actual energy needs.
                                 </p>
                             </div>
                         </div>
@@ -344,7 +344,7 @@ export default function SolarParentPage() {
                                 { loc: "Gordon's Bay", path: "/gordons-bay", desc: "Residential and small commercial solar" },
                                 { loc: "Franschhoek", path: "/franschhoek", desc: "Residential, guesthouse and estate solar systems" },
                                 { loc: "Paarl", path: "/paarl", desc: "Residential and commercial across the Paarl Valley" },
-                                { loc: "Grabouw", path: "/grabouw", desc: "Residential, agricultural and off-grid solar solutions" },
+                                { loc: "Durbanville", path: "/Durbanville", desc: "Residential, agricultural and off-grid solar solutions" },
                                 { loc: "Cape Town", path: "/cape-town", desc: "Residential and commercial solar installations" },
                             ].map((location, i) => (
                                 <Link key={i} href={`/locations${location.path}`} className="bg-white/10 rounded-xl p-5 hover:bg-white/20 transition-colors border border-white/10 group flex flex-col gap-2">

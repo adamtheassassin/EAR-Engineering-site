@@ -38,7 +38,7 @@ export default function SolarRepairMaintenancePage() {
         { q: "My inverter is showing an error code. What should I do?", a: "Write down the error code if you can and call us. Inverter error codes vary by brand and model, but most indicate something specific about the nature of the fault. In some cases the issue can be resolved remotely or with a simple reset. In others, a site visit is needed. Either way, do not ignore a persistent error code as it can indicate a developing fault that will worsen over time." },
         { q: "How long does a solar panel last?", a: "Quality solar panels typically carry a 25-year performance guarantee, during which they are warranted to produce at least 80% of their original rated output. With proper maintenance, many panels continue performing well beyond that. The inverter and batteries have shorter lifespans and are more likely to require attention or replacement during the system's life." },
         { q: "Is panel cleaning worth doing?", a: "Yes, particularly in the Western Cape where dust, pollen and bird activity are common. Studies on similar climates show that dirty panels can lose between 5% and 15% of their output compared to clean ones. On a well-sized residential system, that loss adds up to a meaningful amount of energy bought from the grid each year. Annual cleaning at a minimum is a worthwhile investment." },
-        { q: "What areas do you cover for solar repairs?", a: "We cover Somerset West, Strand, Gordon's Bay, Stellenbosch, Franschhoek, Paarl, Grabouw and Cape Town. Our base is in Somerset West so our response times across the Helderberg are especially fast." },
+        { q: "What areas do you cover for solar repairs?", a: "We cover Somerset West, Strand, Gordon's Bay, Stellenbosch, Franschhoek, Paarl, Durbanville and Cape Town. Our base is in Somerset West so our response times across the Helderberg are especially fast." },
         { q: "How do I get a quote for a repair or maintenance visit?", a: "Call us on 021 855 4462 or send us a message. Describe what you have noticed and we will arrange a visit. A more accurate quote for any repair work can be given once we have assessed the system in person." }
     ];
 
@@ -56,7 +56,7 @@ export default function SolarRepairMaintenancePage() {
         },
         "telephone": "021 855 4462",
         "currenciesAccepted": "ZAR",
-        "areaServed": ["Somerset West", "Strand", "Gordon's Bay", "Stellenbosch", "Franschhoek", "Paarl", "Grabouw", "Cape Town"],
+        "areaServed": ["Somerset West", "Strand", "Gordon's Bay", "Stellenbosch", "Franschhoek", "Paarl", "Durbanville", "Cape Town"],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Solar Repair and Maintenance Services",
@@ -357,7 +357,7 @@ export default function SolarRepairMaintenancePage() {
                                 { loc: "Gordon's Bay", path: "/gordons-bay", desc: "Residential solar repair and replacement" },
                                 { loc: "Franschhoek", path: "/franschhoek", desc: "Estate and residential solar maintenance" },
                                 { loc: "Paarl", path: "/paarl", desc: "Residential and commercial solar repairs" },
-                                { loc: "Grabouw", path: "/grabouw", desc: "Residential and agricultural systems" },
+                                { loc: "Durbanville", path: "/Durbanville", desc: "Residential and agricultural systems" },
                                 { loc: "Cape Town", path: "/cape-town", desc: "Residential and commercial repairs" },
                             ].map((location, i) => (
                                 <Link key={i} href={`/areas${location.path}`} className="bg-white/10 rounded-xl p-5 hover:bg-white/20 transition-colors border border-white/10 group flex flex-col gap-2">

@@ -40,7 +40,7 @@ export default function COCPage() {
         { q: "Do I need a new COC if I have just had solar or a generator installed?", a: "Yes. Any new electrical work requires a COC for that work. If we carry out the solar or generator installation, we include the COC as part of the job. If the work was done by someone else, we can carry out the inspection and issue the certificate." },
         { q: "How quickly can you do a COC inspection?", a: "We aim to accommodate urgent requests wherever possible. For properties where a transfer or tenancy is time-sensitive, call us directly and explain the situation. We will do our best to get to you as quickly as we can." },
         { q: "Do you issue COCs for commercial properties?", a: "Yes. We issue COCs for residential and commercial properties. Commercial inspections are typically more involved and are quoted based on the size and complexity of the installation." },
-        { q: "What areas do you cover?", a: "We cover Somerset West, Strand, Gordon's Bay, Stellenbosch, Franschhoek, Paarl, Grabouw and Cape Town. Our main base is in Somerset West, so our response times across the Helderberg are especially fast." },
+        { q: "What areas do you cover?", a: "We cover Somerset West, Strand, Gordon's Bay, Stellenbosch, Franschhoek, Paarl, Durbanville and Cape Town. Our main base is in Somerset West, so our response times across the Helderberg are especially fast." },
         { q: "How do I get started?", a: "Call us or send a message and we will arrange a convenient time for the inspection. Let us know if there is a deadline we should be aware of and we will do our best to work around it." }
     ];
 
@@ -58,7 +58,7 @@ export default function COCPage() {
             "addressCountry": "ZA"
         },
         "currenciesAccepted": "ZAR",
-        "areaServed": ["Somerset West", "Strand", "Gordon's Bay", "Stellenbosch", "Franschhoek", "Paarl", "Grabouw", "Cape Town"],
+        "areaServed": ["Somerset West", "Strand", "Gordon's Bay", "Stellenbosch", "Franschhoek", "Paarl", "Durbanville", "Cape Town"],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Electrical Compliance Services",
@@ -321,7 +321,7 @@ export default function COCPage() {
                                     { loc: "Gordon's Bay", path: "/gordons-bay", desc: "Residential and holiday homes" },
                                     { loc: "Franschhoek", path: "/franschhoek", desc: "Estates, guesthouses and residential properties" },
                                     { loc: "Paarl", path: "/paarl", desc: "Residential and commercial across Paarl Valley" },
-                                    { loc: "Grabouw", path: "/grabouw", desc: "Residential and rural properties" },
+                                    { loc: "Durbanville", path: "/Durbanville", desc: "Residential and rural properties" },
                                     { loc: "Cape Town", path: "/cape-town", desc: "Residential and commercial properties" },
                                 ].map((location, i) => (
                                     <div key={i} className="flex flex-col gap-1 w-full text-center md:text-left">
