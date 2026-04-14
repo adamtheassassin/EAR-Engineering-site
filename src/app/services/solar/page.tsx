@@ -99,7 +99,7 @@ export default function SolarParentPage() {
                     onOpenModal={() => setIsModalOpen(true)}
                     title={
                         <>
-                            Solar Power Solutions in <span className="text-[#FFCA08]">Somerset West</span>, Stellenbosch and the Helderberg
+                            Solar Power Solutions in <span className="text-[#FFCA08]">Somerset West, Stellenbosch and the Helderberg</span>
                         </>
                     }
                     subtitle="Electricity is getting more expensive every year. Solar changes that equation. We design and install solar power solutions, battery storage, and off-grid systems across the Boland."

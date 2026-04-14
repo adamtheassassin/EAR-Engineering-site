@@ -103,7 +103,7 @@ export default function COCPage() {
                     onOpenModal={() => setIsModalOpen(true)}
                     title={
                         <>
-                            Electrical Certificate of Compliance (COC) in <span className="text-[#FFCA08]">Somerset West</span> and <span className="text-[#FFCA08]">Stellenbosch</span>
+                            Electrical Certificate of Compliance (COC) in <span className="text-[#FFCA08]">Somerset West and Stellenbosch</span>
                         </>
                     }
                     subtitle="Whether your property is going on the market, a tenant is moving in, you've had electrical work done, or your insurer needs one, we inspect and issue COCs quickly and correctly."

@@ -100,7 +100,7 @@ export default function DBBoardUpgradesPage() {
                     onOpenModal={() => setIsModalOpen(true)}
                     title={
                         <>
-                            DB Board Upgrades and Repairs in <span className="text-[#FFCA08]">Somerset West</span>, <span className="text-[#FFCA08]">Stellenbosch</span> and the Helderberg
+                            DB Board Upgrades and Repairs in <span className="text-[#FFCA08]">Somerset West, Stellenbosch and the Helderberg</span>
                         </>
                     }
                     subtitle="Your distribution board is the heart of your property's electrical system. When it stops working, everything stops. We assess, repair and upgrade DB boards quickly, cleanly and completely to code."
