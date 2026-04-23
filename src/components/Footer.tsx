@@ -17,7 +17,7 @@ export default function Footer() {
                         />
                     </div>
                     <p className="text-sm font-medium leading-relaxed mb-6 text-gray-600">
-                        <strong>EAR Engineering</strong> - Project-managed electrical, aircon & solar in Helderberg + Cape Town. Since 1994. Quality installations, zero guesswork.
+                        <strong>EAR Electrical Engineering</strong> - Project-managed electrical, aircon & solar in Helderberg + Cape Town. Since 1994. Quality installations, zero guesswork.
                     </p>
                 </div>
 
@@ -91,7 +91,7 @@ export default function Footer() {
             {/* Bottom Copyright and Built By Section */}
             <div className="container mx-auto px-4 mt-16 pt-8 border-t border-gray-100 flex flex-col items-center justify-center text-center space-y-2">
                 <div className="text-sm font-semibold text-gray-500">
-                    &copy; {new Date().getFullYear()} EAR Engineering. All rights reserved.
+                    &copy; {new Date().getFullYear()} EAR Electrical Engineering. All rights reserved.
                 </div>
                 <a
                     href="https://ao-automations.com"
