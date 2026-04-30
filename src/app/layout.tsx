@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, Mukta } from "next/font/google";
 import { FaWhatsapp } from "react-icons/fa6";
 import { CONTACT } from "@/lib/constants";
+import WhatsAppTracker from "@/components/WhatsAppTracker";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -94,6 +95,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        <WhatsAppTracker />
         {children}
         <a
           href={CONTACT.whatsappLink}
