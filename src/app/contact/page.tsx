@@ -41,6 +41,12 @@ export default function ContactPage() {
             if (response.ok) {
                 alert("Thank you for your message. We will get back to you shortly.");
                 setFormData({ customerName: "", customerEmail: "", customerPhone: "", serviceType: "", description: "" });
+                if (typeof window !== "undefined" && (window as any).dataLayer) {
+                    (window as any).dataLayer.push({
+                        event: "form_submission",
+                        formType: "contact",
+                    });
+                }
             } else {
                 alert("There was an error submitting your request. Please try again calling us directly.");
             }

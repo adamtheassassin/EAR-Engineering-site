@@ -188,6 +188,13 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
 
             if (response.ok) {
                 setIsSuccess(true);
+                if (typeof window !== "undefined" && (window as any).dataLayer) {
+                    (window as any).dataLayer.push({
+                        event: "form_submission",
+                        formType: "free_quote",
+                        serviceCategory: category,
+                    });
+                }
             } else {
                 alert("There was an error submitting your request. Please try again or call us directly.");
             }
