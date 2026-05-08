@@ -302,7 +302,7 @@ export default function GeneratorInstallationPage() {
                                 </p>
                                 <div className="mt-4 text-left">
                                     <p className="text-xl text-gray-700 font-medium">
-                                        <Link href="/services/solar-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">
+                                        <Link href="/services/solar/solar-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">
                                             See our solar installation services
                                         </Link> for more information on solar and battery backup systems.
                                     </p>

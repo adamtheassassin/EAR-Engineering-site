@@ -34,67 +34,67 @@ const nextConfig: NextConfig = {
       // 3. Solar & Battery Products
       {
         source: '/product/canadian-solar-144-cell-555w-n-type-module-tophiku6-t6-connector-700-per-container-35per-pallet',
-        destination: '/services/solar-installation',
+        destination: '/services/solar/solar-installation',
         permanent: true,
       },
       {
         source: '/product/ja-solar-144-cell-555w-gapless-ribbon-pro-series',
-        destination: '/services/solar-installation',
+        destination: '/services/solar/solar-installation',
         permanent: true,
       },
       {
         source: '/product/photon-portable-power-station-1000w-non-ups',
-        destination: '/services/solar-installation',
+        destination: '/services/solar/solar-installation',
         permanent: true,
       },
       {
         source: '/product/dehn-dehncombo-dcb-ypv-1200',
-        destination: '/services/solar-installation',
+        destination: '/services/solar/solar-installation',
         permanent: true,
       },
       {
         source: '/product/sunsynk-battery-lfp-wall-mount-15-97kwh-51-2v',
-        destination: '/services/solar-installation',
+        destination: '/services/solar/solar-installation',
         permanent: true,
       },
       {
         source: '/product/sunsynk-powerbank-x-3-6kw-inverter-3-84kwh-battery-pack',
-        destination: '/services/solar-installation',
+        destination: '/services/solar/solar-installation',
         permanent: true,
       },
       {
         source: '/product/victron-multiplus-48-3000-35-50-230v-ve-bus',
-        destination: '/services/solar-installation',
+        destination: '/services/solar/solar-installation',
         permanent: true,
       },
       {
         source: '/product/bsl-battery-7kw-135ah',
-        destination: '/services/solar-installation',
+        destination: '/services/solar/solar-installation',
         permanent: true,
       },
       {
         source: '/product/ja-solar-144-half-cell-550w-bifacial-mono-perc-pv-module-short-lead',
-        destination: '/services/solar-installation',
+        destination: '/services/solar/solar-installation',
         permanent: true,
       },
       {
         source: '/product/solar-pool-pump-500w-48v-12m-h',
-        destination: '/services/solar-installation',
+        destination: '/services/solar/solar-installation',
         permanent: true,
       },
       {
         source: '/product/microcare-3-phase-pump-controller-5-5kw-380v',
-        destination: '/services/solar-installation',
+        destination: '/services/solar/solar-installation',
         permanent: true,
       },
       {
         source: '/product/victron-multiplus-48-5000-70-100-230v-ve-bus',
-        destination: '/services/solar-installation',
+        destination: '/services/solar/solar-installation',
         permanent: true,
       },
       {
         source: '/product/photon-power-station-2400w-with-ups',
-        destination: '/services/solar-installation',
+        destination: '/services/solar/solar-installation',
         permanent: true,
       },
 

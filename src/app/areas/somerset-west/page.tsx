@@ -231,7 +231,7 @@ export default function SomersetWestAreaPage() {
                                 </div>
                                 <h2 className="text-3xl font-bold mb-4">Solar Installation</h2>
                                 <p className="text-blue-50 font-medium leading-relaxed mb-6">
-                                    Somerset West sits in one of the best locations in the country for solar power. The Helderberg's sunshine hours are consistently high, which means a well-designed solar system produces energy reliably and delivers strong returns. We install <Link href="/services/solar-installation" className="text-[#FFCA08] underline font-bold">solar systems with battery backup</Link> to help you reduce bills and protect against load shedding.
+                                    Somerset West sits in one of the best locations in the country for solar power. The Helderberg's sunshine hours are consistently high, which means a well-designed solar system produces energy reliably and delivers strong returns. We install <Link href="/services/solar/solar-installation" className="text-[#FFCA08] underline font-bold">solar systems with battery backup</Link> to help you reduce bills and protect against load shedding.
                                 </p>
                             </div>
                             <div>

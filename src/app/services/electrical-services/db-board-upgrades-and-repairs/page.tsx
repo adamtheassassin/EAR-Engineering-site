@@ -137,7 +137,7 @@ export default function DBBoardUpgradesPage() {
                         </div>
 
                         <div className="mt-12 text-center max-w-3xl mx-auto text-lg text-gray-700 font-medium">
-                            If you are adding solar panels or a generator to your property, your DB board may need to be upgraded as part of that installation. See our <Link href="/services/solar-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">solar installation services</Link>.
+                            If you are adding solar panels or a generator to your property, your DB board may need to be upgraded as part of that installation. See our <Link href="/services/solar/solar-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">solar installation services</Link>.
                         </div>
                     </div>
                 </section>

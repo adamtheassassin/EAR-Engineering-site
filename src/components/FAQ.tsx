@@ -2,23 +2,56 @@
 
 import { useState } from "react";
 import { FaChevronDown as ChevronDown, FaCircleQuestion as MessageCircleQuestion } from "react-icons/fa6";
+import Link from "next/link";
 
 interface FAQProps {
-    faqs?: { q: string, a: string }[];
+    faqs?: { q: string, a: React.ReactNode, schemaAnswer?: string }[];
 }
 
 export default function FAQ({ faqs: customFaqs }: FAQProps) {
     const [openIdx, setOpenIdx] = useState<number | null>(null);
 
     const defaultFaqs = [
-        { q: "Do you supply Certificates of Compliance (COC)?", a: "Yes, we are fully licensed to inspect your electrical installation and issue a COC upon passing all safety and compliance checks." },
-        { q: "How quickly can you respond to an emergency?", a: "During business hours, we prioritize urgent breakdowns (like power outages or critical faults) and aim to have a technician on-site as fast as possible." },
-        { q: "Are your solar installations registered with the municipality?", a: "We manage the SSEG registration process to ensure your new solar setup is entirely legal and compliant with local municipal regulations." },
-        { q: "Do you offer warranties on your work?", a: "Yes, we provide workmanship warranties on our installations. The specific timeframe depends on the project details, which we outline transparently beforehand." },
-        { q: "Do you handle commercial projects?", a: "Absolutely. We manage large-scale commercial electrical, refrigeration, and solar projects with dedicated project management." },
-        { q: "How long does a typical solar installation take?", a: "Most residential solar installations take between 1 to 3 days, depending on the system size and roof complexity." },
-        { q: "Can you fix an air conditioner installed by someone else?", a: "Yes, our technicians are trained to fault-find and repair air conditioners and refrigeration units from most major brands, regardless of who installed them." },
-        { q: "Is there a call-out fee?", a: "Yes, a standard call-out fee applies for fault finding and diagnostics. Once the issue is identified, we provide a transparent quote for the necessary repairs. Free quotes apply to new installations." }
+        { 
+            q: "Do you supply Certificates of Compliance (COC)?", 
+            a: <>Yes, we are fully licensed to inspect your electrical installation and issue a <Link href="/services/electrical-services/coc" className="text-[#015CAB] hover:underline font-bold">COC</Link> upon passing all safety and compliance checks.</>,
+            schemaAnswer: "Yes, we are fully licensed to inspect your electrical installation and issue a COC upon passing all safety and compliance checks."
+        },
+        { 
+            q: "How quickly can you respond to an emergency?", 
+            a: <>During business hours, we prioritize urgent breakdowns (like power outages or <Link href="/services/electrical-services/db-board-upgrades-and-repairs" className="text-[#015CAB] hover:underline font-bold">tripping DB boards</Link>) and aim to have a technician on-site as fast as possible.</>,
+            schemaAnswer: "During business hours, we prioritize urgent breakdowns (like power outages or tripping DB boards) and aim to have a technician on-site as fast as possible."
+        },
+        { 
+            q: "Are your solar installations registered with the municipality?", 
+            a: <>We manage the SSEG registration process to ensure your new <Link href="/services/solar/solar-installation" className="text-[#015CAB] hover:underline font-bold">solar setup</Link> is entirely legal and compliant with local municipal regulations.</>,
+            schemaAnswer: "We manage the SSEG registration process to ensure your new solar setup is entirely legal and compliant with local municipal regulations."
+        },
+        { 
+            q: "Do you offer warranties on your work?", 
+            a: "Yes, we provide workmanship warranties on our installations. The specific timeframe depends on the project details, which we outline transparently beforehand.",
+            schemaAnswer: "Yes, we provide workmanship warranties on our installations. The specific timeframe depends on the project details, which we outline transparently beforehand."
+        },
+        { 
+            q: "Do you handle commercial projects?", 
+            a: <>Absolutely. We manage large-scale commercial electrical, refrigeration, and <Link href="/services/solar/solar-installation" className="text-[#015CAB] hover:underline font-bold">solar projects</Link> with dedicated project management. We also handle <Link href="/services/electrical-services/generator-installation" className="text-[#015CAB] hover:underline font-bold">generator installations</Link> for businesses.</>,
+            schemaAnswer: "Absolutely. We manage large-scale commercial electrical, refrigeration, and solar projects with dedicated project management. We also handle generator installations for businesses."
+        },
+        { 
+            q: "How long does a typical solar installation take?", 
+            a: <>Most residential <Link href="/services/solar/solar-installation" className="text-[#015CAB] hover:underline font-bold">solar installations</Link> take between 1 to 3 days, depending on the system size, <Link href="/services/solar/battery-storage" className="text-[#015CAB] hover:underline font-bold">battery storage</Link> requirements, and roof complexity.</>,
+            schemaAnswer: "Most residential solar installations take between 1 to 3 days, depending on the system size, battery storage requirements, and roof complexity."
+        },
+        { 
+            q: "Can you fix a solar system or air conditioner installed by someone else?", 
+            a: <>Yes, our technicians are trained to fault-find and handle <Link href="/services/solar/solar-repair-maintenance" className="text-[#015CAB] hover:underline font-bold">solar repairs and maintenance</Link>, as well as air conditioners from most major brands, regardless of who installed them.</>,
+            schemaAnswer: "Yes, our technicians are trained to fault-find and handle solar repairs and maintenance, as well as air conditioners from most major brands, regardless of who installed them."
+        },
+        { 
+            q: "Is there a call-out fee?", 
+            a: "Yes, a standard call-out fee applies for fault finding and diagnostics. Once the issue is identified, we provide a transparent quote for the necessary repairs. Free quotes apply to new installations.",
+            schemaAnswer: "Yes, a standard call-out fee applies for fault finding and diagnostics. Once the issue is identified, we provide a transparent quote for the necessary repairs. Free quotes apply to new installations."
+        }
     ];
 
     const faqs = customFaqs || defaultFaqs;
@@ -31,7 +64,7 @@ export default function FAQ({ faqs: customFaqs }: FAQProps) {
             "name": faq.q,
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": faq.a
+                "text": faq.schemaAnswer || (typeof faq.a === 'string' ? faq.a : "")
             }
         }))
     };

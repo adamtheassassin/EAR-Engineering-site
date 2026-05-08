@@ -177,7 +177,7 @@ export default function COCPage() {
                         </div>
 
                         <div className="mt-12 text-center max-w-3xl mx-auto text-lg text-gray-700 font-medium">
-                            Note: This includes <Link href="/services/solar-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">solar installations</Link> and <Link href="/services/electrical-services/generator-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">generator installations</Link>.
+                            Note: This includes <Link href="/services/solar/solar-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">solar installations</Link> and <Link href="/services/electrical-services/generator-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">generator installations</Link>.
                         </div>
                     </div>
                 </section>
