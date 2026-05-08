@@ -1,18 +1,31 @@
 import { MetadataRoute } from 'next';
-import fs from 'fs';
+import { execSync } from 'child_process';
 import path from 'path';
 
+const cache = new Map<string, Date | undefined>();
+
 function getFileLastModified(routePath: string): Date | undefined {
-    try {
-        const filePath = path.join(process.cwd(), 'src', 'app', routePath === '' ? 'page.tsx' : `${routePath}/page.tsx`);
-        if (fs.existsSync(filePath)) {
-            const stats = fs.statSync(filePath);
-            return stats.mtime;
-        }
-        return undefined;
-    } catch (error) {
-        return undefined;
+    const filePath = path.join(process.cwd(), 'src', 'app', routePath === '' ? 'page.tsx' : `${routePath}/page.tsx`);
+    
+    if (cache.has(filePath)) {
+        return cache.get(filePath);
     }
+
+    try {
+        const stdout = execSync(`git log -1 --format=%cI -- "${filePath}"`, { encoding: 'utf-8', stdio: ['pipe', 'pipe', 'ignore'] });
+        const dateStr = stdout.trim();
+        
+        if (dateStr) {
+            const date = new Date(dateStr);
+            cache.set(filePath, date);
+            return date;
+        }
+    } catch (error) {
+        // Ignore errors (e.g. git not available, or file not in git)
+    }
+
+    cache.set(filePath, undefined);
+    return undefined;
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
