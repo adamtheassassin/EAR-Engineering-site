@@ -292,25 +292,32 @@ export default function SolarOffGridPage() {
                                 { loc: "Sir Lowry's Pass", path: "#", desc: "Remote residential and agricultural properties" },
                                 { loc: "Somerset West Outskirts", path: "/somerset-west", desc: "Smallholdings and semi-rural residential" },
                                 { loc: "Broader Western Cape", path: "#", desc: "We assess remote projects on a case-by-case basis" },
-                            ].map((location, i) => (
-                                location.path !== "#" ? (
-                                    <Link key={i} href={`/areas${location.path}`} className="bg-white/10 rounded-xl p-5 hover:bg-white/20 transition-colors border border-white/10 group flex flex-col gap-2">
+                            ].map((location, i) => {
+                                const isClickable = location.path === "/somerset-west";
+                                const content = (
+                                    <>
                                         <div className="flex items-center gap-2">
-                                            <FaCircleCheck className="text-[#FFCA08] w-4 h-4" />
-                                            <span className="font-bold text-white text-lg group-hover:text-[#FFCA08] transition-colors">{location.loc}</span>
+                                            <FaCircleCheck className="w-4 h-4 text-[#FFCA08]" />
+                                            <span className={`font-bold text-lg text-white transition-colors ${isClickable ? 'underline decoration-2 underline-offset-4 group-hover:text-[#FFCA08]' : ''}`}>{location.loc}</span>
                                         </div>
                                         <span className="text-sm text-blue-100 leading-relaxed">{location.desc}</span>
-                                    </Link>
-                                ) : (
+                                    </>
+                                );
+
+                                if (isClickable) {
+                                    return (
+                                        <Link key={i} href={`/areas${location.path}`} className="bg-white/10 rounded-xl p-5 hover:bg-white/20 transition-colors border border-white/10 group flex flex-col gap-2">
+                                            {content}
+                                        </Link>
+                                    );
+                                }
+
+                                return (
                                     <div key={i} className="bg-white/10 rounded-xl p-5 border border-white/10 flex flex-col gap-2">
-                                        <div className="flex items-center gap-2">
-                                            <FaCircleCheck className="text-[#FFCA08] w-4 h-4" />
-                                            <span className="font-bold text-white text-lg">{location.loc}</span>
-                                        </div>
-                                        <span className="text-sm text-blue-100 leading-relaxed">{location.desc}</span>
+                                        {content}
                                     </div>
-                                )
-                            ))}
+                                );
+                            })}
                         </div>
                     </div>
                 </section>
@@ -363,3 +370,4 @@ export default function SolarOffGridPage() {
         </>
     );
 }
+

@@ -361,17 +361,36 @@ export default function DBBoardUpgradesPage() {
                                     { loc: "Paarl", path: "/paarl", desc: "Residential and commercial across Paarl Valley" },
                                     { loc: "Durbanville", path: "/Durbanville", desc: "Residential and rural properties" },
                                     { loc: "Cape Town", path: "/cape-town", desc: "Residential and commercial DB board work" },
-                                ].map((location, i) => (
-                                    <div key={i} className="flex flex-col gap-1 w-full text-center md:text-left">
-                                        <Link href={`/locations${location.path}`} className="flex flex-col hover:text-[#FFCA08] transition-colors group">
+                                ].map((location, i) => {
+                                    const isClickable = location.path === "/somerset-west";
+                                    const content = (
+                                        <>
                                             <div className="flex items-center justify-center md:justify-start gap-2 mb-1">
-                                                <FaCircleCheck className="text-[#FFCA08] w-5 h-5 flex-shrink-0" />
-                                                <span className="font-bold text-white text-lg group-hover:text-[#FFCA08] transition-colors">{location.loc}</span>
+                                                <FaCircleCheck className="w-5 h-5 flex-shrink-0 text-[#FFCA08]" />
+                                                <span className={`font-bold text-white text-lg transition-colors ${isClickable ? 'underline decoration-2 underline-offset-4 group-hover:text-[#FFCA08]' : ''}`}>{location.loc}</span>
                                             </div>
                                             <span className="text-sm text-blue-200">{location.desc}</span>
-                                        </Link>
-                                    </div>
-                                ))}
+                                        </>
+                                    );
+
+                                    if (isClickable) {
+                                        return (
+                                            <div key={i} className="flex flex-col gap-1 w-full text-center md:text-left">
+                                                <Link href={`/areas${location.path}`} className="flex flex-col hover:text-[#FFCA08] transition-colors group">
+                                                    {content}
+                                                </Link>
+                                            </div>
+                                        );
+                                    }
+
+                                    return (
+                                        <div key={i} className="flex flex-col gap-1 w-full text-center md:text-left">
+                                            <div className="flex flex-col transition-colors">
+                                                {content}
+                                            </div>
+                                        </div>
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>
@@ -427,3 +446,4 @@ export default function DBBoardUpgradesPage() {
         </>
     );
 }
+

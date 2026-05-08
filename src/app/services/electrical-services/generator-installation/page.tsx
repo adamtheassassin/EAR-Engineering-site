@@ -378,12 +378,29 @@ export default function GeneratorInstallationPage() {
                                     { loc: "Paarl", path: "/paarl" },
                                     { loc: "Durbanville", path: "/Durbanville" },
                                     { loc: "Cape Town", path: "/cape-town" },
-                                ].map((location, i) => (
-                                    <Link href={`/locations${location.path}`} key={i} className="flex items-center gap-3 hover:text-[#FFCA08] transition-colors w-full justify-center md:justify-start">
-                                        <FaCircleCheck className="text-[#FFCA08] w-5 h-5 flex-shrink-0" />
-                                        <span className="font-bold text-white text-lg">{location.loc}</span>
-                                    </Link>
-                                ))}
+                                ].map((location, i) => {
+                                    const isClickable = location.path === "/somerset-west";
+                                    const content = (
+                                        <>
+                                            <FaCircleCheck className="w-5 h-5 flex-shrink-0 text-[#FFCA08]" />
+                                            <span className={`font-bold text-white text-lg ${isClickable ? 'underline decoration-2 underline-offset-4' : ''}`}>{location.loc}</span>
+                                        </>
+                                    );
+
+                                    if (isClickable) {
+                                        return (
+                                            <Link href={`/areas${location.path}`} key={i} className="flex items-center gap-3 hover:text-[#FFCA08] transition-colors w-full justify-center md:justify-start">
+                                                {content}
+                                            </Link>
+                                        );
+                                    }
+
+                                    return (
+                                        <div key={i} className="flex items-center gap-3 w-full justify-center md:justify-start">
+                                            {content}
+                                        </div>
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>
@@ -437,3 +454,4 @@ export default function GeneratorInstallationPage() {
         </>
     );
 }
+
