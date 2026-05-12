@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import { getWhatsAppLink } from "@/lib/constants";
 import TrustedBy from "@/components/TrustedBy";
 import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
@@ -97,6 +98,7 @@ export default function SolarParentPage() {
             <main className="flex-1">
                 <Hero
                     onOpenModal={() => setIsModalOpen(true)}
+                    whatsappLink={getWhatsAppLink("Solar")}
                     title={
                         <>
                             Solar Power Solutions in <span className="text-[#FFCA08]">Somerset West, Stellenbosch and the Helderberg</span>

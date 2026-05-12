@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import { getWhatsAppLink } from "@/lib/constants";
 import TrustedBy from "@/components/TrustedBy";
 import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
@@ -96,6 +97,7 @@ export default function SolarOffGridPage() {
             <main className="flex-1 overflow-hidden">
                 <Hero
                     onOpenModal={() => setIsModalOpen(true)}
+                    whatsappLink={getWhatsAppLink("Off-Grid Solar")}
                     title={
                         <>
                             <span className="text-[#FFCA08]">Off-Grid Solar</span> Power Solutions in the Western Cape

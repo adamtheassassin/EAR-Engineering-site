@@ -127,7 +127,7 @@ export default function Services({ onOpenModal }: ServicesProps) {
                                         onClick={() => onOpenModal(svc.title as "Electrical" | "Aircon" | "Solar")}
                                         className="w-full py-4 text-center rounded-xl bg-[#FFCA08] hover:bg-[#E5B507] text-gray-900 font-extrabold transition shadow-md"
                                     >
-                                        Request Free Quote
+                                        Get Quote
                                     </button>
                                     <a
                                         href={svc.href}

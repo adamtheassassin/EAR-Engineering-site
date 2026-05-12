@@ -263,7 +263,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
                         <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
                         <h2 id="modal-title" className="text-2xl font-bold text-gray-900 mb-2">Request Received</h2>
                         <p className="text-gray-600 mb-6">
-                            Thank you! We'll contact you within 1 hour (during business hours) to discuss your free quote.
+                            Thank you! We'll contact you within 1 hour (during business hours) to discuss your requirements.
                         </p>
                         <button
                             onClick={onClose}
@@ -275,7 +275,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
                 ) : (
                     <form onSubmit={handleSubmit} className="flex flex-col h-full hide-scrollbar">
                         <div className="mb-6 border-b pb-4">
-                            <h2 id="modal-title" className="text-xl font-bold text-gray-900">Request a Free Quote</h2>
+                            <h2 id="modal-title" className="text-xl font-bold text-gray-900">Get a Quote</h2>
                             <div className="flex gap-2 mt-4">
                                 {progressChunks.map((s, idx) => (
                                     <div key={s} className={`h-2 flex-1 rounded-full ${idx <= currentProgressIndex ? 'bg-cyan-600' : 'bg-gray-200'}`} />

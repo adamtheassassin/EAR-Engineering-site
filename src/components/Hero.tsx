@@ -9,9 +9,10 @@ interface HeroProps {
     image?: string;
     ctaText?: string;
     ctaIcon?: React.ReactNode;
+    whatsappLink?: string;
 }
 
-export default function Hero({ onOpenModal, title, subtitle, image = "/hero-engineering.png", ctaText, ctaIcon }: HeroProps) {
+export default function Hero({ onOpenModal, title, subtitle, image = "/hero-engineering.png", ctaText, ctaIcon, whatsappLink }: HeroProps) {
     const location = "Helderberg & Cape Town";
 
     return (
@@ -60,7 +61,7 @@ export default function Hero({ onOpenModal, title, subtitle, image = "/hero-engi
                                 onClick={onOpenModal}
                                 className="w-full sm:w-auto px-6 lg:px-8 py-3.5 lg:py-4 bg-[#FFCA08] hover:bg-[#E5B507] text-gray-900 rounded-xl font-bold text-base lg:text-lg transition-transform transform hover:scale-105 active:scale-95 shadow-xl flex items-center justify-center gap-2 group"
                             >
-                                {ctaText || "Get a Free Quote"}
+                                {ctaText || "Get a Quote"}
                                 {ctaIcon ? (
                                     <span className="group-hover:rotate-12 transition-transform">{ctaIcon}</span>
                                 ) : (
@@ -68,7 +69,7 @@ export default function Hero({ onOpenModal, title, subtitle, image = "/hero-engi
                                 )}
                             </button>
                             <a
-                                href={CONTACT.whatsappLink}
+                                href={whatsappLink ?? CONTACT.whatsappLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#25D366] text-white hover:bg-[#128C7E] px-6 lg:px-8 py-3.5 lg:py-4 rounded-xl font-bold text-base lg:text-lg transition-all shadow-md"

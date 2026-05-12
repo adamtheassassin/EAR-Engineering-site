@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import { getWhatsAppLink } from "@/lib/constants";
 import TrustedBy from "@/components/TrustedBy";
 import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
@@ -95,6 +96,7 @@ export default function SolarInverterInstallationPage() {
             <main className="flex-1 overflow-hidden">
                 <Hero
                     onOpenModal={() => setIsModalOpen(true)}
+                    whatsappLink={getWhatsAppLink("Inverter Installation")}
                     title={
                         <>
                             Solar <span className="text-[#FFCA08]">Inverter Installation</span>

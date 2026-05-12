@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import { getWhatsAppLink } from "@/lib/constants";
 import TrustedBy from "@/components/TrustedBy";
 import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
@@ -101,6 +102,7 @@ export default function COCPage() {
             <main className="flex-1">
                 <Hero
                     onOpenModal={() => setIsModalOpen(true)}
+                    whatsappLink={getWhatsAppLink("COC Inspection")}
                     title={
                         <>
                             Electrical Certificate of Compliance (COC) in <span className="text-[#FFCA08]">Somerset West and Stellenbosch</span>

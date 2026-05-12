@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import { getWhatsAppLink } from "@/lib/constants";
 import Reviews from "@/components/Reviews";
 import TrustedBy from "@/components/TrustedBy";
 import Services from "@/components/Services";
@@ -37,7 +38,8 @@ export default function Home() {
 
       <main className="flex-1">
         <Hero 
-          onOpenModal={() => openModal()} 
+          onOpenModal={() => openModal()}
+          whatsappLink={getWhatsAppLink("Electrical Services")}
           title={
             <>
               <span className="block">Professional Electricians</span>

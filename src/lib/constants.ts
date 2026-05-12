@@ -1,8 +1,16 @@
+export function getWhatsAppLink(service?: string): string {
+    const serviceField = service
+        ? `Service: ${service}`
+        : "Service: [COC / Electrical / Solar / Aircon / Generator]";
+    const message = `Hi EAR Engineering,\n\n${serviceField}\nArea: [Your suburb]\nDetails: [Brief description of the job]`;
+    return `https://wa.me/27769737329?text=${encodeURIComponent(message)}`;
+}
+
 export const CONTACT = {
     name: "EAR Engineering",
     phone: "021 855 4462",
     phoneLink: "tel:0218554462",
-    whatsappLink: "https://wa.me/27769737329?text=Hi%20EAR%20Engineering%2C%20I%E2%80%99d%20like%20a%20free%20quote.",
+    whatsappLink: getWhatsAppLink(),
     email: "info@earengineering.co.za",
     address: "Abelia St, Heldervue, Cape Town, 7130",
     hours: {

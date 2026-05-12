@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import { getWhatsAppLink } from "@/lib/constants";
 import TrustedBy from "@/components/TrustedBy";
 import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
@@ -89,18 +90,19 @@ export default function GeneratorInstallationPage() {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
             <title>Generator Installation Somerset West and Stellenbosch | EAR Engineering</title>
-            <meta name="description" content="EAR Engineering installs standby generators and changeover systems for homes and businesses in Somerset West, Stellenbosch and the Helderberg. Free quote today." />
+            <meta name="description" content="EAR Engineering installs standby generators and changeover systems for homes and businesses in Somerset West, Stellenbosch and the Helderberg. Contact us today." />
             <link rel="canonical" href="https://earengineering.co.za/services/electrical-services/generator-installation" />
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
-                mobileCtaText="Free Quote"
+                mobileCtaText="Get Quote"
                 mobileCtaIcon={<FaCarBattery className="w-5 h-5" />}
             />
 
             <main className="flex-1">
                 <Hero
                     onOpenModal={() => setIsModalOpen(true)}
+                    whatsappLink={getWhatsAppLink("Generator Installation")}
                     title={
                         <>
                             Generator Installation in <span className="text-[#FFCA08]">Somerset West</span>

@@ -3,7 +3,7 @@ import { IconType as LucideIcon } from "react-icons";
 
 export default function Guarantee() {
     const guarantees: { title: string; desc: string; icon: LucideIcon }[] = [
-        { title: "1-Hour Callback Promise", desc: "During business hours, our team will respond to your free quote request within 60 minutes.", icon: Clock },
+        { title: "1-Hour Callback Promise", desc: "During business hours, our team will respond to your enquiry within 60 minutes.", icon: Clock },
         { title: "Transparent Scope", desc: "No hidden fees. We detail exactly what will be done before any work begins.", icon: Search },
         { title: "On-Time, On-Budget", desc: "Project-managed execution means we stick to agreed schedules and costs.", icon: Target },
         { title: "Workmanship Warranty", desc: "We stand by our work. Detailed warranty information is provided for every installation.", icon: ShieldCheck }

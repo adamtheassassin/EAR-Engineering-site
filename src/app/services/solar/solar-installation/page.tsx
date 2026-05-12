@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import { getWhatsAppLink } from "@/lib/constants";
 import TrustedBy from "@/components/TrustedBy";
 import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
@@ -58,7 +59,7 @@ export default function SolarInstallationPage() {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
 
             <title>Solar Installation Somerset West and Stellenbosch | EAR Engineering</title>
-            <meta name="description" content="EAR Engineering installs solar systems with battery backup for homes and businesses in Somerset West, Stellenbosch and the Helderberg. Get a free quote today." />
+            <meta name="description" content="EAR Engineering installs solar systems with battery backup for homes and businesses in Somerset West, Stellenbosch and the Helderberg. Contact us today." />
             <link rel="canonical" href="https://earengineering.co.za/services/solar/solar-installation" />
 
             <Header
@@ -70,6 +71,7 @@ export default function SolarInstallationPage() {
             <main className="flex-1">
                 <Hero
                     onOpenModal={() => setIsModalOpen(true)}
+                    whatsappLink={getWhatsAppLink("Solar Installation")}
                     title={
                         <>
                             <span className="text-[#FFCA08]">Solar</span> Installation

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import { getWhatsAppLink } from "@/lib/constants";
 import TrustedBy from "@/components/TrustedBy";
 import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
@@ -98,6 +99,7 @@ export default function DBBoardUpgradesPage() {
             <main className="flex-1">
                 <Hero
                     onOpenModal={() => setIsModalOpen(true)}
+                    whatsappLink={getWhatsAppLink("DB Board Upgrade")}
                     title={
                         <>
                             DB Board Upgrades and Repairs in <span className="text-[#FFCA08]">Somerset West, Stellenbosch and the Helderberg</span>

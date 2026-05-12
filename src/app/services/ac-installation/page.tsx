@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import { getWhatsAppLink } from "@/lib/constants";
 import TrustedBy from "@/components/TrustedBy";
 import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
@@ -72,7 +73,7 @@ export default function ACInstallationPage() {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
 
             <title>Air Conditioning Installation Somerset West and Stellenbosch | EAR Engineering</title>
-            <meta name="description" content="EAR Engineering installs, services and repairs air conditioning systems across Somerset West, Stellenbosch and the Helderberg. Get a free quote today." />
+            <meta name="description" content="EAR Engineering installs, services and repairs air conditioning systems across Somerset West, Stellenbosch and the Helderberg. Contact us today." />
             <link rel="canonical" href="https://earengineering.co.za/services/ac-installation" />
 
             <Header
@@ -84,6 +85,7 @@ export default function ACInstallationPage() {
             <main className="flex-1">
                 <Hero
                     onOpenModal={() => setIsModalOpen(true)}
+                    whatsappLink={getWhatsAppLink("Aircon Installation")}
                     title={
                         <>
                             <span className="text-[#FFCA08]">Air Conditioning</span> Installation
