@@ -48,8 +48,8 @@ export default function ElectricalServicesPage() {
         "telephone": "021 855 4462",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Abelia St, Heldervue",
-            "addressLocality": "Cape Town",
+            "streetAddress": "60 Abelia Street",
+            "addressLocality": "Somerset West",
             "addressRegion": "Western Cape",
             "postalCode": "7130",
             "addressCountry": "ZA"

@@ -12,7 +12,7 @@ export const CONTACT = {
     phoneLink: "tel:0218554462",
     whatsappLink: getWhatsAppLink(),
     email: "info@earengineering.co.za",
-    address: "Abelia St, Heldervue, Cape Town, 7130",
+    address: "60 Abelia Street, Heldervue, Somerset West, 7130",
     hours: {
         mon_fri: "Mon–Fri: 08:00 – 17:00",
         sat: "Sat: Closed",

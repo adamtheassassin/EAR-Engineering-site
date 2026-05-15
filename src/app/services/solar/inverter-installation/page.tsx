@@ -44,8 +44,8 @@ export default function SolarInverterInstallationPage() {
         "name": "EAR Engineering",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Abelia St, Heldervue",
-            "addressLocality": "Cape Town",
+            "streetAddress": "60 Abelia Street",
+            "addressLocality": "Somerset West",
             "addressRegion": "Western Cape",
             "postalCode": "7130",
             "addressCountry": "ZA"

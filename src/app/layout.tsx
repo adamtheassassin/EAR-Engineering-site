@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
+  "@type": "Electrician",
   "name": "EAR Engineering",
   "image": "https://earengineering.co.za/logo.png",
   "url": "https://earengineering.co.za",
@@ -34,8 +34,8 @@ const localBusinessSchema = {
   "email": "info@earengineering.co.za",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Abelia St, Heldervue",
-    "addressLocality": "Cape Town",
+    "streetAddress": "60 Abelia Street",
+    "addressLocality": "Somerset West",
     "addressRegion": "Western Cape",
     "postalCode": "7130",
     "addressCountry": "ZA"
@@ -60,7 +60,7 @@ const localBusinessSchema = {
     }
   ],
   "areaServed": ["Helderberg", "Cape Town", "Somerset West"],
-  "foundingDate": "1994",
+  "foundingDate": "2008-01-10",
   "priceRange": "$$"
 };
 

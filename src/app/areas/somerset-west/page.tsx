@@ -49,8 +49,8 @@ export default function SomersetWestAreaPage() {
         "name": "EAR Engineering",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Abelia St, Heldervue",
-            "addressLocality": "Cape Town",
+            "streetAddress": "60 Abelia Street",
+            "addressLocality": "Somerset West",
             "addressRegion": "Western Cape",
             "postalCode": "7130",
             "addressCountry": "ZA"
@@ -265,7 +265,7 @@ export default function SomersetWestAreaPage() {
                                     Getting to Us from Somerset West
                                 </h2>
                                 <p className="text-lg text-gray-600 mb-8 font-medium">
-                                    EAR Engineering is located at Abelia Street, Heldervue. We are easy to reach from all parts of Somerset West:
+                                    EAR Engineering is located at 60 Abelia Street, Heldervue, Somerset West. We are easy to reach from all parts of Somerset West:
                                 </p>
                                 <ul className="space-y-6">
                                     <li className="flex gap-4">
@@ -282,14 +282,14 @@ export default function SomersetWestAreaPage() {
                                     </li>
                                 </ul>
                                 <div className="mt-8">
-                                    <a href="https://maps.google.com/?q=Abelia+St,+Heldervue,+Cape+Town,+7130" target="_blank" rel="noreferrer" className="inline-block bg-[#015CAB] hover:bg-[#01418a] text-white px-6 py-3 rounded-xl font-bold shadow-sm transition-colors">
+                                    <a href="https://maps.google.com/?q=60+Abelia+Street,+Heldervue,+Somerset+West,+7130" target="_blank" rel="noreferrer" className="inline-block bg-[#015CAB] hover:bg-[#01418a] text-white px-6 py-3 rounded-xl font-bold shadow-sm transition-colors">
                                         Get Directions
                                     </a>
                                 </div>
                             </div>
                             <div className="lg:w-1/2 w-full h-[400px] bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden relative">
                                 <iframe 
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.2977759882205!2d18.8252277!3d-34.061882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc47cfebd0b955%3A0xc6cb5aeb3c2c1a6b!2sAbelia%20St%2C%20Heldervue%2C%20Cape%20Town%2C%207130%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1714470000000!5m2!1sen!2sus" 
+                                    src="https://www.google.com/maps?q=60+Abelia+Street,+Heldervue,+Somerset+West,+7130&output=embed"
                                     width="100%" 
                                     height="100%" 
                                     style={{ border: 0 }} 
