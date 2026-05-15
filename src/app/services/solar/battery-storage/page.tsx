@@ -46,8 +46,8 @@ export default function SolarBatteryStoragePage() {
         "name": "EAR Engineering",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "60 Abelia Street",
-            "addressLocality": "Somerset West",
+            "streetAddress": "60 Abelia St, Somerset West",
+            "addressLocality": "Cape Town",
             "addressRegion": "Western Cape",
             "postalCode": "7130",
             "addressCountry": "ZA"

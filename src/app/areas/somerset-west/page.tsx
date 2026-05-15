@@ -31,7 +31,7 @@ export default function SomersetWestAreaPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const somersetFaqs = [
-        { q: "Are you actually based in Somerset West?", a: "Yes. Our office is on Abelia Street in Heldervue, Somerset West. We are not a national company dispatching contractors from elsewhere. Our team lives and works in the Helderberg and Somerset West is our primary area." },
+        { q: "Are you actually based in Somerset West?", a: "Yes. Our office is at 60 Abelia St, Somerset West, Cape Town, 7130. We are not a national company dispatching contractors from elsewhere. Our team lives and works in the Helderberg and Somerset West is our primary area." },
         { q: "How quickly can you respond to an electrical fault in Somerset West?", a: "Because we are based in Heldervue, we can reach most parts of Somerset West quickly. For urgent faults, call us directly on 021 855 4462 and we will get to you as fast as we can. We offer same-day attendance for emergencies when our schedule allows." },
         { q: "Do you work in the secure estates around Somerset West?", a: "Yes. We work regularly in estates including Sitari Country Estate, Erinvale Golf Estate, Croydon Vineyard, Paardevlei and others across Somerset West. We are familiar with the access and compliance requirements that most estates have for contractors." },
         { q: "My DB board keeps tripping since load shedding started. What should I do?", a: "This is a very common problem in Somerset West. Repeated load shedding cycles and the power surges that happen when the grid is restored put strain on older DB boards and can cause breakers to fail. Call us and we will come out, assess the board, and tell you whether a repair, upgrade or surge protection installation is the right solution." },
@@ -49,8 +49,8 @@ export default function SomersetWestAreaPage() {
         "name": "EAR Engineering",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "60 Abelia Street",
-            "addressLocality": "Somerset West",
+            "streetAddress": "60 Abelia St, Somerset West",
+            "addressLocality": "Cape Town",
             "addressRegion": "Western Cape",
             "postalCode": "7130",
             "addressCountry": "ZA"
@@ -265,7 +265,7 @@ export default function SomersetWestAreaPage() {
                                     Getting to Us from Somerset West
                                 </h2>
                                 <p className="text-lg text-gray-600 mb-8 font-medium">
-                                    EAR Engineering is located at 60 Abelia Street, Heldervue, Somerset West. We are easy to reach from all parts of Somerset West:
+                                    EAR Engineering is located at 60 Abelia St, Somerset West, Cape Town, 7130. We are easy to reach from all parts of Somerset West:
                                 </p>
                                 <ul className="space-y-6">
                                     <li className="flex gap-4">
@@ -282,14 +282,14 @@ export default function SomersetWestAreaPage() {
                                     </li>
                                 </ul>
                                 <div className="mt-8">
-                                    <a href="https://maps.google.com/?q=60+Abelia+Street,+Heldervue,+Somerset+West,+7130" target="_blank" rel="noreferrer" className="inline-block bg-[#015CAB] hover:bg-[#01418a] text-white px-6 py-3 rounded-xl font-bold shadow-sm transition-colors">
+                                    <a href="https://maps.google.com/?q=60+Abelia+St,+Somerset+West,+Cape+Town,+7130" target="_blank" rel="noreferrer" className="inline-block bg-[#015CAB] hover:bg-[#01418a] text-white px-6 py-3 rounded-xl font-bold shadow-sm transition-colors">
                                         Get Directions
                                     </a>
                                 </div>
                             </div>
                             <div className="lg:w-1/2 w-full h-[400px] bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden relative">
                                 <iframe 
-                                    src="https://www.google.com/maps?q=60+Abelia+Street,+Heldervue,+Somerset+West,+7130&output=embed"
+                                    src="https://www.google.com/maps?q=60+Abelia+St,+Somerset+West,+Cape+Town,+7130&output=embed"
                                     width="100%" 
                                     height="100%" 
                                     style={{ border: 0 }} 
