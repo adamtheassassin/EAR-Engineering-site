@@ -89,7 +89,7 @@ export default function SolarInverterInstallationPage() {
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
-                mobileCtaText="Free Inverter Quote"
+                mobileCtaText="Free Inverter Estimate"
                 mobileCtaIcon={<FaPlugCircleBolt className="w-5 h-5" />}
             />
 
@@ -104,7 +104,7 @@ export default function SolarInverterInstallationPage() {
                     }
                     subtitle="The inverter is the core of any solar power system. Without a correctly sized and installed inverter, the rest of your solar system cannot function."
                     image="/Background Images/Solarbackground residential.webp"
-                    ctaText="Get a Free Inverter Quote"
+                    ctaText="Get a Free Inverter Estimate"
                     ctaIcon={<FaPlugCircleBolt className="w-5 h-5" />}
                 />
 

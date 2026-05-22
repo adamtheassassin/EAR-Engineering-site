@@ -95,7 +95,7 @@ export default function GeneratorInstallationPage() {
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
-                mobileCtaText="Get Quote"
+                mobileCtaText="Get Free Estimate"
                 mobileCtaIcon={<FaCarBattery className="w-5 h-5" />}
             />
 
@@ -110,7 +110,7 @@ export default function GeneratorInstallationPage() {
                     }
                     subtitle="Load shedding doesn't have to run your life. We install reliable standby generators and automatic changeover systems for homes and businesses so your power stays on."
                     image="/Work Photos/generator-hero-new.png"
-                    ctaText="Get a Free Generator Quote"
+                    ctaText="Get a Free Generator Estimate"
                     ctaIcon={<FaCarBattery className="w-5 h-5" />}
                 />
 

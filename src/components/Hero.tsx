@@ -61,7 +61,7 @@ export default function Hero({ onOpenModal, title, subtitle, image = "/hero-engi
                                 onClick={onOpenModal}
                                 className="w-full sm:w-auto px-6 lg:px-8 py-3.5 lg:py-4 bg-[#FFCA08] hover:bg-[#E5B507] text-gray-900 rounded-xl font-bold text-base lg:text-lg transition-transform transform hover:scale-105 active:scale-95 shadow-xl flex items-center justify-center gap-2 group"
                             >
-                                {ctaText || "Get a Quote"}
+                                {ctaText || "Get Free Estimate"}
                                 {ctaIcon ? (
                                     <span className="group-hover:rotate-12 transition-transform">{ctaIcon}</span>
                                 ) : (

@@ -90,7 +90,7 @@ export default function SolarBatteryStoragePage() {
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
-                mobileCtaText="Free Battery Quote"
+                mobileCtaText="Free Battery Estimate"
                 mobileCtaIcon={<FaCarBattery className="w-5 h-5" />}
             />
 
@@ -105,7 +105,7 @@ export default function SolarBatteryStoragePage() {
                     }
                     subtitle="Solar panels generate electricity during the day. Without battery storage, that power is lost the moment the sun goes down or cloud cover reduces output."
                     image="/Background Images/Solarbackground residential.webp"
-                    ctaText="Get a Free Battery Quote"
+                    ctaText="Get a Free Battery Estimate"
                     ctaIcon={<FaCarBattery className="w-5 h-5" />}
                 />
 

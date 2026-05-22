@@ -78,7 +78,7 @@ export default function ACInstallationPage() {
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
-                mobileCtaText="Free Air Conditioning Quote"
+                mobileCtaText="Free Air Conditioning Estimate"
                 mobileCtaIcon={<FaWind className="w-5 h-5" />}
             />
 
@@ -93,7 +93,7 @@ export default function ACInstallationPage() {
                     }
                     subtitle="Summers in the Western Cape are no joke. Whether you are trying to sleep in a stuffy bedroom, keep an office productive through a heatwave, or make a guesthouse comfortable for guests, the right air conditioning system makes all the difference."
                     image="/Work Photos/acinstallation hero.webp"
-                    ctaText="Free Air Conditioning Quote"
+                    ctaText="Free Air Conditioning Estimate"
                     ctaIcon={<FaWind className="w-5 h-5" />}
                 />
 
@@ -141,7 +141,7 @@ export default function ACInstallationPage() {
                                 onClick={() => setIsModalOpen(true)}
                                 className="px-10 py-4 bg-[#FFCA08] hover:bg-[#E5B507] text-gray-900 rounded-xl font-extrabold text-xl transition-all transform hover:scale-105 active:scale-95 shadow-xl flex items-center gap-3 group"
                             >
-                                Free Air Conditioning Quote
+                                Free Air Conditioning Estimate
                                 <FaWind className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                             </button>
                         </div>
@@ -502,7 +502,7 @@ export default function ACInstallationPage() {
                                 onClick={() => setIsModalOpen(true)}
                                 className="px-10 py-4 bg-[#FFCA08] hover:bg-[#E5B507] text-gray-900 rounded-xl font-extrabold text-xl transition-all transform hover:scale-105 active:scale-95 shadow-xl flex items-center gap-3 group"
                             >
-                                Free Air Conditioning Quote
+                                Free Air Conditioning Estimate
                                 <FaWind className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                             </button>
                         </div>

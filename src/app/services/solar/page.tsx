@@ -91,7 +91,7 @@ export default function SolarParentPage() {
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
-                mobileCtaText="Free Solar Quote"
+                mobileCtaText="Free Solar Estimate"
                 mobileCtaIcon={<FaSolarPanel className="w-5 h-5" />}
             />
 
@@ -106,7 +106,7 @@ export default function SolarParentPage() {
                     }
                     subtitle="Electricity is getting more expensive every year. Solar changes that equation. We design and install solar power solutions, battery storage, and off-grid systems across the Boland."
                     image="/Work Photos/solar_parent_hero.png"
-                    ctaText="Get a Free Solar Quote"
+                    ctaText="Get a Free Solar Estimate"
                     ctaIcon={<FaSolarPanel className="w-5 h-5" />}
                 />
 

@@ -275,7 +275,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
                 ) : (
                     <form onSubmit={handleSubmit} className="flex flex-col h-full hide-scrollbar">
                         <div className="mb-6 border-b pb-4">
-                            <h2 id="modal-title" className="text-xl font-bold text-gray-900">Get a Quote</h2>
+                            <h2 id="modal-title" className="text-xl font-bold text-gray-900">Get a Free Estimate</h2>
                             <div className="flex gap-2 mt-4">
                                 {progressChunks.map((s, idx) => (
                                     <div key={s} className={`h-2 flex-1 rounded-full ${idx <= currentProgressIndex ? 'bg-cyan-600' : 'bg-gray-200'}`} />

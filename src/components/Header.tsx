@@ -89,7 +89,7 @@ export default function Header({ onOpenModal, mobileCtaText, mobileCtaIcon }: He
                             onClick={onOpenModal}
                             className="px-6 py-2.5 bg-[#015CAB] text-white rounded-lg font-bold hover:bg-[#01418A] transition shadow-sm"
                         >
-                            Get Quote
+                            Get Free Estimate
                         </button>
                     </div>
 
@@ -178,7 +178,7 @@ export default function Header({ onOpenModal, mobileCtaText, mobileCtaIcon }: He
                     className="w-full py-4 bg-[#FFCA08] text-gray-900 rounded-xl font-bold text-lg shadow-lg active:bg-[#E5B507] transition-colors flex items-center justify-center gap-3"
                 >
                     {mobileCtaIcon && <span>{mobileCtaIcon}</span>}
-                    {mobileCtaText || "Get Quote"}
+                    {mobileCtaText || "Get Free Estimate"}
                 </button>
             </div>
         </>

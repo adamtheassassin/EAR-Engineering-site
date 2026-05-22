@@ -22,7 +22,7 @@ export default function FinalCTA({ onOpenModal }: FinalCTAProps) {
                         onClick={onOpenModal}
                         className="w-full sm:w-auto bg-gray-900 hover:bg-gray-800 text-white px-8 py-5 rounded-2xl font-black text-xl transition-transform transform hover:scale-105 active:scale-95 shadow-xl flex items-center justify-center gap-3"
                     >
-                        <FileText className="w-6 h-6" /> Get Quote
+                        <FileText className="w-6 h-6" /> Get Free Estimate
                     </button>
                     <a href="tel:0218554462" className="w-full sm:w-auto bg-white/50 hover:bg-white text-gray-900 backdrop-blur-md border-2 border-gray-900 px-8 py-5 rounded-2xl font-black text-xl transition-all shadow-md flex items-center justify-center gap-3">
                         <Phone className="w-6 h-6" /> 021 855 4462

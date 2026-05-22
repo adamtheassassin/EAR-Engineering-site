@@ -64,7 +64,7 @@ export default function SolarInstallationPage() {
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
-                mobileCtaText="Free Solar Quote"
+                mobileCtaText="Free Solar Estimate"
                 mobileCtaIcon={<FaSun className="w-5 h-5" />}
             />
 
@@ -79,7 +79,7 @@ export default function SolarInstallationPage() {
                     }
                     subtitle="We install solar power systems for homes, businesses and commercial properties across Somerset West, Stellenbosch and the Helderberg."
                     image="/Background Images/Solarbackground residential.webp"
-                    ctaText="Get a Free Solar Quote"
+                    ctaText="Get a Free Solar Estimate"
                     ctaIcon={<FaSun className="w-5 h-5" />}
                 />
 

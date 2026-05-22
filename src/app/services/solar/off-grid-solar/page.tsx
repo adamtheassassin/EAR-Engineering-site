@@ -90,7 +90,7 @@ export default function SolarOffGridPage() {
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
-                mobileCtaText="Free Off-Grid Quote"
+                mobileCtaText="Free Off-Grid Estimate"
                 mobileCtaIcon={<FaPlugCircleBolt className="w-5 h-5" />}
             />
 
@@ -105,7 +105,7 @@ export default function SolarOffGridPage() {
                     }
                     subtitle="For properties where grid connection is impractical or expensive, generating your own power legally and sustainably makes long-term financial sense."
                     image="/Background Images/Solarbackground residential.webp"
-                    ctaText="Get a Free Off-Grid Quote"
+                    ctaText="Get a Free Off-Grid Estimate"
                     ctaIcon={<FaPlugCircleBolt className="w-5 h-5" />}
                 />
 
