@@ -14,35 +14,34 @@ export default function ServicesPage() {
             icon: FaRegSnowflake,
             iconColor: "text-cyan-600",
             services: [
-                { name: "AC Installation", href: "/services/ac-installation" },
-                { name: "AC Repair", href: "/services/ac-installation" },
-                { name: "AC Maintenance", href: "/services/ac-installation" },
-                { name: "Commercial Air Conditioning", href: "/services/ac-installation" },
+                { name: "AC Installation", href: "/ac-installation" },
+                { name: "AC Repair & Servicing", href: "/ac-repair" },
+                { name: "Commercial Air Conditioning", href: "/commercial-air-conditioning" },
             ]
         },
         {
             title: "Solar Solutions",
             icon: FaSun,
             iconColor: "text-[#FFCA08]",
-            seeAllHref: "/services/solar",
+            seeAllHref: "/solar",
             services: [
-                { name: "Solar Installation", href: "/services/solar/solar-installation" },
-                { name: "Repair & Maintenance", href: "/services/solar/solar-repair-maintenance" },
-                { name: "Battery Storage", href: "/services/solar/battery-storage" },
-                { name: "Inverter Installation", href: "/services/solar/inverter-installation" },
-                { name: "Off-Grid Solar", href: "/services/solar/off-grid-solar" },
+                { name: "Solar Installation", href: "/solar/solar-installation" },
+                { name: "Repair & Maintenance", href: "/solar/solar-repair-maintenance" },
+                { name: "Battery Storage", href: "/solar/battery-storage" },
+                { name: "Inverter Installation", href: "/solar/inverter-installation" },
+                { name: "Off-Grid Solar", href: "/solar/off-grid-solar" },
             ]
         },
         {
             title: "Electrical Services",
             icon: FaBolt,
             iconColor: "text-[#015CAB]",
-            seeAllHref: "/services/electrical-services",
+            seeAllHref: "/electrical-services",
             services: [
-                { name: "Electrical Installations", href: "/services/electrical-services" },
-                { name: "DB Board Upgrades & Repairs", href: "/services/electrical-services/db-board-upgrades-and-repairs" },
-                { name: "COC Certificates", href: "/services/electrical-services/coc" },
-                { name: "Generator Installations", href: "/services/electrical-services/generator-installation" },
+                { name: "Electrical Installations", href: "/electrical-services" },
+                { name: "DB Board Upgrades & Repairs", href: "/electrical-services/db-board-upgrades-and-repairs" },
+                { name: "COC Certificates", href: "/electrical-services/coc" },
+                { name: "Generator Installations", href: "/electrical-services/generator-installation" },
             ]
         }
     ];

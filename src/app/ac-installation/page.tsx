@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import { getWhatsAppLink } from "@/lib/constants";
 import TrustedBy from "@/components/TrustedBy";
-import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -74,7 +73,7 @@ export default function ACInstallationPage() {
 
             <title>Air Conditioning Installation Somerset West and Stellenbosch | EAR Engineering</title>
             <meta name="description" content="EAR Engineering installs, services and repairs air conditioning systems across Somerset West, Stellenbosch and the Helderberg. Contact us today." />
-            <link rel="canonical" href="https://earengineering.co.za/services/ac-installation" />
+            <link rel="canonical" href="https://earengineering.co.za/ac-installation" />
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
@@ -114,12 +113,24 @@ export default function ACInstallationPage() {
                         <div className="grid lg:grid-cols-2 gap-8 mb-12">
                             {[
                                 { title: "New Installations", icon: FaSnowflake, desc: "We install split unit and inverter air conditioning systems for homes, offices, guesthouses, estates and commercial properties. Every installation includes all the electrical connections and a proper handover so you know how to get the best out of your system." },
-                                { title: "Servicing & Maintenance", icon: FaToolbox, desc: "A well-serviced air conditioner runs more efficiently, lasts longer and costs less to run. We offer scheduled servicing for residential and commercial clients. This is especially important for rental properties and estates where systems are used heavily and any breakdown affects paying guests or tenants." },
-                                { title: "Fault Finding and Repairs", icon: FaWrench, desc: "If your air conditioner is not cooling properly, making unusual noises, leaking or not switching on, we can diagnose and fix the problem. We work on most makes and models and carry common parts so we can sort most faults in a single visit." },
+                                {
+                                    title: "Servicing & Maintenance", icon: FaToolbox, desc: (
+                                        <>
+                                            A well-serviced air conditioner runs more efficiently, lasts longer and costs less to run. We offer scheduled servicing for residential and commercial clients. This is especially important for rental properties and estates where systems are used heavily and any breakdown affects paying guests or tenants. See our <Link href="/ac-repair" className="text-[#015CAB] underline hover:text-[#013f75]">aircon repair and servicing</Link> page.
+                                        </>
+                                    )
+                                },
+                                {
+                                    title: "Fault Finding and Repairs", icon: FaWrench, desc: (
+                                        <>
+                                            If your air conditioner is not cooling properly, making unusual noises, leaking or not switching on, we can diagnose and fix the problem. We work on most makes and models and carry common parts so we can sort most faults in a single visit. Learn more about our <Link href="/ac-repair" className="text-[#015CAB] underline hover:text-[#013f75]">air conditioning repairs</Link>.
+                                        </>
+                                    )
+                                },
                                 {
                                     title: "Replacements and Upgrades", icon: FaArrowsRotate, desc: (
                                         <>
-                                            Older air conditioning units can be expensive to run and unreliable to fix. If your system is aging, we will give you an honest assessment of whether a repair is worthwhile or whether a replacement makes more financial sense. Pairing a new inverter air conditioner with a solar system can cut your running costs significantly. See our <Link href="/services/solar/solar-installation" className="text-[#015CAB] underline hover:text-[#013f75]">solar installation services</Link>.
+                                            Older air conditioning units can be expensive to run and unreliable to fix. If your system is aging, we will give you an honest assessment of whether a repair is worthwhile or whether a replacement makes more financial sense. Pairing a new inverter air conditioner with a solar system can cut your running costs significantly. See our <Link href="/solar/solar-installation" className="text-[#015CAB] underline hover:text-[#013f75]">solar installation services</Link>.
                                         </>
                                     )
                                 }
@@ -190,7 +201,7 @@ export default function ACInstallationPage() {
                                     <h3 className="text-xl font-extrabold text-white">Brand-Neutral Advice</h3>
                                 </div>
                                 <p className="text-blue-50 font-medium leading-relaxed">
-                                    We recommend the unit that suits your space and budget rather than pushing a specific brand. Because we also handle <Link href="/services/electrical-services" className="text-[#FFCA08] underline decoration-2 underline-offset-4 hover:text-white transition-colors">electrical work</Link> and <Link href="/services/solar/solar-installation" className="text-[#FFCA08] underline decoration-2 underline-offset-4 hover:text-white transition-colors">solar</Link>, we ensure everything works seamlessly together.
+                                    We recommend the unit that suits your space and budget rather than pushing a specific brand. Because we also handle <Link href="/electrical-services" className="text-[#FFCA08] underline decoration-2 underline-offset-4 hover:text-white transition-colors">electrical work</Link> and <Link href="/solar/solar-installation" className="text-[#FFCA08] underline decoration-2 underline-offset-4 hover:text-white transition-colors">solar</Link>, we ensure everything works seamlessly together.
                                 </p>
                             </div>
                         </div>
@@ -348,7 +359,7 @@ export default function ACInstallationPage() {
 
                                 <div className="p-6 md:p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-md border border-gray-100 flex flex-col justify-between flex-grow">
                                     <p className="text-gray-700 font-medium leading-relaxed mb-6">
-                                        If you manage a rental portfolio, an estate or a commercial property and need a dependable air conditioning contractor, we would be glad to talk about what that could look like for you.
+                                        If you manage a rental portfolio, an estate or a commercial property and need a dependable air conditioning contractor, take a look at our <Link href="/commercial-air-conditioning" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">commercial air conditioning services</Link>. We would be glad to talk about what that could look like for you.
                                     </p>
                                     <button
                                         onClick={() => setIsModalOpen(true)}
@@ -444,20 +455,38 @@ export default function ACInstallationPage() {
 
                                 <div className="grid grid-cols-2 gap-x-4 gap-y-3 text-left">
                                     {[
-                                        "Somerset West",
-                                        "Stellenbosch",
-                                        "Strand",
-                                        "Franschhoek",
-                                        "Gordon's Bay",
-                                        "Paarl",
-                                        "Cape Town",
-                                        "Durbanville",
-                                    ].map((location, i) => (
-                                        <div key={i} className="flex items-center gap-3">
-                                            <FaCircleCheck className="text-[#FFCA08] w-5 h-5 flex-shrink-0" />
-                                            <span className="font-bold text-white text-lg">{location}</span>
-                                        </div>
-                                    ))}
+                                        { name: "Somerset West", path: "/somerset-west" },
+                                        { name: "Stellenbosch", path: "/stellenbosch" },
+                                        { name: "Strand", path: "/strand" },
+                                        { name: "Franschhoek", path: "/franschhoek" },
+                                        { name: "Gordon's Bay", path: "/gordons-bay" },
+                                        { name: "Paarl", path: "/paarl" },
+                                        { name: "Cape Town", path: "/cape-town" },
+                                        { name: "Durbanville", path: "/durbanville" },
+                                    ].map((location, i) => {
+                                        const activePaths = ["/somerset-west", "/stellenbosch", "/strand", "/gordons-bay", "/franschhoek", "/paarl", "/durbanville", "/cape-town"];
+                                        const isClickable = activePaths.includes(location.path);
+                                        const content = (
+                                            <>
+                                                <FaCircleCheck className="text-[#FFCA08] w-5 h-5 flex-shrink-0" />
+                                                <span className={`font-bold text-white text-lg transition-colors ${isClickable ? 'underline decoration-2 underline-offset-4 group-hover:text-[#FFCA08]' : ''}`}>{location.name}</span>
+                                            </>
+                                        );
+
+                                        if (isClickable) {
+                                            return (
+                                                <Link key={i} href={`/areas${location.path}`} className="flex items-center gap-3 hover:text-[#FFCA08] transition-colors group">
+                                                    {content}
+                                                </Link>
+                                            );
+                                        }
+
+                                        return (
+                                            <div key={i} className="flex items-center gap-3">
+                                                {content}
+                                            </div>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         </div>
@@ -508,8 +537,6 @@ export default function ACInstallationPage() {
                         </div>
                     </div>
                 </section>
-
-                <Reviews />
 
                 <FAQ faqs={acFaqs} />
 

@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import { getWhatsAppLink } from "@/lib/constants";
 import TrustedBy from "@/components/TrustedBy";
-import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -86,7 +85,7 @@ export default function SolarBatteryStoragePage() {
 
             <title>Solar Battery Storage Installation Somerset West | EAR Engineering</title>
             <meta name="description" content="EAR Engineering installs solar battery storage systems for homes and businesses across Somerset West, Stellenbosch and the Helderberg. New installs and additions to existing solar." />
-            <link rel="canonical" href="https://earengineering.co.za/services/solar/battery-storage" />
+            <link rel="canonical" href="https://earengineering.co.za/solar/battery-storage" />
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
@@ -126,7 +125,7 @@ export default function SolarBatteryStoragePage() {
                                     Battery storage bridges that gap. Instead of feeding surplus daytime generation back to the grid at a low feed-in tariff, you store it and use it yourself at times when it would otherwise cost you money to buy from Eskom. As electricity tariffs continue to rise, the value of every unit you store and self-consume increases alongside them.
                                 </p>
                                 <p className="text-gray-700 font-medium leading-relaxed">
-                                    For businesses that previously relied on diesel generators during outages, the comparison is even more direct. A battery system replaces an ongoing, unpredictable fuel cost with a fixed capital investment that pays for itself over time and requires very little ongoing <Link href="/services/solar/solar-repair-maintenance" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">maintenance</Link> by comparison.
+                                    For businesses that previously relied on diesel generators during outages, the comparison is even more direct. A battery system replaces an ongoing, unpredictable fuel cost with a fixed capital investment that pays for itself over time and requires very little ongoing <Link href="/solar/solar-repair-maintenance" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">maintenance</Link> by comparison.
                                 </p>
                             </div>
                             <div className="relative h-[450px] w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
@@ -159,7 +158,7 @@ export default function SolarBatteryStoragePage() {
                                     title: "Part of a New Solar Installation", 
                                     icon: FaPlugCirclePlus, 
                                     desc: "The most straightforward way to add battery storage. We design and size the panels and batteries together to match your energy goals.",
-                                    link: "/services/solar/solar-installation"
+                                    link: "/solar/solar-installation"
                                 },
                                 { 
                                     title: "Adding to Existing Solar", 
@@ -285,10 +284,11 @@ export default function SolarBatteryStoragePage() {
                                 { loc: "Gordon's Bay", path: "/gordons-bay", desc: "Residential battery systems" },
                                 { loc: "Franschhoek", path: "/franschhoek", desc: "Estate, guesthouse and residential batteries" },
                                 { loc: "Paarl", path: "/paarl", desc: "Residential and commercial battery installations" },
-                                { loc: "Durbanville", path: "/Durbanville", desc: "Residential and agricultural battery storage" },
+                                { loc: "Durbanville", path: "/durbanville", desc: "Residential and agricultural battery storage" },
                                 { loc: "Cape Town", path: "/cape-town", desc: "Residential and commercial battery storage" },
                             ].map((location, i) => {
-                                const isClickable = location.path === "/somerset-west";
+                                const activePaths = ["/somerset-west", "/stellenbosch", "/strand", "/gordons-bay", "/franschhoek", "/paarl", "/durbanville", "/cape-town"];
+                                const isClickable = activePaths.includes(location.path);
                                 const content = (
                                     <>
                                         <div className="flex items-center gap-2">
@@ -347,8 +347,6 @@ export default function SolarBatteryStoragePage() {
                         </div>
                     </div>
                 </section>
-
-                <Reviews />
 
                 <FAQ faqs={batteryFaqs} />
 

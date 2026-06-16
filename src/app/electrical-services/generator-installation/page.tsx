@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import { getWhatsAppLink } from "@/lib/constants";
 import TrustedBy from "@/components/TrustedBy";
-import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -91,7 +90,7 @@ export default function GeneratorInstallationPage() {
 
             <title>Generator Installation Somerset West and Stellenbosch | EAR Engineering</title>
             <meta name="description" content="EAR Engineering installs standby generators and changeover systems for homes and businesses in Somerset West, Stellenbosch and the Helderberg. Contact us today." />
-            <link rel="canonical" href="https://earengineering.co.za/services/electrical-services/generator-installation" />
+            <link rel="canonical" href="https://earengineering.co.za/electrical-services/generator-installation" />
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
@@ -180,7 +179,7 @@ export default function GeneratorInstallationPage() {
                         </div>
 
                         <div className="flex justify-center text-center max-w-3xl mx-auto text-gray-700 font-medium">
-                            <p>Our registered electricians handle all the electrical compliance and certification for every installation. See our <Link href="/services/electrical-services" className="text-[#015CAB] underline hover:text-[#013f75]">electrical services</Link>.</p>
+                            <p>Our registered electricians handle all the electrical compliance and certification for every installation. See our <Link href="/electrical-services" className="text-[#015CAB] underline hover:text-[#013f75]">electrical services</Link>.</p>
                         </div>
                     </div>
                 </section>
@@ -304,7 +303,7 @@ export default function GeneratorInstallationPage() {
                                 </p>
                                 <div className="mt-4 text-left">
                                     <p className="text-xl text-gray-700 font-medium">
-                                        <Link href="/services/solar/solar-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">
+                                        <Link href="/solar/solar-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">
                                             See our solar installation services
                                         </Link> for more information on solar and battery backup systems.
                                     </p>
@@ -378,10 +377,11 @@ export default function GeneratorInstallationPage() {
                                     { loc: "Gordon's Bay", path: "/gordons-bay" },
                                     { loc: "Franschhoek", path: "/franschhoek" },
                                     { loc: "Paarl", path: "/paarl" },
-                                    { loc: "Durbanville", path: "/Durbanville" },
+                                    { loc: "Durbanville", path: "/durbanville" },
                                     { loc: "Cape Town", path: "/cape-town" },
                                 ].map((location, i) => {
-                                    const isClickable = location.path === "/somerset-west";
+                                    const activePaths = ["/somerset-west", "/stellenbosch", "/strand", "/gordons-bay", "/franschhoek", "/paarl", "/durbanville", "/cape-town"];
+                                    const isClickable = activePaths.includes(location.path);
                                     const content = (
                                         <>
                                             <FaCircleCheck className="w-5 h-5 flex-shrink-0 text-[#FFCA08]" />
@@ -438,8 +438,6 @@ export default function GeneratorInstallationPage() {
                         </div>
                     </div>
                 </section>
-
-                <Reviews />
 
                 <FAQ faqs={generatorFaqs} />
 

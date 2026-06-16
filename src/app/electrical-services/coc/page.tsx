@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import { getWhatsAppLink } from "@/lib/constants";
 import TrustedBy from "@/components/TrustedBy";
-import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -91,7 +90,7 @@ export default function COCPage() {
 
             <title>Electrical Certificate of Compliance (COC) Somerset West | EAR Engineering</title>
             <meta name="description" content="Need an electrical COC in Somerset West or Stellenbosch? EAR Engineering issues compliance certificates for homes and businesses across the Helderberg. Book today." />
-            <link rel="canonical" href="https://earengineering.co.za/services/electrical-services/coc" />
+            <link rel="canonical" href="https://earengineering.co.za/electrical-services/coc" />
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
@@ -142,7 +141,7 @@ export default function COCPage() {
                         </div>
 
                         <div className="mt-12 text-center max-w-3xl mx-auto text-lg text-gray-700 font-medium">
-                            Our registered electricians also handle all electrical repairs and installations if work is needed before your COC can be issued. See <Link href="/services/electrical-services" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">our electrical services</Link>.
+                            Our registered electricians also handle all electrical repairs and installations if work is needed before your COC can be issued. See <Link href="/electrical-services" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">our electrical services</Link>.
                         </div>
                     </div>
                 </section>
@@ -179,7 +178,7 @@ export default function COCPage() {
                         </div>
 
                         <div className="mt-12 text-center max-w-3xl mx-auto text-lg text-gray-700 font-medium">
-                            Note: This includes <Link href="/services/solar/solar-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">solar installations</Link> and <Link href="/services/electrical-services/generator-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">generator installations</Link>.
+                            Note: This includes <Link href="/solar/solar-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">solar installations</Link> and <Link href="/electrical-services/generator-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">generator installations</Link>.
                         </div>
                     </div>
                 </section>
@@ -239,7 +238,7 @@ export default function COCPage() {
                                         <strong>Common issues include:</strong> outdated DB boards, missing earth connections, non-compliant wiring, and incorrectly installed plug points or light fittings. Most are straightforward to fix.
                                     </p>
                                     <p className="text-lg text-gray-700 font-medium">
-                                        We also handle <Link href="/services/electrical-services" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">DB board upgrades</Link> and rewiring as part of the same job.
+                                        We also handle <Link href="/electrical-services" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">DB board upgrades</Link> and rewiring as part of the same job.
                                     </p>
                                 </div>
                             </div>
@@ -323,10 +322,11 @@ export default function COCPage() {
                                     { loc: "Gordon's Bay", path: "/gordons-bay", desc: "Residential and holiday homes" },
                                     { loc: "Franschhoek", path: "/franschhoek", desc: "Estates, guesthouses and residential properties" },
                                     { loc: "Paarl", path: "/paarl", desc: "Residential and commercial across Paarl Valley" },
-                                    { loc: "Durbanville", path: "/Durbanville", desc: "Residential and rural properties" },
+                                    { loc: "Durbanville", path: "/durbanville", desc: "Residential and rural properties" },
                                     { loc: "Cape Town", path: "/cape-town", desc: "Residential and commercial properties" },
                                 ].map((location, i) => {
-                                    const isClickable = location.path === "/somerset-west";
+                                    const activePaths = ["/somerset-west", "/stellenbosch", "/strand", "/gordons-bay", "/franschhoek", "/paarl", "/durbanville", "/cape-town"];
+                                    const isClickable = activePaths.includes(location.path);
                                     const content = (
                                         <>
                                             <div className="flex items-center justify-center md:justify-start gap-2 mb-1">
@@ -390,8 +390,6 @@ export default function COCPage() {
                         </div>
                     </div>
                 </section>
-
-                <Reviews />
 
                 <FAQ faqs={cocFaqs} />
 

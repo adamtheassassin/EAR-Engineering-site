@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import Image from "next/image";
+import Link from "next/link";
 import { FaPhone, FaEnvelope, FaLocationDot, FaClock, FaPaperPlane, FaWhatsapp } from "react-icons/fa6";
 import { CONTACT } from "@/lib/constants";
 import QuoteModal from "@/components/QuoteModal";
@@ -247,6 +248,44 @@ export default function ContactPage() {
                                     </button>
                                 </div>
                             </form>
+                        </div>
+                    </div>
+
+                    {/* Areas We Serve Section */}
+                    <div className="mt-20 border-t border-gray-200 pt-16">
+                        <div className="text-center mb-10">
+                            <h2 className="text-3xl font-extrabold text-gray-900 mb-4">
+                                Areas We Serve
+                            </h2>
+                            <p className="text-lg text-gray-600 font-medium max-w-2xl mx-auto">
+                                EAR Engineering is based in Somerset West and carries out work across the Helderberg and Boland regions. Explore our primary locations:
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto">
+                            {[
+                                { name: "Somerset West", id: "somerset-west" },
+                                { name: "Stellenbosch", id: "stellenbosch" },
+                                { name: "Strand", id: "strand" },
+                                { name: "Gordon's Bay", id: "gordons-bay" },
+                                { name: "Franschhoek", id: "franschhoek" },
+                                { name: "Paarl", id: "paarl" },
+                                { name: "Durbanville", id: "durbanville" },
+                                { name: "Cape Town", id: "cape-town" },
+                            ].map((area) => (
+                                <Link
+                                    key={area.id}
+                                    href={`/areas/${area.id}`}
+                                    className="bg-white border border-gray-150 hover:border-[#015CAB] rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col items-center justify-center gap-2"
+                                >
+                                    <span className="font-extrabold text-gray-900 group-hover:text-[#015CAB] transition-colors text-lg">
+                                        {area.name}
+                                    </span>
+                                    <span className="text-xs font-bold text-[#015CAB] uppercase tracking-wider group-hover:underline">
+                                        View Service Area &rarr;
+                                    </span>
+                                </Link>
+                            ))}
                         </div>
                     </div>
                 </div>

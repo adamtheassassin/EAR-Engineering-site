@@ -3,6 +3,7 @@ import { useState } from "react";
 import { FaMountain, FaWater, FaAnchor, FaTree, FaTrainTram, FaMonument, FaHouseChimney, FaMountainCity } from "react-icons/fa6";
 import { IconType } from "react-icons";
 import Image from "next/image";
+import Link from "next/link";
 
 export type LocationData = {
     id: string;
@@ -26,7 +27,7 @@ export const locations: LocationData[] = [
         id: "strand",
         name: "Strand",
         subRegion: "HELDERBERG",
-        description: "Providing top-tier electrical and HVAC services to coastal properties and businesses in the Strand area.",
+        description: "We look after coastal homes and businesses in Strand, where the sea air is tough on wiring, boards and aircon units.",
         image: "/Location images/Strand_Western_Cape.webp",
         icon: FaWater
     },
@@ -34,7 +35,7 @@ export const locations: LocationData[] = [
         id: "gordons-bay",
         name: "Gordon's Bay",
         subRegion: "HELDERBERG",
-        description: "Beautiful coastal town where we manage solar, electrical, and HVAC installations with precision.",
+        description: "A coastal town we know well, where we handle solar, electrical and aircon work on everything from harbour homes to mountainside properties.",
         image: "/Location images/gordons bay.webp",
         icon: FaAnchor
     },
@@ -42,7 +43,7 @@ export const locations: LocationData[] = [
         id: "stellenbosch",
         name: "Stellenbosch",
         subRegion: "WINELANDS",
-        description: "Serving the Winelands with enterprise-grade solutions for farms, estates, and the university district.",
+        description: "We serve the Winelands, from wine farms and estates to the historic homes and student rentals around the university.",
         image: "/Location images/StellenboschWC-Aerial.webp",
         icon: FaTree
     },
@@ -97,24 +98,35 @@ export default function ServiceAreas() {
                                 We serve the greater Western Cape region. We&apos;re local, which means we&apos;re fast. Check your area below to see our commercial coverage zones.
                             </p>
                         </div>
-
+ 
                         {/* MOBILE GRID ONLY (2x4) */}
                         <div className="grid grid-cols-2 gap-3 md:hidden">
-                            {locations.map((loc) => (
-                                <div key={`mob-${loc.id}`} className="bg-white rounded-xl border border-gray-100 p-4 shadow-sm flex flex-col items-center text-center justify-center gap-2">
-                                    <div className="p-2.5 rounded-lg bg-[#e6f0f9] text-[#015CAB] flex-shrink-0">
-                                        <loc.icon className="w-5 h-5" />
+                            {locations.map((loc) => {
+                                const isLinkable = ["somerset-west", "stellenbosch", "strand", "gordons-bay", "franschhoek", "paarl", "durbanville", "cape-town"].includes(loc.id);
+                                const content = (
+                                    <div className="bg-white rounded-xl border border-gray-100 p-4 shadow-sm flex flex-col items-center text-center justify-center gap-2 h-full">
+                                        <div className="p-2.5 rounded-lg bg-[#e6f0f9] text-[#015CAB] flex-shrink-0">
+                                            <loc.icon className="w-5 h-5" />
+                                        </div>
+                                        <div className="mt-1">
+                                            <h3 className={`font-bold text-gray-900 text-sm ${isLinkable ? 'underline decoration-[#015CAB] decoration-2 underline-offset-4 hover:text-[#013f75]' : ''}`}>{loc.name}</h3>
+                                            <p className="text-[10px] font-semibold tracking-wider text-gray-500 uppercase mt-1">
+                                                {loc.subRegion}
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div className="mt-1">
-                                        <h3 className="font-bold text-gray-900 text-sm">{loc.name}</h3>
-                                        <p className="text-[10px] font-semibold tracking-wider text-gray-500 uppercase mt-1">
-                                            {loc.subRegion}
-                                        </p>
-                                    </div>
-                                </div>
-                            ))}
+                                );
+                                if (isLinkable) {
+                                    return (
+                                        <Link key={`mob-${loc.id}`} href={`/areas/${loc.id}`} className="block h-full">
+                                            {content}
+                                        </Link>
+                                    );
+                                }
+                                return <div key={`mob-${loc.id}`}>{content}</div>;
+                            })}
                         </div>
-
+ 
                         {/* DESKTOP LIST ONLY (md+) */}
                         <div className="hidden md:grid grid-cols-2 gap-3 auto-rows-max content-start">
                             {locations.map((loc) => {
@@ -146,7 +158,7 @@ export default function ServiceAreas() {
                                 );
                             })}
                         </div>
-
+ 
                         {/* View All Areas Button */}
                         <div className="mt-4 md:mt-2">
                             <a
@@ -157,7 +169,7 @@ export default function ServiceAreas() {
                             </a>
                         </div>
                     </div>
-
+ 
                     {/* Right Column: Display Area (IMAGE ONLY ON DESKTOP) */}
                     <div className="hidden md:block md:col-span-7">
                         <div className="relative w-full h-[500px] lg:h-[600px] rounded-[2rem] overflow-hidden shadow-2xl bg-white border border-gray-100 group">
@@ -171,13 +183,21 @@ export default function ServiceAreas() {
                                 quality={85}
                             />
                             {/* Info Card - Overlayed on Image */}
-                            <div className="absolute bottom-6 left-6 right-6 md:bottom-8 md:left-8 md:right-8 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-100 z-10">
+                            <div className="absolute bottom-6 left-6 right-6 md:bottom-8 md:left-8 md:right-8 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-100 z-10 flex flex-col items-start">
                                 <h3 className="text-2xl font-extrabold text-gray-900 mb-2">
                                     {activeLocation.name}
                                 </h3>
                                 <p className="text-gray-600 text-base leading-relaxed">
                                     {activeLocation.description}
                                 </p>
+                                {["somerset-west", "stellenbosch", "strand", "gordons-bay", "franschhoek", "paarl", "durbanville", "cape-town"].includes(activeLocation.id) && (
+                                    <Link
+                                        href={`/areas/${activeLocation.id}`}
+                                        className="inline-flex items-center gap-2 mt-4 text-[#015CAB] hover:text-[#013f75] font-extrabold transition-colors"
+                                    >
+                                        View Dedicated Page &rarr;
+                                    </Link>
+                                )}
                             </div>
                             <div className="absolute top-8 left-0 bottom-8 w-[2px] bg-gradient-to-b from-transparent via-[#FFCA08] to-transparent opacity-50 z-20"></div>
                         </div>

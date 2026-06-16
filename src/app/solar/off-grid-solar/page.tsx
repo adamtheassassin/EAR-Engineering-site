@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import { getWhatsAppLink } from "@/lib/constants";
 import TrustedBy from "@/components/TrustedBy";
-import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -86,7 +85,7 @@ export default function SolarOffGridPage() {
 
             <title>Off-Grid Solar Power Solutions Western Cape | EAR Engineering</title>
             <meta name="description" content="EAR Engineering designs and installs off-grid solar systems for farms, smallholdings and remote properties across the Western Cape. Call 021 855 4462." />
-            <link rel="canonical" href="https://earengineering.co.za/services/solar/off-grid-solar" />
+            <link rel="canonical" href="https://earengineering.co.za/solar/off-grid-solar" />
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
@@ -126,7 +125,7 @@ export default function SolarOffGridPage() {
                                     Even for properties that could connect to the grid, there is a growing number of clients who choose off-grid or near-off-grid systems as a deliberate financial decision. When you factor in the rising cost of grid electricity, generating your own power independently makes strong financial sense.
                                 </p>
                                 <p className="text-gray-700 font-medium leading-relaxed">
-                                    Sometimes a <Link href="/services/solar" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">hybrid system</Link> that dramatically reduces grid reliance is the better answer. We will tell you which makes more sense for your situation.
+                                    Sometimes a <Link href="/solar" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">hybrid system</Link> that dramatically reduces grid reliance is the better answer. We will tell you which makes more sense for your situation.
                                 </p>
                             </div>
                             <div className="relative h-[450px] w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
@@ -176,7 +175,7 @@ export default function SolarOffGridPage() {
                                     title: "Electrical Certification", 
                                     icon: FaShieldHalved, 
                                     desc: "All wiring and distribution board connections are carried out by registered electricians and legally certified on completion for insurance.",
-                                    link: "/services/electrical-services/coc"
+                                    link: "/electrical-services/coc"
                                 }
                             ].map((s, i) => (
                                 <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-[#015CAB] transition-colors group flex flex-col">
@@ -237,7 +236,7 @@ export default function SolarOffGridPage() {
                             </table>
                         </div>
                         <div className="mt-8 text-center text-gray-600 font-medium">
-                            Need a hybrid system with grid backup? Check out our <Link href="/services/electrical-services/generator-installation" className="text-[#015CAB] underline font-bold hover:text-[#013f75] transition-colors">backup generator</Link> and grid solutions.
+                            Need a hybrid system with grid backup? Check out our <Link href="/electrical-services/generator-installation" className="text-[#015CAB] underline font-bold hover:text-[#013f75] transition-colors">backup generator</Link> and grid solutions.
                         </div>
                     </div>
                 </section>
@@ -288,14 +287,15 @@ export default function SolarOffGridPage() {
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {[
-                                { loc: "Durbanville and Elgin Valley", path: "#", desc: "Farms, orchards, smallholdings and rural residential" },
-                                { loc: "Franschhoek", path: "#", desc: "Wine farms, rural estates and remote cottages" },
-                                { loc: "Paarl", path: "#", desc: "Agricultural operations and rural properties" },
+                                { loc: "Durbanville", path: "/durbanville", desc: "Farms, orchards, smallholdings and rural residential" },
+                                { loc: "Franschhoek", path: "/franschhoek", desc: "Wine farms, rural estates and remote cottages" },
+                                { loc: "Paarl", path: "/paarl", desc: "Agricultural operations and rural properties" },
                                 { loc: "Sir Lowry's Pass", path: "#", desc: "Remote residential and agricultural properties" },
                                 { loc: "Somerset West Outskirts", path: "/somerset-west", desc: "Smallholdings and semi-rural residential" },
                                 { loc: "Broader Western Cape", path: "#", desc: "We assess remote projects on a case-by-case basis" },
                             ].map((location, i) => {
-                                const isClickable = location.path === "/somerset-west";
+                                const activePaths = ["/somerset-west", "/stellenbosch", "/strand", "/gordons-bay", "/franschhoek", "/paarl", "/durbanville", "/cape-town"];
+                                const isClickable = activePaths.includes(location.path);
                                 const content = (
                                     <>
                                         <div className="flex items-center gap-2">
@@ -354,8 +354,6 @@ export default function SolarOffGridPage() {
                         </div>
                     </div>
                 </section>
-
-                <Reviews />
 
                 <FAQ faqs={offGridFaqs} />
 

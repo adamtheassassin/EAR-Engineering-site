@@ -5,13 +5,13 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import { getWhatsAppLink } from "@/lib/constants";
 import TrustedBy from "@/components/TrustedBy";
-import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import QuoteModal from "@/components/QuoteModal";
 import { FaSolarPanel, FaBatteryFull, FaWrench, FaBuilding, FaCircleCheck, FaBoltLightning, FaShieldHalved, FaClockRotateLeft, FaUserTie, FaPlug, FaMapLocationDot, FaSun } from "react-icons/fa6";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SolarInstallationPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -60,7 +60,7 @@ export default function SolarInstallationPage() {
 
             <title>Solar Installation Somerset West and Stellenbosch | EAR Engineering</title>
             <meta name="description" content="EAR Engineering installs solar systems with battery backup for homes and businesses in Somerset West, Stellenbosch and the Helderberg. Contact us today." />
-            <link rel="canonical" href="https://earengineering.co.za/services/solar/solar-installation" />
+            <link rel="canonical" href="https://earengineering.co.za/solar/solar-installation" />
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
@@ -408,27 +408,43 @@ export default function SolarInstallationPage() {
 
                                 <div className="grid grid-cols-2 gap-x-4 gap-y-3 text-left">
                                     {[
-                                        "Somerset West",
-                                        "Stellenbosch",
-                                        "Strand",
-                                        "Franschhoek",
-                                        "Gordon's Bay",
-                                        "Paarl",
-                                        "Cape Town",
-                                        "Durbanville"
-                                    ].map((area, i) => (
-                                        <div key={i} className="flex items-center gap-2">
-                                            <FaCircleCheck className="text-white w-5 h-5 flex-shrink-0" />
-                                            <span className="font-bold text-white text-lg">{area}</span>
-                                        </div>
-                                    ))}
+                                        { name: "Somerset West", path: "/somerset-west" },
+                                        { name: "Stellenbosch", path: "/stellenbosch" },
+                                        { name: "Strand", path: "/strand" },
+                                        { name: "Franschhoek", path: "/franschhoek" },
+                                        { name: "Gordon's Bay", path: "/gordons-bay" },
+                                        { name: "Paarl", path: "/paarl" },
+                                        { name: "Cape Town", path: "/cape-town" },
+                                        { name: "Durbanville", path: "/durbanville" },
+                                    ].map((location, i) => {
+                                        const activePaths = ["/somerset-west", "/stellenbosch", "/strand", "/gordons-bay", "/franschhoek", "/paarl", "/durbanville", "/cape-town"];
+                                        const isClickable = activePaths.includes(location.path);
+                                        const content = (
+                                            <>
+                                                <FaCircleCheck className="text-[#FFCA08] w-5 h-5 flex-shrink-0" />
+                                                <span className={`font-bold text-white text-lg transition-colors ${isClickable ? 'underline decoration-2 underline-offset-4 group-hover:text-[#FFCA08]' : ''}`}>{location.name}</span>
+                                            </>
+                                        );
+
+                                        if (isClickable) {
+                                            return (
+                                                <Link key={i} href={`/areas${location.path}`} className="flex items-center gap-3 hover:text-[#FFCA08] transition-colors group">
+                                                    {content}
+                                                </Link>
+                                            );
+                                        }
+
+                                        return (
+                                            <div key={i} className="flex items-center gap-3">
+                                                {content}
+                                            </div>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-
-                <Reviews />
 
                 <FAQ faqs={solarFaqs} />
 

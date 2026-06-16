@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import { getWhatsAppLink } from "@/lib/constants";
 import TrustedBy from "@/components/TrustedBy";
-import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -87,7 +86,7 @@ export default function SolarParentPage() {
 
             <title>Solar Power Solutions Somerset West | EAR Engineering</title>
             <meta name="description" content="EAR Engineering offers solar installation, battery storage, inverter and off-grid solar solutions across Somerset West, Stellenbosch and the Helderberg." />
-            <link rel="canonical" href="https://earengineering.co.za/services/solar" />
+            <link rel="canonical" href="https://earengineering.co.za/solar" />
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
@@ -162,35 +161,35 @@ export default function SolarParentPage() {
                                     title: "Solar Installation", 
                                     icon: FaSolarPanel, 
                                     desc: "A complete solar installation includes panels, inverter, battery storage and all electrical connections. We handle the design from start to finish.",
-                                    link: "/services/solar/solar-installation",
+                                    link: "/solar/solar-installation",
                                     linkText: "See our solar installation service"
                                 },
                                 { 
                                     title: "Repair & Maintenance", 
                                     icon: FaWrench, 
                                     desc: "Existing solar systems need attention over time. Panels can be damaged or inverters fail. We diagnose faults, repair, and conduct maintenance.",
-                                    link: "/services/solar/solar-repair-maintenance",
+                                    link: "/solar/solar-repair-maintenance",
                                     linkText: "See our repair and maintenance service"
                                 },
                                 { 
                                     title: "Battery Storage", 
                                     icon: FaCarBattery, 
                                     desc: "Battery storage turns a solar system into a load shedding solution. We install storage as part of a new system or an addition to an existing one.",
-                                    link: "/services/solar/battery-storage",
+                                    link: "/solar/battery-storage",
                                     linkText: "See our battery storage service"
                                 },
                                 { 
                                     title: "Inverter Installation", 
                                     icon: FaPlugCircleBolt, 
                                     desc: "The inverter is the core of any system. Upgrading to a newer model improves a system's performance and reliability significantly.",
-                                    link: "/services/solar/inverter-installation",
+                                    link: "/solar/inverter-installation",
                                     linkText: "See our inverter installation service"
                                 },
                                 { 
                                     title: "Off-Grid Solar", 
                                     icon: FaHouseSignal, 
                                     desc: "Not every property is connected to the municipal grid. We design and install off-grid systems sized to cover your full independent energy needs.",
-                                    link: "/services/solar/off-grid-solar",
+                                    link: "/solar/off-grid-solar",
                                     linkText: "See our off-grid solar service"
                                 }
                             ].map((s, i) => (
@@ -236,27 +235,27 @@ export default function SolarParentPage() {
                                     <tr className="hover:bg-gray-50 transition-colors">
                                         <td className="py-4 px-6 font-bold text-gray-900 border-r border-gray-100">No solar yet, want to get started</td>
                                         <td className="py-4 px-6 text-gray-600 font-medium border-r border-gray-100">Full solar installation with battery backup</td>
-                                        <td className="py-4 px-6 font-bold"><Link href="/services/solar/solar-installation" className="text-[#015CAB] hover:underline">Solar Installation page</Link></td>
+                                        <td className="py-4 px-6 font-bold"><Link href="/solar/solar-installation" className="text-[#015CAB] hover:underline">Solar Installation page</Link></td>
                                     </tr>
                                     <tr className="hover:bg-gray-50 transition-colors bg-gray-50/50">
                                         <td className="py-4 px-6 font-bold text-gray-900 border-r border-gray-100">Have solar but it is not performing well</td>
                                         <td className="py-4 px-6 text-gray-600 font-medium border-r border-gray-100">Fault diagnosis, repair or panel replacement</td>
-                                        <td className="py-4 px-6 font-bold"><Link href="/services/solar/solar-repair-maintenance" className="text-[#015CAB] hover:underline">Repair and Maintenance page</Link></td>
+                                        <td className="py-4 px-6 font-bold"><Link href="/solar/solar-repair-maintenance" className="text-[#015CAB] hover:underline">Repair and Maintenance page</Link></td>
                                     </tr>
                                     <tr className="hover:bg-gray-50 transition-colors">
                                         <td className="py-4 px-6 font-bold text-gray-900 border-r border-gray-100">Have solar panels but no battery</td>
                                         <td className="py-4 px-6 text-gray-600 font-medium border-r border-gray-100">Battery storage added to existing system</td>
-                                        <td className="py-4 px-6 font-bold"><Link href="/services/solar/battery-storage" className="text-[#015CAB] hover:underline">Battery Storage page</Link></td>
+                                        <td className="py-4 px-6 font-bold"><Link href="/solar/battery-storage" className="text-[#015CAB] hover:underline">Battery Storage page</Link></td>
                                     </tr>
                                     <tr className="hover:bg-gray-50 transition-colors bg-gray-50/50">
                                         <td className="py-4 px-6 font-bold text-gray-900 border-r border-gray-100">Inverter is old, failing or underspecified</td>
                                         <td className="py-4 px-6 text-gray-600 font-medium border-r border-gray-100">Inverter replacement or upgrade</td>
-                                        <td className="py-4 px-6 font-bold"><Link href="/services/solar/inverter-installation" className="text-[#015CAB] hover:underline">Inverter Installation page</Link></td>
+                                        <td className="py-4 px-6 font-bold"><Link href="/solar/inverter-installation" className="text-[#015CAB] hover:underline">Inverter Installation page</Link></td>
                                     </tr>
                                     <tr className="hover:bg-gray-50 transition-colors">
                                         <td className="py-4 px-6 font-bold text-gray-900 border-r border-gray-100">Rural or remote property, no grid</td>
                                         <td className="py-4 px-6 text-gray-600 font-medium border-r border-gray-100">Fully independent off-grid solar system</td>
-                                        <td className="py-4 px-6 font-bold"><Link href="/services/solar/off-grid-solar" className="text-[#015CAB] hover:underline">Off-Grid Solar page</Link></td>
+                                        <td className="py-4 px-6 font-bold"><Link href="/solar/off-grid-solar" className="text-[#015CAB] hover:underline">Off-Grid Solar page</Link></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -321,7 +320,7 @@ export default function SolarParentPage() {
                             ))}
                         </div>
                         <div className="mt-8 text-center max-w-3xl mx-auto text-lg text-gray-700 font-medium bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-200">
-                            Looking for more? See our general <Link href="/services/electrical-services" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">electrical upgrades</Link> and <Link href="/services/ac-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">air conditioning</Link> services.
+                            Looking for more? See our general <Link href="/electrical-services" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">electrical upgrades</Link> and <Link href="/ac-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">air conditioning</Link> services.
                         </div>
                     </div>
                 </section>
@@ -346,10 +345,11 @@ export default function SolarParentPage() {
                                 { loc: "Gordon's Bay", path: "/gordons-bay", desc: "Residential and small commercial solar" },
                                 { loc: "Franschhoek", path: "/franschhoek", desc: "Residential, guesthouse and estate solar systems" },
                                 { loc: "Paarl", path: "/paarl", desc: "Residential and commercial across the Paarl Valley" },
-                                { loc: "Durbanville", path: "/Durbanville", desc: "Residential, agricultural and off-grid solar solutions" },
+                                { loc: "Durbanville", path: "/durbanville", desc: "Residential, agricultural and off-grid solar solutions" },
                                 { loc: "Cape Town", path: "/cape-town", desc: "Residential and commercial solar installations" },
                             ].map((location, i) => {
-                                const isClickable = location.path === "/somerset-west";
+                                const activePaths = ["/somerset-west", "/stellenbosch", "/strand", "/gordons-bay", "/franschhoek", "/paarl", "/durbanville", "/cape-town"];
+                                const isClickable = activePaths.includes(location.path);
                                 const content = (
                                     <>
                                         <div className="flex items-center gap-2">
@@ -377,8 +377,6 @@ export default function SolarParentPage() {
                         </div>
                     </div>
                 </section>
-
-                <Reviews />
 
                 <FAQ faqs={solarFaqs} />
 

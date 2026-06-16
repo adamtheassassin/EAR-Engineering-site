@@ -61,7 +61,7 @@ export default function AreasPage() {
                                             <h2 className="text-2xl font-bold text-gray-900 group-hover:text-[#015CAB] transition-colors">{loc.name}</h2>
                                         </div>
                                         <p className="text-gray-600 mb-8 flex-1 leading-relaxed">{loc.description}</p>
-                                        {loc.id === "somerset-west" && (
+                                        {["somerset-west", "strand", "gordons-bay", "stellenbosch", "franschhoek", "paarl", "durbanville", "cape-town"].includes(loc.id) && (
                                             <Link 
                                                 href={`/areas/${loc.id}`}
                                                 className="inline-flex items-center justify-center w-full py-3.5 px-4 bg-gray-50 hover:bg-[#015CAB] hover:text-white text-[#015CAB] font-bold rounded-xl transition-all duration-300 border border-gray-100"

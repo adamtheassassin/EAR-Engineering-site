@@ -1,4 +1,5 @@
-import { FaBolt as Zap, FaWind as Wind, FaSun as Sun } from "react-icons/fa6";
+import { FaBolt as Zap, FaWind as Wind, FaSun as Sun, FaChevronRight } from "react-icons/fa6";
+import Link from "next/link";
 
 interface ServicesProps {
     onOpenModal: (category?: "Electrical" | "Aircon" | "Solar") => void;
@@ -18,13 +19,15 @@ export default function Services({ onOpenModal }: ServicesProps) {
             urgentProblems: "e.g. Tripping power, burnt outlets, compliance certs",
             sliverColor: "border-l-[#015CAB]",
             bulletColor: "bg-[#015CAB]",
+            hoverBg: "hover:bg-blue-50/40",
+            hoverText: "hover:text-[#015CAB]",
             features: [
-                "Electrical design and new installations",
-                "Power distribution, DB boards, lighting & plug circuits",
-                "Standby generator installation and changeover systems",
-                "Testing, commissioning & COC certificates"
+                { name: "Electrical Installations", href: "/electrical-services" },
+                { name: "DB Board Upgrades & Repairs", href: "/electrical-services/db-board-upgrades-and-repairs" },
+                { name: "COC Certificates", href: "/electrical-services/coc" },
+                { name: "Generator Installations", href: "/electrical-services/generator-installation" }
             ],
-            href: "/services/electrical-services",
+            href: "/electrical-services",
             linkText: "View Electrical Services"
         },
         {
@@ -39,13 +42,14 @@ export default function Services({ onOpenModal }: ServicesProps) {
             urgentProblems: "e.g. AC leaking water, not cooling, strange noises",
             sliverColor: "border-l-cyan-600",
             bulletColor: "bg-cyan-600",
+            hoverBg: "hover:bg-cyan-50/40",
+            hoverText: "hover:text-cyan-600",
             features: [
-                "Split unit and inverter air-conditioning systems",
-                "Residential and estate installations",
-                "Commercial and office air-conditioning",
-                "Preventative maintenance and breakdown support"
+                { name: "AC Installation", href: "/ac-installation" },
+                { name: "AC Repair & Servicing", href: "/ac-repair" },
+                { name: "Commercial Air Conditioning", href: "/commercial-air-conditioning" }
             ],
-            href: "/services/ac-installation",
+            href: "/ac-installation",
             linkText: "View Aircon Services"
         },
         {
@@ -60,13 +64,16 @@ export default function Services({ onOpenModal }: ServicesProps) {
             urgentProblems: "e.g. Inverter beeping, batteries not holding charge",
             sliverColor: "border-l-[#FFCA08]",
             bulletColor: "bg-[#FFCA08]",
+            hoverBg: "hover:bg-amber-50/40",
+            hoverText: "hover:text-amber-600",
             features: [
-                "Hybrid solar systems",
-                "Battery backup solutions",
-                "Commercial solar installations up to 100kW",
-                "Solar system upgrades and expansions"
+                { name: "Solar Installation", href: "/solar/solar-installation" },
+                { name: "Battery Backup Solutions", href: "/solar/battery-storage" },
+                { name: "Inverter Installation", href: "/solar/inverter-installation" },
+                { name: "Off-Grid Solar", href: "/solar/off-grid-solar" },
+                { name: "Solar Repair & Maintenance", href: "/solar/solar-repair-maintenance" }
             ],
-            href: "/services/solar",
+            href: "/solar",
             linkText: "View Solar Services"
         }
     ];
@@ -112,11 +119,21 @@ export default function Services({ onOpenModal }: ServicesProps) {
                                         {svc.urgentProblems}
                                     </div>
 
-                                    <ul className="space-y-3">
+                                    <ul className="space-y-2.5">
                                         {svc.features.map((feature, j) => (
-                                            <li key={j} className="flex flex-start gap-3 text-gray-700 font-medium">
-                                                <div className={`w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 ${svc.bulletColor}`}></div>
-                                                <span>{feature}</span>
+                                            <li key={j}>
+                                                <Link
+                                                    href={feature.href}
+                                                    className={`group/item flex items-center justify-between p-2.5 -mx-2.5 rounded-xl border border-transparent ${svc.hoverBg} hover:border-black/5 transition-all text-gray-700 font-semibold`}
+                                                >
+                                                    <div className="flex items-center gap-3">
+                                                        <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${svc.bulletColor} group-hover/item:scale-125 transition-transform`}></div>
+                                                        <span className={`transition-colors duration-200 ${svc.hoverText}`}>
+                                                            {feature.name}
+                                                        </span>
+                                                    </div>
+                                                    <FaChevronRight className="w-3 h-3 text-gray-400 group-hover/item:text-gray-600 group-hover/item:translate-x-1 transition-all" />
+                                                </Link>
                                             </li>
                                         ))}
                                     </ul>
@@ -129,12 +146,12 @@ export default function Services({ onOpenModal }: ServicesProps) {
                                     >
                                         Get Free Estimate
                                     </button>
-                                    <a
+                                    <Link
                                         href={svc.href}
                                         className="w-full py-3.5 text-center flex items-center justify-center rounded-xl bg-gray-50 border border-gray-200 text-gray-700 font-bold hover:border-[#015CAB] hover:text-[#015CAB] transition-colors"
                                     >
                                         {svc.linkText}
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </section>
@@ -142,12 +159,12 @@ export default function Services({ onOpenModal }: ServicesProps) {
                 </div>
 
                 <div className="mt-16 text-center">
-                    <a
+                    <Link
                         href="/services"
                         className="inline-flex items-center justify-center px-8 py-4 bg-[#015CAB] hover:bg-[#01488c] text-white font-extrabold rounded-xl transition-all shadow-md hover:shadow-lg"
                     >
                         See All Services
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

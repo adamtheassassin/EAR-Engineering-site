@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import { getWhatsAppLink } from "@/lib/constants";
 import TrustedBy from "@/components/TrustedBy";
-import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -91,7 +90,7 @@ export default function SolarRepairMaintenancePage() {
 
             <title>Solar Panel Repair and Maintenance | EAR Engineering</title>
             <meta name="description" content="Solar system underperforming? EAR Engineering repairs and maintains solar panels, inverters and batteries across Somerset West, Stellenbosch and the Helderberg." />
-            <link rel="canonical" href="https://earengineering.co.za/services/solar/solar-repair-maintenance" />
+            <link rel="canonical" href="https://earengineering.co.za/solar/solar-repair-maintenance" />
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
@@ -125,7 +124,7 @@ export default function SolarRepairMaintenancePage() {
                                     A Solar System That Is Not Performing Is Costing You Money
                                 </h2>
                                 <p className="text-gray-700 font-medium leading-relaxed mb-4 text-lg">
-                                    One of the less obvious risks of owning a <Link href="/services/solar" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">solar system</Link> is that underperformance is often invisible. Your lights still work, your inverter still shows green, and life carries on normally. But if your panels are dirty, a connection has degraded, a panel has been damaged, or your inverter is running below capacity, your system is producing less energy than it should be.
+                                    One of the less obvious risks of owning a <Link href="/solar" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">solar system</Link> is that underperformance is often invisible. Your lights still work, your inverter still shows green, and life carries on normally. But if your panels are dirty, a connection has degraded, a panel has been damaged, or your inverter is running below capacity, your system is producing less energy than it should be.
                                 </p>
                                 <p className="text-gray-700 font-medium leading-relaxed mb-4">
                                     Every unit it falls short is a unit you are buying from the grid at Eskom's current tariff. For homeowners, this erodes the monthly saving that made the investment worthwhile. For businesses that installed solar specifically to reduce operating costs and eliminate diesel generator spend, an underperforming system means those savings are not materialising as expected.
@@ -179,13 +178,13 @@ export default function SolarRepairMaintenancePage() {
                                     title: "Inverter Troubleshooting", 
                                     icon: FaPlugCircleXmark, 
                                     desc: "Error codes, sudden shutdowns, or a humming inverter producing less than it should. We troubleshoot and provide inverter replacements where needed.",
-                                    link: "/services/solar/inverter-installation"
+                                    link: "/solar/inverter-installation"
                                 },
                                 { 
                                     title: "Battery Fault Diagnosis", 
                                     icon: FaCarBattery, 
                                     desc: "Batteries not charging fully, discharging too quickly, or triggering errors. We assess battery health and carry out replacements where needed.",
-                                    link: "/services/solar/battery-storage"
+                                    link: "/solar/battery-storage"
                                 }
                             ].map((s, i) => (
                                 <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-[#015CAB] transition-colors group flex flex-col">
@@ -359,10 +358,11 @@ export default function SolarRepairMaintenancePage() {
                                 { loc: "Gordon's Bay", path: "/gordons-bay", desc: "Residential solar repair and replacement" },
                                 { loc: "Franschhoek", path: "/franschhoek", desc: "Estate and residential solar maintenance" },
                                 { loc: "Paarl", path: "/paarl", desc: "Residential and commercial solar repairs" },
-                                { loc: "Durbanville", path: "/Durbanville", desc: "Residential and agricultural systems" },
+                                { loc: "Durbanville", path: "/durbanville", desc: "Residential and agricultural systems" },
                                 { loc: "Cape Town", path: "/cape-town", desc: "Residential and commercial repairs" },
                             ].map((location, i) => {
-                                const isClickable = location.path === "/somerset-west";
+                                const activePaths = ["/somerset-west", "/stellenbosch", "/strand", "/gordons-bay", "/franschhoek", "/paarl", "/durbanville", "/cape-town"];
+                                const isClickable = activePaths.includes(location.path);
                                 const content = (
                                     <>
                                         <div className="flex items-center gap-2">
@@ -420,12 +420,10 @@ export default function SolarRepairMaintenancePage() {
                             ))}
                         </div>
                         <div className="mt-12 text-center">
-                            <span className="font-medium text-gray-600">Need specific electrical assistance? Explore <Link href="/services/electrical-services" className="text-[#015CAB] underline font-bold hover:text-[#013f75] transition-colors">all electrical work on solar systems</Link>.</span>
+                            <span className="font-medium text-gray-600">Need specific electrical assistance? Explore <Link href="/electrical-services" className="text-[#015CAB] underline font-bold hover:text-[#013f75] transition-colors">all electrical work on solar systems</Link>.</span>
                         </div>
                     </div>
                 </section>
-
-                <Reviews />
 
                 <FAQ faqs={solarFaqs} />
 

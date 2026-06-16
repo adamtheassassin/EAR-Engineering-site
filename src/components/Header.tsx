@@ -135,19 +135,19 @@ export default function Header({ onOpenModal, mobileCtaText, mobileCtaIcon }: He
                             Areas We Serve
                         </a>
                         <a
-                            href="/services/electrical-services"
+                            href="/electrical-services"
                             className="px-6 py-4 border-b border-gray-100 font-semibold text-gray-700 hover:bg-gray-50 hover:text-[#015CAB] transition-colors pl-10"
                         >
                             Electrical Services
                         </a>
                         <a
-                            href="/services/solar"
+                            href="/solar"
                             className="px-6 py-4 border-b border-gray-100 font-semibold text-gray-700 hover:bg-gray-50 hover:text-[#015CAB] transition-colors pl-10"
                         >
                             Solar Services
                         </a>
                         <a
-                            href="/services/ac-installation"
+                            href="/ac-installation"
                             className="px-6 py-4 border-b border-gray-100 font-semibold text-gray-700 hover:bg-gray-50 hover:text-[#015CAB] transition-colors pl-10"
                         >
                             Air Conditioning

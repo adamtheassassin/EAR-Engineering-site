@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import { getWhatsAppLink } from "@/lib/constants";
 import TrustedBy from "@/components/TrustedBy";
-import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -75,7 +74,7 @@ export default function ElectricalServicesPage() {
 
             <title>Qualified Electricians in Somerset West and Stellenbosch | EAR Engineering</title>
             <meta name="description" content="EAR Engineering provides professional electrical installations, DB board upgrades, COC certificates, generator setups, and fault finding across Somerset West, Stellenbosch, and the Helderberg." />
-            <link rel="canonical" href="https://earengineering.co.za/services/electrical-services" />
+            <link rel="canonical" href="https://earengineering.co.za/electrical-services" />
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
@@ -166,14 +165,14 @@ export default function ElectricalServicesPage() {
                                 {
                                     title: "New Electrical Installations", icon: FaHouse, desc: (
                                         <>
-                                            Building a new home, adding a room, or fitting out a commercial space? We handle full electrical installations from scratch, including all wiring, plug points, and DB board setup. We also offer complete <Link href="/services/ac-installation" className="text-[#015CAB] underline hover:text-[#013f75]">air conditioning installations</Link>.
+                                            Building a new home, adding a room, or fitting out a commercial space? We handle full electrical installations from scratch, including all wiring, plug points, and DB board setup. We also offer complete <Link href="/ac-installation" className="text-[#015CAB] underline hover:text-[#013f75]">air conditioning installations</Link>.
                                         </>
                                     )
                                 },
-                                { title: "DB Board Upgrades & Repairs", icon: FaWrench, desc: "An old or overloaded DB board is a common cause of electrical problems. We assess and upgrade your board to handle your current load safely.", href: "/services/electrical-services/db-board-upgrades-and-repairs" },
+                                { title: "DB Board Upgrades & Repairs", icon: FaWrench, desc: "An old or overloaded DB board is a common cause of electrical problems. We assess and upgrade your board to handle your current load safely.", href: "/electrical-services/db-board-upgrades-and-repairs" },
                                 { title: "Fault Finding & Emergencies", icon: FaScrewdriverWrench, desc: "If something has stopped working and you don't know why, we'll find the fault and fix it. We offer emergency electrical callouts across the Helderberg and Boland." },
-                                { title: "Certificate of Compliance (COC)", icon: FaShieldHalved, desc: "A COC is a legal requirement for property transactions. Our registered electricians inspect, repair, and issue the certificate without hassle.", href: "/services/electrical-services/coc" },
-                                { title: "Generator Installations", icon: FaCarBattery, desc: "We install standby generators and safe changeover systems to provide reliable backup power when the grid goes down.", href: "/services/electrical-services/generator-installation" }
+                                { title: "Certificate of Compliance (COC)", icon: FaShieldHalved, desc: "A COC is a legal requirement for property transactions. Our registered electricians inspect, repair, and issue the certificate without hassle.", href: "/electrical-services/coc" },
+                                { title: "Generator Installations", icon: FaCarBattery, desc: "We install standby generators and safe changeover systems to provide reliable backup power when the grid goes down.", href: "/electrical-services/generator-installation" }
                             ].map((s, i) => (
                                 <div key={i} className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-cyan-200 transition-colors group flex flex-col sm:flex-row gap-6 items-center sm:items-start">
                                     <div className="bg-[#015CAB] p-4 rounded-xl text-white flex-shrink-0 group-hover:text-[#FFCA08] transition-colors">
@@ -399,20 +398,38 @@ export default function ElectricalServicesPage() {
 
                                 <div className="grid grid-cols-2 gap-x-4 gap-y-3 text-left">
                                     {[
-                                        "Somerset West",
-                                        "Stellenbosch",
-                                        "Strand",
-                                        "Franschhoek",
-                                        "Gordon's Bay",
-                                        "Paarl",
-                                        "Cape Town",
-                                        "Durbanville",
-                                    ].map((location, i) => (
-                                        <div key={i} className="flex items-center gap-3">
-                                            <FaCircleCheck className="text-[#FFCA08] w-5 h-5 flex-shrink-0" />
-                                            <span className="font-bold text-white text-lg">{location}</span>
-                                        </div>
-                                    ))}
+                                        { name: "Somerset West", path: "/somerset-west" },
+                                        { name: "Stellenbosch", path: "/stellenbosch" },
+                                        { name: "Strand", path: "/strand" },
+                                        { name: "Franschhoek", path: "/franschhoek" },
+                                        { name: "Gordon's Bay", path: "/gordons-bay" },
+                                        { name: "Paarl", path: "/paarl" },
+                                        { name: "Cape Town", path: "/cape-town" },
+                                        { name: "Durbanville", path: "/durbanville" },
+                                    ].map((location, i) => {
+                                        const activePaths = ["/somerset-west", "/stellenbosch", "/strand", "/gordons-bay", "/franschhoek", "/paarl", "/durbanville", "/cape-town"];
+                                        const isClickable = activePaths.includes(location.path);
+                                        const content = (
+                                            <>
+                                                <FaCircleCheck className="text-[#FFCA08] w-5 h-5 flex-shrink-0" />
+                                                <span className={`font-bold text-white text-lg transition-colors ${isClickable ? 'underline decoration-2 underline-offset-4 group-hover:text-[#FFCA08]' : ''}`}>{location.name}</span>
+                                            </>
+                                        );
+
+                                        if (isClickable) {
+                                            return (
+                                                <Link key={i} href={`/areas${location.path}`} className="flex items-center gap-3 hover:text-[#FFCA08] transition-colors group">
+                                                    {content}
+                                                </Link>
+                                            );
+                                        }
+
+                                        return (
+                                            <div key={i} className="flex items-center gap-3">
+                                                {content}
+                                            </div>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         </div>
@@ -463,8 +480,6 @@ export default function ElectricalServicesPage() {
                         </div>
                     </div>
                 </section>
-
-                <Reviews />
 
                 <FAQ faqs={electricalFaqs} />
 
