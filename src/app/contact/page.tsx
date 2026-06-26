@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
@@ -14,6 +14,10 @@ export default function ContactPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [formData, setFormData] = useState({ customerName: "", customerEmail: "", customerPhone: "", serviceType: "", description: "" });
     const [isSubmitting, setIsSubmitting] = useState(false);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();

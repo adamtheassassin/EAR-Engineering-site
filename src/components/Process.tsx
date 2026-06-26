@@ -1,3 +1,7 @@
+"use client";
+
+import Link from "next/link";
+
 export default function Process() {
     const steps = [
         { num: "01", title: "Get in Touch", desc: "Share your electrical, aircon, or solar needs with us online or over the phone." },
@@ -24,19 +28,44 @@ export default function Process() {
                 </div>
 
                 <div className="grid md:grid-cols-4 gap-8">
-                    {steps.map((step, i) => (
-                        <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition group text-center md:text-left">
-                            <div className="text-5xl font-black text-[#015CAB] md:text-[#015CAB]/10 group-hover:text-[#015CAB] transition-colors mb-4">
-                                {step.num}
+                    {steps.map((step, i) => {
+                        const isLink = step.num === "01";
+                        const cardClasses = "bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition group text-center md:text-left block";
+                        const CardContent = (
+                            <>
+                                <div className="text-5xl font-black text-[#015CAB] md:text-[#015CAB]/10 group-hover:text-[#015CAB] transition-colors mb-4">
+                                    {step.num}
+                                </div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
+                                <p className="text-gray-600 leading-relaxed font-medium">
+                                    {step.desc}
+                                </p>
+                            </>
+                        );
+
+                        if (isLink) {
+                            return (
+                                <Link
+                                    key={i}
+                                    href="/contact"
+                                    className={`${cardClasses} hover:border-[#015CAB]/30 cursor-pointer`}
+                                    onClick={() => window.scrollTo(0, 0)}
+                                >
+                                    {CardContent}
+                                </Link>
+                            );
+                        }
+
+                        return (
+                            <div key={i} className={cardClasses}>
+                                {CardContent}
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
-                            <p className="text-gray-600 leading-relaxed font-medium">
-                                {step.desc}
-                            </p>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </div>
         </section>
     );
 }
+
+
