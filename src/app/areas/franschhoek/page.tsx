@@ -130,7 +130,7 @@ export default function FranschhoekAreaPage() {
                                     A restaurant cannot have the power cut out during service, and a guesthouse cannot leave its visitors in the dark. That is a different kind of pressure to a normal home, and it shapes the way we plan the work, from backup power to boards that can take the load.
                                 </p>
                                 <p className="text-gray-700 font-medium leading-relaxed mb-6">
-                                    Many of the older homes around the village still run on wiring from a different time, and the surges from each load shedding cycle wear out boards across the valley. Fitting <Link href="/electrical-services/db-board-upgrades-and-repairs" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">surge protection at the DB board</Link> is one of the simplest things we do to protect a property here.
+                                    Many of the older homes around the village still run on wiring from a different time, and the surges from each load shedding cycle wear out boards across the valley. Fitting <Link href="/db-board-upgrades-and-repairs" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">surge protection at the DB board</Link> is one of the simplest things we do to protect a property here.
                                 </p>
                             </div>
                             <div className="relative h-[450px] w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
@@ -160,9 +160,9 @@ export default function FranschhoekAreaPage() {
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {[
                                 { title: "Installations & Wiring", icon: FaWrench, desc: "New builds, restaurant fit-outs and guesthouse upgrades, wired to handle the steady demand of a busy hospitality property.", link: "/electrical-services" },
-                                { title: "DB Board Upgrades & Repairs", icon: FaBoltLightning, desc: "A guesthouse or restaurant cannot afford a board that trips mid-service. We upgrade tired boards and add surge protection so your power stays steady.", link: "/electrical-services/db-board-upgrades-and-repairs" },
-                                { title: "COC Certificates", icon: FaShieldHalved, desc: "Selling an estate home or letting out a guest cottage in Franschhoek means you need a valid COC. We inspect, repair, and issue it.", link: "/electrical-services/coc" },
-                                { title: "Generator & Backup Power", icon: FaCarBattery, desc: "Restaurants, hotels and wine farms rely on us for generators and changeover switches that keep the kitchen and cellar running through an outage.", link: "/electrical-services/generator-installation" },
+                                { title: "DB Board Upgrades & Repairs", icon: FaBoltLightning, desc: "A guesthouse or restaurant cannot afford a board that trips mid-service. We upgrade tired boards and add surge protection so your power stays steady.", link: "/db-board-upgrades-and-repairs" },
+                                { title: "COC Certificates", icon: FaShieldHalved, desc: "Selling an estate home or letting out a guest cottage in Franschhoek means you need a valid COC. We inspect, repair, and issue it.", link: "/coc" },
+                                { title: "Generator & Backup Power", icon: FaCarBattery, desc: "Restaurants, hotels and wine farms rely on us for generators and changeover switches that keep the kitchen and cellar running through an outage.", link: "/generator-installation" },
                                 { title: "Fault Finding & Emergencies", icon: FaScrewdriverWrench, desc: "When something trips on a busy weekend in the valley, we trace the fault and get you back up and running quickly." }
                             ].map((s, i) => (
                                 <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-[#015CAB] transition-colors group flex flex-col">
@@ -229,7 +229,7 @@ export default function FranschhoekAreaPage() {
                                 </div>
                                 <h2 className="text-3xl font-bold mb-4">Solar Installation</h2>
                                 <p className="text-blue-50 font-medium leading-relaxed mb-6">
-                                    Franschhoek runs on hospitality, and a hotel or restaurant uses power right through the day. A solar system with battery backup keeps the bills down and keeps service going when the grid drops, which matters a great deal when you have guests booked in. We fit <Link href="/solar/solar-installation" className="text-[#FFCA08] underline font-bold">solar systems</Link> on village properties, wine farms and estate homes across the valley.
+                                    Franschhoek runs on hospitality, and a hotel or restaurant uses power right through the day. A solar system with battery backup keeps the bills down and keeps service going when the grid drops, which matters a great deal when you have guests booked in. We fit <Link href="/solar-installation" className="text-[#FFCA08] underline font-bold">solar systems</Link> on village properties, wine farms and estate homes across the valley.
                                 </p>
                             </div>
                             <div>
@@ -247,7 +247,7 @@ export default function FranschhoekAreaPage() {
                                 </div>
                                 <h2 className="text-3xl font-bold mb-4">Electrical Services</h2>
                                 <p className="text-blue-50 font-medium leading-relaxed mb-6">
-                                    The valley mixes old Cape Dutch homes with high-end estates and working wine farms. Our registered electricians handle careful rewiring of older buildings, full installs on new estate homes, three-phase work for cellars, and <Link href="/electrical-services/coc" className="text-[#FFCA08] underline font-bold">Certificates of Compliance (COC)</Link> for property sales.
+                                    The valley mixes old Cape Dutch homes with high-end estates and working wine farms. Our registered electricians handle careful rewiring of older buildings, full installs on new estate homes, three-phase work for cellars, and <Link href="/coc" className="text-[#FFCA08] underline font-bold">Certificates of Compliance (COC)</Link> for property sales.
                                 </p>
                             </div>
                         </div>

@@ -131,7 +131,7 @@ export default function StellenboschAreaPage() {
                                     Each one needs something different. The older homes often run on wiring that is decades past its prime and was never built for the load a modern household puts on it. The farms and estates need proper three-phase work for cellars, pumps and outbuildings, and they cannot afford long downtime during harvest.
                                 </p>
                                 <p className="text-gray-700 font-medium leading-relaxed mb-6">
-                                    On every kind of property, the surges that come with load shedding wear out boards and damage appliances. Fitting <Link href="/electrical-services/db-board-upgrades-and-repairs" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">surge protection at the DB board</Link> is one of the simplest and most useful upgrades we recommend, whether it is a student flat or a working farm.
+                                    On every kind of property, the surges that come with load shedding wear out boards and damage appliances. Fitting <Link href="/db-board-upgrades-and-repairs" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">surge protection at the DB board</Link> is one of the simplest and most useful upgrades we recommend, whether it is a student flat or a working farm.
                                 </p>
                             </div>
                             <div className="relative h-[450px] w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
@@ -162,9 +162,9 @@ export default function StellenboschAreaPage() {
                             {[
                                 { title: "Three-Phase & Farm Electrical", icon: FaWrench, desc: "Cellars, pumps, irrigation and outbuildings on the wine farms need three-phase work done by people who know that harvest cannot wait. We plan the job around your season.", link: "/electrical-services" },
                                 { title: "Heritage Home Rewiring", icon: FaScrewdriverWrench, desc: "Many of the old homes around Dorp Street still run on wiring from another era. We rewire and upgrade them with care, so they are safe for a modern household without losing their character.", link: "/electrical-services" },
-                                { title: "DB Board Upgrades & Repairs", icon: FaBoltLightning, desc: "Load shedding surges wear out boards across town and out on the farms. We replace failing boards and fit surge protection to keep your equipment safe.", link: "/electrical-services/db-board-upgrades-and-repairs" },
-                                { title: "COC Certificates", icon: FaShieldHalved, desc: "Whether it is a family home, a student rental or a farm, you need a valid COC to sell or let. We inspect, repair, and issue the certificate.", link: "/electrical-services/coc" },
-                                { title: "Generators for Farms & Business", icon: FaCarBattery, desc: "Wine farms, guesthouses and Technopark offices count on us for generators and changeover switches that keep the power on through an outage.", link: "/electrical-services/generator-installation" }
+                                { title: "DB Board Upgrades & Repairs", icon: FaBoltLightning, desc: "Load shedding surges wear out boards across town and out on the farms. We replace failing boards and fit surge protection to keep your equipment safe.", link: "/db-board-upgrades-and-repairs" },
+                                { title: "COC Certificates", icon: FaShieldHalved, desc: "Whether it is a family home, a student rental or a farm, you need a valid COC to sell or let. We inspect, repair, and issue the certificate.", link: "/coc" },
+                                { title: "Generators for Farms & Business", icon: FaCarBattery, desc: "Wine farms, guesthouses and Technopark offices count on us for generators and changeover switches that keep the power on through an outage.", link: "/generator-installation" }
                             ].map((s, i) => (
                                 <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-[#015CAB] transition-colors group flex flex-col">
                                     <div className="bg-[#e6f0f9] p-4 rounded-xl text-[#015CAB] w-16 h-16 flex items-center justify-center mb-6 group-hover:bg-[#015CAB] group-hover:text-[#FFCA08] transition-colors">
@@ -230,7 +230,7 @@ export default function StellenboschAreaPage() {
                                 </div>
                                 <h2 className="text-3xl font-bold mb-4">Solar Installation</h2>
                                 <p className="text-blue-50 font-medium leading-relaxed mb-6">
-                                    Solar makes a lot of sense in the Winelands, and the farms get the most out of it. A wine farm draws a great deal of power and often sits far from a strong, steady supply, so a solar system keeps the pumps, cellars and farmhouse running. We also fit <Link href="/solar/solar-installation" className="text-[#FFCA08] underline font-bold">solar with battery backup</Link> on the larger residential roofs in suburbs like Dalsig and Die Boord.
+                                    Solar makes a lot of sense in the Winelands, and the farms get the most out of it. A wine farm draws a great deal of power and often sits far from a strong, steady supply, so a solar system keeps the pumps, cellars and farmhouse running. We also fit <Link href="/solar-installation" className="text-[#FFCA08] underline font-bold">solar with battery backup</Link> on the larger residential roofs in suburbs like Dalsig and Die Boord.
                                 </p>
                             </div>
                             <div>
@@ -248,7 +248,7 @@ export default function StellenboschAreaPage() {
                                 </div>
                                 <h2 className="text-3xl font-bold mb-4">Electrical Services</h2>
                                 <p className="text-blue-50 font-medium leading-relaxed mb-6">
-                                    Stellenbosch keeps us busy in very different ways: rewiring a century-old home near Dorp Street one day, sorting out three-phase supply on a wine farm the next. Alongside that we handle tripping boards, surge damage, student rental compliance and <Link href="/electrical-services/coc" className="text-[#FFCA08] underline font-bold">Certificates of Compliance (COC)</Link> for property sales.
+                                    Stellenbosch keeps us busy in very different ways: rewiring a century-old home near Dorp Street one day, sorting out three-phase supply on a wine farm the next. Alongside that we handle tripping boards, surge damage, student rental compliance and <Link href="/coc" className="text-[#FFCA08] underline font-bold">Certificates of Compliance (COC)</Link> for property sales.
                                 </p>
                             </div>
                         </div>

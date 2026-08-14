@@ -132,7 +132,7 @@ export default function SomersetWestAreaPage() {
                                     Older suburbs like Heldervue and Firgrove often have electrical installations that have not been updated in decades. Many homes in these areas are still running on DB boards that were installed when the household had a fraction of today's electrical load.
                                 </p>
                                 <p className="text-gray-700 font-medium leading-relaxed mb-6">
-                                    The Somerset West City Improvement District has flagged power surge damage as one of the most common electrical complaints in the area, particularly in homes that do not have <Link href="/electrical-services/db-board-upgrades-and-repairs" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">surge protection fitted at the DB board</Link>. It is one of the most practical upgrades we recommend for any Somerset West home.
+                                    The Somerset West City Improvement District has flagged power surge damage as one of the most common electrical complaints in the area, particularly in homes that do not have <Link href="/db-board-upgrades-and-repairs" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">surge protection fitted at the DB board</Link>. It is one of the most practical upgrades we recommend for any Somerset West home.
                                 </p>
                             </div>
                             <div className="relative h-[450px] w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
@@ -162,9 +162,9 @@ export default function SomersetWestAreaPage() {
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {[
                                 { title: "Installations & Wiring", icon: FaWrench, desc: "New builds, renovations and additions across Somerset West, from townhouses in Paardevlei to commercial fit-outs in the Techno Park.", link: "/electrical-services" },
-                                { title: "DB Board Upgrades & Repairs", icon: FaBoltLightning, desc: "Outdated boards are a common issue in Somerset West's older suburbs. If your board keeps tripping, we assess and fix it properly.", link: "/electrical-services/db-board-upgrades-and-repairs" },
-                                { title: "COC Certificates", icon: FaShieldHalved, desc: "A valid COC is a legal requirement if you are selling or renting a property in Somerset West. We inspect, repair, and issue the certificate.", link: "/electrical-services/coc" },
-                                { title: "Generator Installations", icon: FaCarBattery, desc: "For homes in Heritage Park and businesses near Waterstone Village, we install generators and changeover systems for reliable backup power.", link: "/electrical-services/generator-installation" },
+                                { title: "DB Board Upgrades & Repairs", icon: FaBoltLightning, desc: "Outdated boards are a common issue in Somerset West's older suburbs. If your board keeps tripping, we assess and fix it properly.", link: "/db-board-upgrades-and-repairs" },
+                                { title: "COC Certificates", icon: FaShieldHalved, desc: "A valid COC is a legal requirement if you are selling or renting a property in Somerset West. We inspect, repair, and issue the certificate.", link: "/coc" },
+                                { title: "Generator Installations", icon: FaCarBattery, desc: "For homes in Heritage Park and businesses near Waterstone Village, we install generators and changeover systems for reliable backup power.", link: "/generator-installation" },
                                 { title: "Fault Finding & Emergencies", icon: FaScrewdriverWrench, desc: "We offer fault finding and emergency response across Somerset West, with fast turnaround times because we are already based in the area." }
                             ].map((s, i) => (
                                 <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-[#015CAB] transition-colors group flex flex-col">
@@ -231,7 +231,7 @@ export default function SomersetWestAreaPage() {
                                 </div>
                                 <h2 className="text-3xl font-bold mb-4">Solar Installation</h2>
                                 <p className="text-blue-50 font-medium leading-relaxed mb-6">
-                                    Somerset West sits in one of the best locations in the country for solar power. The Helderberg's sunshine hours are consistently high, which means a well-designed solar system produces energy reliably and delivers strong returns. We install <Link href="/solar/solar-installation" className="text-[#FFCA08] underline font-bold">solar systems with battery backup</Link> to help you reduce bills and protect against load shedding.
+                                    Somerset West sits in one of the best locations in the country for solar power. The Helderberg's sunshine hours are consistently high, which means a well-designed solar system produces energy reliably and delivers strong returns. We install <Link href="/solar-installation" className="text-[#FFCA08] underline font-bold">solar systems with battery backup</Link> to help you reduce bills and protect against load shedding.
                                 </p>
                             </div>
                             <div>
@@ -249,7 +249,7 @@ export default function SomersetWestAreaPage() {
                                 </div>
                                 <h2 className="text-3xl font-bold mb-4">Electrical Services</h2>
                                 <p className="text-blue-50 font-medium leading-relaxed mb-6">
-                                    From modern estates in Sitari to decades-old properties in Heldervue, our registered electricians cover all of Somerset West. We handle everything from tripping DB boards and power surges to wiring new builds and issuing <Link href="/electrical-services/coc" className="text-[#FFCA08] underline font-bold">Certificates of Compliance (COC)</Link> for property sales.
+                                    From modern estates in Sitari to decades-old properties in Heldervue, our registered electricians cover all of Somerset West. We handle everything from tripping DB boards and power surges to wiring new builds and issuing <Link href="/coc" className="text-[#FFCA08] underline font-bold">Certificates of Compliance (COC)</Link> for property sales.
                                 </p>
                             </div>
                         </div>

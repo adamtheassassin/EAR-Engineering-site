@@ -85,7 +85,7 @@ export default function SolarOffGridPage() {
 
             <title>Off-Grid Solar Power Solutions Western Cape | EAR Engineering</title>
             <meta name="description" content="EAR Engineering designs and installs off-grid solar systems for farms, smallholdings and remote properties across the Western Cape. Call 021 855 4462." />
-            <link rel="canonical" href="https://earengineering.co.za/solar/off-grid-solar" />
+            <link rel="canonical" href="https://earengineering.co.za/off-grid-solar" />
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
@@ -175,7 +175,7 @@ export default function SolarOffGridPage() {
                                     title: "Electrical Certification", 
                                     icon: FaShieldHalved, 
                                     desc: "All wiring and distribution board connections are carried out by registered electricians and legally certified on completion for insurance.",
-                                    link: "/electrical-services/coc"
+                                    link: "/coc"
                                 }
                             ].map((s, i) => (
                                 <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-[#015CAB] transition-colors group flex flex-col">
@@ -236,7 +236,7 @@ export default function SolarOffGridPage() {
                             </table>
                         </div>
                         <div className="mt-8 text-center text-gray-600 font-medium">
-                            Need a hybrid system with grid backup? Check out our <Link href="/electrical-services/generator-installation" className="text-[#015CAB] underline font-bold hover:text-[#013f75] transition-colors">backup generator</Link> and grid solutions.
+                            Need a hybrid system with grid backup? Check out our <Link href="/generator-installation" className="text-[#015CAB] underline font-bold hover:text-[#013f75] transition-colors">backup generator</Link> and grid solutions.
                         </div>
                     </div>
                 </section>

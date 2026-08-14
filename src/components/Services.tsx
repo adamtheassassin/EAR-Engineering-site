@@ -23,9 +23,9 @@ export default function Services({ onOpenModal }: ServicesProps) {
             hoverText: "hover:text-[#015CAB]",
             features: [
                 { name: "Electrical Installations", href: "/electrical-services" },
-                { name: "DB Board Upgrades & Repairs", href: "/electrical-services/db-board-upgrades-and-repairs" },
-                { name: "COC Certificates", href: "/electrical-services/coc" },
-                { name: "Generator Installations", href: "/electrical-services/generator-installation" }
+                { name: "DB Board Upgrades & Repairs", href: "/db-board-upgrades-and-repairs" },
+                { name: "COC Certificates", href: "/coc" },
+                { name: "Generator Installations", href: "/generator-installation" }
             ],
             href: "/electrical-services",
             linkText: "View Electrical Services"
@@ -67,11 +67,11 @@ export default function Services({ onOpenModal }: ServicesProps) {
             hoverBg: "hover:bg-amber-50/40",
             hoverText: "hover:text-amber-600",
             features: [
-                { name: "Solar Installation", href: "/solar/solar-installation" },
-                { name: "Battery Backup Solutions", href: "/solar/battery-storage" },
-                { name: "Inverter Installation", href: "/solar/inverter-installation" },
-                { name: "Off-Grid Solar", href: "/solar/off-grid-solar" },
-                { name: "Solar Repair & Maintenance", href: "/solar/solar-repair-maintenance" }
+                { name: "Solar Installation", href: "/solar-installation" },
+                { name: "Battery Backup Solutions", href: "/battery-storage" },
+                { name: "Inverter Installation", href: "/inverter-installation" },
+                { name: "Off-Grid Solar", href: "/off-grid-solar" },
+                { name: "Solar Repair & Maintenance", href: "/solar-repair-maintenance" }
             ],
             href: "/solar",
             linkText: "View Solar Services"

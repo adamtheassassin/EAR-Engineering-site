@@ -131,7 +131,7 @@ export default function GordonsBayAreaPage() {
                                     All that sea air comes at a cost for your electrics. Salt slowly wears down plugs, outdoor fittings, and DB boards, and the homes higher up the slope catch the worst of the wind off the water. We see corroded boards and failing outdoor units here often, so we fit parts that hold up better against the coast.
                                 </p>
                                 <p className="text-gray-700 font-medium leading-relaxed mb-6">
-                                    The steep mountainside plots bring their own quirks too, with split levels and long outdoor cable runs. Add in the surges from each load shedding cycle, and fitting <Link href="/electrical-services/db-board-upgrades-and-repairs" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">surge protection at the DB board</Link> becomes one of the smartest things you can do for a Gordon&apos;s Bay home.
+                                    The steep mountainside plots bring their own quirks too, with split levels and long outdoor cable runs. Add in the surges from each load shedding cycle, and fitting <Link href="/db-board-upgrades-and-repairs" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">surge protection at the DB board</Link> becomes one of the smartest things you can do for a Gordon&apos;s Bay home.
                                 </p>
                             </div>
                             <div className="relative h-[450px] w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
@@ -161,9 +161,9 @@ export default function GordonsBayAreaPage() {
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {[
                                 { title: "Mountainside Installations & Wiring", icon: FaWrench, desc: "New builds, renovations and additions, including the split-level homes on the Mountainside that need longer, carefully planned cable runs to reach every room.", link: "/electrical-services" },
-                                { title: "DB Board Upgrades & Repairs", icon: FaBoltLightning, desc: "Between the salt air off the bay and the surges from load shedding, boards here take a beating. We swap out tired boards and add surge protection to keep your appliances safe.", link: "/electrical-services/db-board-upgrades-and-repairs" },
-                                { title: "COC Certificates", icon: FaShieldHalved, desc: "A valid COC is a must before you sell or rent in Gordon's Bay. We inspect the installation, repair anything that fails the check, and issue the certificate.", link: "/electrical-services/coc" },
-                                { title: "Generator & Backup Power", icon: FaCarBattery, desc: "Homes at the country estate and businesses near the harbour rely on us for generators and changeover switches that keep things running when the grid drops.", link: "/electrical-services/generator-installation" },
+                                { title: "DB Board Upgrades & Repairs", icon: FaBoltLightning, desc: "Between the salt air off the bay and the surges from load shedding, boards here take a beating. We swap out tired boards and add surge protection to keep your appliances safe.", link: "/db-board-upgrades-and-repairs" },
+                                { title: "COC Certificates", icon: FaShieldHalved, desc: "A valid COC is a must before you sell or rent in Gordon's Bay. We inspect the installation, repair anything that fails the check, and issue the certificate.", link: "/coc" },
+                                { title: "Generator & Backup Power", icon: FaCarBattery, desc: "Homes at the country estate and businesses near the harbour rely on us for generators and changeover switches that keep things running when the grid drops.", link: "/generator-installation" },
                                 { title: "Fault Finding & Emergencies", icon: FaScrewdriverWrench, desc: "A dead circuit on a split-level mountainside home can be tricky to track down. We find the fault, fix it, and get there quickly from just up the road." }
                             ].map((s, i) => (
                                 <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-[#015CAB] transition-colors group flex flex-col">
@@ -230,7 +230,7 @@ export default function GordonsBayAreaPage() {
                                 </div>
                                 <h2 className="text-3xl font-bold mb-4">Solar Installation</h2>
                                 <p className="text-blue-50 font-medium leading-relaxed mb-6">
-                                    The tricky part of solar in Gordon&apos;s Bay is the roofs. So many homes sit on the steep Mountainside slopes, and angling the panels to catch the afternoon sun safely takes proper planning and the right mounting. We have done plenty of these climbs, and we pair the panels with <Link href="/solar/solar-installation" className="text-[#FFCA08] underline font-bold">battery backup</Link> so the home keeps running when the power drops.
+                                    The tricky part of solar in Gordon&apos;s Bay is the roofs. So many homes sit on the steep Mountainside slopes, and angling the panels to catch the afternoon sun safely takes proper planning and the right mounting. We have done plenty of these climbs, and we pair the panels with <Link href="/solar-installation" className="text-[#FFCA08] underline font-bold">battery backup</Link> so the home keeps running when the power drops.
                                 </p>
                             </div>
                             <div>
@@ -248,7 +248,7 @@ export default function GordonsBayAreaPage() {
                                 </div>
                                 <h2 className="text-3xl font-bold mb-4">Electrical Services</h2>
                                 <p className="text-blue-50 font-medium leading-relaxed mb-6">
-                                    Two things keep us busy in Gordon&apos;s Bay: the sea air that corrodes fittings and boards, and the steep plots that call for careful, longer cable runs. Alongside that we handle tripping boards, surge damage, full rewiring and <Link href="/electrical-services/coc" className="text-[#FFCA08] underline font-bold">Certificates of Compliance (COC)</Link> for property sales.
+                                    Two things keep us busy in Gordon&apos;s Bay: the sea air that corrodes fittings and boards, and the steep plots that call for careful, longer cable runs. Alongside that we handle tripping boards, surge damage, full rewiring and <Link href="/coc" className="text-[#FFCA08] underline font-bold">Certificates of Compliance (COC)</Link> for property sales.
                                 </p>
                             </div>
                         </div>

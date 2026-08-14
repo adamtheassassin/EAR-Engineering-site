@@ -14,17 +14,17 @@ export default function FAQ({ faqs: customFaqs }: FAQProps) {
     const defaultFaqs = [
         { 
             q: "Do you supply Certificates of Compliance (COC)?", 
-            a: <>Yes, we are fully licensed to inspect your electrical installation and issue a <Link href="/electrical-services/coc" className="text-[#015CAB] hover:underline font-bold">COC</Link> upon passing all safety and compliance checks.</>,
+            a: <>Yes, we are fully licensed to inspect your electrical installation and issue a <Link href="/coc" className="text-[#015CAB] hover:underline font-bold">COC</Link> upon passing all safety and compliance checks.</>,
             schemaAnswer: "Yes, we are fully licensed to inspect your electrical installation and issue a COC upon passing all safety and compliance checks."
         },
         { 
             q: "How quickly can you respond to an emergency?", 
-            a: <>During business hours, we prioritize urgent breakdowns (like power outages or <Link href="/electrical-services/db-board-upgrades-and-repairs" className="text-[#015CAB] hover:underline font-bold">tripping DB boards</Link>) and aim to have a technician on-site as fast as possible.</>,
+            a: <>During business hours, we prioritize urgent breakdowns (like power outages or <Link href="/db-board-upgrades-and-repairs" className="text-[#015CAB] hover:underline font-bold">tripping DB boards</Link>) and aim to have a technician on-site as fast as possible.</>,
             schemaAnswer: "During business hours, we prioritize urgent breakdowns (like power outages or tripping DB boards) and aim to have a technician on-site as fast as possible."
         },
         { 
             q: "Are your solar installations registered with the municipality?", 
-            a: <>We manage the SSEG registration process to ensure your new <Link href="/solar/solar-installation" className="text-[#015CAB] hover:underline font-bold">solar setup</Link> is entirely legal and compliant with local municipal regulations.</>,
+            a: <>We manage the SSEG registration process to ensure your new <Link href="/solar-installation" className="text-[#015CAB] hover:underline font-bold">solar setup</Link> is entirely legal and compliant with local municipal regulations.</>,
             schemaAnswer: "We manage the SSEG registration process to ensure your new solar setup is entirely legal and compliant with local municipal regulations."
         },
         { 
@@ -34,17 +34,17 @@ export default function FAQ({ faqs: customFaqs }: FAQProps) {
         },
         { 
             q: "Do you handle commercial projects?", 
-            a: <>Absolutely. We manage large-scale commercial electrical, refrigeration, and <Link href="/solar/solar-installation" className="text-[#015CAB] hover:underline font-bold">solar projects</Link> with dedicated project management. We also handle <Link href="/electrical-services/generator-installation" className="text-[#015CAB] hover:underline font-bold">generator installations</Link> for businesses.</>,
+            a: <>Absolutely. We manage large-scale commercial electrical, refrigeration, and <Link href="/solar-installation" className="text-[#015CAB] hover:underline font-bold">solar projects</Link> with dedicated project management. We also handle <Link href="/generator-installation" className="text-[#015CAB] hover:underline font-bold">generator installations</Link> for businesses.</>,
             schemaAnswer: "Absolutely. We manage large-scale commercial electrical, refrigeration, and solar projects with dedicated project management. We also handle generator installations for businesses."
         },
         { 
             q: "How long does a typical solar installation take?", 
-            a: <>Most residential <Link href="/solar/solar-installation" className="text-[#015CAB] hover:underline font-bold">solar installations</Link> take between 1 to 3 days, depending on the system size, <Link href="/solar/battery-storage" className="text-[#015CAB] hover:underline font-bold">battery storage</Link> requirements, and roof complexity.</>,
+            a: <>Most residential <Link href="/solar-installation" className="text-[#015CAB] hover:underline font-bold">solar installations</Link> take between 1 to 3 days, depending on the system size, <Link href="/battery-storage" className="text-[#015CAB] hover:underline font-bold">battery storage</Link> requirements, and roof complexity.</>,
             schemaAnswer: "Most residential solar installations take between 1 to 3 days, depending on the system size, battery storage requirements, and roof complexity."
         },
         { 
             q: "Can you fix a solar system or air conditioner installed by someone else?", 
-            a: <>Yes, our technicians are trained to fault-find and handle <Link href="/solar/solar-repair-maintenance" className="text-[#015CAB] hover:underline font-bold">solar repairs and maintenance</Link>, as well as air conditioners from most major brands, regardless of who installed them.</>,
+            a: <>Yes, our technicians are trained to fault-find and handle <Link href="/solar-repair-maintenance" className="text-[#015CAB] hover:underline font-bold">solar repairs and maintenance</Link>, as well as air conditioners from most major brands, regardless of who installed them.</>,
             schemaAnswer: "Yes, our technicians are trained to fault-find and handle solar repairs and maintenance, as well as air conditioners from most major brands, regardless of who installed them."
         },
         { 

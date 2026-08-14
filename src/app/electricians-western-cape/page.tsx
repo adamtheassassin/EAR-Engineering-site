@@ -30,8 +30,8 @@ export default function Home() {
 
   return (
     <>
-      <title>Professional Electricians in Helderberg, Stellenbosch & Cape Town - EAR Engineering</title>
-      <meta name="description" content="EAR Engineering provides expert project-managed electrical, aircon & solar solutions in the Helderberg, Stellenbosch and Cape Town. On time, on budget, with a 1-hour callback promise." />
+      <title>Professional Electricians in Helderberg, Stellenbosch, Winelands & Cape Town - EAR Engineering</title>
+      <meta name="description" content="EAR Engineering provides expert project-managed electrical, aircon & solar solutions in the Helderberg, Stellenbosch, Winelands and Cape Town. On time, on budget, with a 1-hour callback promise." />
       <meta name="robots" content="noindex, nofollow" />
       <link rel="canonical" href="https://earengineering.co.za/" />
       <Header onOpenModal={() => openModal()} />
@@ -43,7 +43,7 @@ export default function Home() {
           title={
             <>
               <span className="block">Professional Electricians</span>
-              <span className="text-[#FFCA08] block">in Helderberg, Stellenbosch & Cape Town</span>
+              <span className="text-[#FFCA08] block">in Helderberg, Stellenbosch, Winelands & Cape Town</span>
             </>
           }
         />

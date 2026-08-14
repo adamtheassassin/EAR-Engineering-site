@@ -130,7 +130,7 @@ export default function CapeTownAreaPage() {
                                     A lot of our city work is commercial, where downtime is expensive and the wiring has to be right the first time. We are comfortable with three-phase supply, generators and the coordination that comes with working in an occupied office block or a managed building.
                                 </p>
                                 <p className="text-gray-700 font-medium leading-relaxed mb-6">
-                                    The older inner-city buildings carry their own challenges, with original wiring that was never built for modern demand, and the surges from load shedding wear out boards everywhere. Fitting <Link href="/electrical-services/db-board-upgrades-and-repairs" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">surge protection at the DB board</Link> is one of the simplest ways to protect expensive equipment.
+                                    The older inner-city buildings carry their own challenges, with original wiring that was never built for modern demand, and the surges from load shedding wear out boards everywhere. Fitting <Link href="/db-board-upgrades-and-repairs" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">surge protection at the DB board</Link> is one of the simplest ways to protect expensive equipment.
                                 </p>
                             </div>
                             <div className="relative h-[450px] w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
@@ -160,9 +160,9 @@ export default function CapeTownAreaPage() {
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {[
                                 { title: "Commercial & Office Installations", icon: FaWrench, desc: "Office fit-outs, retail premises and industrial units, wired and certified for the load a working business puts on its supply.", link: "/electrical-services" },
-                                { title: "DB Board Upgrades & Repairs", icon: FaBoltLightning, desc: "Inner-city buildings and older homes often outgrow their boards. We upgrade boards that keep tripping and add surge protection to keep equipment safe.", link: "/electrical-services/db-board-upgrades-and-repairs" },
-                                { title: "COC Certificates", icon: FaShieldHalved, desc: "Selling or leasing a property in Cape Town means you need a valid COC. We inspect the wiring, fix whatever fails, and issue the certificate.", link: "/electrical-services/coc" },
-                                { title: "Generator Installations", icon: FaCarBattery, desc: "Offices, shops and industrial units rely on us for generators and changeover switches that keep the business running through an outage.", link: "/electrical-services/generator-installation" },
+                                { title: "DB Board Upgrades & Repairs", icon: FaBoltLightning, desc: "Inner-city buildings and older homes often outgrow their boards. We upgrade boards that keep tripping and add surge protection to keep equipment safe.", link: "/db-board-upgrades-and-repairs" },
+                                { title: "COC Certificates", icon: FaShieldHalved, desc: "Selling or leasing a property in Cape Town means you need a valid COC. We inspect the wiring, fix whatever fails, and issue the certificate.", link: "/coc" },
+                                { title: "Generator Installations", icon: FaCarBattery, desc: "Offices, shops and industrial units rely on us for generators and changeover switches that keep the business running through an outage.", link: "/generator-installation" },
                                 { title: "Fault Finding & Emergencies", icon: FaScrewdriverWrench, desc: "A fault that takes out a floor of offices needs sorting fast. We trace the problem, fix it, and get the building back to normal." }
                             ].map((s, i) => (
                                 <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-[#015CAB] transition-colors group flex flex-col">
@@ -229,7 +229,7 @@ export default function CapeTownAreaPage() {
                                 </div>
                                 <h2 className="text-3xl font-bold mb-4">Solar Installation</h2>
                                 <p className="text-blue-50 font-medium leading-relaxed mb-6">
-                                    Cape Town businesses carry heavy power bills, and the flat roofs on offices, warehouses and apartment blocks are perfect for solar. A commercial system with battery backup protects you from load shedding and pays for itself over time. We fit <Link href="/solar/solar-installation" className="text-[#FFCA08] underline font-bold">solar systems</Link> for businesses, body corporates and homes across the city.
+                                    Cape Town businesses carry heavy power bills, and the flat roofs on offices, warehouses and apartment blocks are perfect for solar. A commercial system with battery backup protects you from load shedding and pays for itself over time. We fit <Link href="/solar-installation" className="text-[#FFCA08] underline font-bold">solar systems</Link> for businesses, body corporates and homes across the city.
                                 </p>
                             </div>
                             <div>
@@ -247,7 +247,7 @@ export default function CapeTownAreaPage() {
                                 </div>
                                 <h2 className="text-3xl font-bold mb-4">Electrical Services</h2>
                                 <p className="text-blue-50 font-medium leading-relaxed mb-6">
-                                    Cape Town covers everything from century-old buildings in the City Bowl to industrial units in Epping and apartment blocks on the Atlantic Seaboard. Our registered electricians handle commercial installs, three-phase and industrial work, rewiring, surge damage and <Link href="/electrical-services/coc" className="text-[#FFCA08] underline font-bold">Certificates of Compliance (COC)</Link> for sales and leases.
+                                    Cape Town covers everything from century-old buildings in the City Bowl to industrial units in Epping and apartment blocks on the Atlantic Seaboard. Our registered electricians handle commercial installs, three-phase and industrial work, rewiring, surge damage and <Link href="/coc" className="text-[#FFCA08] underline font-bold">Certificates of Compliance (COC)</Link> for sales and leases.
                                 </p>
                             </div>
                         </div>

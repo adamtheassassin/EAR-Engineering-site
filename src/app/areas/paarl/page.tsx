@@ -130,7 +130,7 @@ export default function PaarlAreaPage() {
                                     That changes what an electrician needs to handle here. A tripping circuit in a packhouse during the picking season, or a pump that will not start on a farm, costs real money by the hour. We plan our work around keeping these operations running, not just fixing the immediate fault.
                                 </p>
                                 <p className="text-gray-700 font-medium leading-relaxed mb-6">
-                                    The older suburbs carry their own issues too, with boards that have not kept up with the modern household, and the surges from load shedding wear them out faster. Fitting <Link href="/electrical-services/db-board-upgrades-and-repairs" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">surge protection at the DB board</Link> is one of the most useful upgrades we do, whether it is a home or a warehouse.
+                                    The older suburbs carry their own issues too, with boards that have not kept up with the modern household, and the surges from load shedding wear them out faster. Fitting <Link href="/db-board-upgrades-and-repairs" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">surge protection at the DB board</Link> is one of the most useful upgrades we do, whether it is a home or a warehouse.
                                 </p>
                             </div>
                             <div className="relative h-[450px] w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
@@ -160,9 +160,9 @@ export default function PaarlAreaPage() {
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {[
                                 { title: "Installations & Wiring", icon: FaWrench, desc: "New builds, farm sheds, packhouses and commercial premises, wired for the heavier loads that agriculture and industry put on a supply.", link: "/electrical-services" },
-                                { title: "DB Board Upgrades & Repairs", icon: FaBoltLightning, desc: "Older boards are common in Paarl's established suburbs and out on the farms. We replace boards that keep tripping and add surge protection to keep equipment safe.", link: "/electrical-services/db-board-upgrades-and-repairs" },
-                                { title: "COC Certificates", icon: FaShieldHalved, desc: "You need a valid COC to sell or rent a property in Paarl. We inspect the wiring, fix whatever fails, and issue the certificate.", link: "/electrical-services/coc" },
-                                { title: "Generator Installations", icon: FaCarBattery, desc: "Farms, packhouses and businesses count on us for generators and changeover switches that keep cold storage and production running through an outage.", link: "/electrical-services/generator-installation" },
+                                { title: "DB Board Upgrades & Repairs", icon: FaBoltLightning, desc: "Older boards are common in Paarl's established suburbs and out on the farms. We replace boards that keep tripping and add surge protection to keep equipment safe.", link: "/db-board-upgrades-and-repairs" },
+                                { title: "COC Certificates", icon: FaShieldHalved, desc: "You need a valid COC to sell or rent a property in Paarl. We inspect the wiring, fix whatever fails, and issue the certificate.", link: "/coc" },
+                                { title: "Generator Installations", icon: FaCarBattery, desc: "Farms, packhouses and businesses count on us for generators and changeover switches that keep cold storage and production running through an outage.", link: "/generator-installation" },
                                 { title: "Fault Finding & Emergencies", icon: FaScrewdriverWrench, desc: "A fault that stops a farm or a production line cannot wait. We trace the problem, fix it, and get you back up and running." }
                             ].map((s, i) => (
                                 <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-[#015CAB] transition-colors group flex flex-col">
@@ -229,7 +229,7 @@ export default function PaarlAreaPage() {
                                 </div>
                                 <h2 className="text-3xl font-bold mb-4">Solar Installation</h2>
                                 <p className="text-blue-50 font-medium leading-relaxed mb-6">
-                                    Paarl gets long, hot, sunny days, and the big roofs on farm sheds, packhouses and warehouses are ideal for solar. A system with battery backup cuts the heavy power bills these operations carry and keeps cold storage going through load shedding. We also fit <Link href="/solar/solar-installation" className="text-[#FFCA08] underline font-bold">solar systems</Link> on homes right across the suburbs.
+                                    Paarl gets long, hot, sunny days, and the big roofs on farm sheds, packhouses and warehouses are ideal for solar. A system with battery backup cuts the heavy power bills these operations carry and keeps cold storage going through load shedding. We also fit <Link href="/solar-installation" className="text-[#FFCA08] underline font-bold">solar systems</Link> on homes right across the suburbs.
                                 </p>
                             </div>
                             <div>
@@ -247,7 +247,7 @@ export default function PaarlAreaPage() {
                                 </div>
                                 <h2 className="text-3xl font-bold mb-4">Electrical Services</h2>
                                 <p className="text-blue-50 font-medium leading-relaxed mb-6">
-                                    Paarl mixes fruit farms, packhouses and light industry in with its homes. Our registered electricians handle three-phase supply, motor and pump work, and commercial installs, as well as everyday home wiring, surge damage and <Link href="/electrical-services/coc" className="text-[#FFCA08] underline font-bold">Certificates of Compliance (COC)</Link> for property sales.
+                                    Paarl mixes fruit farms, packhouses and light industry in with its homes. Our registered electricians handle three-phase supply, motor and pump work, and commercial installs, as well as everyday home wiring, surge damage and <Link href="/coc" className="text-[#FFCA08] underline font-bold">Certificates of Compliance (COC)</Link> for property sales.
                                 </p>
                             </div>
                         </div>

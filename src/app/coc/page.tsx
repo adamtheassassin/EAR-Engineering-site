@@ -90,7 +90,7 @@ export default function COCPage() {
 
             <title>Electrical Certificate of Compliance (COC) Somerset West | EAR Engineering</title>
             <meta name="description" content="Need an electrical COC in Somerset West or Stellenbosch? EAR Engineering issues compliance certificates for homes and businesses across the Helderberg. Book today." />
-            <link rel="canonical" href="https://earengineering.co.za/electrical-services/coc" />
+            <link rel="canonical" href="https://earengineering.co.za/coc" />
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
@@ -178,7 +178,7 @@ export default function COCPage() {
                         </div>
 
                         <div className="mt-12 text-center max-w-3xl mx-auto text-lg text-gray-700 font-medium">
-                            Note: This includes <Link href="/solar/solar-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">solar installations</Link> and <Link href="/electrical-services/generator-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">generator installations</Link>.
+                            Note: This includes <Link href="/solar-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">solar installations</Link> and <Link href="/generator-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">generator installations</Link>.
                         </div>
                     </div>
                 </section>

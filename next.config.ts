@@ -13,6 +13,87 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Redirects for un-nested service pages
+      {
+        source: '/solar/battery-storage',
+        destination: '/battery-storage',
+        permanent: true,
+      },
+      {
+        source: '/services/solar/battery-storage',
+        destination: '/battery-storage',
+        permanent: true,
+      },
+      {
+        source: '/solar/inverter-installation',
+        destination: '/inverter-installation',
+        permanent: true,
+      },
+      {
+        source: '/services/solar/inverter-installation',
+        destination: '/inverter-installation',
+        permanent: true,
+      },
+      {
+        source: '/solar/off-grid-solar',
+        destination: '/off-grid-solar',
+        permanent: true,
+      },
+      {
+        source: '/services/solar/off-grid-solar',
+        destination: '/off-grid-solar',
+        permanent: true,
+      },
+      {
+        source: '/solar/solar-installation',
+        destination: '/solar-installation',
+        permanent: true,
+      },
+      {
+        source: '/services/solar/solar-installation',
+        destination: '/solar-installation',
+        permanent: true,
+      },
+      {
+        source: '/solar/solar-repair-maintenance',
+        destination: '/solar-repair-maintenance',
+        permanent: true,
+      },
+      {
+        source: '/services/solar/solar-repair-maintenance',
+        destination: '/solar-repair-maintenance',
+        permanent: true,
+      },
+      {
+        source: '/electrical-services/coc',
+        destination: '/coc',
+        permanent: true,
+      },
+      {
+        source: '/services/electrical-services/coc',
+        destination: '/coc',
+        permanent: true,
+      },
+      {
+        source: '/electrical-services/db-board-upgrades-and-repairs',
+        destination: '/db-board-upgrades-and-repairs',
+        permanent: true,
+      },
+      {
+        source: '/services/electrical-services/db-board-upgrades-and-repairs',
+        destination: '/db-board-upgrades-and-repairs',
+        permanent: true,
+      },
+      {
+        source: '/electrical-services/generator-installation',
+        destination: '/generator-installation',
+        permanent: true,
+      },
+      {
+        source: '/services/electrical-services/generator-installation',
+        destination: '/generator-installation',
+        permanent: true,
+      },
       // New redirects for moved service pages (Option A)
       {
         source: '/services/ac-installation',
@@ -72,67 +153,67 @@ const nextConfig: NextConfig = {
       // 3. Solar & Battery Products
       {
         source: '/product/canadian-solar-144-cell-555w-n-type-module-tophiku6-t6-connector-700-per-container-35per-pallet',
-        destination: '/solar/solar-installation',
+        destination: '/solar-installation',
         permanent: true,
       },
       {
         source: '/product/ja-solar-144-cell-555w-gapless-ribbon-pro-series',
-        destination: '/solar/solar-installation',
+        destination: '/solar-installation',
         permanent: true,
       },
       {
         source: '/product/photon-portable-power-station-1000w-non-ups',
-        destination: '/solar/solar-installation',
+        destination: '/solar-installation',
         permanent: true,
       },
       {
         source: '/product/dehn-dehncombo-dcb-ypv-1200',
-        destination: '/solar/solar-installation',
+        destination: '/solar-installation',
         permanent: true,
       },
       {
         source: '/product/sunsynk-battery-lfp-wall-mount-15-97kwh-51-2v',
-        destination: '/solar/solar-installation',
+        destination: '/solar-installation',
         permanent: true,
       },
       {
         source: '/product/sunsynk-powerbank-x-3-6kw-inverter-3-84kwh-battery-pack',
-        destination: '/solar/solar-installation',
+        destination: '/solar-installation',
         permanent: true,
       },
       {
         source: '/product/victron-multiplus-48-3000-35-50-230v-ve-bus',
-        destination: '/solar/solar-installation',
+        destination: '/solar-installation',
         permanent: true,
       },
       {
         source: '/product/bsl-battery-7kw-135ah',
-        destination: '/solar/solar-installation',
+        destination: '/solar-installation',
         permanent: true,
       },
       {
         source: '/product/ja-solar-144-half-cell-550w-bifacial-mono-perc-pv-module-short-lead',
-        destination: '/solar/solar-installation',
+        destination: '/solar-installation',
         permanent: true,
       },
       {
         source: '/product/solar-pool-pump-500w-48v-12m-h',
-        destination: '/solar/solar-installation',
+        destination: '/solar-installation',
         permanent: true,
       },
       {
         source: '/product/microcare-3-phase-pump-controller-5-5kw-380v',
-        destination: '/solar/solar-installation',
+        destination: '/solar-installation',
         permanent: true,
       },
       {
         source: '/product/victron-multiplus-48-5000-70-100-230v-ve-bus',
-        destination: '/solar/solar-installation',
+        destination: '/solar-installation',
         permanent: true,
       },
       {
         source: '/product/photon-power-station-2400w-with-ups',
-        destination: '/solar/solar-installation',
+        destination: '/solar-installation',
         permanent: true,
       },
 
@@ -253,7 +334,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/wp-content/uploads/2024/02/generator-king-baudouin-88kva-gkb-80-spec-sheet.pdf',
-        destination: '/electrical-services/generator-installation',
+        destination: '/generator-installation',
         permanent: true,
       },
       {
@@ -263,7 +344,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/product/sunsynk-contour-1kw-2kwh',
-        destination: '/solar/battery-storage',
+        destination: '/battery-storage',
         permanent: true,
       },
       {

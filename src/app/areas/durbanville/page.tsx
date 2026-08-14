@@ -130,7 +130,7 @@ export default function DurbanvilleAreaPage() {
                                     The older suburbs are where we spend a lot of our time. Homes that were wired decades ago are now running pools, ovens, geysers and aircons all at once, and the original board was never meant to carry that. When it starts tripping, that is usually the sign it needs attention.
                                 </p>
                                 <p className="text-gray-700 font-medium leading-relaxed mb-6">
-                                    On top of that, the surges that come with every load shedding cycle wear out boards across the area. Fitting <Link href="/electrical-services/db-board-upgrades-and-repairs" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">surge protection at the DB board</Link> is one of the most practical upgrades we recommend for any Durbanville home.
+                                    On top of that, the surges that come with every load shedding cycle wear out boards across the area. Fitting <Link href="/db-board-upgrades-and-repairs" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">surge protection at the DB board</Link> is one of the most practical upgrades we recommend for any Durbanville home.
                                 </p>
                             </div>
                             <div className="relative h-[450px] w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
@@ -160,9 +160,9 @@ export default function DurbanvilleAreaPage() {
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {[
                                 { title: "Installations & Wiring", icon: FaWrench, desc: "New builds, renovations and additions, from estate homes in Vierlanden to commercial premises around the Durbanville town centre.", link: "/electrical-services" },
-                                { title: "DB Board Upgrades & Repairs", icon: FaBoltLightning, desc: "Older homes here often outgrow the board they were built with. We upgrade boards that keep tripping and add surge protection to keep your appliances safe.", link: "/electrical-services/db-board-upgrades-and-repairs" },
-                                { title: "COC Certificates", icon: FaShieldHalved, desc: "You need a valid COC to sell or rent a property in Durbanville. We inspect the wiring, fix whatever fails, and issue the certificate.", link: "/electrical-services/coc" },
-                                { title: "Generator Installations", icon: FaCarBattery, desc: "For family homes and businesses around Durbanville, we install generators and changeover switches so you keep your power through an outage.", link: "/electrical-services/generator-installation" },
+                                { title: "DB Board Upgrades & Repairs", icon: FaBoltLightning, desc: "Older homes here often outgrow the board they were built with. We upgrade boards that keep tripping and add surge protection to keep your appliances safe.", link: "/db-board-upgrades-and-repairs" },
+                                { title: "COC Certificates", icon: FaShieldHalved, desc: "You need a valid COC to sell or rent a property in Durbanville. We inspect the wiring, fix whatever fails, and issue the certificate.", link: "/coc" },
+                                { title: "Generator Installations", icon: FaCarBattery, desc: "For family homes and businesses around Durbanville, we install generators and changeover switches so you keep your power through an outage.", link: "/generator-installation" },
                                 { title: "Fault Finding & Emergencies", icon: FaScrewdriverWrench, desc: "When a circuit dies or a board will not reset, we trace the fault and put it right, so your home is back to normal as quickly as possible." }
                             ].map((s, i) => (
                                 <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-[#015CAB] transition-colors group flex flex-col">
@@ -229,7 +229,7 @@ export default function DurbanvilleAreaPage() {
                                 </div>
                                 <h2 className="text-3xl font-bold mb-4">Solar Installation</h2>
                                 <p className="text-blue-50 font-medium leading-relaxed mb-6">
-                                    The family homes and newer estates in Durbanville tend to have generous roofs, which makes them well suited to solar. A system with battery backup keeps your home running through load shedding and brings down a bill that climbs every year. We size and fit <Link href="/solar/solar-installation" className="text-[#FFCA08] underline font-bold">solar systems</Link> for homes and businesses across the northern suburbs.
+                                    The family homes and newer estates in Durbanville tend to have generous roofs, which makes them well suited to solar. A system with battery backup keeps your home running through load shedding and brings down a bill that climbs every year. We size and fit <Link href="/solar-installation" className="text-[#FFCA08] underline font-bold">solar systems</Link> for homes and businesses across the northern suburbs.
                                 </p>
                             </div>
                             <div>
@@ -247,7 +247,7 @@ export default function DurbanvilleAreaPage() {
                                 </div>
                                 <h2 className="text-3xl font-bold mb-4">Electrical Services</h2>
                                 <p className="text-blue-50 font-medium leading-relaxed mb-6">
-                                    Durbanville runs from established family suburbs to new lifestyle estates, a busy commercial centre, and the wine farms up in the Tygerberg hills. Our registered electricians handle home rewiring, estate installs, commercial work, surge damage and <Link href="/electrical-services/coc" className="text-[#FFCA08] underline font-bold">Certificates of Compliance (COC)</Link> for property sales.
+                                    Durbanville runs from established family suburbs to new lifestyle estates, a busy commercial centre, and the wine farms up in the Tygerberg hills. Our registered electricians handle home rewiring, estate installs, commercial work, surge damage and <Link href="/coc" className="text-[#FFCA08] underline font-bold">Certificates of Compliance (COC)</Link> for property sales.
                                 </p>
                             </div>
                         </div>

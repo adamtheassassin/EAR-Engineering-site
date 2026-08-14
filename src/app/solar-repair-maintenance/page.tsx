@@ -90,7 +90,7 @@ export default function SolarRepairMaintenancePage() {
 
             <title>Solar Panel Repair and Maintenance | EAR Engineering</title>
             <meta name="description" content="Solar system underperforming? EAR Engineering repairs and maintains solar panels, inverters and batteries across Somerset West, Stellenbosch and the Helderberg." />
-            <link rel="canonical" href="https://earengineering.co.za/solar/solar-repair-maintenance" />
+            <link rel="canonical" href="https://earengineering.co.za/solar-repair-maintenance" />
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
@@ -178,13 +178,13 @@ export default function SolarRepairMaintenancePage() {
                                     title: "Inverter Troubleshooting", 
                                     icon: FaPlugCircleXmark, 
                                     desc: "Error codes, sudden shutdowns, or a humming inverter producing less than it should. We troubleshoot and provide inverter replacements where needed.",
-                                    link: "/solar/inverter-installation"
+                                    link: "/inverter-installation"
                                 },
                                 { 
                                     title: "Battery Fault Diagnosis", 
                                     icon: FaCarBattery, 
                                     desc: "Batteries not charging fully, discharging too quickly, or triggering errors. We assess battery health and carry out replacements where needed.",
-                                    link: "/solar/battery-storage"
+                                    link: "/battery-storage"
                                 }
                             ].map((s, i) => (
                                 <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-[#015CAB] transition-colors group flex flex-col">

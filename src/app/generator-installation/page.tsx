@@ -90,7 +90,7 @@ export default function GeneratorInstallationPage() {
 
             <title>Generator Installation Somerset West and Stellenbosch | EAR Engineering</title>
             <meta name="description" content="EAR Engineering installs standby generators and changeover systems for homes and businesses in Somerset West, Stellenbosch and the Helderberg. Contact us today." />
-            <link rel="canonical" href="https://earengineering.co.za/electrical-services/generator-installation" />
+            <link rel="canonical" href="https://earengineering.co.za/generator-installation" />
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
@@ -303,7 +303,7 @@ export default function GeneratorInstallationPage() {
                                 </p>
                                 <div className="mt-4 text-left">
                                     <p className="text-xl text-gray-700 font-medium">
-                                        <Link href="/solar/solar-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">
+                                        <Link href="/solar-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">
                                             See our solar installation services
                                         </Link> for more information on solar and battery backup systems.
                                     </p>

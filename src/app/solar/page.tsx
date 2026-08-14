@@ -161,35 +161,35 @@ export default function SolarParentPage() {
                                     title: "Solar Installation", 
                                     icon: FaSolarPanel, 
                                     desc: "A complete solar installation includes panels, inverter, battery storage and all electrical connections. We handle the design from start to finish.",
-                                    link: "/solar/solar-installation",
+                                    link: "/solar-installation",
                                     linkText: "See our solar installation service"
                                 },
                                 { 
                                     title: "Repair & Maintenance", 
                                     icon: FaWrench, 
                                     desc: "Existing solar systems need attention over time. Panels can be damaged or inverters fail. We diagnose faults, repair, and conduct maintenance.",
-                                    link: "/solar/solar-repair-maintenance",
+                                    link: "/solar-repair-maintenance",
                                     linkText: "See our repair and maintenance service"
                                 },
                                 { 
                                     title: "Battery Storage", 
                                     icon: FaCarBattery, 
                                     desc: "Battery storage turns a solar system into a load shedding solution. We install storage as part of a new system or an addition to an existing one.",
-                                    link: "/solar/battery-storage",
+                                    link: "/battery-storage",
                                     linkText: "See our battery storage service"
                                 },
                                 { 
                                     title: "Inverter Installation", 
                                     icon: FaPlugCircleBolt, 
                                     desc: "The inverter is the core of any system. Upgrading to a newer model improves a system's performance and reliability significantly.",
-                                    link: "/solar/inverter-installation",
+                                    link: "/inverter-installation",
                                     linkText: "See our inverter installation service"
                                 },
                                 { 
                                     title: "Off-Grid Solar", 
                                     icon: FaHouseSignal, 
                                     desc: "Not every property is connected to the municipal grid. We design and install off-grid systems sized to cover your full independent energy needs.",
-                                    link: "/solar/off-grid-solar",
+                                    link: "/off-grid-solar",
                                     linkText: "See our off-grid solar service"
                                 }
                             ].map((s, i) => (
@@ -235,27 +235,27 @@ export default function SolarParentPage() {
                                     <tr className="hover:bg-gray-50 transition-colors">
                                         <td className="py-4 px-6 font-bold text-gray-900 border-r border-gray-100">No solar yet, want to get started</td>
                                         <td className="py-4 px-6 text-gray-600 font-medium border-r border-gray-100">Full solar installation with battery backup</td>
-                                        <td className="py-4 px-6 font-bold"><Link href="/solar/solar-installation" className="text-[#015CAB] hover:underline">Solar Installation page</Link></td>
+                                        <td className="py-4 px-6 font-bold"><Link href="/solar-installation" className="text-[#015CAB] hover:underline">Solar Installation page</Link></td>
                                     </tr>
                                     <tr className="hover:bg-gray-50 transition-colors bg-gray-50/50">
                                         <td className="py-4 px-6 font-bold text-gray-900 border-r border-gray-100">Have solar but it is not performing well</td>
                                         <td className="py-4 px-6 text-gray-600 font-medium border-r border-gray-100">Fault diagnosis, repair or panel replacement</td>
-                                        <td className="py-4 px-6 font-bold"><Link href="/solar/solar-repair-maintenance" className="text-[#015CAB] hover:underline">Repair and Maintenance page</Link></td>
+                                        <td className="py-4 px-6 font-bold"><Link href="/solar-repair-maintenance" className="text-[#015CAB] hover:underline">Repair and Maintenance page</Link></td>
                                     </tr>
                                     <tr className="hover:bg-gray-50 transition-colors">
                                         <td className="py-4 px-6 font-bold text-gray-900 border-r border-gray-100">Have solar panels but no battery</td>
                                         <td className="py-4 px-6 text-gray-600 font-medium border-r border-gray-100">Battery storage added to existing system</td>
-                                        <td className="py-4 px-6 font-bold"><Link href="/solar/battery-storage" className="text-[#015CAB] hover:underline">Battery Storage page</Link></td>
+                                        <td className="py-4 px-6 font-bold"><Link href="/battery-storage" className="text-[#015CAB] hover:underline">Battery Storage page</Link></td>
                                     </tr>
                                     <tr className="hover:bg-gray-50 transition-colors bg-gray-50/50">
                                         <td className="py-4 px-6 font-bold text-gray-900 border-r border-gray-100">Inverter is old, failing or underspecified</td>
                                         <td className="py-4 px-6 text-gray-600 font-medium border-r border-gray-100">Inverter replacement or upgrade</td>
-                                        <td className="py-4 px-6 font-bold"><Link href="/solar/inverter-installation" className="text-[#015CAB] hover:underline">Inverter Installation page</Link></td>
+                                        <td className="py-4 px-6 font-bold"><Link href="/inverter-installation" className="text-[#015CAB] hover:underline">Inverter Installation page</Link></td>
                                     </tr>
                                     <tr className="hover:bg-gray-50 transition-colors">
                                         <td className="py-4 px-6 font-bold text-gray-900 border-r border-gray-100">Rural or remote property, no grid</td>
                                         <td className="py-4 px-6 text-gray-600 font-medium border-r border-gray-100">Fully independent off-grid solar system</td>
-                                        <td className="py-4 px-6 font-bold"><Link href="/solar/off-grid-solar" className="text-[#015CAB] hover:underline">Off-Grid Solar page</Link></td>
+                                        <td className="py-4 px-6 font-bold"><Link href="/off-grid-solar" className="text-[#015CAB] hover:underline">Off-Grid Solar page</Link></td>
                                     </tr>
                                 </tbody>
                             </table>

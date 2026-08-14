@@ -169,10 +169,10 @@ export default function ElectricalServicesPage() {
                                         </>
                                     )
                                 },
-                                { title: "DB Board Upgrades & Repairs", icon: FaWrench, desc: "An old or overloaded DB board is a common cause of electrical problems. We assess and upgrade your board to handle your current load safely.", href: "/electrical-services/db-board-upgrades-and-repairs" },
+                                { title: "DB Board Upgrades & Repairs", icon: FaWrench, desc: "An old or overloaded DB board is a common cause of electrical problems. We assess and upgrade your board to handle your current load safely.", href: "/db-board-upgrades-and-repairs" },
                                 { title: "Fault Finding & Emergencies", icon: FaScrewdriverWrench, desc: "If something has stopped working and you don't know why, we'll find the fault and fix it. We offer emergency electrical callouts across the Helderberg and Boland." },
-                                { title: "Certificate of Compliance (COC)", icon: FaShieldHalved, desc: "A COC is a legal requirement for property transactions. Our registered electricians inspect, repair, and issue the certificate without hassle.", href: "/electrical-services/coc" },
-                                { title: "Generator Installations", icon: FaCarBattery, desc: "We install standby generators and safe changeover systems to provide reliable backup power when the grid goes down.", href: "/electrical-services/generator-installation" }
+                                { title: "Certificate of Compliance (COC)", icon: FaShieldHalved, desc: "A COC is a legal requirement for property transactions. Our registered electricians inspect, repair, and issue the certificate without hassle.", href: "/coc" },
+                                { title: "Generator Installations", icon: FaCarBattery, desc: "We install standby generators and safe changeover systems to provide reliable backup power when the grid goes down.", href: "/generator-installation" }
                             ].map((s, i) => (
                                 <div key={i} className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-cyan-200 transition-colors group flex flex-col sm:flex-row gap-6 items-center sm:items-start">
                                     <div className="bg-[#015CAB] p-4 rounded-xl text-white flex-shrink-0 group-hover:text-[#FFCA08] transition-colors">

@@ -84,7 +84,7 @@ export default function SolarInverterInstallationPage() {
 
             <title>Solar Inverter Installation Somerset West | EAR Engineering</title>
             <meta name="description" content="EAR Engineering installs and replaces solar inverters for homes and businesses across Somerset West, Stellenbosch and the Helderberg. Brand-neutral advice and certified installations." />
-            <link rel="canonical" href="https://earengineering.co.za/solar/inverter-installation" />
+            <link rel="canonical" href="https://earengineering.co.za/inverter-installation" />
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
@@ -124,7 +124,7 @@ export default function SolarInverterInstallationPage() {
                                     Inverters typically have a lifespan of ten to fifteen years, making them the component most likely to require replacement. An inverter that is failing will often show error codes, produce less than it should, or stop working entirely.
                                 </p>
                                 <p className="text-gray-700 font-medium leading-relaxed">
-                                    Replacing an ageing or underperforming inverter is often one of the most cost-effective ways to improve the output and reliability of an <Link href="/solar/solar-repair-maintenance" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">existing solar system</Link> without replacing the panels themselves.
+                                    Replacing an ageing or underperforming inverter is often one of the most cost-effective ways to improve the output and reliability of an <Link href="/solar-repair-maintenance" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">existing solar system</Link> without replacing the panels themselves.
                                 </p>
                             </div>
                             <div className="relative h-[450px] w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
@@ -164,7 +164,7 @@ export default function SolarInverterInstallationPage() {
                                     title: "Inverter Replacements & Upgrades", 
                                     icon: FaWrench, 
                                     desc: "We perform full replacements of old failing units or upgrades to hybrid models to accommodate new batteries, including all electrical rewiring.",
-                                    link: "/solar/battery-storage"
+                                    link: "/battery-storage"
                                 }
                             ].map((s, i) => (
                                 <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-[#015CAB] transition-colors group flex flex-col">
@@ -337,7 +337,7 @@ export default function SolarInverterInstallationPage() {
                             ))}
                         </div>
                         <div className="mt-12 text-center">
-                            <span className="font-medium text-gray-600">Need specific electrical assistance? Explore our <Link href="/electrical-services/coc" className="text-[#015CAB] underline font-bold hover:text-[#013f75] transition-colors">COC Certificates services</Link>.</span>
+                             <span className="font-medium text-gray-600">Need specific electrical assistance? Explore our <Link href="/coc" className="text-[#015CAB] underline font-bold hover:text-[#013f75] transition-colors">COC Certificates services</Link>.</span>
                         </div>
                     </div>
                 </section>

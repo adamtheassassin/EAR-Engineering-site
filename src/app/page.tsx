@@ -29,13 +29,20 @@ export default function Home() {
 
   return (
     <>
-      <title>BEST Electrician Somerset West - EAR Engineering: For Electrical Repairs, Aircon & Solar Installations near me in Stellenbosch & Cape Town - EAR Engineering is the top choice for the Helderberg.</title>
+      <title>Electrician Somerset West - EAR Engineering: For Electrical Repairs, Aircon & Solar Installations near me in Stellenbosch & Cape Town - EAR Engineering is the top choice for the Helderberg.</title>
       <meta name="description" content="EAR Engineering provides expert project-managed electrical, aircon & solar solutions in Helderberg and Cape Town. On time, on budget, with a 1-hour callback promise." />
       <link rel="canonical" href="https://earengineering.co.za/" />
       <Header onOpenModal={() => openModal()} />
 
       <main className="flex-1">
-        <Hero onOpenModal={() => openModal()} />
+        <Hero 
+          onOpenModal={() => openModal()} 
+          title={
+            <>
+              Electrician <span className="text-[#FFCA08]">Somerset West</span>
+            </>
+          }
+        />
         <TrustedBy />
         <Reviews />
         <Services onOpenModal={(cat) => openModal(cat)} />

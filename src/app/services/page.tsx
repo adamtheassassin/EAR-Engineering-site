@@ -25,11 +25,11 @@ export default function ServicesPage() {
             iconColor: "text-[#FFCA08]",
             seeAllHref: "/solar",
             services: [
-                { name: "Solar Installation", href: "/solar/solar-installation" },
-                { name: "Repair & Maintenance", href: "/solar/solar-repair-maintenance" },
-                { name: "Battery Storage", href: "/solar/battery-storage" },
-                { name: "Inverter Installation", href: "/solar/inverter-installation" },
-                { name: "Off-Grid Solar", href: "/solar/off-grid-solar" },
+                { name: "Solar Installation", href: "/solar-installation" },
+                { name: "Repair & Maintenance", href: "/solar-repair-maintenance" },
+                { name: "Battery Storage", href: "/battery-storage" },
+                { name: "Inverter Installation", href: "/inverter-installation" },
+                { name: "Off-Grid Solar", href: "/off-grid-solar" },
             ]
         },
         {
@@ -39,9 +39,9 @@ export default function ServicesPage() {
             seeAllHref: "/electrical-services",
             services: [
                 { name: "Electrical Installations", href: "/electrical-services" },
-                { name: "DB Board Upgrades & Repairs", href: "/electrical-services/db-board-upgrades-and-repairs" },
-                { name: "COC Certificates", href: "/electrical-services/coc" },
-                { name: "Generator Installations", href: "/electrical-services/generator-installation" },
+                { name: "DB Board Upgrades & Repairs", href: "/db-board-upgrades-and-repairs" },
+                { name: "COC Certificates", href: "/coc" },
+                { name: "Generator Installations", href: "/generator-installation" },
             ]
         }
     ];

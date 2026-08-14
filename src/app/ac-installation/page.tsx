@@ -130,7 +130,7 @@ export default function ACInstallationPage() {
                                 {
                                     title: "Replacements and Upgrades", icon: FaArrowsRotate, desc: (
                                         <>
-                                            Older air conditioning units can be expensive to run and unreliable to fix. If your system is aging, we will give you an honest assessment of whether a repair is worthwhile or whether a replacement makes more financial sense. Pairing a new inverter air conditioner with a solar system can cut your running costs significantly. See our <Link href="/solar/solar-installation" className="text-[#015CAB] underline hover:text-[#013f75]">solar installation services</Link>.
+                                            Older air conditioning units can be expensive to run and unreliable to fix. If your system is aging, we will give you an honest assessment of whether a repair is worthwhile or whether a replacement makes more financial sense. Pairing a new inverter air conditioner with a solar system can cut your running costs significantly. See our <Link href="/solar-installation" className="text-[#015CAB] underline hover:text-[#013f75]">solar installation services</Link>.
                                         </>
                                     )
                                 }
@@ -201,7 +201,7 @@ export default function ACInstallationPage() {
                                     <h3 className="text-xl font-extrabold text-white">Brand-Neutral Advice</h3>
                                 </div>
                                 <p className="text-blue-50 font-medium leading-relaxed">
-                                    We recommend the unit that suits your space and budget rather than pushing a specific brand. Because we also handle <Link href="/electrical-services" className="text-[#FFCA08] underline decoration-2 underline-offset-4 hover:text-white transition-colors">electrical work</Link> and <Link href="/solar/solar-installation" className="text-[#FFCA08] underline decoration-2 underline-offset-4 hover:text-white transition-colors">solar</Link>, we ensure everything works seamlessly together.
+                                    We recommend the unit that suits your space and budget rather than pushing a specific brand. Because we also handle <Link href="/electrical-services" className="text-[#FFCA08] underline decoration-2 underline-offset-4 hover:text-white transition-colors">electrical work</Link> and <Link href="/solar-installation" className="text-[#FFCA08] underline decoration-2 underline-offset-4 hover:text-white transition-colors">solar</Link>, we ensure everything works seamlessly together.
                                 </p>
                             </div>
                         </div>

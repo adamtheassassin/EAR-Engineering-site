@@ -87,7 +87,7 @@ export default function DBBoardUpgradesPage() {
 
             <title>DB Board Upgrades and Repairs in Somerset West and Stellenbosch | EAR Engineering</title>
             <meta name="description" content="DB board tripping or outdated? EAR Engineering repairs, upgrades and replaces distribution boards across Somerset West, Stellenbosch and the Helderberg. Get a quote." />
-            <link rel="canonical" href="https://earengineering.co.za/electrical-services/db-board-upgrades-and-repairs" />
+            <link rel="canonical" href="https://earengineering.co.za/db-board-upgrades-and-repairs" />
 
             <Header
                 onOpenModal={() => setIsModalOpen(true)}
@@ -138,7 +138,7 @@ export default function DBBoardUpgradesPage() {
                         </div>
 
                         <div className="mt-12 text-center max-w-3xl mx-auto text-lg text-gray-700 font-medium">
-                            If you are adding solar panels or a generator to your property, your DB board may need to be upgraded as part of that installation. See our <Link href="/solar/solar-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">solar installation services</Link>.
+                            If you are adding solar panels or a generator to your property, your DB board may need to be upgraded as part of that installation. See our <Link href="/solar-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">solar installation services</Link>.
                         </div>
                     </div>
                 </section>
@@ -176,7 +176,7 @@ export default function DBBoardUpgradesPage() {
 
                         <div className="mt-12 text-center max-w-3xl mx-auto text-lg text-gray-700 font-medium bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
                             <h3 className="text-2xl font-bold text-[#015CAB] mb-4">COC After DB Board Work</h3>
-                            <p>Any DB board repair, upgrade or replacement requires a Certificate of Compliance to be issued on completion. Our registered electricians issue the COC as part of every job. Learn more about <Link href="/electrical-services/coc" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">what a COC involves</Link>.</p>
+                            <p>Any DB board repair, upgrade or replacement requires a Certificate of Compliance to be issued on completion. Our registered electricians issue the COC as part of every job. Learn more about <Link href="/coc" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">what a COC involves</Link>.</p>
                         </div>
                     </div>
                 </section>
@@ -426,7 +426,7 @@ export default function DBBoardUpgradesPage() {
                             ))}
                         </div>
                         <div className="mt-8 text-center max-w-3xl mx-auto text-lg text-gray-700 font-medium bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
-                            If your board upgrade is connected to a generator installation, we handle both together. Learn more about <Link href="/electrical-services/generator-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">generator installation</Link>.
+                            If your board upgrade is connected to a generator installation, we handle both together. Learn more about <Link href="/generator-installation" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">generator installation</Link>.
                         </div>
                     </div>
                 </section>

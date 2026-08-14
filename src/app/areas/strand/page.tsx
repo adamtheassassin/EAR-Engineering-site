@@ -131,7 +131,7 @@ export default function StrandAreaPage() {
                                     Living by the sea looks great, but it is hard on your electrics. The salty air eats away at plugs, outdoor fittings, and DB boards faster than it does anywhere inland. We see corroded boards and failing outdoor units in Strand all the time, so we fit parts that hold up better against the sea air.
                                 </p>
                                 <p className="text-gray-700 font-medium leading-relaxed mb-6">
-                                    On top of that, the surges that come with every load shedding cycle wear out older boards quickly. One of the most useful things we can do for a Strand home is fit <Link href="/electrical-services/db-board-upgrades-and-repairs" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">surge protection at the DB board</Link> so a single spike does not take out your appliances.
+                                    On top of that, the surges that come with every load shedding cycle wear out older boards quickly. One of the most useful things we can do for a Strand home is fit <Link href="/db-board-upgrades-and-repairs" className="text-[#015CAB] underline hover:text-[#013f75] font-bold">surge protection at the DB board</Link> so a single spike does not take out your appliances.
                                 </p>
                             </div>
                             <div className="relative h-[450px] w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
@@ -161,8 +161,8 @@ export default function StrandAreaPage() {
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {[
                                 { title: "Installations & Wiring", icon: FaWrench, desc: "Wiring for new builds and renovations, from holiday flats on the beachfront to homes in Greenways. We pick fittings that cope with the damp, salty air close to the sea.", link: "/electrical-services" },
-                                { title: "DB Board Upgrades & Repairs", icon: FaBoltLightning, desc: "Salt air and surges are a rough combination for boards near the coast. We replace corroded boards and worn breakers, then add surge protection so one spike does not cost you a fridge.", link: "/electrical-services/db-board-upgrades-and-repairs" },
-                                { title: "COC Certificates", icon: FaShieldHalved, desc: "Selling or renting out a flat in Strand means you need a valid COC. We check the wiring, fix whatever fails, and hand you the certificate.", link: "/electrical-services/coc" },
+                                { title: "DB Board Upgrades & Repairs", icon: FaBoltLightning, desc: "Salt air and surges are a rough combination for boards near the coast. We replace corroded boards and worn breakers, then add surge protection so one spike does not cost you a fridge.", link: "/db-board-upgrades-and-repairs" },
+                                { title: "COC Certificates", icon: FaShieldHalved, desc: "Selling or renting out a flat in Strand means you need a valid COC. We check the wiring, fix whatever fails, and hand you the certificate.", link: "/coc" },
                                 { title: "Holiday Flat & Body Corporate Work", icon: FaHandshake, desc: "The beachfront is full of holiday lets and sectional title blocks. We do repairs, COCs and shared electrical work for owners, building managers and body corporates." },
                                 { title: "Fault Finding & Emergencies", icon: FaScrewdriverWrench, desc: "When a circuit dies or a board trips and won't reset, we trace the fault and put it right. We are only minutes away, so we reach you fast." }
                             ].map((s, i) => (
@@ -230,7 +230,7 @@ export default function StrandAreaPage() {
                                 </div>
                                 <h2 className="text-3xl font-bold mb-4">Solar Installation</h2>
                                 <p className="text-blue-50 font-medium leading-relaxed mb-6">
-                                    Out near the sea, the real enemy of solar is not cloud, it is rust. Cheap mounting rails and clamps corrode within a few seasons of salt air, so we fit coastal-grade hardware that holds up on a beachfront roof. The flat roofs on so many Strand flats and holiday rentals suit a tidy panel layout, and we pair it with <Link href="/solar/solar-installation" className="text-[#FFCA08] underline font-bold">battery backup</Link> so your lights stay on through load shedding.
+                                    Out near the sea, the real enemy of solar is not cloud, it is rust. Cheap mounting rails and clamps corrode within a few seasons of salt air, so we fit coastal-grade hardware that holds up on a beachfront roof. The flat roofs on so many Strand flats and holiday rentals suit a tidy panel layout, and we pair it with <Link href="/solar-installation" className="text-[#FFCA08] underline font-bold">battery backup</Link> so your lights stay on through load shedding.
                                 </p>
                             </div>
                             <div>
@@ -248,7 +248,7 @@ export default function StrandAreaPage() {
                                 </div>
                                 <h2 className="text-3xl font-bold mb-4">Electrical Services</h2>
                                 <p className="text-blue-50 font-medium leading-relaxed mb-6">
-                                    Living by the sea is hard on your wiring. A lot of our time in Strand goes into replacing plugs, fittings and boards that the salt air has eaten away, on top of the everyday tripping circuits, rewiring and <Link href="/electrical-services/coc" className="text-[#FFCA08] underline font-bold">Certificates of Compliance (COC)</Link> people need when they sell.
+                                    Living by the sea is hard on your wiring. A lot of our time in Strand goes into replacing plugs, fittings and boards that the salt air has eaten away, on top of the everyday tripping circuits, rewiring and <Link href="/coc" className="text-[#FFCA08] underline font-bold">Certificates of Compliance (COC)</Link> people need when they sell.
                                 </p>
                             </div>
                         </div>
